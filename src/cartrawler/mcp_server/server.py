@@ -17,6 +17,7 @@ import json
 from typing import Any
 
 from mcp.server.fastmcp import FastMCP
+from mcp.server.transport_security import TransportSecuritySettings
 
 from cartrawler.config import settings
 
@@ -59,6 +60,9 @@ mcp = FastMCP(
         "You are CarTrawler — India's travel booking assistant. "
         "You can search flights, book cars, find hotels, apply coupons, "
         "and answer FAQs. Users must log in before making bookings."
+    ),
+    transport_security=TransportSecuritySettings(
+        enable_dns_rebinding_protection=False,
     ),
 )
 
