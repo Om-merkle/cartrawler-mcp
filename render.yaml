@@ -90,25 +90,3 @@ services:
       - key: EMBEDDING_DIMENSION
         value: "1536"
 
-  # ─────────────────────────────────────────────────────────────────────────
-  # One-off DB seed job (runs once after deploy)
-  # ─────────────────────────────────────────────────────────────────────────
-  - type: job
-    name: cartrawler-seed
-    runtime: python
-    plan: starter
-
-    buildCommand: |
-      pip install uv &&
-      uv sync --frozen --no-dev
-
-    startCommand: |
-      PYTHONPATH=src uv run python scripts/seed_db.py
-
-    envVars:
-      - key: DATABASE_URL
-        sync: false
-      - key: PYTHONPATH
-        value: src
-      - key: APP_ENV
-        value: production
