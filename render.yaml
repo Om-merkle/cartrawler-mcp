@@ -1,0 +1,114 @@
+###############################################################################
+# Render.com Deployment Configuration
+# https://render.com/docs/blueprint-spec
+#
+# Deploy:
+#   1. Push this repo to GitHub
+#   2. Go to render.com → New → Blueprint
+#   3. Connect your repo — Render reads this file automatically
+#   4. Set required env vars in the Render dashboard (marked with sync: false)
+###############################################################################
+
+services:
+  # ─────────────────────────────────────────────────────────────────────────
+  # CarTrawler MCP Web Service
+  # ─────────────────────────────────────────────────────────────────────────
+  - type: web
+    name: cartrawler-mcp
+    runtime: python
+    region: oregon                  # or frankfurt, singapore
+    plan: starter                   # free tier; upgrade for production
+
+    # ── Build ──────────────────────────────────────────────────────────────
+    buildCommand: |
+      pip install uv &&
+      uv sync --frozen --no-dev
+
+    # ── Start ─────────────────────────────────────────────────────────────
+    startCommand: uv run uvicorn cartrawler.main:app --host 0.0.0.0 --port $PORT
+
+    # ── Python version ─────────────────────────────────────────────────────
+    pythonVersion: "3.11"
+
+    # ── Health check ───────────────────────────────────────────────────────
+    healthCheckPath: /health
+
+    # ── Auto-deploy on push ────────────────────────────────────────────────
+    autoDeploy: true
+
+    # ── Environment variables ──────────────────────────────────────────────
+    envVars:
+      # Application
+      - key: APP_ENV
+        value: production
+      - key: DEBUG
+        value: "false"
+      - key: PYTHONPATH
+        value: src
+
+      # Database (set in Render dashboard — never commit secrets)
+      - key: DATABASE_URL
+        sync: false        # set manually in dashboard
+      - key: DATABASE_URL_SYNC
+        sync: false
+
+      # Supabase
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_ANON_KEY
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+
+      # JWT
+      - key: JWT_SECRET_KEY
+        generateValue: true   # Render auto-generates a secure random value
+      - key: JWT_ALGORITHM
+        value: HS256
+      - key: JWT_ACCESS_TOKEN_EXPIRE_MINUTES
+        value: "30"
+      - key: JWT_REFRESH_TOKEN_EXPIRE_DAYS
+        value: "7"
+
+      # OpenAI
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        value: gpt-4o-mini
+      - key: OPENAI_EMBEDDING_MODEL
+        value: text-embedding-3-small
+
+      # MCP Server
+      - key: MCP_SERVER_NAME
+        value: cartrawler-mcp
+      - key: MCP_SERVER_HOST
+        value: "0.0.0.0"
+
+      # RAG / Vector
+      - key: VECTOR_STORE_TABLE
+        value: knowledge_base_embeddings
+      - key: EMBEDDING_DIMENSION
+        value: "1536"
+
+  # ─────────────────────────────────────────────────────────────────────────
+  # One-off DB seed job (runs once after deploy)
+  # ─────────────────────────────────────────────────────────────────────────
+  - type: job
+    name: cartrawler-seed
+    runtime: python
+    plan: starter
+
+    buildCommand: |
+      pip install uv &&
+      uv sync --frozen --no-dev
+
+    startCommand: |
+      PYTHONPATH=src uv run python scripts/seed_db.py
+
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: PYTHONPATH
+        value: src
+      - key: APP_ENV
+        value: production

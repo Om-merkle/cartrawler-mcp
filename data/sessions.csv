@@ -1,0 +1,21 @@
+session_id,user_id,channel,intent,context,resolved,session_duration_secs,created_at
+S2001,U1001,MOBILE_APP,book_flight,"{""source"": ""BOM"", ""destination"": ""DEL"", ""date"": ""2026-05-15""}",true,245,2026-04-01T10:25:00
+S2002,U1002,WEB,book_combo,"{""source"": ""DEL"", ""destination"": ""BOM"", ""car_type"": ""Sedan""}",true,420,2026-04-02T09:10:00
+S2003,U1003,WHATSAPP_BOT,book_car,"{""city"": ""Bangalore"", ""car_type"": ""Compact""}",true,180,2026-04-03T14:15:00
+S2004,U1004,MOBILE_APP,search_flights,"{""source"": ""MAA"", ""destination"": ""BOM""}",true,120,2026-04-03T16:40:00
+S2005,U1005,WEB,book_combo,"{""source"": ""DEL"", ""destination"": ""BLR"", ""cabin"": ""Business""}",true,680,2026-04-04T10:55:00
+S2006,U1006,VOICE_ASSISTANT,ask_faq,"{""question"": ""minimum age for car rental""}",true,95,2026-04-05T08:25:00
+S2007,U1007,MOBILE_APP,book_flight,"{""source"": ""PNQ"", ""destination"": ""DEL""}",true,210,2026-04-06T11:55:00
+S2008,U1001,WEB,check_offers,"{""booking_type"": ""FLIGHT""}",true,135,2026-04-05T18:15:00
+S2009,U1008,WHATSAPP_BOT,ask_faq,"{""question"": ""refund policy""}",true,150,2026-04-09T09:30:00
+S2010,U1009,MOBILE_APP,book_flight,"{""source"": ""HYD"", ""destination"": ""DEL""}",true,190,2026-04-07T07:10:00
+S2011,U1010,WEB,book_car,"{""city"": ""Mumbai"", ""days"": 3}",true,260,2026-04-07T13:25:00
+S2012,U1011,MOBILE_APP,book_combo,"{""source"": ""CCU"", ""destination"": ""BOM""}",true,380,2026-04-08T09:55:00
+S2013,U1012,WHATSAPP_BOT,book_car,"{""city"": ""Jaipur"", ""car_type"": ""Hatchback""}",true,145,2026-04-09T07:55:00
+S2014,U1013,MOBILE_APP,book_flight,"{""source"": ""BOM"", ""destination"": ""AMD""}",true,170,2026-04-09T11:25:00
+S2015,U1003,WEB,cancel_booking,"{""booking_id"": ""B7013""}",true,200,2026-04-08T15:40:00
+S2016,U1015,WEB,book_combo,"{""source"": ""DEL"", ""destination"": ""BLR"", ""cabin"": ""Business"", ""car_type"": ""Luxury""}",true,720,2026-04-10T08:55:00
+S2017,U1016,MOBILE_APP,book_flight,"{""source"": ""MAA"", ""destination"": ""DEL""}",true,230,2026-04-11T07:25:00
+S2018,U1019,WEB,book_combo,"{""source"": ""MAA"", ""destination"": ""BOM"", ""car_type"": ""SUV""}",true,450,2026-04-11T10:10:00
+S2019,U1017,VOICE_ASSISTANT,ask_faq,"{""question"": ""loyalty points""}",false,60,2026-04-11T09:00:00
+S2020,U1020,WHATSAPP_BOT,search_flights,"{""source"": ""DEL"", ""destination"": ""GOI""}",true,115,2026-04-11T11:00:00

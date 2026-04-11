@@ -1,0 +1,26 @@
+car_id,vendor,city,pickup_location,car_type,car_model,fuel_type,transmission,seating_capacity,price_per_day,price_per_hour,with_driver,availability,rating,total_reviews,ac,insurance_included,min_age_required
+C5001,Zoomcar,Mumbai,Mumbai Airport T2,Sedan,Maruti Swift Dzire,Petrol,Manual,5,1800,250,false,true,4.2,320,true,false,21
+C5002,Myles,Mumbai,Bandra Kurla Complex,SUV,Mahindra Scorpio,Diesel,Manual,7,3200,450,false,true,4.0,185,true,false,25
+C5003,Revv,Delhi,Indira Gandhi Airport T3,Sedan,Honda City,Petrol,Automatic,5,2200,320,false,true,4.4,410,true,false,21
+C5004,Zoomcar,Delhi,Connaught Place,Hatchback,Maruti Swift,Petrol,Manual,5,1400,200,false,true,4.1,280,true,false,21
+C5005,Myles,Bangalore,Kempegowda Airport,Compact,Hyundai i20,Petrol,Manual,5,1600,230,false,true,4.3,350,true,false,21
+C5006,Revv,Bangalore,MG Road,Sedan,Toyota Etios,Diesel,Manual,5,1900,270,false,true,4.0,240,true,false,21
+C5007,Zoomcar,Chennai,Chennai Airport,SUV,Toyota Fortuner,Diesel,Automatic,7,4500,650,false,true,4.5,180,true,true,25
+C5008,Myles,Chennai,Anna Nagar,Sedan,Honda Amaze,Petrol,Manual,5,1700,240,false,true,4.2,295,true,false,21
+C5009,Revv,Hyderabad,Rajiv Gandhi Airport,Compact,Maruti Baleno,Petrol,Automatic,5,1750,250,false,true,4.3,310,true,false,21
+C5010,Zoomcar,Hyderabad,Hitech City,Sedan,Volkswagen Polo,Petrol,Manual,5,2000,290,false,true,4.1,220,true,false,21
+C5011,IndiGo Cars,Kolkata,Netaji Subhas Airport,Sedan,Ford Aspire,Petrol,Manual,5,1650,235,false,true,3.9,195,true,false,21
+C5012,Myles,Kolkata,Park Street,Hatchback,Hyundai Santro,Petrol,Manual,5,1300,190,false,true,4.0,265,true,false,21
+C5013,Zoomcar,Pune,Pune Airport,Sedan,Maruti Ciaz,Petrol,Automatic,5,2100,300,false,true,4.2,285,true,false,21
+C5014,Revv,Pune,Koregaon Park,Compact,Tata Tiago,Petrol,Manual,5,1350,195,false,true,4.1,310,true,false,21
+C5015,Myles,Goa,Goa Airport,SUV,Renault Duster,Diesel,Manual,5,2800,400,false,true,4.4,425,true,false,25
+C5016,Zoomcar,Goa,Panaji,Compact,Maruti Wagon R,Petrol,Manual,5,1500,215,false,true,4.2,380,true,false,21
+C5017,Revv,Jaipur,Jaipur Airport,Sedan,Hyundai Verna,Petrol,Automatic,5,2400,340,false,true,4.3,195,true,false,21
+C5018,IndiGo Cars,Jaipur,MI Road,Hatchback,Maruti Alto,Petrol,Manual,5,1100,160,false,true,3.8,145,true,false,21
+C5019,Myles,Ahmedabad,Sardar Vallabhbhai Airport,Sedan,Honda Jazz,Petrol,Automatic,5,2000,285,false,true,4.1,225,true,false,21
+C5020,Zoomcar,Mumbai,Andheri East,Luxury,Mercedes C-Class,Petrol,Automatic,5,8500,1200,false,true,4.7,95,true,true,25
+C5021,Revv,Delhi,Aerocity,Luxury,BMW 3 Series,Petrol,Automatic,5,9000,1300,false,true,4.8,78,true,true,25
+C5022,Myles,Bangalore,Electronic City,MUV,Toyota Innova,Diesel,Manual,7,3500,500,true,true,4.5,290,true,false,21
+C5023,Zoomcar,Chennai,Velachery,MUV,Maruti Ertiga,Petrol,Manual,7,2600,370,false,true,4.2,215,true,false,21
+C5024,Revv,Hyderabad,Gachibowli,Electric,Tata Nexon EV,Electric,Automatic,5,2300,330,false,true,4.6,185,true,true,21
+C5025,IndiGo Cars,Mumbai,Navi Mumbai,Compact,Maruti Celerio,Petrol,Manual,5,1450,210,false,true,4.0,270,true,false,21

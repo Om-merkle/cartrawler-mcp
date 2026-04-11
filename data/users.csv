@@ -1,0 +1,21 @@
+user_id,name,email,phone,age,gender,nationality,preferred_car_type,preferred_airline,home_city,loyalty_tier,loyalty_points
+U1001,Arjun Sharma,arjun.sharma@email.com,+91-9876543210,28,Male,Indian,Sedan,IndiGo,Mumbai,SILVER,1250
+U1002,Priya Patel,priya.patel@email.com,+91-9876543211,34,Female,Indian,SUV,Air India,Delhi,GOLD,3200
+U1003,Rahul Verma,rahul.verma@email.com,+91-9876543212,22,Male,Indian,Hatchback,SpiceJet,Bangalore,BRONZE,320
+U1004,Sneha Nair,sneha.nair@email.com,+91-9876543213,29,Female,Indian,Compact,Vistara,Chennai,SILVER,1780
+U1005,Vikram Singh,vikram.singh@email.com,+91-9876543214,45,Male,Indian,Luxury,Air India,Delhi,PLATINUM,12500
+U1006,Ananya Gupta,ananya.gupta@email.com,+91-9876543215,26,Female,Indian,Sedan,IndiGo,Hyderabad,BRONZE,450
+U1007,Kiran Kumar,kiran.kumar@email.com,+91-9876543216,38,Male,Indian,MUV,GoAir,Pune,SILVER,2100
+U1008,Deepa Menon,deepa.menon@email.com,+91-9876543217,31,Female,Indian,Compact,SpiceJet,Kochi,BRONZE,680
+U1009,Suresh Reddy,suresh.reddy@email.com,+91-9876543218,42,Male,Indian,SUV,Vistara,Hyderabad,GOLD,4500
+U1010,Meera Joshi,meera.joshi@email.com,+91-9876543219,27,Female,Indian,Sedan,IndiGo,Mumbai,SILVER,1900
+U1011,Aditya Bose,aditya.bose@email.com,+91-9876543220,35,Male,Indian,Luxury,Air India,Kolkata,GOLD,3800
+U1012,Pooja Sharma,pooja.sharma@email.com,+91-9876543221,24,Female,Indian,Hatchback,IndiGo,Jaipur,BRONZE,210
+U1013,Rohit Khanna,rohit.khanna@email.com,+91-9876543222,33,Male,Indian,Sedan,SpiceJet,Ahmedabad,SILVER,1450
+U1014,Kavya Rao,kavya.rao@email.com,+91-9876543223,30,Female,Indian,Compact,Vistara,Bangalore,BRONZE,560
+U1015,Sanjay Mehta,sanjay.mehta@email.com,+91-9876543224,48,Male,Indian,SUV,Air India,Delhi,PLATINUM,15000
+U1016,Lakshmi Iyer,lakshmi.iyer@email.com,+91-9876543225,36,Female,Indian,Sedan,IndiGo,Chennai,SILVER,2300
+U1017,Manish Tiwari,manish.tiwari@email.com,+91-9876543226,29,Male,Indian,Hatchback,GoAir,Lucknow,BRONZE,380
+U1018,Nisha Agarwal,nisha.agarwal@email.com,+91-9876543227,32,Female,Indian,Compact,SpiceJet,Bhopal,BRONZE,720
+U1019,Rajesh Pillai,rajesh.pillai@email.com,+91-9876543228,44,Male,Indian,Luxury,Vistara,Kochi,GOLD,5100
+U1020,Divya Chauhan,divya.chauhan@email.com,+91-9876543229,25,Female,Indian,Sedan,IndiGo,Chandigarh,BRONZE,290

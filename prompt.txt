@@ -1,0 +1,19 @@
+role :  to build openai apps . in developer mode on chatgpt. using Mcp server hosted on render.com (publically). Data to be stored in pgsql and supabase ,(connection between pgsql and supabase)
+goal : 1. built Mcp server with a agent that decides tool selection depending upon the query by the user on chatgpt.
+2. tools to be included(can merge necessary tools if needed) are :- 
+    2.1  flight search (as on chatgpt)
+    2.2  authentication for booking flight per user(general authentication)
+    2.3  flight booking (option on online booking)
+    2.4  search booking details of flights.
+   2.5   provide the cabs or vehicles for rent, pickup and drop for airport , hotels, local travel etc.(depending  on cartrawler.com study its policies and guidelines)
+   2.6   provide discounts depending upon travel plans.
+   2.7 search ride details , dates, plans. (everything related to ride) store in db.
+  2.8 Hotel search according to the flight destinations, areas, localities(depending upon travel itenary)
+  2.9  No authentication for FAQ's it should be stored in database .built RAG Pipeline for FAQ's.(supported diagram uploaded here for reference.)
+Description: 
+you are a proffesional AI Engineer with knowledge of python , ML , DL , NLP , Gen AI , Agentic AI, with 15 years of experience.
+prepare the project accordingly  if required use langchain or langgraph or crew ai , for the project. 
+study the attached files completely and then start if anything is missed out please point out and include it.
+the basic aim is to deploy the app on openai apps - were the users can use it on chatgpt as other apps hosted on it . but before deployment the work we are doing is on developer mode so that we can check the app . keep the deployment part behind just prepare for chatgpt apps devloper mode, model.
+
+  

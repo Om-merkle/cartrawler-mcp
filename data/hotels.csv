@@ -1,0 +1,31 @@
+hotel_id,name,city,area,address,star_rating,price_per_night,amenities,total_rooms,available_rooms,check_in_time,check_out_time,image_url,is_active
+H9001,The Taj Mahal Palace,Mumbai,Colaba,"Apollo Bunder, Colaba, Mumbai 400001",5,18000,"[""wifi"", ""pool"", ""gym"", ""spa"", ""restaurant"", ""bar"", ""concierge"", ""parking""]",560,45,14:00,12:00,,true
+H9002,ITC Maratha,Mumbai,Andheri,"Sahar Airport Road, Andheri East, Mumbai 400099",5,15000,"[""wifi"", ""pool"", ""gym"", ""spa"", ""restaurant"", ""bar"", ""airport_shuttle"", ""parking""]",387,62,14:00,12:00,,true
+H9003,Hotel Sea Princess,Mumbai,Juhu,"Juhu Beach, Juhu, Mumbai 400049",4,8500,"[""wifi"", ""pool"", ""restaurant"", ""bar"", ""parking""]",78,18,14:00,12:00,,true
+H9004,Ibis Mumbai Airport,Mumbai,Andheri,"Cts No 215, Vile Parle East, Mumbai 400099",3,4500,"[""wifi"", ""restaurant"", ""gym"", ""airport_shuttle""]",194,55,14:00,12:00,,true
+H9005,Zostel Mumbai,Mumbai,Bandra,"Pali Naka, Bandra West, Mumbai 400050",2,1200,"[""wifi"", ""lounge"", ""lockers""]",40,12,12:00,11:00,,true
+H9006,The Imperial Hotel,Delhi,Janpath,"Janpath Lane, New Delhi 110001",5,20000,"[""wifi"", ""pool"", ""gym"", ""spa"", ""restaurant"", ""bar"", ""concierge"", ""parking""]",235,28,14:00,12:00,,true
+H9007,Hyatt Regency Delhi,Delhi,Bhikaji Cama,"Bhikaji Cama Place, Ring Road, New Delhi 110066",5,16000,"[""wifi"", ""pool"", ""gym"", ""spa"", ""restaurant"", ""bar"", ""parking""]",520,75,14:00,12:00,,true
+H9008,Lemon Tree Premier,Delhi,Aerocity,"Asset 7, Hospitality District, IGI Airport Area, New Delhi 110037",4,7500,"[""wifi"", ""pool"", ""gym"", ""restaurant"", ""bar"", ""airport_shuttle""]",88,30,14:00,12:00,,true
+H9009,OYO Townhouse,Delhi,Karol Bagh,"15/44 W.E.A. Karol Bagh, New Delhi 110005",3,3200,"[""wifi"", ""restaurant"", ""parking""]",45,20,12:00,11:00,,true
+H9010,The Leela Palace,Bangalore,Airport Road,"23 Airport Road, Bangalore 560008",5,19000,"[""wifi"", ""pool"", ""gym"", ""spa"", ""restaurant"", ""bar"", ""concierge""]",357,40,14:00,12:00,,true
+H9011,Marriott Whitefield,Bangalore,Whitefield,"8, Whitefield Main Road, Bangalore 560066",5,14000,"[""wifi"", ""pool"", ""gym"", ""spa"", ""restaurant"", ""bar"", ""parking""]",391,58,14:00,12:00,,true
+H9012,Novotel Bangalore,Bangalore,Outer Ring Road,"Cessna Business Park, Marathahalli, Bangalore 560037",4,8000,"[""wifi"", ""pool"", ""gym"", ""restaurant"", ""parking""]",164,45,14:00,12:00,,true
+H9013,FabHotel Prime,Bangalore,Koramangala,"80 Feet Road, Koramangala 4th Block, Bangalore 560034",3,3500,"[""wifi"", ""restaurant"", ""parking""]",35,15,13:00,11:00,,true
+H9014,ITC Grand Chola,Chennai,Mount Road,"63 Mount Road, Chennai 600002",5,17000,"[""wifi"", ""pool"", ""gym"", ""spa"", ""restaurant"", ""bar"", ""concierge"", ""parking""]",600,55,14:00,12:00,,true
+H9015,Taj Coromandel,Chennai,Nungambakkam,"37 Mahatma Gandhi Road, Nungambakkam, Chennai 600034",5,15000,"[""wifi"", ""pool"", ""gym"", ""spa"", ""restaurant"", ""bar"", ""parking""]",200,32,14:00,12:00,,true
+H9016,Hyatt Place Chennai,Chennai,Airport,"1 AG-DMS Colony, Airport Road, Chennai 600027",4,7000,"[""wifi"", ""gym"", ""restaurant"", ""airport_shuttle"", ""parking""]",160,48,14:00,12:00,,true
+H9017,Trident Hyderabad,Hyderabad,Hitec City,"Road 1, Banjara Hills, Hyderabad 500034",5,14000,"[""wifi"", ""pool"", ""gym"", ""spa"", ""restaurant"", ""bar""]",143,25,14:00,12:00,,true
+H9018,Marriott Hyderabad,Hyderabad,Begumpet,"Tank Bund Road, Begumpet, Hyderabad 500016",5,13000,"[""wifi"", ""pool"", ""gym"", ""spa"", ""restaurant"", ""bar"", ""parking""]",273,42,14:00,12:00,,true
+H9019,Novotel HICC,Hyderabad,Hitec City,"Opposite Hitec City, Hyderabad 500081",4,8500,"[""wifi"", ""pool"", ""gym"", ""restaurant"", ""parking""]",300,68,14:00,12:00,,true
+H9020,The Oberoi Grand,Kolkata,Park Street,"15 Jawaharlal Nehru Road, Kolkata 700013",5,16000,"[""wifi"", ""pool"", ""gym"", ""spa"", ""restaurant"", ""bar"", ""concierge""]",209,30,14:00,12:00,,true
+H9021,Kenilworth Hotel,Kolkata,Chowringhee,"1-2 Little Russell Street, Kolkata 700071",4,6500,"[""wifi"", ""pool"", ""restaurant"", ""bar"", ""parking""]",100,22,14:00,12:00,,true
+H9022,Radisson Blu Pune,Pune,Kharadi,"Kharadi, Mundhwa Road, Pune 411014",5,11000,"[""wifi"", ""pool"", ""gym"", ""spa"", ""restaurant"", ""bar"", ""parking""]",196,38,14:00,12:00,,true
+H9023,Le Meridien Pune,Pune,Nagar Road,"Nagar Road, Raja Bahadur Mill, Pune 411014",5,12000,"[""wifi"", ""pool"", ""gym"", ""restaurant"", ""bar"", ""parking""]",233,44,14:00,12:00,,true
+H9024,Cidade de Goa,Goa,Vainguinim Beach,"Vainguinim Beach, Dona Paula, Goa 403004",5,18000,"[""wifi"", ""pool"", ""spa"", ""restaurant"", ""bar"", ""beach_access"", ""water_sports""]",210,35,14:00,12:00,,true
+H9025,Taj Fort Aguada,Goa,Candolim,"Sinquerim, Candolim, North Goa 403515",5,22000,"[""wifi"", ""pool"", ""spa"", ""restaurant"", ""bar"", ""beach_access"", ""concierge""]",144,18,14:00,12:00,,true
+H9026,The Lalit Resort Goa,Goa,Canacona,"Raj Baga, Canacona, South Goa 403702",4,12000,"[""wifi"", ""pool"", ""spa"", ""restaurant"", ""bar"", ""beach_access""]",168,42,14:00,12:00,,true
+H9027,Treebo Tryst Goa,Goa,Calangute,"Gaurawaddo, Calangute, North Goa 403516",3,4500,"[""wifi"", ""restaurant"", ""parking""]",30,14,13:00,11:00,,true
+H9028,Jai Mahal Palace,Jaipur,Civil Lines,"Jacob Road, Civil Lines, Jaipur 302006",5,16000,"[""wifi"", ""pool"", ""spa"", ""restaurant"", ""bar"", ""concierge"", ""heritage""]",100,15,14:00,12:00,,true
+H9029,ITC Rajputana,Jaipur,Park Street,"Palace Road, Jaipur 302006",5,14000,"[""wifi"", ""pool"", ""gym"", ""spa"", ""restaurant"", ""bar"", ""parking""]",215,35,14:00,12:00,,true
+H9030,Hotel Pearl Palace,Jaipur,Hathroi,"Hathroi Fort, Amer Road, Jaipur 302002",3,3200,"[""wifi"", ""restaurant"", ""rooftop""]",26,10,12:00,11:00,,true
