@@ -550,5 +550,5 @@ async def agent_query(
 # ─────────────────────────────────────────────────────────────────────────────
 
 def create_mcp_app():
-    """Return the FastMCP ASGI app (Starlette-compatible, SSE transport)."""
-    return mcp.streamable_http_app()
+    """Return the FastMCP ASGI app using SSE transport (ChatGPT-compatible)."""
+    return mcp.sse_app()
