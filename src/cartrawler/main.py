@@ -16,6 +16,11 @@ import sys
 
 import uvicorn
 
+from starlette.applications import Starlette
+from starlette.requests import Request
+from starlette.responses import JSONResponse
+from starlette.routing import Mount, Route
+
 from cartrawler.config import settings
 from cartrawler.mcp_server import create_mcp_app
 
@@ -34,7 +39,18 @@ logger = logging.getLogger("cartrawler")
 # ASGI app (importable by uvicorn / gunicorn)
 # ─────────────────────────────────────────────────────────────────────────────
 
-app = create_mcp_app()
+async def health(request: Request) -> JSONResponse:
+    return JSONResponse({"status": "ok", "service": "cartrawler-mcp"})
+
+
+_mcp_app = create_mcp_app()
+
+app = Starlette(
+    routes=[
+        Route("/health", health),
+        Mount("/", app=_mcp_app),
+    ]
+)
 
 # ─────────────────────────────────────────────────────────────────────────────
 # CLI entry point
