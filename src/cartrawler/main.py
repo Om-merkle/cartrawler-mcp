@@ -99,6 +99,31 @@ async def admin_seed(request: Request) -> JSONResponse:
         return JSONResponse({"status": "error", "message": str(exc)}, status_code=500)
 
 
+async def admin_embed(request: Request) -> JSONResponse:
+    """
+    POST /admin/embed
+    Header: Authorization: Bearer <SEED_SECRET>
+
+    Generates OpenAI embeddings for all knowledge_base rows and stores
+    them in knowledge_base_embeddings for RAG-powered FAQ queries.
+    """
+    seed_secret = os.environ.get("SEED_SECRET", "")
+    if not seed_secret:
+        return JSONResponse({"error": "SEED_SECRET env var not set"}, status_code=503)
+    if request.headers.get("Authorization") != f"Bearer {seed_secret}":
+        return JSONResponse({"error": "Unauthorized"}, status_code=401)
+
+    try:
+        from cartrawler.admin.embedder import run_embed
+        logger.info("Starting embedding build…")
+        result = await run_embed(rebuild=True)
+        logger.info("Embedding complete: %s", result)
+        return JSONResponse({"status": "ok", **result})
+    except Exception as exc:
+        logger.exception("Embed failed: %s", exc)
+        return JSONResponse({"status": "error", "message": str(exc)}, status_code=500)
+
+
 _mcp_app = create_mcp_app()
 
 app = Starlette(
@@ -106,6 +131,7 @@ app = Starlette(
         Route("/health", health),
         Route("/admin/dbcheck", admin_dbcheck),
         Route("/admin/seed", admin_seed, methods=["POST"]),
+        Route("/admin/embed", admin_embed, methods=["POST"]),
         Mount("/", app=_mcp_app),
     ]
 )
