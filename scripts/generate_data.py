@@ -558,14 +558,15 @@ if __name__ == "__main__":
          "session_duration_secs","created_at"],
         gen_sessions())
 
-    # Knowledge base: read existing rows + append 20 new ones
+    # Knowledge base: read existing rows (skip any already in KB_EXTRA) + append 20 new ones
     kb_path = DATA_DIR / "knowledge_base.csv"
     kb_rows = []
+    extra_ids = {row[0] for row in KB_EXTRA}
     if kb_path.exists():
         with open(kb_path, "r", encoding="utf-8") as f:
             reader = csv.reader(f)
             next(reader, None)  # skip header
-            kb_rows.extend(list(reader))
+            kb_rows.extend([row for row in reader if row[0] not in extra_ids])
     kb_rows.extend(KB_EXTRA)
     write_csv("knowledge_base.csv",
         ["kb_id","topic","content","embedding_ready","chunk_type","language","last_updated"],

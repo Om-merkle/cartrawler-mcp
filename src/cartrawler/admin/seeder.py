@@ -58,7 +58,19 @@ def _float_or_none(val: str) -> float | None:
 
 def _date_or_none(val: str) -> date | None:
     v = str(val).strip()
-    return date.fromisoformat(v[:10]) if v else None
+    if not v:
+        return None
+    # Try ISO format YYYY-MM-DD first
+    try:
+        return date.fromisoformat(v[:10])
+    except ValueError:
+        pass
+    # Fall back to DD-MM-YYYY (Excel / Indian locale format)
+    try:
+        from datetime import datetime as _dt
+        return _dt.strptime(v[:10], "%d-%m-%Y").date()
+    except ValueError:
+        return None
 
 
 def _json_or_none(val: str) -> Any:
@@ -224,7 +236,14 @@ async def _seed_sessions(session: AsyncSession) -> int:
 
 
 async def _seed_knowledge_base(session: AsyncSession) -> int:
-    rows = _read_csv("knowledge_base.csv")
+    all_rows = _read_csv("knowledge_base.csv")
+    # Deduplicate by kb_id (CSV may have duplicates from repeated generation)
+    seen: set[str] = set()
+    rows = []
+    for r in all_rows:
+        if r["kb_id"] not in seen:
+            seen.add(r["kb_id"])
+            rows.append(r)
     session.add_all([KnowledgeBase(
         kb_id=r["kb_id"], topic=r["topic"], content=r["content"],
         embedding_ready=_bool(r.get("embedding_ready", "false")),
