@@ -43,6 +43,28 @@ async def health(request: Request) -> JSONResponse:
     return JSONResponse({"status": "ok", "service": "cartrawler-mcp"})
 
 
+async def admin_dbcheck(_request: Request) -> JSONResponse:
+    """GET /admin/dbcheck — verify DB connectivity and show sanitised URL."""
+    from sqlalchemy import text
+    from cartrawler.db.database import engine
+
+    url = settings.database_url
+    # Hide password in response
+    try:
+        from urllib.parse import urlparse, urlunparse
+        p = urlparse(url)
+        safe_url = urlunparse(p._replace(netloc=f"{p.username}:***@{p.hostname}:{p.port}"))
+    except Exception:
+        safe_url = url[:40] + "…"
+
+    try:
+        async with engine.connect() as conn:
+            await conn.execute(text("SELECT 1"))
+        return JSONResponse({"db": "ok", "url": safe_url})
+    except Exception as exc:
+        return JSONResponse({"db": "error", "url": safe_url, "error": str(exc)}, status_code=500)
+
+
 async def admin_seed(request: Request) -> JSONResponse:
     """
     POST /admin/seed
@@ -82,6 +104,7 @@ _mcp_app = create_mcp_app()
 app = Starlette(
     routes=[
         Route("/health", health),
+        Route("/admin/dbcheck", admin_dbcheck),
         Route("/admin/seed", admin_seed, methods=["POST"]),
         Mount("/", app=_mcp_app),
     ]
