@@ -280,7 +280,7 @@ def gen_cars():
                    "MUV":random.randint(2500,3800),"Luxury":random.randint(7000,12000)}
         ppd = ppd_map[car_type]
         pph = round(ppd/7)
-        with_driver = "true" if car_type == "MUV" and random.random()>0.6 else "false"
+        with_driver = "true" if (car_type in ["MUV","Sedan","SUV"] and random.random()>0.55) else "false"
         avail = random.choices(["true","false"],[0.85,0.15])[0]
         rating = round(random.uniform(3.5,5.0),1)
         reviews = random.randint(50,500)

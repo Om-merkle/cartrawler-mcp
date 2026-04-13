@@ -10,7 +10,6 @@ Hosted on : Render.com
 """
 from __future__ import annotations
 
-import json
 from typing import Any
 
 from mcp.server.fastmcp import FastMCP
@@ -71,11 +70,7 @@ When a user asks about flights or hotel bookings:
 
 def _auth_card(action: str = "continue") -> str:
     """Return a formatted authentication-required card."""
-    return json.dumps({
-        "success": False,
-        "card": "AUTH_REQUIRED",
-        "display": f"""
-## 🔐 Login Required
+    return f"""## 🔐 Login Required
 
 To **{action}**, please authenticate first.
 
@@ -91,19 +86,13 @@ Use the **`login`** tool with your `email` and `password`.
 
 > Your session token is valid for **30 minutes**.
 > Use `refresh_session` to extend it without re-logging in.
-""",
-        "message": f"Authentication required to {action}. Please login or register."
-    })
+"""
 
 
 def _flight_redirect_card(destination_city: str = "") -> str:
     """Return a flight-redirect card with car rental pitch."""
     car_pitch = f"\n\n---\n\n### 🚗 Need a Car in {destination_city}?\nI can find you the best rental cars! Just say **\"find cars in {destination_city}\"**." if destination_city else "\n\n---\n\n### 🚗 Need a Rental Car at Your Destination?\nTell me the city and I'll find you the best deals!"
-    return json.dumps({
-        "success": False,
-        "card": "FLIGHT_REDIRECT",
-        "display": f"""
-## ✈️ Flight Bookings — Not My Department!
+    return f"""## ✈️ Flight Bookings — Not My Department!
 
 CarTrawler specialises in **car rentals**. For flights, please use:
 
@@ -114,19 +103,13 @@ CarTrawler specialises in **car rentals**. For flights, please use:
 | 🇮🇳 **IndiGo / Air India** apps | Direct airline booking |
 
 {car_pitch}
-""",
-        "message": "CarTrawler handles car rentals only. Please use a flight booking app for flights."
-    })
+"""
 
 
 def _hotel_redirect_card(city: str = "") -> str:
     """Return a hotel-redirect card with car rental pitch."""
     car_pitch = f"\n\n---\n\n### 🚗 Need a Car in {city}?\nI can find rental cars from top vendors like Zoomcar, Avis & Savaari. Just ask!" if city else "\n\n---\n\n### 🚗 Planning to Explore?\nRent a car and go wherever you want — no fixed routes, no schedules!"
-    return json.dumps({
-        "success": False,
-        "card": "HOTEL_REDIRECT",
-        "display": f"""
-## 🏨 Hotel Bookings — Not My Department!
+    return f"""## 🏨 Hotel Bookings — Not My Department!
 
 CarTrawler specialises in **car rentals**. For hotels, please use:
 
@@ -137,9 +120,7 @@ CarTrawler specialises in **car rentals**. For hotels, please use:
 | 🛎️ **Oyo / Treebo** apps | Budget stays in India |
 
 {car_pitch}
-""",
-        "message": "CarTrawler handles car rentals only. Please use a hotel booking app for hotels."
-    })
+"""
 
 
 def _format_cars(result: dict) -> str:
@@ -147,10 +128,7 @@ def _format_cars(result: dict) -> str:
     cars = result.get("cars", [])
     if not cars:
         city = result.get("city", "this city")
-        return json.dumps({
-            **result,
-            "display": f"## 🚗 No Cars Available\n\nNo rental cars found in **{city}** matching your criteria.\n\nTry adjusting the car type, price range, or date."
-        })
+        return f"## 🚗 No Cars Available\n\nNo rental cars found in **{city}** matching your criteria.\n\nTry adjusting the car type, price range, or date."
 
     rows = []
     for c in cars[:10]:  # show max 10 in card
@@ -180,13 +158,13 @@ def _format_cars(result: dict) -> str:
 💡 **To book:** Use the `book_rental_car` tool with the Car ID, pickup date, and number of days.
 🏷️ **Offers:** Use `list_offers` to find car rental discounts like `CAR10`, `WEEKEND15`.
 """
-    return json.dumps({**result, "display": display})
+    return display
 
 
 def _format_booking_confirmation(result: dict) -> str:
     """Format a booking confirmation as a display card."""
     if not result.get("success"):
-        return json.dumps({**result, "display": f"## ❌ Booking Failed\n\n{result.get('message', 'Unknown error')}"})
+        return f"## ❌ Booking Failed\n\n{result.get('message', 'Unknown error')}"
 
     b = result.get("booking", {})
     display = f"""## ✅ Booking Confirmed!
@@ -210,13 +188,13 @@ def _format_booking_confirmation(result: dict) -> str:
 > 🔑 Save your Booking ID for cancellations or enquiries.
 > ⛽ Fuel not included. Security deposit collected at pickup.
 """
-    return json.dumps({**result, "display": display})
+    return display
 
 
 def _format_profile(result: dict) -> str:
     """Format user profile as a display card."""
     if not result.get("success"):
-        return json.dumps({**result, "display": f"## ❌ {result.get('message', 'Error')}"})
+        return f"## ❌ {result.get('message', 'Error')}"
 
     p = result.get("profile", {})
     tier_emoji = {"BRONZE": "🥉", "SILVER": "🥈", "GOLD": "🥇", "PLATINUM": "💎"}.get(p.get("loyalty_tier", ""), "🎖️")
@@ -240,14 +218,14 @@ def _format_profile(result: dict) -> str:
 ---
 > 🥉 Bronze: 0–999 pts &nbsp; 🥈 Silver: 1,000–2,499 pts &nbsp; 🥇 Gold: 2,500–4,999 pts &nbsp; 💎 Platinum: 5,000+ pts
 """
-    return json.dumps({**result, "display": display})
+    return display
 
 
 def _format_offers(result: dict) -> str:
     """Format car rental offers as a display card."""
     offers = result.get("offers", [])
     if not offers:
-        return json.dumps({**result, "display": "## 🏷️ No Active Offers\n\nCheck back soon for new car rental deals!"})
+        return "## 🏷️ No Active Offers\n\nCheck back soon for new car rental deals!"
 
     rows = []
     for o in offers:
@@ -268,7 +246,7 @@ def _format_offers(result: dict) -> str:
 ---
 💡 Apply any coupon code when using `book_rental_car`.
 """
-    return json.dumps({**result, "display": display})
+    return display
 
 
 # ═════════════════════════════════════════════════════════════════════════════
@@ -299,7 +277,7 @@ async def register(
     )
     if result.get("success"):
         tokens = result.get("tokens", {})
-        display = f"""## 🎉 Welcome to CarTrawler, {name}!
+        return f"""## 🎉 Welcome to CarTrawler, {name}!
 
 Your account has been created successfully.
 
@@ -311,20 +289,22 @@ Your account has been created successfully.
 | **Loyalty Tier** | 🥉 Bronze |
 | **Points** | 0 pts |
 
-### 🔑 Your Session Token
+### 🔑 Your Access Token
 ```
-{tokens.get('access_token', '—')[:40]}...
+{tokens.get('access_token', '—')}
 ```
-> ⚠️ Save this token — it expires in **30 minutes**.
-> Use `login` to get a fresh token anytime.
+
+### 🔄 Your Refresh Token
+```
+{tokens.get('refresh_token', '—')}
+```
+
+> ⚠️ Token expires in **30 minutes**. Use `refresh_session` to renew.
 
 ---
 🚗 **Ready to book your first car?** Try `find_cars` with your city!
 """
-        result["display"] = display
-    else:
-        result["display"] = f"## ❌ Registration Failed\n\n{result.get('message', 'Unknown error')}"
-    return json.dumps(result, default=str)
+    return f"## ❌ Registration Failed\n\n{result.get('message', 'Unknown error')}"
 
 
 @mcp.tool()
@@ -340,7 +320,7 @@ async def login(email: str, password: str) -> str:
         tokens = result.get("tokens", {})
         tier = tokens.get("loyalty_tier", "BRONZE")
         tier_emoji = {"BRONZE": "🥉", "SILVER": "🥈", "GOLD": "🥇", "PLATINUM": "💎"}.get(tier, "🎖️")
-        display = f"""## ✅ Login Successful
+        return f"""## ✅ Login Successful
 
 Welcome back, **{tokens.get('name', 'User')}**! 👋
 
@@ -351,10 +331,16 @@ Welcome back, **{tokens.get('name', 'User')}**! 👋
 | **Loyalty Tier** | {tier_emoji} {tier} |
 | **Points** | {tokens.get('loyalty_points', 0):,} pts |
 
-### 🔑 Your Session Token
+### 🔑 Your Access Token
 ```
-{tokens.get('access_token', '—')[:40]}...
+{tokens.get('access_token', '—')}
 ```
+
+### 🔄 Your Refresh Token
+```
+{tokens.get('refresh_token', '—')}
+```
+
 > ⚠️ Token expires in **30 minutes**. Use `refresh_session` to renew.
 
 ---
@@ -363,10 +349,7 @@ Welcome back, **{tokens.get('name', 'User')}**! 👋
 - `my_bookings` — View your bookings
 - `my_profile` — View your profile
 """
-        result["display"] = display
-    else:
-        result["display"] = f"## ❌ Login Failed\n\n{result.get('message', 'Incorrect email or password.')}"
-    return json.dumps(result, default=str)
+    return f"## ❌ Login Failed\n\n{result.get('message', 'Incorrect email or password.')}"
 
 
 @mcp.tool()
@@ -379,10 +362,16 @@ async def refresh_session(refresh_token: str) -> str:
     result = await refresh_tokens(refresh_token=refresh_token)
     if result.get("success"):
         tokens = result.get("tokens", {})
-        result["display"] = f"## 🔄 Session Renewed\n\nNew token: `{tokens.get('access_token', '')[:40]}...`\n\n> Valid for another 30 minutes."
-    else:
-        result["display"] = f"## ❌ Session Expired\n\n{result.get('message', '')}\n\nPlease use the `login` tool to sign in again."
-    return json.dumps(result, default=str)
+        return f"""## 🔄 Session Renewed
+
+### 🔑 New Access Token
+```
+{tokens.get('access_token', '—')}
+```
+
+> Valid for another **30 minutes**.
+"""
+    return f"## ❌ Session Expired\n\n{result.get('message', '')}\n\nPlease use the `login` tool to sign in again."
 
 
 @mcp.tool()
@@ -398,9 +387,8 @@ async def my_profile(access_token: str) -> str:
 @mcp.tool()
 async def logout(access_token: str) -> str:
     """Log out and invalidate your current session token."""
-    result = await logout_user(access_token=access_token)
-    result["display"] = "## 👋 Logged Out\n\nYou have been logged out of CarTrawler.\n\nUse `login` to sign in again."
-    return json.dumps(result, default=str)
+    await logout_user(access_token=access_token)
+    return "## 👋 Logged Out\n\nYou have been logged out of CarTrawler.\n\nUse `login` to sign in again."
 
 
 # ═════════════════════════════════════════════════════════════════════════════
@@ -421,8 +409,6 @@ async def find_flights(
     a car rental suggestion for their destination.
     """
     card = _flight_redirect_card(destination_city)
-    result = json.loads(card)
-    # Auto-pitch: search cars at destination if city provided
     if destination_city:
         try:
             cars_result = await search_cars(city=destination_city, limit=3)
@@ -432,11 +418,10 @@ async def find_flights(
                     f"- **{c.get('car_model','Car')}** ({c.get('car_type','')}) — ₹{int(c.get('price_per_day',0)):,}/day @ {c.get('vendor','')}"
                     for c in top_cars
                 )
-                result["display"] += f"\n### 🔥 Top Cars in {destination_city}\n{car_lines}\n\n> 👉 Use `find_cars` with city=**\"{destination_city}\"** to see all options."
-                result["car_suggestions"] = top_cars
+                card += f"\n### 🔥 Top Cars in {destination_city}\n{car_lines}\n\n> 👉 Use `find_cars` with city=**\"{destination_city}\"** to see all options."
         except Exception:
             pass
-    return json.dumps(result, default=str)
+    return card
 
 
 @mcp.tool()
@@ -469,7 +454,6 @@ async def find_hotels(
     a car rental suggestion for their stay.
     """
     card = _hotel_redirect_card(city)
-    result = json.loads(card)
     if city:
         try:
             cars_result = await search_cars(city=city, limit=3)
@@ -479,11 +463,10 @@ async def find_hotels(
                     f"- **{c.get('car_model','Car')}** ({c.get('car_type','')}) — ₹{int(c.get('price_per_day',0)):,}/day @ {c.get('vendor','')}"
                     for c in top_cars
                 )
-                result["display"] += f"\n### 🔥 Available Cars in {city}\n{car_lines}\n\n> 👉 Use `find_cars` with city=**\"{city}\"** to book."
-                result["car_suggestions"] = top_cars
+                card += f"\n### 🔥 Available Cars in {city}\n{car_lines}\n\n> 👉 Use `find_cars` with city=**\"{city}\"** to book."
         except Exception:
             pass
-    return json.dumps(result, default=str)
+    return card
 
 
 @mcp.tool()
@@ -552,7 +535,7 @@ async def car_details(car_id: str) -> str:
     """
     result = await get_car_details(car_id=car_id)
     if not result.get("success"):
-        return json.dumps({**result, "display": f"## ❌ Car Not Found\n\n`{car_id}` was not found."})
+        return f"## ❌ Car Not Found\n\n`{car_id}` was not found."
 
     c = result.get("car", {})
     ins = "✅ Included" if c.get("insurance_included") else "❌ Not Included"
@@ -590,7 +573,7 @@ async def car_details(car_id: str) -> str:
 ---
 > 👉 Ready to book? Use `book_rental_car` with Car ID `{c.get('car_id', car_id)}`
 """
-    return json.dumps({**result, "display": display})
+    return display
 
 
 @mcp.tool()
@@ -670,7 +653,7 @@ async def my_bookings(
 
 > Use `cancel_booking` with a Booking ID to cancel a booking.
 """
-    return json.dumps({**result, "display": display})
+    return display
 
 
 @mcp.tool()
@@ -700,7 +683,7 @@ async def cancel_booking(access_token: str, booking_id: str) -> str:
 """
     else:
         display = f"## ❌ Cancellation Failed\n\n{result.get('message', 'Could not cancel booking.')}"
-    return json.dumps({**result, "display": display})
+    return display
 
 
 @mcp.tool()
@@ -722,7 +705,11 @@ async def my_rides(
         travel_date=travel_date or None,
         status_filter=status_filter or None,
     )
-    return json.dumps(result, default=str)
+    rides = result.get("rides", [])
+    if not rides:
+        return "## 🚕 My Rides\n\nNo rides found."
+    rows = [f"| `{r.get('booking_id','—')}` | {r.get('car_id','—')} | {r.get('travel_date','—')} | {r.get('status','—')} |" for r in rides]
+    return f"## 🚕 My Rides\n\n| Booking ID | Car | Date | Status |\n|-----------|-----|------|--------|\n" + "\n".join(rows)
 
 
 # ═════════════════════════════════════════════════════════════════════════════
@@ -794,7 +781,7 @@ async def validate_car_coupon(
 """
     else:
         display = f"## ❌ Coupon Invalid\n\n`{coupon_code}` — {result.get('message', 'Not applicable.')}\n\nTry `car_offers` to see valid codes."
-    return json.dumps({**result, "display": display})
+    return display
 
 
 # ═════════════════════════════════════════════════════════════════════════════
@@ -815,8 +802,7 @@ async def faq(question: str) -> str:
     sources = result.get("sources", [])
 
     if result.get("success") and sources:
-        source_text = "\n".join(f"- {s}" for s in sources[:3]) if sources else ""
-        display = f"""## 💬 CarTrawler FAQ
+        return f"""## 💬 CarTrawler FAQ
 
 **Q: {question}**
 
@@ -827,8 +813,7 @@ async def faq(question: str) -> str:
 ---
 *Based on {len(sources)} knowledge base source(s)*
 """
-    else:
-        display = f"""## 💬 CarTrawler FAQ
+    return f"""## 💬 CarTrawler FAQ
 
 **Q: {question}**
 
@@ -839,7 +824,6 @@ async def faq(question: str) -> str:
 ---
 > 📞 For further help: Contact CarTrawler support
 """
-    return json.dumps({**result, "display": display})
 
 
 # ─────────────────────────────────────────────────────────────────────────────
