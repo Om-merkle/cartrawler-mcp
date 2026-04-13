@@ -1,6 +1,5 @@
 from .jwt_handler import create_access_token, create_refresh_token, verify_token
 from .password import hash_password, verify_password
-from .schemas import TokenPair, UserCreate, UserLogin, UserOut
 
 __all__ = [
     "create_access_token",
@@ -8,8 +7,4 @@ __all__ = [
     "verify_token",
     "hash_password",
     "verify_password",
-    "TokenPair",
-    "UserCreate",
-    "UserLogin",
-    "UserOut",
 ]
