@@ -286,7 +286,7 @@ async def run_seed() -> dict[str, int]:
         logger.info("Recreating tables…")
         await conn.run_sync(Base.metadata.create_all)
 
-    results: dict[str, int] = {}
+    results: dict[str, object] = {}
     async with AsyncSession(engine) as session:
         for table_name, seeder in _SEEDERS:
             try:
@@ -296,8 +296,9 @@ async def run_seed() -> dict[str, int]:
                 logger.info("  seeded %-20s %d rows", table_name, count)
             except Exception as exc:
                 await session.rollback()
-                logger.error("  FAILED %-20s %s", table_name, exc)
-                results[table_name] = -1
+                error_msg = str(exc)
+                logger.error("  FAILED %-20s %s", table_name, error_msg)
+                results[table_name] = {"error": error_msg}
 
     logger.info("Seed complete: %s", results)
     return results
