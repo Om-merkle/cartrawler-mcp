@@ -1,201 +1,201 @@
 session_id,user_id,channel,intent,context,resolved,session_duration_secs,created_at
-S2001,U1071,VOICE_ASSISTANT,search_flights,"{""source"": ""MAA"", ""destination"": ""BOM""}",true,731,2026-04-10T22:24:00
-S2002,U1075,VOICE_ASSISTANT,book_car,"{""city"": ""Goa"", ""car_type"": ""Luxury""}",true,554,2026-04-05T14:24:00
-S2003,U1005,VOICE_ASSISTANT,check_offers,"{""booking_type"": ""CAR""}",true,791,2026-04-02T21:14:00
-S2004,U1148,MOBILE_APP,check_offers,"{""booking_type"": ""FLIGHT""}",true,548,2026-04-10T10:41:00
-S2005,U1080,WHATSAPP_BOT,book_combo,"{""source"": ""BLR"", ""destination"": ""BOM"", ""car_type"": ""Sedan""}",true,272,2026-04-08T14:05:00
-S2006,U1037,VOICE_ASSISTANT,ask_refund,{},true,640,2026-04-04T08:49:00
-S2007,U1127,WHATSAPP_BOT,check_offers,"{""booking_type"": ""CAR""}",true,214,2026-04-01T17:44:00
-S2008,U1145,VOICE_ASSISTANT,book_flight,"{""source"": ""JAI"", ""destination"": ""DEL""}",true,833,2026-04-09T22:34:00
-S2009,U1128,WHATSAPP_BOT,search_flights,"{""source"": ""MAA"", ""destination"": ""DEL""}",true,554,2026-04-09T09:58:00
-S2010,U1027,VOICE_ASSISTANT,book_car,"{""city"": ""Chandigarh"", ""car_type"": ""SUV""}",true,225,2026-04-09T10:10:00
-S2011,U1051,VOICE_ASSISTANT,book_car,"{""city"": ""Delhi"", ""car_type"": ""Luxury""}",true,701,2026-04-09T22:08:00
-S2012,U1192,VOICE_ASSISTANT,check_offers,"{""booking_type"": ""FLIGHT""}",true,505,2026-04-05T15:33:00
-S2013,U1083,WHATSAPP_BOT,book_combo,"{""source"": ""DEL"", ""destination"": ""HYD"", ""car_type"": ""Hatchback""}",true,269,2026-04-10T18:33:00
-S2014,U1155,WHATSAPP_BOT,ask_refund,{},true,398,2026-04-12T11:10:00
-S2015,U1135,VOICE_ASSISTANT,book_flight,"{""source"": ""MAA"", ""destination"": ""DEL""}",true,213,2026-04-08T09:00:00
-S2016,U1080,WEB,search_flights,"{""source"": ""MAA"", ""destination"": ""BOM""}",true,398,2026-04-02T08:39:00
-S2017,U1120,WEB,book_car,"{""city"": ""Kochi"", ""car_type"": ""Compact""}",true,291,2026-04-06T07:59:00
-S2018,U1050,WHATSAPP_BOT,ask_faq,"{""question"": ""coupon codes""}",true,373,2026-04-06T19:59:00
-S2019,U1066,WEB,book_car,"{""city"": ""Visakhapatnam"", ""car_type"": ""SUV""}",true,281,2026-04-05T12:16:00
-S2020,U1145,MOBILE_APP,book_combo,"{""source"": ""HYD"", ""destination"": ""BLR"", ""car_type"": ""MUV""}",true,452,2026-04-06T15:51:00
-S2021,U1189,VOICE_ASSISTANT,search_flights,"{""source"": ""CCU"", ""destination"": ""DEL""}",true,297,2026-04-04T09:59:00
-S2022,U1158,WEB,book_combo,"{""source"": ""CCU"", ""destination"": ""DEL"", ""car_type"": ""Luxury""}",false,391,2026-04-02T08:08:00
-S2023,U1131,VOICE_ASSISTANT,check_offers,"{""booking_type"": ""BOTH""}",true,369,2026-04-09T10:15:00
-S2024,U1144,VOICE_ASSISTANT,check_offers,"{""booking_type"": ""CAR""}",true,423,2026-04-05T17:33:00
-S2025,U1021,WEB,book_combo,"{""source"": ""JAI"", ""destination"": ""DEL"", ""car_type"": ""Compact""}",true,507,2026-04-09T21:31:00
-S2026,U1178,WHATSAPP_BOT,book_car,"{""city"": ""Coimbatore"", ""car_type"": ""Luxury""}",true,242,2026-04-01T18:54:00
-S2027,U1120,WHATSAPP_BOT,check_offers,"{""booking_type"": ""FLIGHT""}",true,255,2026-04-07T18:11:00
-S2028,U1192,MOBILE_APP,search_flights,"{""source"": ""DEL"", ""destination"": ""LKO""}",true,259,2026-04-01T16:21:00
-S2029,U1025,WHATSAPP_BOT,ask_faq,"{""question"": ""cancellation policy""}",true,94,2026-04-11T15:41:00
-S2030,U1123,VOICE_ASSISTANT,book_flight,"{""source"": ""DEL"", ""destination"": ""JAI""}",true,118,2026-04-10T07:55:00
-S2031,U1184,VOICE_ASSISTANT,ask_refund,{},true,544,2026-04-12T10:02:00
-S2032,U1095,MOBILE_APP,book_combo,"{""source"": ""DEL"", ""destination"": ""CCU"", ""car_type"": ""SUV""}",true,182,2026-04-01T21:40:00
-S2033,U1182,MOBILE_APP,cancel_booking,"{""booking_id"": ""B7025""}",false,344,2026-04-04T07:21:00
-S2034,U1173,WHATSAPP_BOT,book_combo,"{""source"": ""JAI"", ""destination"": ""BOM"", ""car_type"": ""Compact""}",false,588,2026-04-01T19:26:00
-S2035,U1171,MOBILE_APP,book_car,"{""city"": ""Pune"", ""car_type"": ""MUV""}",true,333,2026-04-02T12:28:00
-S2036,U1012,WHATSAPP_BOT,search_flights,"{""source"": ""BLR"", ""destination"": ""HYD""}",true,710,2026-04-12T07:19:00
-S2037,U1071,WHATSAPP_BOT,book_car,"{""city"": ""Lucknow"", ""car_type"": ""Luxury""}",true,773,2026-04-02T21:05:00
-S2038,U1030,MOBILE_APP,book_combo,"{""source"": ""BLR"", ""destination"": ""BOM"", ""car_type"": ""SUV""}",true,701,2026-04-01T12:50:00
-S2039,U1003,WEB,cancel_booking,"{""booking_id"": ""B7118""}",true,801,2026-04-04T16:53:00
-S2040,U1175,WEB,book_combo,"{""source"": ""AMD"", ""destination"": ""BOM"", ""car_type"": ""Sedan""}",true,353,2026-04-03T15:08:00
-S2041,U1145,WHATSAPP_BOT,check_offers,"{""booking_type"": ""FLIGHT""}",true,339,2026-04-04T12:18:00
-S2042,U1067,VOICE_ASSISTANT,ask_faq,"{""question"": ""refund status""}",true,652,2026-04-06T18:49:00
-S2043,U1165,VOICE_ASSISTANT,book_combo,"{""source"": ""DEL"", ""destination"": ""BLR"", ""car_type"": ""MUV""}",true,610,2026-04-10T13:44:00
-S2044,U1112,WHATSAPP_BOT,ask_faq,"{""question"": ""loyalty points""}",true,575,2026-04-09T15:05:00
-S2045,U1132,WEB,ask_faq,"{""question"": ""loyalty points""}",true,92,2026-04-02T12:30:00
-S2046,U1036,VOICE_ASSISTANT,cancel_booking,"{""booking_id"": ""B7096""}",true,734,2026-04-10T08:20:00
-S2047,U1180,MOBILE_APP,cancel_booking,"{""booking_id"": ""B7003""}",true,546,2026-04-06T17:41:00
-S2048,U1026,WEB,cancel_booking,"{""booking_id"": ""B7079""}",true,619,2026-04-03T07:28:00
-S2049,U1158,VOICE_ASSISTANT,check_offers,"{""booking_type"": ""BOTH""}",true,309,2026-04-05T18:38:00
-S2050,U1087,VOICE_ASSISTANT,check_offers,"{""booking_type"": ""CAR""}",true,299,2026-04-09T10:26:00
-S2051,U1110,WHATSAPP_BOT,check_offers,"{""booking_type"": ""BOTH""}",true,584,2026-04-03T16:56:00
-S2052,U1153,WEB,book_combo,"{""source"": ""HYD"", ""destination"": ""DEL"", ""car_type"": ""Compact""}",true,115,2026-04-02T16:50:00
-S2053,U1197,WEB,cancel_booking,"{""booking_id"": ""B7118""}",true,531,2026-04-01T11:12:00
-S2054,U1045,WHATSAPP_BOT,ask_faq,"{""question"": ""refund status""}",true,268,2026-04-07T09:46:00
-S2055,U1063,WEB,check_booking,{},true,443,2026-04-01T22:10:00
-S2056,U1089,MOBILE_APP,ask_refund,{},true,463,2026-04-12T13:58:00
-S2057,U1121,VOICE_ASSISTANT,ask_refund,{},true,841,2026-04-02T19:08:00
-S2058,U1082,WEB,check_offers,"{""booking_type"": ""CAR""}",false,899,2026-04-11T20:38:00
-S2059,U1101,MOBILE_APP,cancel_booking,"{""booking_id"": ""B7126""}",true,660,2026-04-01T14:56:00
-S2060,U1156,WEB,search_flights,"{""source"": ""BLR"", ""destination"": ""MAA""}",true,573,2026-04-01T19:58:00
-S2061,U1020,WEB,book_combo,"{""source"": ""CCU"", ""destination"": ""BOM"", ""car_type"": ""SUV""}",true,369,2026-04-07T09:21:00
-S2062,U1099,WEB,check_offers,"{""booking_type"": ""FLIGHT""}",true,456,2026-04-11T22:02:00
-S2063,U1067,VOICE_ASSISTANT,book_combo,"{""source"": ""CCU"", ""destination"": ""DEL"", ""car_type"": ""Luxury""}",true,168,2026-04-08T09:22:00
-S2064,U1176,MOBILE_APP,check_offers,"{""booking_type"": ""FLIGHT""}",true,191,2026-04-10T19:43:00
-S2065,U1117,MOBILE_APP,ask_refund,{},true,746,2026-04-07T20:49:00
-S2066,U1014,WHATSAPP_BOT,check_offers,"{""booking_type"": ""CAR""}",true,178,2026-04-10T21:32:00
-S2067,U1096,VOICE_ASSISTANT,cancel_booking,"{""booking_id"": ""B7137""}",false,174,2026-04-03T20:34:00
-S2068,U1195,VOICE_ASSISTANT,book_car,"{""city"": ""Hyderabad"", ""car_type"": ""Sedan""}",true,784,2026-04-10T15:12:00
-S2069,U1132,VOICE_ASSISTANT,check_offers,"{""booking_type"": ""FLIGHT""}",true,100,2026-04-02T22:29:00
-S2070,U1094,MOBILE_APP,cancel_booking,"{""booking_id"": ""B7065""}",true,751,2026-04-05T07:34:00
-S2071,U1069,WEB,ask_faq,"{""question"": ""payment methods""}",true,517,2026-04-06T16:40:00
-S2072,U1010,MOBILE_APP,cancel_booking,"{""booking_id"": ""B7188""}",true,816,2026-04-07T14:11:00
-S2073,U1022,MOBILE_APP,book_combo,"{""source"": ""DEL"", ""destination"": ""HYD"", ""car_type"": ""Compact""}",true,341,2026-04-06T21:44:00
-S2074,U1159,WEB,check_booking,{},true,101,2026-04-02T17:23:00
-S2075,U1010,WEB,book_car,"{""city"": ""Chandigarh"", ""car_type"": ""MUV""}",false,140,2026-04-06T16:27:00
-S2076,U1103,MOBILE_APP,book_combo,"{""source"": ""DEL"", ""destination"": ""JAI"", ""car_type"": ""Compact""}",true,141,2026-04-07T10:50:00
-S2077,U1050,WHATSAPP_BOT,ask_faq,"{""question"": ""loyalty points""}",true,110,2026-04-06T22:13:00
-S2078,U1195,VOICE_ASSISTANT,ask_faq,"{""question"": ""baggage allowance""}",true,747,2026-04-01T19:58:00
-S2079,U1047,WHATSAPP_BOT,ask_faq,"{""question"": ""cancellation policy""}",true,79,2026-04-07T11:17:00
-S2080,U1069,VOICE_ASSISTANT,cancel_booking,"{""booking_id"": ""B7025""}",true,78,2026-04-12T17:14:00
-S2081,U1017,WHATSAPP_BOT,ask_refund,{},true,710,2026-04-10T17:34:00
-S2082,U1100,VOICE_ASSISTANT,check_booking,{},true,408,2026-04-06T18:52:00
-S2083,U1114,WEB,ask_refund,{},false,570,2026-04-04T12:43:00
-S2084,U1100,WHATSAPP_BOT,check_offers,"{""booking_type"": ""FLIGHT""}",true,645,2026-04-02T22:35:00
-S2085,U1089,MOBILE_APP,search_flights,"{""source"": ""HYD"", ""destination"": ""BLR""}",true,358,2026-04-06T21:43:00
-S2086,U1120,MOBILE_APP,book_combo,"{""source"": ""MAA"", ""destination"": ""HYD"", ""car_type"": ""MUV""}",true,420,2026-04-10T20:26:00
-S2087,U1196,MOBILE_APP,ask_faq,"{""question"": ""hotel check-in time""}",false,444,2026-04-09T11:24:00
-S2088,U1156,MOBILE_APP,book_car,"{""city"": ""Chandigarh"", ""car_type"": ""SUV""}",true,173,2026-04-10T16:11:00
-S2089,U1041,VOICE_ASSISTANT,check_booking,{},true,829,2026-04-04T20:57:00
-S2090,U1154,WHATSAPP_BOT,cancel_booking,"{""booking_id"": ""B7198""}",true,168,2026-04-11T17:32:00
-S2091,U1138,VOICE_ASSISTANT,search_flights,"{""source"": ""BOM"", ""destination"": ""HYD""}",true,535,2026-04-05T21:10:00
-S2092,U1046,VOICE_ASSISTANT,ask_faq,"{""question"": ""cancellation policy""}",true,402,2026-04-08T12:43:00
-S2093,U1026,VOICE_ASSISTANT,check_offers,"{""booking_type"": ""CAR""}",true,711,2026-04-01T14:08:00
-S2094,U1157,MOBILE_APP,check_offers,"{""booking_type"": ""FLIGHT""}",true,315,2026-04-03T22:43:00
-S2095,U1024,WHATSAPP_BOT,book_flight,"{""source"": ""HYD"", ""destination"": ""MAA""}",false,729,2026-04-07T13:54:00
-S2096,U1042,VOICE_ASSISTANT,cancel_booking,"{""booking_id"": ""B7186""}",false,239,2026-04-08T13:20:00
-S2097,U1034,WHATSAPP_BOT,book_car,"{""city"": ""Amsterdam"", ""car_type"": ""Sedan""}",true,532,2026-04-08T14:43:00
-S2098,U1155,VOICE_ASSISTANT,search_flights,"{""source"": ""DEL"", ""destination"": ""CCU""}",false,572,2026-04-11T10:51:00
-S2099,U1155,WHATSAPP_BOT,book_combo,"{""source"": ""GOI"", ""destination"": ""BOM"", ""car_type"": ""Luxury""}",true,131,2026-04-01T08:43:00
-S2100,U1174,VOICE_ASSISTANT,check_booking,{},false,454,2026-04-02T20:16:00
-S2101,U1184,MOBILE_APP,check_booking,{},true,509,2026-04-08T08:18:00
-S2102,U1102,MOBILE_APP,cancel_booking,"{""booking_id"": ""B7103""}",true,583,2026-04-11T21:27:00
-S2103,U1032,MOBILE_APP,book_combo,"{""source"": ""DEL"", ""destination"": ""JAI"", ""car_type"": ""MUV""}",true,174,2026-04-12T12:23:00
-S2104,U1106,WHATSAPP_BOT,book_combo,"{""source"": ""GOI"", ""destination"": ""BOM"", ""car_type"": ""Luxury""}",true,159,2026-04-06T09:29:00
-S2105,U1182,VOICE_ASSISTANT,search_flights,"{""source"": ""DEL"", ""destination"": ""JAI""}",true,765,2026-04-08T17:50:00
-S2106,U1116,WHATSAPP_BOT,ask_faq,"{""question"": ""cancellation policy""}",true,211,2026-04-09T16:01:00
-S2107,U1057,WHATSAPP_BOT,cancel_booking,"{""booking_id"": ""B7183""}",true,793,2026-04-03T16:30:00
-S2108,U1183,VOICE_ASSISTANT,ask_faq,"{""question"": ""baggage allowance""}",true,771,2026-04-03T11:38:00
-S2109,U1075,VOICE_ASSISTANT,ask_faq,"{""question"": ""loyalty points""}",true,276,2026-04-10T16:09:00
-S2110,U1150,MOBILE_APP,ask_faq,"{""question"": ""payment methods""}",true,823,2026-04-09T19:30:00
-S2111,U1159,WEB,cancel_booking,"{""booking_id"": ""B7165""}",true,573,2026-04-06T18:24:00
-S2112,U1125,WEB,check_booking,{},true,555,2026-04-07T07:42:00
-S2113,U1017,WHATSAPP_BOT,search_flights,"{""source"": ""AMD"", ""destination"": ""BOM""}",true,213,2026-04-05T10:41:00
-S2114,U1051,WHATSAPP_BOT,ask_refund,{},true,713,2026-04-01T14:47:00
-S2115,U1052,WHATSAPP_BOT,book_flight,"{""source"": ""BOM"", ""destination"": ""HYD""}",true,397,2026-04-09T09:17:00
-S2116,U1142,MOBILE_APP,book_flight,"{""source"": ""DEL"", ""destination"": ""LKO""}",true,313,2026-04-04T15:51:00
-S2117,U1190,WEB,search_flights,"{""source"": ""BOM"", ""destination"": ""GOI""}",true,527,2026-04-03T08:38:00
-S2118,U1069,WHATSAPP_BOT,book_car,"{""city"": ""Los Angeles"", ""car_type"": ""SUV""}",true,125,2026-04-03T16:03:00
-S2119,U1054,WEB,search_flights,"{""source"": ""JAI"", ""destination"": ""BOM""}",true,548,2026-04-08T10:34:00
-S2120,U1014,WHATSAPP_BOT,book_car,"{""city"": ""Pune"", ""car_type"": ""Luxury""}",true,145,2026-04-08T13:06:00
-S2121,U1139,WEB,ask_refund,{},true,69,2026-04-10T20:55:00
-S2122,U1029,VOICE_ASSISTANT,search_flights,"{""source"": ""JAI"", ""destination"": ""BOM""}",true,689,2026-04-08T07:16:00
-S2123,U1194,VOICE_ASSISTANT,ask_faq,"{""question"": ""hotel check-in time""}",true,396,2026-04-09T22:32:00
-S2124,U1073,WHATSAPP_BOT,ask_faq,"{""question"": ""loyalty points""}",true,754,2026-04-09T16:40:00
-S2125,U1113,MOBILE_APP,book_combo,"{""source"": ""CCU"", ""destination"": ""BOM"", ""car_type"": ""Sedan""}",true,581,2026-04-08T22:10:00
-S2126,U1046,MOBILE_APP,check_offers,"{""booking_type"": ""BOTH""}",true,513,2026-04-06T12:12:00
-S2127,U1200,MOBILE_APP,search_flights,"{""source"": ""DEL"", ""destination"": ""PNQ""}",true,372,2026-04-06T22:06:00
-S2128,U1176,WHATSAPP_BOT,search_flights,"{""source"": ""BOM"", ""destination"": ""JAI""}",true,391,2026-04-03T13:49:00
-S2129,U1102,WEB,book_combo,"{""source"": ""MAA"", ""destination"": ""HYD"", ""car_type"": ""Compact""}",true,588,2026-04-08T20:49:00
-S2130,U1186,WHATSAPP_BOT,search_flights,"{""source"": ""DEL"", ""destination"": ""JAI""}",true,370,2026-04-06T11:19:00
-S2131,U1086,WHATSAPP_BOT,cancel_booking,"{""booking_id"": ""B7116""}",true,636,2026-04-07T20:00:00
-S2132,U1196,VOICE_ASSISTANT,book_flight,"{""source"": ""CCU"", ""destination"": ""BLR""}",true,884,2026-04-03T21:49:00
-S2133,U1071,MOBILE_APP,search_flights,"{""source"": ""DEL"", ""destination"": ""PNQ""}",true,322,2026-04-05T18:01:00
-S2134,U1083,VOICE_ASSISTANT,check_offers,"{""booking_type"": ""CAR""}",true,816,2026-04-04T13:39:00
-S2135,U1129,VOICE_ASSISTANT,ask_faq,"{""question"": ""refund status""}",true,224,2026-04-06T22:46:00
-S2136,U1152,VOICE_ASSISTANT,book_flight,"{""source"": ""HYD"", ""destination"": ""BOM""}",true,783,2026-04-08T14:17:00
-S2137,U1156,VOICE_ASSISTANT,book_flight,"{""source"": ""MAA"", ""destination"": ""BOM""}",true,410,2026-04-05T18:28:00
-S2138,U1073,MOBILE_APP,ask_refund,{},true,827,2026-04-02T17:49:00
-S2139,U1188,VOICE_ASSISTANT,book_combo,"{""source"": ""DEL"", ""destination"": ""HYD"", ""car_type"": ""MUV""}",true,264,2026-04-09T09:28:00
-S2140,U1063,WHATSAPP_BOT,check_booking,{},true,326,2026-04-09T16:44:00
-S2141,U1006,WEB,book_car,"{""city"": ""Bangkok"", ""car_type"": ""Compact""}",true,381,2026-04-06T21:47:00
-S2142,U1055,WEB,cancel_booking,"{""booking_id"": ""B7120""}",true,430,2026-04-06T13:43:00
-S2143,U1181,WHATSAPP_BOT,ask_faq,"{""question"": ""cancellation policy""}",true,717,2026-04-07T20:25:00
-S2144,U1125,MOBILE_APP,check_booking,{},true,584,2026-04-06T07:36:00
-S2145,U1112,MOBILE_APP,check_booking,{},false,394,2026-04-09T22:18:00
-S2146,U1148,WHATSAPP_BOT,book_car,"{""city"": ""Los Angeles"", ""car_type"": ""Sedan""}",true,631,2026-04-02T12:51:00
-S2147,U1132,MOBILE_APP,ask_refund,{},true,255,2026-04-02T20:52:00
-S2148,U1071,VOICE_ASSISTANT,ask_refund,{},false,816,2026-04-03T17:04:00
-S2149,U1047,WHATSAPP_BOT,ask_refund,{},true,769,2026-04-12T20:56:00
-S2150,U1006,VOICE_ASSISTANT,ask_faq,"{""question"": ""cancellation policy""}",true,459,2026-04-01T07:14:00
-S2151,U1083,VOICE_ASSISTANT,book_combo,"{""source"": ""DEL"", ""destination"": ""JAI"", ""car_type"": ""SUV""}",true,846,2026-04-06T21:41:00
-S2152,U1171,WEB,cancel_booking,"{""booking_id"": ""B7184""}",false,216,2026-04-04T11:13:00
-S2153,U1079,WEB,book_car,"{""city"": ""Mumbai"", ""car_type"": ""MUV""}",true,100,2026-04-03T18:04:00
-S2154,U1084,WHATSAPP_BOT,search_flights,"{""source"": ""DEL"", ""destination"": ""PNQ""}",true,227,2026-04-07T15:14:00
-S2155,U1056,WHATSAPP_BOT,book_flight,"{""source"": ""HYD"", ""destination"": ""DEL""}",false,510,2026-04-02T19:01:00
-S2156,U1114,WEB,check_offers,"{""booking_type"": ""FLIGHT""}",true,468,2026-04-04T13:49:00
-S2157,U1098,MOBILE_APP,book_car,"{""city"": ""Kolkata"", ""car_type"": ""MUV""}",false,801,2026-04-09T10:10:00
-S2158,U1194,WEB,book_car,"{""city"": ""Surat"", ""car_type"": ""Compact""}",true,827,2026-04-06T20:12:00
-S2159,U1054,MOBILE_APP,check_booking,{},true,321,2026-04-09T10:29:00
-S2160,U1005,MOBILE_APP,check_offers,"{""booking_type"": ""CAR""}",true,162,2026-04-06T18:19:00
-S2161,U1017,VOICE_ASSISTANT,ask_faq,"{""question"": ""loyalty points""}",false,146,2026-04-11T19:56:00
-S2162,U1121,MOBILE_APP,ask_faq,"{""question"": ""payment methods""}",true,314,2026-04-03T07:08:00
-S2163,U1133,WEB,book_combo,"{""source"": ""BOM"", ""destination"": ""CCU"", ""car_type"": ""Sedan""}",true,881,2026-04-04T16:23:00
-S2164,U1159,VOICE_ASSISTANT,book_combo,"{""source"": ""CCU"", ""destination"": ""BLR"", ""car_type"": ""SUV""}",true,591,2026-04-03T12:23:00
-S2165,U1029,WEB,book_flight,"{""source"": ""CCU"", ""destination"": ""BOM""}",true,473,2026-04-11T18:58:00
-S2166,U1068,WHATSAPP_BOT,book_flight,"{""source"": ""DEL"", ""destination"": ""BOM""}",true,541,2026-04-01T11:58:00
-S2167,U1105,MOBILE_APP,check_booking,{},true,672,2026-04-12T12:10:00
-S2168,U1026,MOBILE_APP,cancel_booking,"{""booking_id"": ""B7058""}",true,127,2026-04-02T22:29:00
-S2169,U1107,VOICE_ASSISTANT,book_combo,"{""source"": ""HYD"", ""destination"": ""MAA"", ""car_type"": ""Compact""}",true,547,2026-04-08T15:08:00
-S2170,U1083,WHATSAPP_BOT,book_car,"{""city"": ""Surat"", ""car_type"": ""Luxury""}",true,644,2026-04-04T11:14:00
-S2171,U1132,WEB,book_combo,"{""source"": ""BOM"", ""destination"": ""GOI"", ""car_type"": ""Compact""}",true,157,2026-04-12T19:18:00
-S2172,U1158,MOBILE_APP,search_flights,"{""source"": ""BOM"", ""destination"": ""GOI""}",true,807,2026-04-11T16:21:00
-S2173,U1182,VOICE_ASSISTANT,check_booking,{},true,333,2026-04-03T17:27:00
-S2174,U1096,WEB,book_flight,"{""source"": ""HYD"", ""destination"": ""BOM""}",true,873,2026-04-04T12:00:00
-S2175,U1037,MOBILE_APP,search_flights,"{""source"": ""CCU"", ""destination"": ""DEL""}",true,71,2026-04-10T22:30:00
-S2176,U1089,WEB,check_offers,"{""booking_type"": ""CAR""}",false,524,2026-04-10T15:34:00
-S2177,U1113,MOBILE_APP,ask_faq,"{""question"": ""payment methods""}",true,250,2026-04-05T17:51:00
-S2178,U1125,VOICE_ASSISTANT,book_car,"{""city"": ""London"", ""car_type"": ""Hatchback""}",true,329,2026-04-02T18:27:00
-S2179,U1165,MOBILE_APP,check_booking,{},true,292,2026-04-08T10:07:00
-S2180,U1141,WHATSAPP_BOT,book_combo,"{""source"": ""MAA"", ""destination"": ""BLR"", ""car_type"": ""Hatchback""}",true,626,2026-04-02T12:25:00
-S2181,U1131,WEB,book_combo,"{""source"": ""BOM"", ""destination"": ""GOI"", ""car_type"": ""Sedan""}",true,822,2026-04-06T11:36:00
-S2182,U1136,MOBILE_APP,check_booking,{},true,295,2026-04-12T12:23:00
-S2183,U1041,MOBILE_APP,book_combo,"{""source"": ""MAA"", ""destination"": ""HYD"", ""car_type"": ""SUV""}",true,829,2026-04-12T11:34:00
-S2184,U1157,VOICE_ASSISTANT,search_flights,"{""source"": ""JAI"", ""destination"": ""DEL""}",true,470,2026-04-05T19:57:00
-S2185,U1134,VOICE_ASSISTANT,ask_refund,{},true,199,2026-04-12T16:00:00
-S2186,U1020,WHATSAPP_BOT,check_booking,{},true,273,2026-04-12T09:03:00
-S2187,U1194,VOICE_ASSISTANT,book_combo,"{""source"": ""DEL"", ""destination"": ""HYD"", ""car_type"": ""Luxury""}",true,842,2026-04-04T19:50:00
-S2188,U1041,VOICE_ASSISTANT,check_offers,"{""booking_type"": ""BOTH""}",true,418,2026-04-02T14:17:00
-S2189,U1036,VOICE_ASSISTANT,book_car,"{""city"": ""Los Angeles"", ""car_type"": ""Compact""}",true,748,2026-04-03T13:28:00
-S2190,U1037,WHATSAPP_BOT,cancel_booking,"{""booking_id"": ""B7003""}",true,593,2026-04-05T10:49:00
-S2191,U1161,VOICE_ASSISTANT,search_flights,"{""source"": ""DEL"", ""destination"": ""LKO""}",true,187,2026-04-09T21:09:00
-S2192,U1019,WHATSAPP_BOT,ask_faq,"{""question"": ""cancellation policy""}",true,321,2026-04-02T21:27:00
-S2193,U1150,WEB,ask_refund,{},true,290,2026-04-09T10:05:00
-S2194,U1188,WHATSAPP_BOT,search_flights,"{""source"": ""CCU"", ""destination"": ""BOM""}",true,502,2026-04-07T08:40:00
-S2195,U1027,WHATSAPP_BOT,ask_faq,"{""question"": ""minimum age car rental""}",true,396,2026-04-07T15:22:00
-S2196,U1022,MOBILE_APP,book_car,"{""city"": ""New York"", ""car_type"": ""Luxury""}",true,566,2026-04-04T20:42:00
-S2197,U1069,MOBILE_APP,ask_refund,{},true,639,2026-04-07T19:02:00
-S2198,U1155,MOBILE_APP,book_car,"{""city"": ""Visakhapatnam"", ""car_type"": ""Sedan""}",true,842,2026-04-04T18:37:00
-S2199,U1173,VOICE_ASSISTANT,check_offers,"{""booking_type"": ""BOTH""}",true,415,2026-04-11T21:54:00
-S2200,U1118,MOBILE_APP,check_offers,"{""booking_type"": ""BOTH""}",true,502,2026-04-11T07:13:00
+S2001,U1165,WHATSAPP_BOT,search_flights,"{""source"": ""BOM"", ""destination"": ""HYD""}",TRUE,171,2026-04-09T21:19:00
+S2002,U1199,VOICE_ASSISTANT,book_flight,"{""source"": ""PNQ"", ""destination"": ""DEL""}",TRUE,624,2026-04-03T19:59:00
+S2003,U1133,VOICE_ASSISTANT,book_combo,"{""source"": ""DEL"", ""destination"": ""LKO"", ""car_type"": ""Sedan""}",TRUE,455,2026-04-10T12:17:00
+S2004,U1191,WEB,check_offers,"{""booking_type"": ""BOTH""}",TRUE,262,2026-04-03T20:20:00
+S2005,U1120,WEB,book_combo,"{""source"": ""CCU"", ""destination"": ""BOM"", ""car_type"": ""Hatchback""}",TRUE,841,2026-04-10T08:43:00
+S2006,U1025,MOBILE_APP,book_car,"{""city"": ""Mumbai"", ""car_type"": ""Sedan""}",FALSE,114,2026-04-06T09:20:00
+S2007,U1092,WEB,book_combo,"{""source"": ""DEL"", ""destination"": ""PNQ"", ""car_type"": ""Hatchback""}",TRUE,431,2026-04-10T17:37:00
+S2008,U1115,VOICE_ASSISTANT,cancel_booking,"{""booking_id"": ""B7181""}",TRUE,370,2026-04-02T12:57:00
+S2009,U1039,WEB,check_offers,"{""booking_type"": ""FLIGHT""}",TRUE,693,2026-04-07T12:35:00
+S2010,U1142,VOICE_ASSISTANT,ask_faq,"{""question"": ""loyalty points""}",FALSE,739,2026-04-03T21:06:00
+S2011,U1194,MOBILE_APP,book_combo,"{""source"": ""HYD"", ""destination"": ""BOM"", ""car_type"": ""Luxury""}",TRUE,234,2026-04-01T18:59:00
+S2012,U1113,WEB,ask_refund,{},FALSE,563,2026-04-11T18:56:00
+S2013,U1087,MOBILE_APP,cancel_booking,"{""booking_id"": ""B7018""}",TRUE,699,2026-04-05T19:58:00
+S2014,U1039,MOBILE_APP,search_flights,"{""source"": ""MAA"", ""destination"": ""DEL""}",TRUE,871,2026-04-02T18:38:00
+S2015,U1127,MOBILE_APP,check_offers,"{""booking_type"": ""FLIGHT""}",TRUE,318,2026-04-04T15:33:00
+S2016,U1007,VOICE_ASSISTANT,cancel_booking,"{""booking_id"": ""B7043""}",TRUE,304,2026-04-12T16:16:00
+S2017,U1115,VOICE_ASSISTANT,cancel_booking,"{""booking_id"": ""B7011""}",TRUE,837,2026-04-11T21:42:00
+S2018,U1021,WHATSAPP_BOT,check_booking,{},TRUE,699,2026-04-01T07:19:00
+S2019,U1098,WEB,ask_refund,{},TRUE,96,2026-04-12T15:44:00
+S2020,U1097,WHATSAPP_BOT,cancel_booking,"{""booking_id"": ""B7132""}",FALSE,862,2026-04-07T20:45:00
+S2021,U1088,WEB,cancel_booking,"{""booking_id"": ""B7185""}",TRUE,257,2026-04-08T16:17:00
+S2022,U1022,VOICE_ASSISTANT,book_car,"{""city"": ""Lucknow"", ""car_type"": ""MUV""}",FALSE,83,2026-04-03T10:15:00
+S2023,U1020,WEB,cancel_booking,"{""booking_id"": ""B7017""}",TRUE,880,2026-04-04T09:55:00
+S2024,U1020,MOBILE_APP,book_flight,"{""source"": ""DEL"", ""destination"": ""MAA""}",FALSE,692,2026-04-02T11:37:00
+S2025,U1161,VOICE_ASSISTANT,cancel_booking,"{""booking_id"": ""B7171""}",TRUE,184,2026-04-01T11:12:00
+S2026,U1191,MOBILE_APP,book_combo,"{""source"": ""BLR"", ""destination"": ""BOM"", ""car_type"": ""Compact""}",FALSE,63,2026-04-07T14:13:00
+S2027,U1013,MOBILE_APP,check_offers,"{""booking_type"": ""CAR""}",TRUE,257,2026-04-08T13:45:00
+S2028,U1127,WEB,ask_refund,{},TRUE,752,2026-04-10T08:28:00
+S2029,U1048,MOBILE_APP,book_car,"{""city"": ""Kolkata"", ""car_type"": ""SUV""}",TRUE,615,2026-04-10T13:44:00
+S2030,U1032,MOBILE_APP,search_flights,"{""source"": ""DEL"", ""destination"": ""CCU""}",TRUE,834,2026-04-04T12:25:00
+S2031,U1163,WHATSAPP_BOT,check_offers,"{""booking_type"": ""BOTH""}",TRUE,283,2026-04-07T15:52:00
+S2032,U1089,WEB,check_booking,{},TRUE,759,2026-04-05T16:48:00
+S2033,U1042,MOBILE_APP,book_flight,"{""source"": ""BOM"", ""destination"": ""BLR""}",TRUE,810,2026-04-01T20:05:00
+S2034,U1173,VOICE_ASSISTANT,book_flight,"{""source"": ""BLR"", ""destination"": ""BOM""}",TRUE,849,2026-04-06T09:36:00
+S2035,U1068,WHATSAPP_BOT,ask_refund,{},TRUE,890,2026-04-08T18:31:00
+S2036,U1077,VOICE_ASSISTANT,cancel_booking,"{""booking_id"": ""B7140""}",FALSE,254,2026-04-04T12:02:00
+S2037,U1177,WHATSAPP_BOT,check_offers,"{""booking_type"": ""CAR""}",FALSE,392,2026-04-07T21:55:00
+S2038,U1119,VOICE_ASSISTANT,book_combo,"{""source"": ""DEL"", ""destination"": ""HYD"", ""car_type"": ""Compact""}",TRUE,489,2026-04-01T11:50:00
+S2039,U1082,VOICE_ASSISTANT,book_combo,"{""source"": ""BOM"", ""destination"": ""HYD"", ""car_type"": ""Hatchback""}",TRUE,870,2026-04-11T12:09:00
+S2040,U1152,WEB,search_flights,"{""source"": ""MAA"", ""destination"": ""BOM""}",TRUE,543,2026-04-03T15:21:00
+S2041,U1051,MOBILE_APP,ask_refund,{},TRUE,370,2026-04-09T15:14:00
+S2042,U1049,VOICE_ASSISTANT,ask_refund,{},TRUE,223,2026-04-08T08:22:00
+S2043,U1028,MOBILE_APP,cancel_booking,"{""booking_id"": ""B7181""}",TRUE,356,2026-04-03T14:33:00
+S2044,U1127,WEB,check_offers,"{""booking_type"": ""CAR""}",TRUE,375,2026-04-11T12:21:00
+S2045,U1162,WHATSAPP_BOT,check_offers,"{""booking_type"": ""BOTH""}",TRUE,192,2026-04-09T16:21:00
+S2046,U1186,WHATSAPP_BOT,book_combo,"{""source"": ""BLR"", ""destination"": ""MAA"", ""car_type"": ""MUV""}",FALSE,124,2026-04-01T21:23:00
+S2047,U1107,WEB,search_flights,"{""source"": ""MAA"", ""destination"": ""DEL""}",TRUE,380,2026-04-11T22:50:00
+S2048,U1072,WHATSAPP_BOT,cancel_booking,"{""booking_id"": ""B7179""}",TRUE,190,2026-04-06T14:45:00
+S2049,U1152,WEB,search_flights,"{""source"": ""CCU"", ""destination"": ""BOM""}",TRUE,79,2026-04-06T10:24:00
+S2050,U1193,WEB,cancel_booking,"{""booking_id"": ""B7021""}",TRUE,533,2026-04-10T15:04:00
+S2051,U1116,VOICE_ASSISTANT,search_flights,"{""source"": ""JAI"", ""destination"": ""DEL""}",TRUE,432,2026-04-01T22:15:00
+S2052,U1058,MOBILE_APP,cancel_booking,"{""booking_id"": ""B7092""}",TRUE,554,2026-04-09T11:50:00
+S2053,U1070,WHATSAPP_BOT,ask_refund,{},FALSE,679,2026-04-09T13:52:00
+S2054,U1166,WEB,book_car,"{""city"": ""Ahmedabad"", ""car_type"": ""Compact""}",TRUE,259,2026-04-09T16:15:00
+S2055,U1097,VOICE_ASSISTANT,book_flight,"{""source"": ""AMD"", ""destination"": ""BOM""}",TRUE,207,2026-04-05T07:01:00
+S2056,U1167,VOICE_ASSISTANT,book_car,"{""city"": ""Kochi"", ""car_type"": ""Luxury""}",TRUE,211,2026-04-08T19:35:00
+S2057,U1041,VOICE_ASSISTANT,cancel_booking,"{""booking_id"": ""B7028""}",FALSE,526,2026-04-05T13:45:00
+S2058,U1156,VOICE_ASSISTANT,ask_faq,"{""question"": ""baggage allowance""}",TRUE,390,2026-04-01T10:03:00
+S2059,U1084,VOICE_ASSISTANT,cancel_booking,"{""booking_id"": ""B7037""}",TRUE,797,2026-04-07T07:40:00
+S2060,U1112,WHATSAPP_BOT,check_offers,"{""booking_type"": ""FLIGHT""}",TRUE,838,2026-04-01T16:20:00
+S2061,U1145,MOBILE_APP,check_booking,{},TRUE,794,2026-04-12T11:31:00
+S2062,U1017,MOBILE_APP,book_combo,"{""source"": ""DEL"", ""destination"": ""HYD"", ""car_type"": ""Sedan""}",TRUE,790,2026-04-04T09:48:00
+S2063,U1093,WHATSAPP_BOT,cancel_booking,"{""booking_id"": ""B7021""}",TRUE,828,2026-04-02T22:25:00
+S2064,U1140,MOBILE_APP,check_booking,{},TRUE,868,2026-04-07T11:35:00
+S2065,U1023,WEB,ask_refund,{},TRUE,841,2026-04-05T14:15:00
+S2066,U1015,MOBILE_APP,book_flight,"{""source"": ""BOM"", ""destination"": ""GOI""}",TRUE,103,2026-04-04T14:09:00
+S2067,U1036,WHATSAPP_BOT,cancel_booking,"{""booking_id"": ""B7100""}",TRUE,746,2026-04-07T07:32:00
+S2068,U1196,WHATSAPP_BOT,ask_refund,{},TRUE,791,2026-04-12T20:35:00
+S2069,U1018,MOBILE_APP,search_flights,"{""source"": ""JAI"", ""destination"": ""BOM""}",TRUE,295,2026-04-10T22:00:00
+S2070,U1090,MOBILE_APP,cancel_booking,"{""booking_id"": ""B7131""}",FALSE,228,2026-04-07T13:09:00
+S2071,U1138,MOBILE_APP,ask_faq,"{""question"": ""minimum age car rental""}",TRUE,583,2026-04-07T12:53:00
+S2072,U1052,WHATSAPP_BOT,cancel_booking,"{""booking_id"": ""B7051""}",TRUE,326,2026-04-07T10:41:00
+S2073,U1074,VOICE_ASSISTANT,book_flight,"{""source"": ""DEL"", ""destination"": ""LKO""}",TRUE,727,2026-04-11T19:13:00
+S2074,U1048,MOBILE_APP,book_flight,"{""source"": ""HYD"", ""destination"": ""BOM""}",TRUE,820,2026-04-04T13:48:00
+S2075,U1146,WHATSAPP_BOT,search_flights,"{""source"": ""JAI"", ""destination"": ""BOM""}",TRUE,429,2026-04-08T08:41:00
+S2076,U1161,WEB,ask_faq,"{""question"": ""loyalty points""}",TRUE,377,2026-04-01T13:53:00
+S2077,U1047,WHATSAPP_BOT,search_flights,"{""source"": ""CCU"", ""destination"": ""BOM""}",FALSE,457,2026-04-12T17:29:00
+S2078,U1101,WEB,ask_refund,{},TRUE,671,2026-04-05T14:04:00
+S2079,U1158,MOBILE_APP,book_flight,"{""source"": ""DEL"", ""destination"": ""BOM""}",TRUE,71,2026-04-05T07:19:00
+S2080,U1114,VOICE_ASSISTANT,book_combo,"{""source"": ""MAA"", ""destination"": ""BOM"", ""car_type"": ""Sedan""}",TRUE,721,2026-04-04T20:47:00
+S2081,U1096,MOBILE_APP,ask_faq,"{""question"": ""coupon codes""}",TRUE,364,2026-04-01T10:19:00
+S2082,U1037,WHATSAPP_BOT,ask_refund,{},FALSE,879,2026-04-04T10:58:00
+S2083,U1163,MOBILE_APP,ask_refund,{},TRUE,175,2026-04-02T14:29:00
+S2084,U1149,WHATSAPP_BOT,ask_faq,"{""question"": ""cancellation policy""}",TRUE,551,2026-04-02T11:13:00
+S2085,U1017,VOICE_ASSISTANT,check_offers,"{""booking_type"": ""FLIGHT""}",TRUE,502,2026-04-08T20:11:00
+S2086,U1004,MOBILE_APP,book_car,"{""city"": ""Jaipur"", ""car_type"": ""Compact""}",TRUE,550,2026-04-04T15:01:00
+S2087,U1172,WHATSAPP_BOT,search_flights,"{""source"": ""GOI"", ""destination"": ""BOM""}",TRUE,889,2026-04-01T08:55:00
+S2088,U1145,VOICE_ASSISTANT,check_booking,{},FALSE,560,2026-04-04T08:18:00
+S2089,U1094,MOBILE_APP,cancel_booking,"{""booking_id"": ""B7117""}",TRUE,617,2026-04-03T18:42:00
+S2090,U1096,WEB,cancel_booking,"{""booking_id"": ""B7189""}",TRUE,476,2026-04-03T19:23:00
+S2091,U1120,WHATSAPP_BOT,ask_faq,"{""question"": ""baggage allowance""}",TRUE,829,2026-04-08T20:23:00
+S2092,U1111,MOBILE_APP,ask_faq,"{""question"": ""baggage allowance""}",TRUE,427,2026-04-11T21:28:00
+S2093,U1193,WEB,book_flight,"{""source"": ""DEL"", ""destination"": ""MAA""}",TRUE,700,2026-04-03T17:34:00
+S2094,U1162,WEB,book_combo,"{""source"": ""DEL"", ""destination"": ""PNQ"", ""car_type"": ""Compact""}",TRUE,489,2026-04-02T08:33:00
+S2095,U1027,MOBILE_APP,ask_faq,"{""question"": ""baggage allowance""}",TRUE,760,2026-04-12T17:31:00
+S2096,U1030,WHATSAPP_BOT,cancel_booking,"{""booking_id"": ""B7141""}",FALSE,595,2026-04-11T19:14:00
+S2097,U1148,WHATSAPP_BOT,check_offers,"{""booking_type"": ""BOTH""}",TRUE,168,2026-04-04T21:09:00
+S2098,U1178,WEB,book_flight,"{""source"": ""BLR"", ""destination"": ""HYD""}",TRUE,567,2026-04-03T09:44:00
+S2099,U1079,WEB,check_offers,"{""booking_type"": ""CAR""}",TRUE,614,2026-04-11T10:52:00
+S2100,U1049,MOBILE_APP,book_flight,"{""source"": ""DEL"", ""destination"": ""BOM""}",TRUE,272,2026-04-03T09:04:00
+S2101,U1065,VOICE_ASSISTANT,book_car,"{""city"": ""Bhopal"", ""car_type"": ""Hatchback""}",TRUE,70,2026-04-12T16:21:00
+S2102,U1100,WHATSAPP_BOT,search_flights,"{""source"": ""AMD"", ""destination"": ""BOM""}",TRUE,663,2026-04-08T08:43:00
+S2103,U1126,MOBILE_APP,ask_refund,{},TRUE,91,2026-04-05T22:55:00
+S2104,U1099,MOBILE_APP,check_offers,"{""booking_type"": ""BOTH""}",TRUE,419,2026-04-11T22:01:00
+S2105,U1098,MOBILE_APP,ask_refund,{},TRUE,148,2026-04-08T15:34:00
+S2106,U1024,MOBILE_APP,search_flights,"{""source"": ""MAA"", ""destination"": ""BOM""}",TRUE,827,2026-04-06T14:38:00
+S2107,U1121,MOBILE_APP,cancel_booking,"{""booking_id"": ""B7080""}",TRUE,780,2026-04-08T13:39:00
+S2108,U1106,MOBILE_APP,book_flight,"{""source"": ""HYD"", ""destination"": ""DEL""}",TRUE,751,2026-04-01T21:04:00
+S2109,U1129,WEB,ask_refund,{},TRUE,638,2026-04-07T08:16:00
+S2110,U1150,MOBILE_APP,check_booking,{},TRUE,522,2026-04-05T12:02:00
+S2111,U1075,WHATSAPP_BOT,check_offers,"{""booking_type"": ""FLIGHT""}",TRUE,138,2026-04-04T22:31:00
+S2112,U1064,MOBILE_APP,check_offers,"{""booking_type"": ""BOTH""}",TRUE,240,2026-04-07T08:19:00
+S2113,U1047,WEB,cancel_booking,"{""booking_id"": ""B7175""}",TRUE,565,2026-04-04T21:51:00
+S2114,U1180,MOBILE_APP,book_car,"{""city"": ""Kolkata"", ""car_type"": ""SUV""}",TRUE,679,2026-04-10T07:28:00
+S2115,U1128,WHATSAPP_BOT,check_offers,"{""booking_type"": ""FLIGHT""}",TRUE,770,2026-04-06T10:26:00
+S2116,U1122,MOBILE_APP,ask_faq,"{""question"": ""coupon codes""}",TRUE,492,2026-04-02T09:05:00
+S2117,U1068,WHATSAPP_BOT,ask_refund,{},TRUE,309,2026-04-03T10:01:00
+S2118,U1042,MOBILE_APP,book_combo,"{""source"": ""PNQ"", ""destination"": ""DEL"", ""car_type"": ""Luxury""}",TRUE,619,2026-04-06T15:30:00
+S2119,U1018,WEB,check_offers,"{""booking_type"": ""FLIGHT""}",TRUE,297,2026-04-04T11:19:00
+S2120,U1035,VOICE_ASSISTANT,book_flight,"{""source"": ""BLR"", ""destination"": ""MAA""}",TRUE,867,2026-04-01T10:33:00
+S2121,U1171,WHATSAPP_BOT,check_booking,{},TRUE,890,2026-04-03T17:58:00
+S2122,U1063,VOICE_ASSISTANT,search_flights,"{""source"": ""PNQ"", ""destination"": ""DEL""}",TRUE,549,2026-04-08T13:06:00
+S2123,U1045,VOICE_ASSISTANT,check_booking,{},TRUE,614,2026-04-02T11:42:00
+S2124,U1033,WEB,book_car,"{""city"": ""Surat"", ""car_type"": ""MUV""}",FALSE,134,2026-04-10T12:15:00
+S2125,U1161,VOICE_ASSISTANT,cancel_booking,"{""booking_id"": ""B7058""}",TRUE,476,2026-04-01T20:02:00
+S2126,U1083,VOICE_ASSISTANT,book_flight,"{""source"": ""PNQ"", ""destination"": ""DEL""}",TRUE,442,2026-04-07T21:38:00
+S2127,U1058,WEB,ask_refund,{},TRUE,869,2026-04-09T20:41:00
+S2128,U1194,WEB,search_flights,"{""source"": ""HYD"", ""destination"": ""MAA""}",TRUE,569,2026-04-02T20:38:00
+S2129,U1008,VOICE_ASSISTANT,book_car,"{""city"": ""Coimbatore"", ""car_type"": ""Sedan""}",TRUE,855,2026-04-03T08:23:00
+S2130,U1072,VOICE_ASSISTANT,ask_faq,"{""question"": ""hotel check-in time""}",TRUE,409,2026-04-05T17:58:00
+S2131,U1079,VOICE_ASSISTANT,check_booking,{},TRUE,835,2026-04-12T11:30:00
+S2132,U1087,MOBILE_APP,ask_refund,{},FALSE,605,2026-04-09T09:16:00
+S2133,U1162,WHATSAPP_BOT,ask_faq,"{""question"": ""minimum age car rental""}",TRUE,293,2026-04-06T17:58:00
+S2134,U1062,WEB,cancel_booking,"{""booking_id"": ""B7079""}",TRUE,403,2026-04-09T20:17:00
+S2135,U1068,VOICE_ASSISTANT,search_flights,"{""source"": ""MAA"", ""destination"": ""HYD""}",FALSE,202,2026-04-12T16:12:00
+S2136,U1176,WHATSAPP_BOT,check_booking,{},TRUE,269,2026-04-08T12:07:00
+S2137,U1186,WHATSAPP_BOT,search_flights,"{""source"": ""DEL"", ""destination"": ""PNQ""}",TRUE,708,2026-04-06T12:56:00
+S2138,U1166,VOICE_ASSISTANT,cancel_booking,"{""booking_id"": ""B7063""}",TRUE,794,2026-04-05T21:34:00
+S2139,U1088,WEB,ask_faq,"{""question"": ""refund status""}",TRUE,445,2026-04-09T19:00:00
+S2140,U1018,WEB,ask_faq,"{""question"": ""hotel check-in time""}",TRUE,623,2026-04-10T15:32:00
+S2141,U1146,VOICE_ASSISTANT,search_flights,"{""source"": ""JAI"", ""destination"": ""DEL""}",TRUE,497,2026-04-11T22:38:00
+S2142,U1028,VOICE_ASSISTANT,check_offers,"{""booking_type"": ""CAR""}",TRUE,203,2026-04-03T10:23:00
+S2143,U1195,MOBILE_APP,book_flight,"{""source"": ""BOM"", ""destination"": ""BLR""}",TRUE,621,2026-04-09T15:08:00
+S2144,U1025,VOICE_ASSISTANT,search_flights,"{""source"": ""DEL"", ""destination"": ""BLR""}",FALSE,640,2026-04-01T07:07:00
+S2145,U1087,WHATSAPP_BOT,ask_faq,"{""question"": ""coupon codes""}",TRUE,285,2026-04-10T15:59:00
+S2146,U1142,WHATSAPP_BOT,search_flights,"{""source"": ""DEL"", ""destination"": ""HYD""}",TRUE,658,2026-04-06T14:10:00
+S2147,U1099,WEB,check_booking,{},TRUE,224,2026-04-02T15:51:00
+S2148,U1125,MOBILE_APP,book_car,"{""city"": ""Goa"", ""car_type"": ""Luxury""}",TRUE,530,2026-04-10T12:57:00
+S2149,U1045,WEB,ask_faq,"{""question"": ""refund status""}",TRUE,747,2026-04-05T20:37:00
+S2150,U1154,VOICE_ASSISTANT,ask_refund,{},TRUE,162,2026-04-02T20:45:00
+S2151,U1114,VOICE_ASSISTANT,book_combo,"{""source"": ""HYD"", ""destination"": ""BOM"", ""car_type"": ""MUV""}",TRUE,83,2026-04-09T15:13:00
+S2152,U1173,VOICE_ASSISTANT,check_offers,"{""booking_type"": ""BOTH""}",TRUE,81,2026-04-08T19:53:00
+S2153,U1114,WEB,cancel_booking,"{""booking_id"": ""B7037""}",TRUE,675,2026-04-12T19:10:00
+S2154,U1104,WEB,search_flights,"{""source"": ""MAA"", ""destination"": ""DEL""}",TRUE,340,2026-04-04T16:57:00
+S2155,U1060,VOICE_ASSISTANT,ask_refund,{},FALSE,762,2026-04-10T14:41:00
+S2156,U1179,MOBILE_APP,ask_refund,{},TRUE,82,2026-04-07T18:23:00
+S2157,U1098,MOBILE_APP,ask_refund,{},TRUE,516,2026-04-07T09:27:00
+S2158,U1066,WHATSAPP_BOT,search_flights,"{""source"": ""JAI"", ""destination"": ""DEL""}",TRUE,326,2026-04-08T12:10:00
+S2159,U1057,WEB,book_flight,"{""source"": ""HYD"", ""destination"": ""BOM""}",TRUE,838,2026-04-04T09:45:00
+S2160,U1041,MOBILE_APP,check_booking,{},TRUE,141,2026-04-09T15:28:00
+S2161,U1039,WHATSAPP_BOT,book_combo,"{""source"": ""BLR"", ""destination"": ""CCU"", ""car_type"": ""Hatchback""}",FALSE,250,2026-04-04T20:19:00
+S2162,U1043,MOBILE_APP,search_flights,"{""source"": ""BLR"", ""destination"": ""BOM""}",TRUE,646,2026-04-11T12:18:00
+S2163,U1141,VOICE_ASSISTANT,check_offers,"{""booking_type"": ""FLIGHT""}",TRUE,887,2026-04-04T09:04:00
+S2164,U1198,MOBILE_APP,ask_faq,"{""question"": ""baggage allowance""}",TRUE,857,2026-04-08T18:46:00
+S2165,U1046,WEB,check_booking,{},FALSE,311,2026-04-01T17:54:00
+S2166,U1044,WHATSAPP_BOT,check_booking,{},TRUE,572,2026-04-09T08:25:00
+S2167,U1035,WEB,book_flight,"{""source"": ""BOM"", ""destination"": ""CCU""}",TRUE,195,2026-04-04T18:36:00
+S2168,U1072,VOICE_ASSISTANT,search_flights,"{""source"": ""LKO"", ""destination"": ""DEL""}",TRUE,172,2026-04-12T14:10:00
+S2169,U1164,MOBILE_APP,book_car,"{""city"": ""Chandigarh"", ""car_type"": ""SUV""}",TRUE,531,2026-04-09T22:43:00
+S2170,U1194,VOICE_ASSISTANT,check_booking,{},TRUE,473,2026-04-09T21:41:00
+S2171,U1134,WHATSAPP_BOT,check_offers,"{""booking_type"": ""CAR""}",TRUE,477,2026-04-03T22:08:00
+S2172,U1010,WEB,book_car,"{""city"": ""Patna"", ""car_type"": ""Hatchback""}",TRUE,178,2026-04-10T20:24:00
+S2173,U1097,WHATSAPP_BOT,cancel_booking,"{""booking_id"": ""B7007""}",TRUE,263,2026-04-01T13:27:00
+S2174,U1199,WEB,ask_refund,{},FALSE,869,2026-04-12T11:41:00
+S2175,U1078,VOICE_ASSISTANT,search_flights,"{""source"": ""DEL"", ""destination"": ""HYD""}",TRUE,292,2026-04-08T15:31:00
+S2176,U1103,VOICE_ASSISTANT,ask_refund,{},TRUE,269,2026-04-08T11:26:00
+S2177,U1014,WEB,book_combo,"{""source"": ""MAA"", ""destination"": ""BOM"", ""car_type"": ""Hatchback""}",TRUE,418,2026-04-08T19:56:00
+S2178,U1168,VOICE_ASSISTANT,book_car,"{""city"": ""Patna"", ""car_type"": ""Hatchback""}",TRUE,584,2026-04-09T22:02:00
+S2179,U1123,MOBILE_APP,cancel_booking,"{""booking_id"": ""B7085""}",TRUE,578,2026-04-03T07:06:00
+S2180,U1038,WHATSAPP_BOT,book_flight,"{""source"": ""DEL"", ""destination"": ""BOM""}",TRUE,705,2026-04-09T18:01:00
+S2181,U1115,VOICE_ASSISTANT,cancel_booking,"{""booking_id"": ""B7157""}",TRUE,696,2026-04-06T16:23:00
+S2182,U1014,MOBILE_APP,ask_refund,{},TRUE,503,2026-04-09T08:42:00
+S2183,U1200,MOBILE_APP,book_combo,"{""source"": ""HYD"", ""destination"": ""BOM"", ""car_type"": ""Hatchback""}",TRUE,510,2026-04-12T15:09:00
+S2184,U1037,WEB,book_car,"{""city"": ""Patna"", ""car_type"": ""Luxury""}",TRUE,285,2026-04-01T08:19:00
+S2185,U1004,WEB,search_flights,"{""source"": ""CCU"", ""destination"": ""BLR""}",TRUE,487,2026-04-03T20:35:00
+S2186,U1146,WHATSAPP_BOT,search_flights,"{""source"": ""BOM"", ""destination"": ""DEL""}",FALSE,227,2026-04-01T15:46:00
+S2187,U1124,MOBILE_APP,search_flights,"{""source"": ""LKO"", ""destination"": ""DEL""}",FALSE,229,2026-04-11T22:07:00
+S2188,U1021,VOICE_ASSISTANT,cancel_booking,"{""booking_id"": ""B7158""}",TRUE,441,2026-04-08T15:36:00
+S2189,U1143,WHATSAPP_BOT,cancel_booking,"{""booking_id"": ""B7135""}",TRUE,758,2026-04-12T15:51:00
+S2190,U1153,WEB,search_flights,"{""source"": ""DEL"", ""destination"": ""BOM""}",TRUE,338,2026-04-06T16:31:00
+S2191,U1186,VOICE_ASSISTANT,book_flight,"{""source"": ""JAI"", ""destination"": ""BOM""}",TRUE,323,2026-04-02T11:35:00
+S2192,U1058,WEB,search_flights,"{""source"": ""LKO"", ""destination"": ""DEL""}",FALSE,160,2026-04-12T18:26:00
+S2193,U1191,VOICE_ASSISTANT,check_offers,"{""booking_type"": ""BOTH""}",TRUE,143,2026-04-04T12:39:00
+S2194,U1124,MOBILE_APP,cancel_booking,"{""booking_id"": ""B7015""}",TRUE,894,2026-04-07T11:26:00
+S2195,U1122,MOBILE_APP,cancel_booking,"{""booking_id"": ""B7095""}",TRUE,301,2026-04-08T22:59:00
+S2196,U1102,WEB,check_offers,"{""booking_type"": ""CAR""}",TRUE,353,2026-04-04T12:21:00
+S2197,U1041,WHATSAPP_BOT,check_offers,"{""booking_type"": ""FLIGHT""}",TRUE,144,2026-04-12T07:09:00
+S2198,U1139,VOICE_ASSISTANT,ask_refund,{},FALSE,872,2026-04-12T11:03:00
+S2199,U1001,VOICE_ASSISTANT,book_combo,"{""source"": ""DEL"", ""destination"": ""BLR"", ""car_type"": ""SUV""}",TRUE,435,2026-04-11T18:42:00
+S2200,U1147,MOBILE_APP,book_flight,"{""source"": ""CCU"", ""destination"": ""DEL""}",FALSE,398,2026-04-02T08:37:00
