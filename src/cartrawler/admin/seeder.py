@@ -34,8 +34,10 @@ from cartrawler.db.models import (
 
 logger = logging.getLogger("cartrawler.admin.seeder")
 
-# data/ directory is at the repo root — two levels above src/cartrawler/admin/
-DATA_DIR = Path(__file__).resolve().parents[4] / "data"
+# data/ is at the repo root.
+# __file__ = {repo_root}/src/cartrawler/admin/seeder.py
+# parents[3] = {repo_root}
+DATA_DIR = Path(__file__).resolve().parents[3] / "data"
 
 
 # ── helpers ───────────────────────────────────────────────────────────────────
