@@ -39,14 +39,18 @@ LAST_NAMES = [
 
 CITIES = ["Mumbai","Delhi","Bangalore","Chennai","Hyderabad","Kolkata","Pune",
           "Goa","Jaipur","Ahmedabad","Lucknow","Kochi","Chandigarh","Bhopal","Nagpur",
-          "Surat","Indore","Coimbatore","Visakhapatnam","Patna"]
+          "Surat","Indore","Coimbatore","Visakhapatnam","Patna",
+          "Dubai","London","New York","Los Angeles","Singapore","Paris","Sydney","Bangkok","Amsterdam","Tokyo"]
 
 IATA = {
     "Mumbai":"BOM","Delhi":"DEL","Bangalore":"BLR","Chennai":"MAA",
     "Hyderabad":"HYD","Kolkata":"CCU","Pune":"PNQ","Goa":"GOI",
     "Jaipur":"JAI","Ahmedabad":"AMD","Lucknow":"LKO","Kochi":"COK",
     "Chandigarh":"IXC","Bhopal":"BHO","Nagpur":"NAG","Surat":"STV",
-    "Indore":"IDR","Coimbatore":"CJB","Visakhapatnam":"VTZ","Patna":"PAT"
+    "Indore":"IDR","Coimbatore":"CJB","Visakhapatnam":"VTZ","Patna":"PAT",
+    "Dubai":"DXB","London":"LHR","New York":"JFK","Los Angeles":"LAX",
+    "Singapore":"SIN","Paris":"CDG","Sydney":"SYD","Bangkok":"BKK",
+    "Amsterdam":"AMS","Tokyo":"NRT"
 }
 
 AIRLINES = [
@@ -57,7 +61,8 @@ AIRLINES = [
 AIRCRAFT = ["Airbus A320","Boeing 737","Airbus A320neo","Boeing 737-800",
             "ATR 72","Airbus A321","Boeing 777","Airbus A319"]
 
-CAR_VENDORS = ["Zoomcar","Revv","Myles","Savaari","Avis","MyChoize","EasyCab","CarTrawler"]
+CAR_VENDORS = ["Zoomcar","Revv","Myles","Savaari","Avis","MyChoize","EasyCab","CarTrawler",
+               "Hertz","Enterprise","Budget","Sixt","Europcar"]
 
 CAR_TYPES = ["Sedan","SUV","Hatchback","Luxury","MUV","Compact"]
 
@@ -223,12 +228,24 @@ CITY_LOCATIONS = {
     "Chandigarh": ["Chandigarh Airport","Sector 17","Sector 35","Phase 1","Mohali"],
     "Nagpur": ["Nagpur Airport","Sitabuldi","Dharampeth","Ramdaspeth","Civil Lines"],
     "Lucknow": ["Lucknow Airport","Hazratganj","Gomti Nagar","Alambagh","Indiranagar"],
+    "Dubai": ["Dubai International Airport T3","Dubai Mall","DIFC","Jumeirah Beach","Downtown Dubai","Dubai Marina","Palm Jumeirah"],
+    "London": ["Heathrow Airport T5","Gatwick Airport","London Bridge","Canary Wharf","Paddington","Victoria Station","King's Cross"],
+    "New York": ["JFK Airport","LaGuardia Airport","Manhattan Midtown","Times Square","Brooklyn","Queens","Newark Airport"],
+    "Los Angeles": ["LAX Airport","Hollywood","Beverly Hills","Santa Monica","Downtown LA","Burbank Airport","Long Beach"],
+    "Singapore": ["Changi Airport T1","Marina Bay Sands","Orchard Road","Sentosa Island","Jurong East","Bugis Junction"],
+    "Paris": ["Charles de Gaulle Airport","Orly Airport","Champs-Élysées","Louvre","Montparnasse","La Défense","Eiffel Tower Area"],
+    "Sydney": ["Sydney Airport","Sydney CBD","Bondi Beach","Darling Harbour","North Sydney","Parramatta","Manly"],
+    "Bangkok": ["Suvarnabhumi Airport","Don Mueang Airport","Sukhumvit","Silom","Chatuchak","Asok","Nana"],
+    "Amsterdam": ["Schiphol Airport","Amsterdam Centraal","Dam Square","Leidseplein","Zuidas","Westergasfabriek"],
+    "Tokyo": ["Narita Airport","Haneda Airport T3","Shinjuku","Shibuya","Akihabara","Ginza","Roppongi"],
 }
 
 CITY_DIST = {
-    "Mumbai":25,"Delhi":25,"Bangalore":20,"Chennai":15,"Hyderabad":15,
-    "Kolkata":15,"Pune":15,"Goa":20,"Jaipur":15,"Ahmedabad":15,
-    "Kochi":10,"Chandigarh":10,"Nagpur":10,"Lucknow":5
+    "Mumbai":20,"Delhi":20,"Bangalore":15,"Chennai":12,"Hyderabad":12,
+    "Kolkata":12,"Pune":12,"Goa":15,"Jaipur":12,"Ahmedabad":12,
+    "Kochi":8,"Chandigarh":8,"Nagpur":8,"Lucknow":5,
+    "Dubai":15,"London":15,"New York":15,"Los Angeles":15,"Singapore":10,
+    "Paris":10,"Sydney":10,"Bangkok":10,"Amsterdam":10,"Tokyo":10,
 }
 
 FUEL_TYPES_BY_CAR = {
@@ -495,6 +512,11 @@ KB_EXTRA = [
     ["K8048","cancellation","No-show policy: If you do not board a flight and did not cancel, the ticket is marked as no-show. For refundable tickets, no-show forfeits the full fare. For non-refundable tickets, no refund or credit note is issued. Car rental no-show results in full day charge. Always cancel if you cannot travel.",False,"faq","en","2026-01-20"],
     ["K8049","loyalty","Tier upgrade timeline: Bronze to Silver when you cross 1000 points. Silver to Gold at 2500 points. Gold to Platinum at 5000 points. Tier is calculated on rolling 12-month basis. Tier benefits apply from the date of upgrade. Downgrade happens if points fall below tier threshold during annual review.",False,"faq","en","2026-01-20"],
     ["K8050","travel_tips","Monsoon travel tips (June-September): Book refundable tickets as weather can cause flight delays. Carry waterproof bags for electronics. Goa, Kerala, and hill stations are beautiful during monsoon but have limited connectivity. Avoid night driving in mountainous regions during monsoon. Check weather forecasts 24 hours before departure.",False,"faq","en","2026-01-20"],
+    ["K8051","car_rental","International car rental at CarTrawler: Available in UAE, UK, USA, Singapore, France, Australia, Thailand, Netherlands, and Japan. Prices shown in local currency. Valid international driving licence (IDL) required in most countries. UK/Australia/Japan drive on the LEFT side. Minimum age: 21 in most countries, 25 in USA for some vehicle classes.",False,"faq","en","2026-01-20"],
+    ["K8052","car_rental","Dubai car rental rules: Minimum age 21, valid passport + UAE visa required for tourists. No-alcohol policy strictly enforced — DUI results in licence confiscation. Speed cameras everywhere — fines auto-charged to credit card. Salik (toll) charges apply on major roads. Petrol is cheap (~AED 2.6/litre).",False,"faq","en","2026-01-20"],
+    ["K8053","car_rental","London car rental rules: Drive on the LEFT. Minimum age 21 (under-25 surcharge applies). Congestion Charge £15/day applies in central London (Mon-Fri 7AM-6PM). Ultra Low Emission Zone (ULEZ) charges £12.50/day for older vehicles. Most rentals include insurance but check excess amounts.",False,"faq","en","2026-01-20"],
+    ["K8054","car_rental","USA car rental rules: Minimum age 21 (25 for luxury at some vendors). International licence recommended alongside home country licence. Fuel sold in gallons. Drive on the RIGHT. Toll roads common — many vendors offer EZ-Pass/toll transponders. CDW (Collision Damage Waiver) insurance recommended.",False,"faq","en","2026-01-20"],
+    ["K8055","car_rental","Singapore car rental rules: Drive on the LEFT. Electronic Road Pricing (ERP) tolls apply in city centre during peak hours. Minimum age 22. Car rentals include basic insurance; additional coverage available. Parking coupons required for coupon parking zones. Expressways are fast — budget 30 min from Changi Airport to city centre.",False,"faq","en","2026-01-20"],
 ]
 
 # ── WRITE FILES ────────────────────────────────────────────────────────────────
