@@ -13,7 +13,6 @@ from __future__ import annotations
 
 import logging
 import os
-from pathlib import Path
 
 import uvicorn
 
@@ -63,24 +62,15 @@ async def admin_seed(request: Request) -> JSONResponse:
     if auth != f"Bearer {seed_secret}":
         return JSONResponse({"error": "Unauthorized"}, status_code=401)
 
-    # Load seed_db from scripts/ using explicit file path (avoids import resolution issues)
-    # src/cartrawler/main.py → parents[2] = repo root
-    seed_file = Path(__file__).resolve().parents[2] / "scripts" / "seed_db.py"
-
     try:
-        import importlib.util
-        spec = importlib.util.spec_from_file_location("seed_db", seed_file)
-        if spec is None or spec.loader is None:
-            raise RuntimeError(f"Could not load {seed_file}")
-        seed_db = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(seed_db)  # type: ignore[union-attr]
-        logger.info("Starting database seed (drop=True)…")
-        await seed_db._run(seed_db.SEED_ORDER, drop=True)
+        from cartrawler.admin.seeder import run_seed
+        logger.info("Starting database seed…")
+        results = await run_seed()
         logger.info("Database seed complete.")
         return JSONResponse({
             "status": "ok",
             "message": "Database dropped and re-seeded successfully.",
-            "tables": seed_db.SEED_ORDER,
+            "rows": results,
         })
     except Exception as exc:
         logger.exception("Seed failed: %s", exc)
