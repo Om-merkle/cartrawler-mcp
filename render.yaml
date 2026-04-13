@@ -32,6 +32,8 @@ services:
         value: "30"
       - key: JWT_REFRESH_TOKEN_EXPIRE_DAYS
         value: "7"
+      - key: SEED_SECRET
+        sync: false
       - key: OPENAI_API_KEY
         sync: false
       - key: OPENAI_MODEL
