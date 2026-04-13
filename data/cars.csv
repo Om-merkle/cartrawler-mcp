@@ -1,201 +1,201 @@
 car_id,vendor,city,pickup_location,car_type,car_model,fuel_type,transmission,seating_capacity,price_per_day,price_per_hour,with_driver,availability,rating,total_reviews,ac,insurance_included,min_age_required
-C5001,MyChoize,Delhi,Gurugram,Hatchback,Hyundai Santro,Petrol,Automatic,5,1227,175,false,true,3.8,210,true,false,21
-C5002,Avis,Goa,Panaji,Hatchback,Tata Tiago,Petrol,Automatic,5,1477,211,false,true,4.8,478,true,false,21
-C5003,Myles,Bangalore,Kempegowda Airport,MUV,Mahindra Marazzo,Diesel,Manual,7,3608,515,true,true,4.0,344,true,false,21
-C5004,Myles,Chandigarh,Mohali,Hatchback,Maruti Alto,CNG,Automatic,5,1213,173,false,true,4.3,307,true,false,21
-C5005,Myles,Pune,Shivajinagar,Hatchback,Hyundai Santro,Petrol,Automatic,5,1261,180,false,true,4.0,491,true,false,21
-C5006,Avis,Bangalore,MG Road,Hatchback,Honda Jazz,CNG,Automatic,5,1590,227,false,true,4.1,435,true,false,21
-C5007,EasyCab,Mumbai,Andheri East,Hatchback,Maruti Celerio,CNG,Manual,5,1392,199,false,true,4.3,488,true,false,21
-C5008,Myles,Chennai,Anna Nagar,Luxury,BMW 3 Series,Diesel,Automatic,5,11235,1605,false,true,4.0,299,true,false,25
-C5009,Zoomcar,Nagpur,Ramdaspeth,MUV,Toyota Innova Crysta,Diesel,Manual,7,3789,541,false,true,4.0,336,true,false,21
-C5010,MyChoize,Lucknow,Lucknow Airport,MUV,Mahindra Marazzo,Petrol,Manual,7,3082,440,false,true,4.7,278,true,false,21
-C5011,Avis,Delhi,Noida,Sedan,Honda Amaze,CNG,Manual,5,1871,267,false,true,4.9,90,true,false,21
-C5012,Savaari,Mumbai,Andheri East,SUV,Mahindra XUV500,Petrol,Automatic,7,3911,559,false,true,4.3,280,true,false,25
-C5013,Myles,Nagpur,Sitabuldi,SUV,Mahindra Scorpio,Petrol,Manual,7,3221,460,false,false,4.2,77,true,false,25
-C5014,Revv,Kochi,Kochi Airport,Luxury,BMW 5 Series,Diesel,Automatic,5,9026,1289,false,true,4.2,114,true,false,25
-C5015,Zoomcar,Mumbai,Andheri East,SUV,Mahindra Scorpio,Petrol,Automatic,7,4622,660,false,true,4.4,373,true,true,25
-C5016,Avis,Jaipur,Pink City,MUV,Kia Carnival,Petrol,Manual,7,3249,464,false,true,3.5,467,true,false,21
-C5017,Avis,Pune,Shivajinagar,SUV,Mahindra XUV500,Diesel,Automatic,7,2837,405,false,true,4.7,330,true,false,25
-C5018,EasyCab,Mumbai,Navi Mumbai,Luxury,BMW 5 Series,Petrol,Automatic,5,10458,1494,false,true,4.3,459,true,true,25
-C5019,Avis,Bangalore,Electronic City,Compact,Skoda Rapid,Diesel,Automatic,5,1586,227,false,true,4.4,189,true,false,21
-C5020,CarTrawler,Nagpur,Sitabuldi,Compact,Volkswagen Polo,Diesel,Manual,5,1422,203,false,true,4.6,422,true,false,21
-C5021,Revv,Ahmedabad,CG Road,Sedan,Toyota Etios,Petrol,Automatic,5,2050,293,false,true,4.7,219,true,false,21
-C5022,Zoomcar,Hyderabad,Gachibowli,Sedan,Hyundai Verna,Diesel,Manual,5,2181,312,false,true,3.7,443,true,false,21
-C5023,EasyCab,Bangalore,Whitefield,Compact,Maruti Baleno,Petrol,Automatic,5,1871,267,false,true,4.5,209,true,false,21
-C5024,Zoomcar,Delhi,Gurugram,Hatchback,Honda Jazz,Petrol,Automatic,5,1346,192,false,false,3.8,107,true,false,21
-C5025,MyChoize,Chandigarh,Chandigarh Airport,SUV,Tata Harrier,Diesel,Automatic,7,3795,542,false,true,4.5,402,true,true,25
-C5026,Savaari,Bangalore,MG Road,Hatchback,Hyundai i20,CNG,Manual,5,1451,207,false,true,4.6,455,true,false,21
-C5027,CarTrawler,Nagpur,Sitabuldi,Sedan,Hyundai Verna,Diesel,Automatic,5,2149,307,false,true,3.9,70,true,false,21
-C5028,CarTrawler,Mumbai,Dadar,Luxury,Jaguar XE,Diesel,Automatic,5,9848,1407,false,true,4.2,494,true,true,25
-C5029,Revv,Hyderabad,Secunderabad,MUV,Maruti Ertiga,Diesel,Automatic,7,3429,490,true,true,4.6,59,true,false,21
-C5030,Savaari,Lucknow,Gomti Nagar,MUV,Mahindra Marazzo,Diesel,Automatic,7,3755,536,false,true,3.7,317,true,false,21
-C5031,Zoomcar,Bangalore,MG Road,Compact,Hyundai i20,Petrol,Automatic,5,1897,271,false,true,4.8,386,true,false,21
-C5032,Avis,Bangalore,Kempegowda Airport,Luxury,BMW 5 Series,Diesel,Manual,5,7497,1071,false,true,4.6,262,true,true,25
-C5033,Avis,Pune,Kothrud,Compact,Hyundai i20,Petrol,Automatic,5,1479,211,false,true,3.8,247,true,false,21
-C5034,Savaari,Delhi,Gurugram,SUV,Kia Seltos,Diesel,Automatic,7,4266,609,false,false,3.8,142,true,true,25
-C5035,Myles,Delhi,Gurugram,MUV,Mahindra Marazzo,Petrol,Automatic,7,3261,466,true,true,4.6,361,true,false,21
-C5036,EasyCab,Chennai,OMR,SUV,Kia Seltos,Petrol,Automatic,7,4426,632,false,false,4.4,315,true,false,25
-C5037,Avis,Mumbai,Bandra Kurla Complex,Hatchback,Maruti Swift,Petrol,Automatic,5,1111,159,false,false,3.7,69,true,false,21
-C5038,Myles,Hyderabad,Hitech City,Luxury,Audi A4,Diesel,Manual,5,10275,1468,false,true,3.8,89,true,true,25
-C5039,CarTrawler,Chennai,OMR,Luxury,BMW 3 Series,Petrol,Automatic,5,7458,1065,false,false,4.0,500,true,true,25
-C5040,Revv,Kolkata,Park Street,Luxury,Volvo S90,Petrol,Automatic,5,7337,1048,false,true,4.3,217,true,true,25
-C5041,Zoomcar,Chennai,T Nagar,SUV,Hyundai Creta,Petrol,Manual,7,4415,631,false,true,4.2,431,true,false,25
-C5042,Revv,Goa,Baga,Luxury,Audi A4,Diesel,Automatic,5,10238,1463,false,true,3.8,365,true,true,25
-C5043,Savaari,Delhi,IGI Airport T3,MUV,Maruti Ertiga,Petrol,Automatic,7,3347,478,false,true,4.0,385,true,false,21
-C5044,Myles,Mumbai,Andheri East,Sedan,Maruti Ciaz,CNG,Automatic,5,1849,264,false,true,3.7,422,true,false,21
-C5045,Zoomcar,Mumbai,Bandra Kurla Complex,Sedan,Maruti Swift Dzire,CNG,Manual,5,1994,285,false,true,3.5,157,true,false,21
-C5046,Savaari,Lucknow,Hazratganj,Compact,Volkswagen Polo,Diesel,Automatic,5,1418,203,false,true,3.8,195,true,false,21
-C5047,Zoomcar,Hyderabad,Banjara Hills,SUV,MG Hector,Diesel,Manual,7,4275,611,false,true,4.8,247,true,false,25
-C5048,Revv,Ahmedabad,Navrangpura,Luxury,BMW 5 Series,Diesel,Automatic,5,10751,1536,false,true,4.6,70,true,false,25
-C5049,MyChoize,Nagpur,Ramdaspeth,MUV,Mahindra Marazzo,Petrol,Manual,7,3780,540,false,false,4.3,465,true,false,21
-C5050,EasyCab,Pune,Pune Airport,Sedan,Maruti Ciaz,CNG,Automatic,5,1855,265,false,true,4.3,397,true,false,21
-C5051,Savaari,Chandigarh,Phase 1,MUV,Maruti XL6,Diesel,Manual,7,3610,516,false,true,4.3,459,true,false,21
-C5052,Avis,Chennai,OMR,SUV,Hyundai Creta,Diesel,Automatic,7,3447,492,false,true,4.9,110,true,false,25
-C5053,MyChoize,Mumbai,Navi Mumbai,SUV,Mahindra Scorpio,Petrol,Automatic,7,3422,489,false,true,3.5,363,true,true,25
-C5054,Savaari,Chennai,OMR,MUV,Toyota Innova Crysta,Diesel,Manual,7,3476,497,false,true,4.6,241,true,false,21
-C5055,CarTrawler,Chennai,T Nagar,SUV,Tata Harrier,Diesel,Manual,7,4473,639,false,false,3.8,393,true,true,25
-C5056,Myles,Hyderabad,Banjara Hills,SUV,Toyota Fortuner,Petrol,Automatic,7,4551,650,false,true,4.7,418,true,false,25
-C5057,Zoomcar,Bangalore,Koramangala,MUV,Maruti XL6,Diesel,Automatic,7,3601,514,true,true,4.1,441,true,false,21
-C5058,Savaari,Jaipur,Pink City,Compact,Hyundai i20,Diesel,Automatic,5,1872,267,false,true,3.6,314,true,false,21
-C5059,CarTrawler,Mumbai,Mumbai Airport T2,SUV,Jeep Compass,Diesel,Manual,7,3354,479,false,true,3.5,282,true,true,25
-C5060,CarTrawler,Delhi,IGI Airport T3,Compact,Maruti Baleno,Diesel,Manual,5,1493,213,false,true,4.6,422,true,false,21
-C5061,Myles,Bangalore,Whitefield,MUV,Toyota Innova Crysta,Petrol,Manual,7,2832,405,false,true,4.1,208,true,false,21
-C5062,CarTrawler,Hyderabad,Gachibowli,Compact,Renault Triber,Petrol,Manual,5,1403,200,false,true,4.2,463,true,false,21
-C5063,Savaari,Delhi,Connaught Place,Sedan,Ford Aspire,CNG,Automatic,5,2119,303,false,true,4.8,192,true,false,21
-C5064,Savaari,Ahmedabad,Sardar Vallabhbhai Airport,MUV,Maruti XL6,Diesel,Manual,7,2797,400,true,true,3.9,94,true,false,21
-C5065,EasyCab,Goa,Panaji,Sedan,Maruti Swift Dzire,Petrol,Automatic,5,2376,339,false,true,3.6,443,true,false,21
-C5066,MyChoize,Goa,Baga,Hatchback,Maruti Celerio,Petrol,Automatic,5,1531,219,false,true,4.8,218,true,false,21
-C5067,Savaari,Kolkata,Park Street,MUV,Kia Carnival,Diesel,Manual,7,3490,499,true,false,3.9,361,true,false,21
-C5068,MyChoize,Pune,Koregaon Park,Hatchback,Maruti Wagon R,CNG,Automatic,5,1352,193,false,true,4.2,457,true,false,21
-C5069,EasyCab,Kolkata,Howrah,Sedan,Toyota Etios,Petrol,Automatic,5,2273,325,false,true,3.6,203,true,false,21
-C5070,MyChoize,Goa,Goa Airport,MUV,Toyota Innova Crysta,Diesel,Automatic,7,2859,408,false,true,4.5,292,true,false,21
-C5071,CarTrawler,Delhi,Connaught Place,Sedan,Hyundai Verna,CNG,Automatic,5,2249,321,false,true,3.9,421,true,false,21
-C5072,Zoomcar,Kochi,MG Road,Compact,Tata Altroz,Diesel,Automatic,5,1467,210,false,true,4.1,323,true,false,21
-C5073,Myles,Ahmedabad,SG Highway,SUV,Tata Harrier,Diesel,Automatic,7,3912,559,false,true,3.9,281,true,true,25
-C5074,Avis,Delhi,Connaught Place,Hatchback,Tata Tiago,Petrol,Automatic,5,1501,214,false,true,4.2,306,true,false,21
-C5075,MyChoize,Jaipur,Vaishali Nagar,SUV,Kia Seltos,Petrol,Automatic,7,3343,478,false,true,4.6,317,true,false,25
-C5076,Revv,Pune,Hinjewadi,Hatchback,Maruti Swift,CNG,Manual,5,1152,165,false,true,3.8,152,true,false,21
-C5077,Avis,Goa,Panjim,SUV,MG Hector,Petrol,Automatic,7,3411,487,false,true,4.9,336,true,true,25
-C5078,MyChoize,Jaipur,Pink City,SUV,Mahindra XUV500,Diesel,Automatic,7,3091,442,false,true,3.6,64,true,false,25
-C5079,Revv,Mumbai,Navi Mumbai,Compact,Hyundai i20,Petrol,Automatic,5,1856,265,false,true,4.6,393,true,false,21
-C5080,CarTrawler,Pune,Kothrud,MUV,Toyota Innova,Diesel,Manual,7,3135,448,false,false,3.7,365,true,false,21
-C5081,EasyCab,Pune,Koregaon Park,Hatchback,Maruti Celerio,CNG,Automatic,5,1332,190,false,true,4.2,137,true,false,21
-C5082,Myles,Pune,Kothrud,Hatchback,Maruti Celerio,Petrol,Automatic,5,1518,217,false,true,4.4,172,true,false,21
-C5083,Myles,Jaipur,Vaishali Nagar,MUV,Maruti Ertiga,Petrol,Manual,7,3661,523,false,true,4.5,89,true,false,21
-C5084,CarTrawler,Bangalore,Kempegowda Airport,Compact,Skoda Rapid,Diesel,Manual,5,1580,226,false,true,4.5,355,true,false,21
-C5085,CarTrawler,Bangalore,Kempegowda Airport,Luxury,Audi A4,Petrol,Manual,5,10710,1530,false,true,4.1,345,true,false,25
-C5086,Avis,Kolkata,New Town,SUV,Mahindra XUV500,Petrol,Automatic,7,2833,405,false,true,3.7,200,true,false,25
-C5087,Zoomcar,Mumbai,Dadar,MUV,Toyota Innova,Petrol,Manual,7,3384,483,false,true,4.1,245,true,false,21
-C5088,Savaari,Mumbai,Bandra Kurla Complex,Luxury,BMW 5 Series,Diesel,Automatic,5,8028,1147,false,true,3.6,58,true,false,25
-C5089,EasyCab,Goa,Panaji,Luxury,Jaguar XE,Petrol,Automatic,5,11173,1596,false,true,4.7,246,true,false,25
-C5090,Zoomcar,Delhi,Gurugram,SUV,Tata Harrier,Petrol,Manual,7,4482,640,false,true,5.0,340,true,false,25
-C5091,CarTrawler,Kochi,Kochi Airport,Hatchback,Hyundai i20,Petrol,Automatic,5,1338,191,false,true,4.4,389,true,false,21
-C5092,Avis,Chennai,OMR,Compact,Hyundai i20,Petrol,Automatic,5,1880,269,false,true,4.0,230,true,false,21
-C5093,Myles,Pune,Pune Airport,Hatchback,Maruti Wagon R,CNG,Automatic,5,1131,162,false,true,3.9,427,true,false,21
-C5094,Avis,Pune,Shivajinagar,MUV,Toyota Innova,Diesel,Manual,7,2771,396,false,true,4.6,359,true,false,21
-C5095,CarTrawler,Kolkata,Salt Lake,SUV,Hyundai Creta,Diesel,Automatic,7,3540,506,false,true,3.6,124,true,true,25
-C5096,EasyCab,Jaipur,Vaishali Nagar,SUV,Jeep Compass,Diesel,Automatic,7,3663,523,false,true,3.9,469,true,false,25
-C5097,EasyCab,Mumbai,Navi Mumbai,SUV,Jeep Compass,Petrol,Automatic,7,4355,622,false,true,4.3,272,true,false,25
-C5098,MyChoize,Chennai,OMR,Luxury,Mercedes E-Class,Petrol,Automatic,5,9187,1312,false,true,3.9,349,true,false,25
-C5099,Savaari,Mumbai,Dadar,Compact,Skoda Rapid,Petrol,Automatic,5,1720,246,false,true,3.6,103,true,false,21
-C5100,MyChoize,Delhi,Connaught Place,Compact,Honda Jazz,Diesel,Manual,5,1494,213,false,false,4.5,412,true,false,21
-C5101,Myles,Delhi,Noida,Sedan,Maruti Swift Dzire,CNG,Manual,5,1813,259,false,true,3.6,282,true,false,21
-C5102,MyChoize,Nagpur,Dharampeth,Hatchback,Hyundai Santro,Petrol,Manual,5,1241,177,false,true,4.7,141,true,false,21
-C5103,CarTrawler,Mumbai,Bandra Kurla Complex,Luxury,Mercedes C-Class,Diesel,Automatic,5,7870,1124,false,false,4.6,102,true,false,25
-C5104,CarTrawler,Ahmedabad,Sardar Vallabhbhai Airport,Sedan,Maruti Ciaz,Diesel,Manual,5,2355,336,false,true,4.0,250,true,false,21
-C5105,CarTrawler,Bangalore,Whitefield,MUV,Toyota Innova,Petrol,Automatic,7,2506,358,true,true,4.2,340,true,false,21
-C5106,MyChoize,Chennai,Velachery,MUV,Mahindra Marazzo,Petrol,Manual,7,3594,513,false,true,4.6,381,true,false,21
-C5107,Zoomcar,Bangalore,Whitefield,SUV,Hyundai Creta,Diesel,Automatic,7,4271,610,false,false,4.2,147,true,false,25
-C5108,Savaari,Mumbai,Navi Mumbai,SUV,Mahindra Scorpio,Petrol,Manual,7,4846,692,false,false,3.5,223,true,false,25
-C5109,EasyCab,Goa,Goa Airport,Compact,Hyundai i20,Petrol,Automatic,5,1869,267,false,true,3.6,426,true,false,21
-C5110,Zoomcar,Chandigarh,Phase 1,SUV,Jeep Compass,Diesel,Manual,7,2858,408,false,false,4.7,99,true,false,25
-C5111,Revv,Lucknow,Lucknow Airport,SUV,Toyota Fortuner,Petrol,Manual,7,4181,597,false,true,4.5,329,true,false,25
-C5112,Myles,Chandigarh,Sector 35,SUV,Mahindra Scorpio,Diesel,Manual,7,3488,498,false,true,3.9,347,true,false,25
-C5113,Myles,Chennai,Chennai Airport,Sedan,Honda Amaze,Diesel,Manual,5,1707,244,false,true,4.7,445,true,false,21
-C5114,Myles,Delhi,Connaught Place,Luxury,Jaguar XE,Petrol,Automatic,5,7308,1044,false,true,4.6,363,true,true,25
-C5115,Avis,Mumbai,Andheri East,Compact,Renault Triber,Diesel,Manual,5,1942,277,false,false,5.0,309,true,false,21
-C5116,Savaari,Mumbai,Andheri East,SUV,Jeep Compass,Diesel,Manual,7,4837,691,false,true,3.6,380,true,false,25
-C5117,Avis,Hyderabad,Gachibowli,SUV,Tata Harrier,Petrol,Manual,7,3520,503,false,true,3.7,170,true,true,25
-C5118,MyChoize,Hyderabad,Banjara Hills,MUV,Toyota Innova Crysta,Diesel,Automatic,7,2700,386,true,false,4.1,162,true,false,21
-C5119,CarTrawler,Kochi,Kochi Airport,Sedan,Ford Aspire,Diesel,Manual,5,2324,332,false,true,4.6,373,true,false,21
-C5120,Savaari,Kochi,Kakkanad,Hatchback,Maruti Wagon R,Petrol,Manual,5,1454,208,false,false,4.2,137,true,false,21
-C5121,Avis,Goa,Panjim,Hatchback,Tata Tiago,Petrol,Manual,5,1395,199,false,true,5.0,352,true,false,21
-C5122,CarTrawler,Kolkata,Salt Lake,Luxury,Volvo S90,Petrol,Automatic,5,11746,1678,false,true,4.9,126,true,true,25
-C5123,Zoomcar,Delhi,IGI Airport T3,Sedan,Honda Amaze,Diesel,Manual,5,2243,320,false,true,3.6,435,true,false,21
-C5124,Savaari,Kolkata,Park Street,Sedan,Honda Amaze,Diesel,Automatic,5,2363,338,false,true,4.2,342,true,false,21
-C5125,Zoomcar,Bangalore,Whitefield,Compact,Volkswagen Polo,Diesel,Automatic,5,1589,227,false,true,3.5,371,true,false,21
-C5126,MyChoize,Ahmedabad,SG Highway,Sedan,Honda Amaze,Petrol,Automatic,5,1976,282,false,true,3.6,395,true,false,21
-C5127,Revv,Jaipur,Vaishali Nagar,Hatchback,Maruti Swift,CNG,Automatic,5,1416,202,false,true,4.3,446,true,false,21
-C5128,MyChoize,Kochi,MG Road,SUV,Hyundai Creta,Diesel,Automatic,7,3723,532,false,false,4.3,266,true,false,25
-C5129,MyChoize,Delhi,Noida,Sedan,Volkswagen Vento,Diesel,Manual,5,2244,321,false,true,4.9,464,true,false,21
-C5130,CarTrawler,Kolkata,Netaji Subhas Airport,Sedan,Toyota Etios,Petrol,Automatic,5,1883,269,false,true,4.5,304,true,false,21
-C5131,Zoomcar,Kochi,Kakkanad,SUV,Kia Seltos,Petrol,Manual,7,4618,660,false,true,3.5,460,true,false,25
-C5132,MyChoize,Jaipur,Vaishali Nagar,MUV,Maruti XL6,Petrol,Automatic,7,3437,491,false,false,4.0,454,true,false,21
-C5133,CarTrawler,Delhi,Aerocity,Hatchback,Tata Tiago,CNG,Manual,5,1175,168,false,true,3.9,139,true,false,21
-C5134,Myles,Ahmedabad,CG Road,Compact,Skoda Rapid,Petrol,Automatic,5,1851,264,false,true,4.6,390,true,false,21
-C5135,Myles,Hyderabad,Gachibowli,Hatchback,Maruti Celerio,CNG,Manual,5,1373,196,false,true,4.9,213,true,false,21
-C5136,MyChoize,Chennai,Velachery,SUV,Mahindra Scorpio,Petrol,Automatic,7,4610,659,false,true,4.9,121,true,true,25
-C5137,Zoomcar,Jaipur,Vaishali Nagar,Sedan,Maruti Ciaz,CNG,Manual,5,2065,295,false,true,4.4,163,true,false,21
-C5138,Zoomcar,Goa,Goa Airport,Hatchback,Tata Tiago,CNG,Manual,5,1599,228,false,true,4.3,78,true,false,21
-C5139,EasyCab,Nagpur,Sitabuldi,Compact,Tata Altroz,Diesel,Automatic,5,1753,250,false,false,3.6,422,true,false,21
-C5140,EasyCab,Delhi,Noida,Luxury,Jaguar XE,Diesel,Automatic,5,8702,1243,false,true,5.0,318,true,true,25
-C5141,Revv,Kochi,Kochi Airport,Sedan,Honda Amaze,Diesel,Automatic,5,1879,268,false,true,4.7,198,true,false,21
-C5142,Zoomcar,Goa,Calangute,MUV,Kia Carnival,Petrol,Automatic,7,2505,358,false,false,4.8,291,true,false,21
-C5143,EasyCab,Kolkata,Park Street,Sedan,Maruti Ciaz,Diesel,Manual,5,1822,260,false,true,4.4,339,true,false,21
-C5144,Avis,Jaipur,Vaishali Nagar,Luxury,Volvo S90,Petrol,Manual,5,9618,1374,false,true,4.5,232,true,false,25
-C5145,EasyCab,Kolkata,Salt Lake,Hatchback,Maruti Celerio,Petrol,Automatic,5,1249,178,false,true,4.4,135,true,false,21
-C5146,MyChoize,Chennai,Velachery,MUV,Mahindra Marazzo,Petrol,Automatic,7,2794,399,false,true,4.7,260,true,false,21
-C5147,Revv,Hyderabad,Hitech City,Hatchback,Honda Jazz,Petrol,Manual,5,1525,218,false,true,4.7,263,true,false,21
-C5148,Revv,Goa,Panaji,Luxury,Mercedes C-Class,Petrol,Automatic,5,11285,1612,false,true,4.0,413,true,false,25
-C5149,Revv,Ahmedabad,CG Road,Compact,Renault Triber,Petrol,Automatic,5,1714,245,false,false,4.1,440,true,false,21
-C5150,Zoomcar,Goa,Baga,Sedan,Maruti Swift Dzire,Diesel,Manual,5,1810,259,false,true,4.9,72,true,false,21
-C5151,Zoomcar,Bangalore,Kempegowda Airport,Sedan,Maruti Ciaz,Petrol,Manual,5,1904,272,false,true,4.6,192,true,false,21
-C5152,MyChoize,Bangalore,MG Road,MUV,Mahindra Marazzo,Diesel,Manual,7,2944,421,true,true,4.6,52,true,false,21
-C5153,Savaari,Goa,Panjim,Compact,Hyundai i20,Diesel,Manual,5,1509,216,false,true,4.3,258,true,false,21
-C5154,Revv,Kochi,Ernakulam,Sedan,Volkswagen Vento,Petrol,Manual,5,2069,296,false,true,4.1,283,true,false,21
-C5155,Avis,Delhi,Noida,MUV,Maruti XL6,Diesel,Automatic,7,3474,496,false,false,4.2,103,true,false,21
-C5156,Revv,Delhi,IGI Airport T3,Luxury,Mercedes E-Class,Petrol,Manual,5,9774,1396,false,true,4.8,256,true,false,25
-C5157,CarTrawler,Hyderabad,Gachibowli,Luxury,Jaguar XE,Diesel,Automatic,5,11941,1706,false,false,5.0,311,true,false,25
-C5158,Revv,Ahmedabad,Navrangpura,Luxury,Mercedes C-Class,Diesel,Automatic,5,7558,1080,false,true,3.5,141,true,false,25
-C5159,Myles,Chennai,Velachery,Compact,Tata Altroz,Petrol,Automatic,5,1904,272,false,true,4.2,183,true,false,21
-C5160,Zoomcar,Bangalore,Kempegowda Airport,MUV,Mahindra Marazzo,Petrol,Manual,7,3406,487,false,true,4.5,449,true,false,21
-C5161,CarTrawler,Hyderabad,Banjara Hills,Hatchback,Honda Jazz,Petrol,Automatic,5,1466,209,false,true,4.5,342,true,false,21
-C5162,Myles,Chandigarh,Mohali,Luxury,Mercedes E-Class,Petrol,Automatic,5,7503,1072,false,true,3.6,478,true,false,25
-C5163,Zoomcar,Jaipur,Pink City,Compact,Volkswagen Polo,Diesel,Automatic,5,1759,251,false,true,4.0,93,true,false,21
-C5164,Avis,Nagpur,Nagpur Airport,Compact,Hyundai i20,Diesel,Automatic,5,1832,262,false,true,4.2,61,true,false,21
-C5165,EasyCab,Chandigarh,Sector 35,Hatchback,Hyundai Santro,Petrol,Automatic,5,1151,164,false,true,4.5,135,true,false,21
-C5166,MyChoize,Kochi,Ernakulam,MUV,Mahindra Marazzo,Diesel,Automatic,7,3088,441,false,false,4.1,165,true,false,21
-C5167,Revv,Ahmedabad,SG Highway,MUV,Maruti XL6,Diesel,Automatic,7,3473,496,false,true,4.5,204,true,false,21
-C5168,EasyCab,Mumbai,Dadar,MUV,Mahindra Marazzo,Petrol,Manual,7,3428,490,false,true,4.6,491,true,false,21
-C5169,Savaari,Delhi,Noida,SUV,Jeep Compass,Petrol,Automatic,7,4939,706,false,true,3.9,432,true,true,25
-C5170,EasyCab,Ahmedabad,Navrangpura,Hatchback,Hyundai Santro,Petrol,Manual,5,1533,219,false,true,3.9,172,true,false,21
-C5171,Savaari,Kolkata,Netaji Subhas Airport,Sedan,Hyundai Verna,Petrol,Automatic,5,2197,314,false,true,3.9,64,true,false,21
-C5172,Myles,Goa,Goa Airport,Hatchback,Maruti Wagon R,CNG,Manual,5,1128,161,false,false,4.5,96,true,false,21
-C5173,Myles,Lucknow,Hazratganj,Luxury,Volvo S90,Petrol,Automatic,5,11066,1581,false,false,3.9,112,true,true,25
-C5174,EasyCab,Chennai,Anna Nagar,Hatchback,Maruti Celerio,CNG,Manual,5,1173,168,false,true,4.8,78,true,false,21
-C5175,MyChoize,Mumbai,Mumbai Airport T2,Luxury,BMW 5 Series,Diesel,Automatic,5,9973,1425,false,true,4.1,207,true,false,25
-C5176,Zoomcar,Bangalore,MG Road,MUV,Toyota Innova,Petrol,Automatic,7,3595,514,true,true,4.9,251,true,false,21
-C5177,Revv,Pune,Koregaon Park,Hatchback,Maruti Wagon R,CNG,Manual,5,1540,220,false,true,3.6,449,true,false,21
-C5178,EasyCab,Bangalore,Electronic City,Luxury,Mercedes E-Class,Diesel,Automatic,5,7543,1078,false,true,4.4,466,true,true,25
-C5179,Zoomcar,Delhi,IGI Airport T3,Hatchback,Maruti Alto,Petrol,Automatic,5,1505,215,false,true,4.0,92,true,false,21
-C5180,Savaari,Kolkata,New Town,Sedan,Hyundai Verna,CNG,Manual,5,2308,330,false,false,3.7,138,true,false,21
-C5181,MyChoize,Delhi,Aerocity,Compact,Volkswagen Polo,Petrol,Automatic,5,1786,255,false,false,4.5,370,true,false,21
-C5182,CarTrawler,Goa,Panaji,SUV,Toyota Fortuner,Petrol,Manual,7,3865,552,false,false,3.8,340,true,false,25
-C5183,EasyCab,Chandigarh,Phase 1,Compact,Volkswagen Polo,Diesel,Manual,5,1694,242,false,true,3.8,160,true,false,21
-C5184,EasyCab,Jaipur,MI Road,Hatchback,Tata Tiago,CNG,Manual,5,1114,159,false,false,4.1,400,true,false,21
-C5185,Revv,Hyderabad,Rajiv Gandhi Airport,Compact,Honda Jazz,Diesel,Automatic,5,1617,231,false,true,3.6,80,true,false,21
-C5186,Savaari,Hyderabad,Banjara Hills,Sedan,Volkswagen Vento,Diesel,Manual,5,1959,280,false,true,3.7,336,true,false,21
-C5187,Avis,Nagpur,Sitabuldi,Sedan,Hyundai Verna,CNG,Automatic,5,2047,292,false,true,4.1,183,true,false,21
-C5188,Zoomcar,Bangalore,MG Road,Sedan,Volkswagen Vento,Diesel,Automatic,5,2069,296,false,true,4.2,134,true,false,21
-C5189,Myles,Kolkata,New Town,Hatchback,Maruti Alto,CNG,Manual,5,1196,171,false,true,3.7,289,true,false,21
-C5190,CarTrawler,Goa,Goa Airport,Luxury,Mercedes C-Class,Diesel,Automatic,5,9863,1409,false,true,4.8,142,true,true,25
-C5191,Avis,Ahmedabad,SG Highway,Compact,Volkswagen Polo,Petrol,Automatic,5,1938,277,false,true,4.2,98,true,false,21
-C5192,Avis,Mumbai,Mumbai Airport T2,Hatchback,Maruti Swift,CNG,Automatic,5,1402,200,false,true,4.6,295,true,false,21
-C5193,Avis,Hyderabad,Secunderabad,Luxury,Jaguar XE,Petrol,Manual,5,8059,1151,false,true,3.6,379,true,false,25
-C5194,EasyCab,Kolkata,Netaji Subhas Airport,Sedan,Maruti Swift Dzire,Diesel,Automatic,5,1945,278,false,true,4.7,195,true,false,21
-C5195,Myles,Goa,Goa Airport,Compact,Renault Triber,Diesel,Automatic,5,1534,219,false,true,4.2,248,true,false,21
-C5196,EasyCab,Kolkata,Netaji Subhas Airport,Luxury,Audi A4,Diesel,Automatic,5,7331,1047,false,true,5.0,396,true,false,25
-C5197,Myles,Ahmedabad,Vastrapur,Compact,Skoda Rapid,Petrol,Automatic,5,1707,244,false,true,4.3,201,true,false,21
-C5198,Revv,Ahmedabad,Sardar Vallabhbhai Airport,MUV,Toyota Innova,Diesel,Automatic,7,3227,461,false,true,3.5,429,true,false,21
-C5199,Myles,Chandigarh,Sector 17,Compact,Honda Jazz,Diesel,Automatic,5,1721,246,false,true,4.9,464,true,false,21
-C5200,Myles,Mumbai,Mumbai Airport T2,SUV,Kia Seltos,Petrol,Manual,7,2823,403,false,true,4.5,285,true,true,25
+C5001,MyChoize,Delhi,Gurugram,Hatchback,Hyundai Santro,Petrol,Automatic,5,1227,175,FALSE,TRUE,3.8,210,TRUE,FALSE,21
+C5002,Avis,Goa,Panaji,Hatchback,Tata Tiago,Petrol,Automatic,5,1477,211,FALSE,TRUE,4.8,478,TRUE,FALSE,21
+C5003,Myles,Bangalore,Kempegowda Airport,MUV,Mahindra Marazzo,Diesel,Manual,7,3608,515,TRUE,TRUE,4,344,TRUE,FALSE,21
+C5004,Myles,Chandigarh,Mohali,Hatchback,Maruti Alto,CNG,Automatic,5,1213,173,FALSE,TRUE,4.3,307,TRUE,FALSE,21
+C5005,Myles,Pune,Shivajinagar,Hatchback,Hyundai Santro,Petrol,Automatic,5,1261,180,FALSE,TRUE,4,491,TRUE,FALSE,21
+C5006,Avis,Bangalore,MG Road,Hatchback,Honda Jazz,CNG,Automatic,5,1590,227,FALSE,TRUE,4.1,435,TRUE,FALSE,21
+C5007,EasyCab,Mumbai,Andheri East,Hatchback,Maruti Celerio,CNG,Manual,5,1392,199,FALSE,TRUE,4.3,488,TRUE,FALSE,21
+C5008,Myles,Chennai,Anna Nagar,Luxury,BMW 3 Series,Diesel,Automatic,5,11235,1605,FALSE,TRUE,4,299,TRUE,FALSE,25
+C5009,Zoomcar,Nagpur,Ramdaspeth,MUV,Toyota Innova Crysta,Diesel,Manual,7,3789,541,FALSE,TRUE,4,336,TRUE,FALSE,21
+C5010,MyChoize,Lucknow,Lucknow Airport,MUV,Mahindra Marazzo,Petrol,Manual,7,3082,440,FALSE,TRUE,4.7,278,TRUE,FALSE,21
+C5011,Avis,Delhi,Noida,Sedan,Honda Amaze,CNG,Manual,5,1871,267,FALSE,TRUE,4.9,90,TRUE,FALSE,21
+C5012,Savaari,Mumbai,Andheri East,SUV,Mahindra XUV500,Petrol,Automatic,7,3911,559,FALSE,TRUE,4.3,280,TRUE,FALSE,25
+C5013,Myles,Nagpur,Sitabuldi,SUV,Mahindra Scorpio,Petrol,Manual,7,3221,460,FALSE,FALSE,4.2,77,TRUE,FALSE,25
+C5014,Revv,Kochi,Kochi Airport,Luxury,BMW 5 Series,Diesel,Automatic,5,9026,1289,FALSE,TRUE,4.2,114,TRUE,FALSE,25
+C5015,Zoomcar,Mumbai,Andheri East,SUV,Mahindra Scorpio,Petrol,Automatic,7,4622,660,FALSE,TRUE,4.4,373,TRUE,TRUE,25
+C5016,Avis,Jaipur,Pink City,MUV,Kia Carnival,Petrol,Manual,7,3249,464,FALSE,TRUE,3.5,467,TRUE,FALSE,21
+C5017,Avis,Pune,Shivajinagar,SUV,Mahindra XUV500,Diesel,Automatic,7,2837,405,FALSE,TRUE,4.7,330,TRUE,FALSE,25
+C5018,EasyCab,Mumbai,Navi Mumbai,Luxury,BMW 5 Series,Petrol,Automatic,5,10458,1494,FALSE,TRUE,4.3,459,TRUE,TRUE,25
+C5019,Avis,Bangalore,Electronic City,Compact,Skoda Rapid,Diesel,Automatic,5,1586,227,FALSE,TRUE,4.4,189,TRUE,FALSE,21
+C5020,CarTrawler,Nagpur,Sitabuldi,Compact,Volkswagen Polo,Diesel,Manual,5,1422,203,FALSE,TRUE,4.6,422,TRUE,FALSE,21
+C5021,Revv,Ahmedabad,CG Road,Sedan,Toyota Etios,Petrol,Automatic,5,2050,293,FALSE,TRUE,4.7,219,TRUE,FALSE,21
+C5022,Zoomcar,Hyderabad,Gachibowli,Sedan,Hyundai Verna,Diesel,Manual,5,2181,312,FALSE,TRUE,3.7,443,TRUE,FALSE,21
+C5023,EasyCab,Bangalore,Whitefield,Compact,Maruti Baleno,Petrol,Automatic,5,1871,267,FALSE,TRUE,4.5,209,TRUE,FALSE,21
+C5024,Zoomcar,Delhi,Gurugram,Hatchback,Honda Jazz,Petrol,Automatic,5,1346,192,FALSE,FALSE,3.8,107,TRUE,FALSE,21
+C5025,MyChoize,Chandigarh,Chandigarh Airport,SUV,Tata Harrier,Diesel,Automatic,7,3795,542,FALSE,TRUE,4.5,402,TRUE,TRUE,25
+C5026,Savaari,Bangalore,MG Road,Hatchback,Hyundai i20,CNG,Manual,5,1451,207,FALSE,TRUE,4.6,455,TRUE,FALSE,21
+C5027,CarTrawler,Nagpur,Sitabuldi,Sedan,Hyundai Verna,Diesel,Automatic,5,2149,307,FALSE,TRUE,3.9,70,TRUE,FALSE,21
+C5028,CarTrawler,Mumbai,Dadar,Luxury,Jaguar XE,Diesel,Automatic,5,9848,1407,FALSE,TRUE,4.2,494,TRUE,TRUE,25
+C5029,Revv,Hyderabad,Secunderabad,MUV,Maruti Ertiga,Diesel,Automatic,7,3429,490,TRUE,TRUE,4.6,59,TRUE,FALSE,21
+C5030,Savaari,Lucknow,Gomti Nagar,MUV,Mahindra Marazzo,Diesel,Automatic,7,3755,536,FALSE,TRUE,3.7,317,TRUE,FALSE,21
+C5031,Zoomcar,Bangalore,MG Road,Compact,Hyundai i20,Petrol,Automatic,5,1897,271,FALSE,TRUE,4.8,386,TRUE,FALSE,21
+C5032,Avis,Bangalore,Kempegowda Airport,Luxury,BMW 5 Series,Diesel,Manual,5,7497,1071,FALSE,TRUE,4.6,262,TRUE,TRUE,25
+C5033,Avis,Pune,Kothrud,Compact,Hyundai i20,Petrol,Automatic,5,1479,211,FALSE,TRUE,3.8,247,TRUE,FALSE,21
+C5034,Savaari,Delhi,Gurugram,SUV,Kia Seltos,Diesel,Automatic,7,4266,609,FALSE,FALSE,3.8,142,TRUE,TRUE,25
+C5035,Myles,Delhi,Gurugram,MUV,Mahindra Marazzo,Petrol,Automatic,7,3261,466,TRUE,TRUE,4.6,361,TRUE,FALSE,21
+C5036,EasyCab,Chennai,OMR,SUV,Kia Seltos,Petrol,Automatic,7,4426,632,FALSE,FALSE,4.4,315,TRUE,FALSE,25
+C5037,Avis,Mumbai,Bandra Kurla Complex,Hatchback,Maruti Swift,Petrol,Automatic,5,1111,159,FALSE,FALSE,3.7,69,TRUE,FALSE,21
+C5038,Myles,Hyderabad,Hitech City,Luxury,Audi A4,Diesel,Manual,5,10275,1468,FALSE,TRUE,3.8,89,TRUE,TRUE,25
+C5039,CarTrawler,Chennai,OMR,Luxury,BMW 3 Series,Petrol,Automatic,5,7458,1065,FALSE,FALSE,4,500,TRUE,TRUE,25
+C5040,Revv,Kolkata,Park Street,Luxury,Volvo S90,Petrol,Automatic,5,7337,1048,FALSE,TRUE,4.3,217,TRUE,TRUE,25
+C5041,Zoomcar,Chennai,T Nagar,SUV,Hyundai Creta,Petrol,Manual,7,4415,631,FALSE,TRUE,4.2,431,TRUE,FALSE,25
+C5042,Revv,Goa,Baga,Luxury,Audi A4,Diesel,Automatic,5,10238,1463,FALSE,TRUE,3.8,365,TRUE,TRUE,25
+C5043,Savaari,Delhi,IGI Airport T3,MUV,Maruti Ertiga,Petrol,Automatic,7,3347,478,FALSE,TRUE,4,385,TRUE,FALSE,21
+C5044,Myles,Mumbai,Andheri East,Sedan,Maruti Ciaz,CNG,Automatic,5,1849,264,FALSE,TRUE,3.7,422,TRUE,FALSE,21
+C5045,Zoomcar,Mumbai,Bandra Kurla Complex,Sedan,Maruti Swift Dzire,CNG,Manual,5,1994,285,FALSE,TRUE,3.5,157,TRUE,FALSE,21
+C5046,Savaari,Lucknow,Hazratganj,Compact,Volkswagen Polo,Diesel,Automatic,5,1418,203,FALSE,TRUE,3.8,195,TRUE,FALSE,21
+C5047,Zoomcar,Hyderabad,Banjara Hills,SUV,MG Hector,Diesel,Manual,7,4275,611,FALSE,TRUE,4.8,247,TRUE,FALSE,25
+C5048,Revv,Ahmedabad,Navrangpura,Luxury,BMW 5 Series,Diesel,Automatic,5,10751,1536,FALSE,TRUE,4.6,70,TRUE,FALSE,25
+C5049,MyChoize,Nagpur,Ramdaspeth,MUV,Mahindra Marazzo,Petrol,Manual,7,3780,540,FALSE,FALSE,4.3,465,TRUE,FALSE,21
+C5050,EasyCab,Pune,Pune Airport,Sedan,Maruti Ciaz,CNG,Automatic,5,1855,265,FALSE,TRUE,4.3,397,TRUE,FALSE,21
+C5051,Savaari,Chandigarh,Phase 1,MUV,Maruti XL6,Diesel,Manual,7,3610,516,FALSE,TRUE,4.3,459,TRUE,FALSE,21
+C5052,Avis,Chennai,OMR,SUV,Hyundai Creta,Diesel,Automatic,7,3447,492,FALSE,TRUE,4.9,110,TRUE,FALSE,25
+C5053,MyChoize,Mumbai,Navi Mumbai,SUV,Mahindra Scorpio,Petrol,Automatic,7,3422,489,FALSE,TRUE,3.5,363,TRUE,TRUE,25
+C5054,Savaari,Chennai,OMR,MUV,Toyota Innova Crysta,Diesel,Manual,7,3476,497,FALSE,TRUE,4.6,241,TRUE,FALSE,21
+C5055,CarTrawler,Chennai,T Nagar,SUV,Tata Harrier,Diesel,Manual,7,4473,639,FALSE,FALSE,3.8,393,TRUE,TRUE,25
+C5056,Myles,Hyderabad,Banjara Hills,SUV,Toyota Fortuner,Petrol,Automatic,7,4551,650,FALSE,TRUE,4.7,418,TRUE,FALSE,25
+C5057,Zoomcar,Bangalore,Koramangala,MUV,Maruti XL6,Diesel,Automatic,7,3601,514,TRUE,TRUE,4.1,441,TRUE,FALSE,21
+C5058,Savaari,Jaipur,Pink City,Compact,Hyundai i20,Diesel,Automatic,5,1872,267,FALSE,TRUE,3.6,314,TRUE,FALSE,21
+C5059,CarTrawler,Mumbai,Mumbai Airport T2,SUV,Jeep Compass,Diesel,Manual,7,3354,479,FALSE,TRUE,3.5,282,TRUE,TRUE,25
+C5060,CarTrawler,Delhi,IGI Airport T3,Compact,Maruti Baleno,Diesel,Manual,5,1493,213,FALSE,TRUE,4.6,422,TRUE,FALSE,21
+C5061,Myles,Bangalore,Whitefield,MUV,Toyota Innova Crysta,Petrol,Manual,7,2832,405,FALSE,TRUE,4.1,208,TRUE,FALSE,21
+C5062,CarTrawler,Hyderabad,Gachibowli,Compact,Renault Triber,Petrol,Manual,5,1403,200,FALSE,TRUE,4.2,463,TRUE,FALSE,21
+C5063,Savaari,Delhi,Connaught Place,Sedan,Ford Aspire,CNG,Automatic,5,2119,303,FALSE,TRUE,4.8,192,TRUE,FALSE,21
+C5064,Savaari,Ahmedabad,Sardar Vallabhbhai Airport,MUV,Maruti XL6,Diesel,Manual,7,2797,400,TRUE,TRUE,3.9,94,TRUE,FALSE,21
+C5065,EasyCab,Goa,Panaji,Sedan,Maruti Swift Dzire,Petrol,Automatic,5,2376,339,FALSE,TRUE,3.6,443,TRUE,FALSE,21
+C5066,MyChoize,Goa,Baga,Hatchback,Maruti Celerio,Petrol,Automatic,5,1531,219,FALSE,TRUE,4.8,218,TRUE,FALSE,21
+C5067,Savaari,Kolkata,Park Street,MUV,Kia Carnival,Diesel,Manual,7,3490,499,TRUE,FALSE,3.9,361,TRUE,FALSE,21
+C5068,MyChoize,Pune,Koregaon Park,Hatchback,Maruti Wagon R,CNG,Automatic,5,1352,193,FALSE,TRUE,4.2,457,TRUE,FALSE,21
+C5069,EasyCab,Kolkata,Howrah,Sedan,Toyota Etios,Petrol,Automatic,5,2273,325,FALSE,TRUE,3.6,203,TRUE,FALSE,21
+C5070,MyChoize,Goa,Goa Airport,MUV,Toyota Innova Crysta,Diesel,Automatic,7,2859,408,FALSE,TRUE,4.5,292,TRUE,FALSE,21
+C5071,CarTrawler,Delhi,Connaught Place,Sedan,Hyundai Verna,CNG,Automatic,5,2249,321,FALSE,TRUE,3.9,421,TRUE,FALSE,21
+C5072,Zoomcar,Kochi,MG Road,Compact,Tata Altroz,Diesel,Automatic,5,1467,210,FALSE,TRUE,4.1,323,TRUE,FALSE,21
+C5073,Myles,Ahmedabad,SG Highway,SUV,Tata Harrier,Diesel,Automatic,7,3912,559,FALSE,TRUE,3.9,281,TRUE,TRUE,25
+C5074,Avis,Delhi,Connaught Place,Hatchback,Tata Tiago,Petrol,Automatic,5,1501,214,FALSE,TRUE,4.2,306,TRUE,FALSE,21
+C5075,MyChoize,Jaipur,Vaishali Nagar,SUV,Kia Seltos,Petrol,Automatic,7,3343,478,FALSE,TRUE,4.6,317,TRUE,FALSE,25
+C5076,Revv,Pune,Hinjewadi,Hatchback,Maruti Swift,CNG,Manual,5,1152,165,FALSE,TRUE,3.8,152,TRUE,FALSE,21
+C5077,Avis,Goa,Panjim,SUV,MG Hector,Petrol,Automatic,7,3411,487,FALSE,TRUE,4.9,336,TRUE,TRUE,25
+C5078,MyChoize,Jaipur,Pink City,SUV,Mahindra XUV500,Diesel,Automatic,7,3091,442,FALSE,TRUE,3.6,64,TRUE,FALSE,25
+C5079,Revv,Mumbai,Navi Mumbai,Compact,Hyundai i20,Petrol,Automatic,5,1856,265,FALSE,TRUE,4.6,393,TRUE,FALSE,21
+C5080,CarTrawler,Pune,Kothrud,MUV,Toyota Innova,Diesel,Manual,7,3135,448,FALSE,FALSE,3.7,365,TRUE,FALSE,21
+C5081,EasyCab,Pune,Koregaon Park,Hatchback,Maruti Celerio,CNG,Automatic,5,1332,190,FALSE,TRUE,4.2,137,TRUE,FALSE,21
+C5082,Myles,Pune,Kothrud,Hatchback,Maruti Celerio,Petrol,Automatic,5,1518,217,FALSE,TRUE,4.4,172,TRUE,FALSE,21
+C5083,Myles,Jaipur,Vaishali Nagar,MUV,Maruti Ertiga,Petrol,Manual,7,3661,523,FALSE,TRUE,4.5,89,TRUE,FALSE,21
+C5084,CarTrawler,Bangalore,Kempegowda Airport,Compact,Skoda Rapid,Diesel,Manual,5,1580,226,FALSE,TRUE,4.5,355,TRUE,FALSE,21
+C5085,CarTrawler,Bangalore,Kempegowda Airport,Luxury,Audi A4,Petrol,Manual,5,10710,1530,FALSE,TRUE,4.1,345,TRUE,FALSE,25
+C5086,Avis,Kolkata,New Town,SUV,Mahindra XUV500,Petrol,Automatic,7,2833,405,FALSE,TRUE,3.7,200,TRUE,FALSE,25
+C5087,Zoomcar,Mumbai,Dadar,MUV,Toyota Innova,Petrol,Manual,7,3384,483,FALSE,TRUE,4.1,245,TRUE,FALSE,21
+C5088,Savaari,Mumbai,Bandra Kurla Complex,Luxury,BMW 5 Series,Diesel,Automatic,5,8028,1147,FALSE,TRUE,3.6,58,TRUE,FALSE,25
+C5089,EasyCab,Goa,Panaji,Luxury,Jaguar XE,Petrol,Automatic,5,11173,1596,FALSE,TRUE,4.7,246,TRUE,FALSE,25
+C5090,Zoomcar,Delhi,Gurugram,SUV,Tata Harrier,Petrol,Manual,7,4482,640,FALSE,TRUE,5,340,TRUE,FALSE,25
+C5091,CarTrawler,Kochi,Kochi Airport,Hatchback,Hyundai i20,Petrol,Automatic,5,1338,191,FALSE,TRUE,4.4,389,TRUE,FALSE,21
+C5092,Avis,Chennai,OMR,Compact,Hyundai i20,Petrol,Automatic,5,1880,269,FALSE,TRUE,4,230,TRUE,FALSE,21
+C5093,Myles,Pune,Pune Airport,Hatchback,Maruti Wagon R,CNG,Automatic,5,1131,162,FALSE,TRUE,3.9,427,TRUE,FALSE,21
+C5094,Avis,Pune,Shivajinagar,MUV,Toyota Innova,Diesel,Manual,7,2771,396,FALSE,TRUE,4.6,359,TRUE,FALSE,21
+C5095,CarTrawler,Kolkata,Salt Lake,SUV,Hyundai Creta,Diesel,Automatic,7,3540,506,FALSE,TRUE,3.6,124,TRUE,TRUE,25
+C5096,EasyCab,Jaipur,Vaishali Nagar,SUV,Jeep Compass,Diesel,Automatic,7,3663,523,FALSE,TRUE,3.9,469,TRUE,FALSE,25
+C5097,EasyCab,Mumbai,Navi Mumbai,SUV,Jeep Compass,Petrol,Automatic,7,4355,622,FALSE,TRUE,4.3,272,TRUE,FALSE,25
+C5098,MyChoize,Chennai,OMR,Luxury,Mercedes E-Class,Petrol,Automatic,5,9187,1312,FALSE,TRUE,3.9,349,TRUE,FALSE,25
+C5099,Savaari,Mumbai,Dadar,Compact,Skoda Rapid,Petrol,Automatic,5,1720,246,FALSE,TRUE,3.6,103,TRUE,FALSE,21
+C5100,MyChoize,Delhi,Connaught Place,Compact,Honda Jazz,Diesel,Manual,5,1494,213,FALSE,FALSE,4.5,412,TRUE,FALSE,21
+C5101,Myles,Delhi,Noida,Sedan,Maruti Swift Dzire,CNG,Manual,5,1813,259,FALSE,TRUE,3.6,282,TRUE,FALSE,21
+C5102,MyChoize,Nagpur,Dharampeth,Hatchback,Hyundai Santro,Petrol,Manual,5,1241,177,FALSE,TRUE,4.7,141,TRUE,FALSE,21
+C5103,CarTrawler,Mumbai,Bandra Kurla Complex,Luxury,Mercedes C-Class,Diesel,Automatic,5,7870,1124,FALSE,FALSE,4.6,102,TRUE,FALSE,25
+C5104,CarTrawler,Ahmedabad,Sardar Vallabhbhai Airport,Sedan,Maruti Ciaz,Diesel,Manual,5,2355,336,FALSE,TRUE,4,250,TRUE,FALSE,21
+C5105,CarTrawler,Bangalore,Whitefield,MUV,Toyota Innova,Petrol,Automatic,7,2506,358,TRUE,TRUE,4.2,340,TRUE,FALSE,21
+C5106,MyChoize,Chennai,Velachery,MUV,Mahindra Marazzo,Petrol,Manual,7,3594,513,FALSE,TRUE,4.6,381,TRUE,FALSE,21
+C5107,Zoomcar,Bangalore,Whitefield,SUV,Hyundai Creta,Diesel,Automatic,7,4271,610,FALSE,FALSE,4.2,147,TRUE,FALSE,25
+C5108,Savaari,Mumbai,Navi Mumbai,SUV,Mahindra Scorpio,Petrol,Manual,7,4846,692,FALSE,FALSE,3.5,223,TRUE,FALSE,25
+C5109,EasyCab,Goa,Goa Airport,Compact,Hyundai i20,Petrol,Automatic,5,1869,267,FALSE,TRUE,3.6,426,TRUE,FALSE,21
+C5110,Zoomcar,Chandigarh,Phase 1,SUV,Jeep Compass,Diesel,Manual,7,2858,408,FALSE,FALSE,4.7,99,TRUE,FALSE,25
+C5111,Revv,Lucknow,Lucknow Airport,SUV,Toyota Fortuner,Petrol,Manual,7,4181,597,FALSE,TRUE,4.5,329,TRUE,FALSE,25
+C5112,Myles,Chandigarh,Sector 35,SUV,Mahindra Scorpio,Diesel,Manual,7,3488,498,FALSE,TRUE,3.9,347,TRUE,FALSE,25
+C5113,Myles,Chennai,Chennai Airport,Sedan,Honda Amaze,Diesel,Manual,5,1707,244,FALSE,TRUE,4.7,445,TRUE,FALSE,21
+C5114,Myles,Delhi,Connaught Place,Luxury,Jaguar XE,Petrol,Automatic,5,7308,1044,FALSE,TRUE,4.6,363,TRUE,TRUE,25
+C5115,Avis,Mumbai,Andheri East,Compact,Renault Triber,Diesel,Manual,5,1942,277,FALSE,FALSE,5,309,TRUE,FALSE,21
+C5116,Savaari,Mumbai,Andheri East,SUV,Jeep Compass,Diesel,Manual,7,4837,691,FALSE,TRUE,3.6,380,TRUE,FALSE,25
+C5117,Avis,Hyderabad,Gachibowli,SUV,Tata Harrier,Petrol,Manual,7,3520,503,FALSE,TRUE,3.7,170,TRUE,TRUE,25
+C5118,MyChoize,Hyderabad,Banjara Hills,MUV,Toyota Innova Crysta,Diesel,Automatic,7,2700,386,TRUE,FALSE,4.1,162,TRUE,FALSE,21
+C5119,CarTrawler,Kochi,Kochi Airport,Sedan,Ford Aspire,Diesel,Manual,5,2324,332,FALSE,TRUE,4.6,373,TRUE,FALSE,21
+C5120,Savaari,Kochi,Kakkanad,Hatchback,Maruti Wagon R,Petrol,Manual,5,1454,208,FALSE,FALSE,4.2,137,TRUE,FALSE,21
+C5121,Avis,Goa,Panjim,Hatchback,Tata Tiago,Petrol,Manual,5,1395,199,FALSE,TRUE,5,352,TRUE,FALSE,21
+C5122,CarTrawler,Kolkata,Salt Lake,Luxury,Volvo S90,Petrol,Automatic,5,11746,1678,FALSE,TRUE,4.9,126,TRUE,TRUE,25
+C5123,Zoomcar,Delhi,IGI Airport T3,Sedan,Honda Amaze,Diesel,Manual,5,2243,320,FALSE,TRUE,3.6,435,TRUE,FALSE,21
+C5124,Savaari,Kolkata,Park Street,Sedan,Honda Amaze,Diesel,Automatic,5,2363,338,FALSE,TRUE,4.2,342,TRUE,FALSE,21
+C5125,Zoomcar,Bangalore,Whitefield,Compact,Volkswagen Polo,Diesel,Automatic,5,1589,227,FALSE,TRUE,3.5,371,TRUE,FALSE,21
+C5126,MyChoize,Ahmedabad,SG Highway,Sedan,Honda Amaze,Petrol,Automatic,5,1976,282,FALSE,TRUE,3.6,395,TRUE,FALSE,21
+C5127,Revv,Jaipur,Vaishali Nagar,Hatchback,Maruti Swift,CNG,Automatic,5,1416,202,FALSE,TRUE,4.3,446,TRUE,FALSE,21
+C5128,MyChoize,Kochi,MG Road,SUV,Hyundai Creta,Diesel,Automatic,7,3723,532,FALSE,FALSE,4.3,266,TRUE,FALSE,25
+C5129,MyChoize,Delhi,Noida,Sedan,Volkswagen Vento,Diesel,Manual,5,2244,321,FALSE,TRUE,4.9,464,TRUE,FALSE,21
+C5130,CarTrawler,Kolkata,Netaji Subhas Airport,Sedan,Toyota Etios,Petrol,Automatic,5,1883,269,FALSE,TRUE,4.5,304,TRUE,FALSE,21
+C5131,Zoomcar,Kochi,Kakkanad,SUV,Kia Seltos,Petrol,Manual,7,4618,660,FALSE,TRUE,3.5,460,TRUE,FALSE,25
+C5132,MyChoize,Jaipur,Vaishali Nagar,MUV,Maruti XL6,Petrol,Automatic,7,3437,491,FALSE,FALSE,4,454,TRUE,FALSE,21
+C5133,CarTrawler,Delhi,Aerocity,Hatchback,Tata Tiago,CNG,Manual,5,1175,168,FALSE,TRUE,3.9,139,TRUE,FALSE,21
+C5134,Myles,Ahmedabad,CG Road,Compact,Skoda Rapid,Petrol,Automatic,5,1851,264,FALSE,TRUE,4.6,390,TRUE,FALSE,21
+C5135,Myles,Hyderabad,Gachibowli,Hatchback,Maruti Celerio,CNG,Manual,5,1373,196,FALSE,TRUE,4.9,213,TRUE,FALSE,21
+C5136,MyChoize,Chennai,Velachery,SUV,Mahindra Scorpio,Petrol,Automatic,7,4610,659,FALSE,TRUE,4.9,121,TRUE,TRUE,25
+C5137,Zoomcar,Jaipur,Vaishali Nagar,Sedan,Maruti Ciaz,CNG,Manual,5,2065,295,FALSE,TRUE,4.4,163,TRUE,FALSE,21
+C5138,Zoomcar,Goa,Goa Airport,Hatchback,Tata Tiago,CNG,Manual,5,1599,228,FALSE,TRUE,4.3,78,TRUE,FALSE,21
+C5139,EasyCab,Nagpur,Sitabuldi,Compact,Tata Altroz,Diesel,Automatic,5,1753,250,FALSE,FALSE,3.6,422,TRUE,FALSE,21
+C5140,EasyCab,Delhi,Noida,Luxury,Jaguar XE,Diesel,Automatic,5,8702,1243,FALSE,TRUE,5,318,TRUE,TRUE,25
+C5141,Revv,Kochi,Kochi Airport,Sedan,Honda Amaze,Diesel,Automatic,5,1879,268,FALSE,TRUE,4.7,198,TRUE,FALSE,21
+C5142,Zoomcar,Goa,Calangute,MUV,Kia Carnival,Petrol,Automatic,7,2505,358,FALSE,FALSE,4.8,291,TRUE,FALSE,21
+C5143,EasyCab,Kolkata,Park Street,Sedan,Maruti Ciaz,Diesel,Manual,5,1822,260,FALSE,TRUE,4.4,339,TRUE,FALSE,21
+C5144,Avis,Jaipur,Vaishali Nagar,Luxury,Volvo S90,Petrol,Manual,5,9618,1374,FALSE,TRUE,4.5,232,TRUE,FALSE,25
+C5145,EasyCab,Kolkata,Salt Lake,Hatchback,Maruti Celerio,Petrol,Automatic,5,1249,178,FALSE,TRUE,4.4,135,TRUE,FALSE,21
+C5146,MyChoize,Chennai,Velachery,MUV,Mahindra Marazzo,Petrol,Automatic,7,2794,399,FALSE,TRUE,4.7,260,TRUE,FALSE,21
+C5147,Revv,Hyderabad,Hitech City,Hatchback,Honda Jazz,Petrol,Manual,5,1525,218,FALSE,TRUE,4.7,263,TRUE,FALSE,21
+C5148,Revv,Goa,Panaji,Luxury,Mercedes C-Class,Petrol,Automatic,5,11285,1612,FALSE,TRUE,4,413,TRUE,FALSE,25
+C5149,Revv,Ahmedabad,CG Road,Compact,Renault Triber,Petrol,Automatic,5,1714,245,FALSE,FALSE,4.1,440,TRUE,FALSE,21
+C5150,Zoomcar,Goa,Baga,Sedan,Maruti Swift Dzire,Diesel,Manual,5,1810,259,FALSE,TRUE,4.9,72,TRUE,FALSE,21
+C5151,Zoomcar,Bangalore,Kempegowda Airport,Sedan,Maruti Ciaz,Petrol,Manual,5,1904,272,FALSE,TRUE,4.6,192,TRUE,FALSE,21
+C5152,MyChoize,Bangalore,MG Road,MUV,Mahindra Marazzo,Diesel,Manual,7,2944,421,TRUE,TRUE,4.6,52,TRUE,FALSE,21
+C5153,Savaari,Goa,Panjim,Compact,Hyundai i20,Diesel,Manual,5,1509,216,FALSE,TRUE,4.3,258,TRUE,FALSE,21
+C5154,Revv,Kochi,Ernakulam,Sedan,Volkswagen Vento,Petrol,Manual,5,2069,296,FALSE,TRUE,4.1,283,TRUE,FALSE,21
+C5155,Avis,Delhi,Noida,MUV,Maruti XL6,Diesel,Automatic,7,3474,496,FALSE,FALSE,4.2,103,TRUE,FALSE,21
+C5156,Revv,Delhi,IGI Airport T3,Luxury,Mercedes E-Class,Petrol,Manual,5,9774,1396,FALSE,TRUE,4.8,256,TRUE,FALSE,25
+C5157,CarTrawler,Hyderabad,Gachibowli,Luxury,Jaguar XE,Diesel,Automatic,5,11941,1706,FALSE,FALSE,5,311,TRUE,FALSE,25
+C5158,Revv,Ahmedabad,Navrangpura,Luxury,Mercedes C-Class,Diesel,Automatic,5,7558,1080,FALSE,TRUE,3.5,141,TRUE,FALSE,25
+C5159,Myles,Chennai,Velachery,Compact,Tata Altroz,Petrol,Automatic,5,1904,272,FALSE,TRUE,4.2,183,TRUE,FALSE,21
+C5160,Zoomcar,Bangalore,Kempegowda Airport,MUV,Mahindra Marazzo,Petrol,Manual,7,3406,487,FALSE,TRUE,4.5,449,TRUE,FALSE,21
+C5161,CarTrawler,Hyderabad,Banjara Hills,Hatchback,Honda Jazz,Petrol,Automatic,5,1466,209,FALSE,TRUE,4.5,342,TRUE,FALSE,21
+C5162,Myles,Chandigarh,Mohali,Luxury,Mercedes E-Class,Petrol,Automatic,5,7503,1072,FALSE,TRUE,3.6,478,TRUE,FALSE,25
+C5163,Zoomcar,Jaipur,Pink City,Compact,Volkswagen Polo,Diesel,Automatic,5,1759,251,FALSE,TRUE,4,93,TRUE,FALSE,21
+C5164,Avis,Nagpur,Nagpur Airport,Compact,Hyundai i20,Diesel,Automatic,5,1832,262,FALSE,TRUE,4.2,61,TRUE,FALSE,21
+C5165,EasyCab,Chandigarh,Sector 35,Hatchback,Hyundai Santro,Petrol,Automatic,5,1151,164,FALSE,TRUE,4.5,135,TRUE,FALSE,21
+C5166,MyChoize,Kochi,Ernakulam,MUV,Mahindra Marazzo,Diesel,Automatic,7,3088,441,FALSE,FALSE,4.1,165,TRUE,FALSE,21
+C5167,Revv,Ahmedabad,SG Highway,MUV,Maruti XL6,Diesel,Automatic,7,3473,496,FALSE,TRUE,4.5,204,TRUE,FALSE,21
+C5168,EasyCab,Mumbai,Dadar,MUV,Mahindra Marazzo,Petrol,Manual,7,3428,490,FALSE,TRUE,4.6,491,TRUE,FALSE,21
+C5169,Savaari,Delhi,Noida,SUV,Jeep Compass,Petrol,Automatic,7,4939,706,FALSE,TRUE,3.9,432,TRUE,TRUE,25
+C5170,EasyCab,Ahmedabad,Navrangpura,Hatchback,Hyundai Santro,Petrol,Manual,5,1533,219,FALSE,TRUE,3.9,172,TRUE,FALSE,21
+C5171,Savaari,Kolkata,Netaji Subhas Airport,Sedan,Hyundai Verna,Petrol,Automatic,5,2197,314,FALSE,TRUE,3.9,64,TRUE,FALSE,21
+C5172,Myles,Goa,Goa Airport,Hatchback,Maruti Wagon R,CNG,Manual,5,1128,161,FALSE,FALSE,4.5,96,TRUE,FALSE,21
+C5173,Myles,Lucknow,Hazratganj,Luxury,Volvo S90,Petrol,Automatic,5,11066,1581,FALSE,FALSE,3.9,112,TRUE,TRUE,25
+C5174,EasyCab,Chennai,Anna Nagar,Hatchback,Maruti Celerio,CNG,Manual,5,1173,168,FALSE,TRUE,4.8,78,TRUE,FALSE,21
+C5175,MyChoize,Mumbai,Mumbai Airport T2,Luxury,BMW 5 Series,Diesel,Automatic,5,9973,1425,FALSE,TRUE,4.1,207,TRUE,FALSE,25
+C5176,Zoomcar,Bangalore,MG Road,MUV,Toyota Innova,Petrol,Automatic,7,3595,514,TRUE,TRUE,4.9,251,TRUE,FALSE,21
+C5177,Revv,Pune,Koregaon Park,Hatchback,Maruti Wagon R,CNG,Manual,5,1540,220,FALSE,TRUE,3.6,449,TRUE,FALSE,21
+C5178,EasyCab,Bangalore,Electronic City,Luxury,Mercedes E-Class,Diesel,Automatic,5,7543,1078,FALSE,TRUE,4.4,466,TRUE,TRUE,25
+C5179,Zoomcar,Delhi,IGI Airport T3,Hatchback,Maruti Alto,Petrol,Automatic,5,1505,215,FALSE,TRUE,4,92,TRUE,FALSE,21
+C5180,Savaari,Kolkata,New Town,Sedan,Hyundai Verna,CNG,Manual,5,2308,330,FALSE,FALSE,3.7,138,TRUE,FALSE,21
+C5181,MyChoize,Delhi,Aerocity,Compact,Volkswagen Polo,Petrol,Automatic,5,1786,255,FALSE,FALSE,4.5,370,TRUE,FALSE,21
+C5182,CarTrawler,Goa,Panaji,SUV,Toyota Fortuner,Petrol,Manual,7,3865,552,FALSE,FALSE,3.8,340,TRUE,FALSE,25
+C5183,EasyCab,Chandigarh,Phase 1,Compact,Volkswagen Polo,Diesel,Manual,5,1694,242,FALSE,TRUE,3.8,160,TRUE,FALSE,21
+C5184,EasyCab,Jaipur,MI Road,Hatchback,Tata Tiago,CNG,Manual,5,1114,159,FALSE,FALSE,4.1,400,TRUE,FALSE,21
+C5185,Revv,Hyderabad,Rajiv Gandhi Airport,Compact,Honda Jazz,Diesel,Automatic,5,1617,231,FALSE,TRUE,3.6,80,TRUE,FALSE,21
+C5186,Savaari,Hyderabad,Banjara Hills,Sedan,Volkswagen Vento,Diesel,Manual,5,1959,280,FALSE,TRUE,3.7,336,TRUE,FALSE,21
+C5187,Avis,Nagpur,Sitabuldi,Sedan,Hyundai Verna,CNG,Automatic,5,2047,292,FALSE,TRUE,4.1,183,TRUE,FALSE,21
+C5188,Zoomcar,Bangalore,MG Road,Sedan,Volkswagen Vento,Diesel,Automatic,5,2069,296,FALSE,TRUE,4.2,134,TRUE,FALSE,21
+C5189,Myles,Kolkata,New Town,Hatchback,Maruti Alto,CNG,Manual,5,1196,171,FALSE,TRUE,3.7,289,TRUE,FALSE,21
+C5190,CarTrawler,Goa,Goa Airport,Luxury,Mercedes C-Class,Diesel,Automatic,5,9863,1409,FALSE,TRUE,4.8,142,TRUE,TRUE,25
+C5191,Avis,Ahmedabad,SG Highway,Compact,Volkswagen Polo,Petrol,Automatic,5,1938,277,FALSE,TRUE,4.2,98,TRUE,FALSE,21
+C5192,Avis,Mumbai,Mumbai Airport T2,Hatchback,Maruti Swift,CNG,Automatic,5,1402,200,FALSE,TRUE,4.6,295,TRUE,FALSE,21
+C5193,Avis,Hyderabad,Secunderabad,Luxury,Jaguar XE,Petrol,Manual,5,8059,1151,FALSE,TRUE,3.6,379,TRUE,FALSE,25
+C5194,EasyCab,Kolkata,Netaji Subhas Airport,Sedan,Maruti Swift Dzire,Diesel,Automatic,5,1945,278,FALSE,TRUE,4.7,195,TRUE,FALSE,21
+C5195,Myles,Goa,Goa Airport,Compact,Renault Triber,Diesel,Automatic,5,1534,219,FALSE,TRUE,4.2,248,TRUE,FALSE,21
+C5196,EasyCab,Kolkata,Netaji Subhas Airport,Luxury,Audi A4,Diesel,Automatic,5,7331,1047,FALSE,TRUE,5,396,TRUE,FALSE,25
+C5197,Myles,Ahmedabad,Vastrapur,Compact,Skoda Rapid,Petrol,Automatic,5,1707,244,FALSE,TRUE,4.3,201,TRUE,FALSE,21
+C5198,Revv,Ahmedabad,Sardar Vallabhbhai Airport,MUV,Toyota Innova,Diesel,Automatic,7,3227,461,FALSE,TRUE,3.5,429,TRUE,FALSE,21
+C5199,Myles,Chandigarh,Sector 17,Compact,Honda Jazz,Diesel,Automatic,5,1721,246,FALSE,TRUE,4.9,464,TRUE,FALSE,21
+C5200,Myles,Mumbai,Mumbai Airport T2,SUV,Kia Seltos,Petrol,Manual,7,2823,403,FALSE,TRUE,4.5,285,TRUE,TRUE,25
