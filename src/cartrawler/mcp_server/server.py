@@ -53,9 +53,15 @@ When user mentions "ride from airport" or "transfer to [city]":
 → Call find_cars with destination city and with_driver=true
 → Present CarTrawler cars as the pre-booked airport transfer solution
 
-## Authentication Rules
-- Booking, profile, my-bookings, cancel → ask for login first
+## Authentication Rules — CRITICAL
 - FAQ and car search → NO login required
+- Booking, profile, my-bookings, cancel → need access_token
+- If user gives name/email/password/phone → call `register` tool immediately
+- If user gives email/password only → call `login` tool immediately
+- After `register` or `login` returns an access_token → IMMEDIATELY call
+  `book_rental_car` (or whatever action the user requested) using that token
+- NEVER stop after login/register and ask the user to "do it manually"
+- NEVER say "I can't complete the booking" — always use the token to proceed
 
 ## Display Format
 - Always use markdown with emojis, tables, and clear headers
@@ -353,8 +359,9 @@ async def register(
     """
     Create a new CarTrawler account.
 
-    Returns JWT access_token + refresh_token. Save the access_token —
-    it is required for all booking and account operations.
+    IMPORTANT: After this tool returns successfully, you MUST immediately
+    call book_rental_car (or whatever the user asked to do) using the
+    access_token returned here. Do NOT stop and ask the user to do it manually.
     """
     result = await register_user(
         name=name, email=email, password=password,
@@ -363,48 +370,28 @@ async def register(
     )
     if result.get("success"):
         tokens = result.get("tokens", {})
+        token = tokens.get('access_token', '')
         return f"""## 🎉 Account Created — Welcome, {name}!
-
----
 
 | | |
 |--|--|
 | 👤 **Name** | {name} |
 | 📧 **Email** | {email} |
 | 🆔 **User ID** | `{result.get('user_id', '—')}` |
-| 🥉 **Loyalty Tier** | Bronze (0 pts) |
+| 🥉 **Loyalty** | Bronze · 0 pts |
 
-### 🔑 Access Token *(copy this — needed for booking)*
-```
-{tokens.get('access_token', '—')}
-```
+**access_token:** `{token}`
 
-### 🔄 Refresh Token *(use to renew session after 30 min)*
-```
-{tokens.get('refresh_token', '—')}
-```
-
----
-✅ **You're logged in.** Token valid for **30 minutes**.
-🚗 Say **"find cars in [your city]"** to start booking!
+✅ Registration successful. Proceeding with your booking now...
 """
 
-    # Friendly error — distinguish "already registered" from real errors
     msg = result.get("message", "Unknown error")
     if "already registered" in msg.lower() or "already exists" in msg.lower():
         return f"""## 📧 Email Already Registered
 
-**{email}** already has a CarTrawler account.
-
----
-
-### 👉 Just log in instead:
-
-Please share your **password** for `{email}` and I'll log you in right away.
-
-> Forgot your password? Register with a different email address.
+**{email}** already has an account. Please call the `login` tool with email="{email}" and the password provided to get the access_token, then proceed with the booking.
 """
-    return f"## ❌ Registration Failed\n\n{msg}\n\nPlease check your details and try again."
+    return f"## ❌ Registration Failed\n\n{msg}\n\nPlease check the details and try again."
 
 
 @mcp.tool()
@@ -420,34 +407,17 @@ async def login(email: str, password: str) -> str:
         tokens = result.get("tokens", {})
         tier = tokens.get("loyalty_tier", "BRONZE")
         tier_emoji = {"BRONZE": "🥉", "SILVER": "🥈", "GOLD": "🥇", "PLATINUM": "💎"}.get(tier, "🎖️")
-        return f"""## ✅ Login Successful
-
-Welcome back, **{tokens.get('name', 'User')}**! 👋
-
----
+        token = tokens.get('access_token', '')
+        return f"""## ✅ Login Successful — Welcome back, {tokens.get('name', 'User')}! 👋
 
 | | |
 |--|--|
-| **Loyalty Tier** | {tier_emoji} {tier} |
-| **Points** | {tokens.get('loyalty_points', 0):,} pts |
+| {tier_emoji} **Tier** | {tier} · {tokens.get('loyalty_points', 0):,} pts |
+| 📧 **Email** | {email} |
 
-### 🔑 Your Access Token
-```
-{tokens.get('access_token', '—')}
-```
+**access_token:** `{token}`
 
-### 🔄 Your Refresh Token
-```
-{tokens.get('refresh_token', '—')}
-```
-
-> ⚠️ Token expires in **30 minutes**. Use `refresh_session` to renew.
-
----
-🚗 What would you like to do?
-- `find_cars` — Search rental cars
-- `my_bookings` — View your bookings
-- `my_profile` — View your profile
+✅ Logged in. Proceeding with your request now...
 """
     msg = result.get("message", "")
     if "no account" in msg.lower() or "not found" in msg.lower():
