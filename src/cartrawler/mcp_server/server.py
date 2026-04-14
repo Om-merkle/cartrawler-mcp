@@ -90,75 +90,143 @@ Use the **`login`** tool with your `email` and `password`.
 
 
 def _flight_redirect_card(destination_city: str = "") -> str:
-    """Return a flight-redirect card with car rental pitch."""
-    car_pitch = f"\n\n---\n\n### 🚗 Need a Car in {destination_city}?\nI can find you the best rental cars! Just say **\"find cars in {destination_city}\"**." if destination_city else "\n\n---\n\n### 🚗 Need a Rental Car at Your Destination?\nTell me the city and I'll find you the best deals!"
-    return f"""## ✈️ Flight Bookings — Not My Department!
+    """Return a flight-redirect card with real booking links and car rental pitch."""
+    dest = destination_city or "your destination"
+    # Build deep-link URLs for flight booking sites
+    dest_enc = dest.replace(" ", "+")
+    kayak_url = f"https://www.kayak.co.in/flights/DEL-{dest_enc}"
+    gf_url = f"https://www.google.com/flights?q=flights+to+{dest_enc}"
+    indigo_url = "https://www.goindigo.in"
+    airindia_url = "https://www.airindia.com"
+    car_section = f"\n\n---\n\n### 🚗 Also Need a Car in {dest}?\n> CarTrawler can help! Use `find_cars` with city **\"{dest}\"** — I'll show you the best rental options." if destination_city else ""
 
-CarTrawler specialises in **car rentals**. For flights, please use:
+    return f"""## ✈️ Flight Bookings
 
-| App | Best For |
-|-----|----------|
-| 🔍 **Kayak** (ChatGPT plugin) | Compare all airlines |
-| 🗺️ **Google Flights** | Price calendar & alerts |
-| 🇮🇳 **IndiGo / Air India** apps | Direct airline booking |
+CarTrawler specialises in **car rentals**, but here are top options for your flight:
 
-{car_pitch}
+---
+
+### Book your flight here:
+
+| Platform | Action |
+|----------|--------|
+| 🔍 **Kayak** | [Search Delhi → {dest} →]({kayak_url}) |
+| 🗺️ **Google Flights** | [Find cheapest dates →]({gf_url}) |
+| 🇮🇳 **IndiGo** | [Book on IndiGo →]({indigo_url}) |
+| 🇮🇳 **Air India** | [Book on Air India →]({airindia_url}) |
+
+> 💡 Prices may change based on availability. Review final price before booking.
+{car_section}
 """
 
 
 def _hotel_redirect_card(city: str = "") -> str:
-    """Return a hotel-redirect card with car rental pitch."""
-    car_pitch = f"\n\n---\n\n### 🚗 Need a Car in {city}?\nI can find rental cars from top vendors like Zoomcar, Avis & Savaari. Just ask!" if city else "\n\n---\n\n### 🚗 Planning to Explore?\nRent a car and go wherever you want — no fixed routes, no schedules!"
-    return f"""## 🏨 Hotel Bookings — Not My Department!
+    """Return a hotel-redirect card with real booking links and car rental pitch."""
+    city_label = city or "your destination"
+    city_enc = city_label.replace(" ", "+")
+    booking_url = f"https://www.booking.com/searchresults.html?ss={city_enc}"
+    mmt_url = f"https://www.makemytrip.com/hotels/{city_label.lower().replace(' ', '-')}-hotels.html"
+    oyo_url = f"https://www.oyorooms.com/hotels-in-{city_label.lower().replace(' ', '-')}/"
+    car_section = f"\n\n---\n\n### 🚗 Need a Car in {city_label}?\n> CarTrawler can find you rental cars at great prices! Use `find_cars` with city **\"{city_label}\"**." if city else ""
 
-CarTrawler specialises in **car rentals**. For hotels, please use:
+    return f"""## 🏨 Hotel Bookings
 
-| App | Best For |
-|-----|----------|
-| 🏨 **Booking.com** (ChatGPT plugin) | Global hotels |
-| 🌟 **MakeMyTrip** | Indian hotels & packages |
-| 🛎️ **Oyo / Treebo** apps | Budget stays in India |
+CarTrawler specialises in **car rentals**, but here are top options for your hotel:
 
-{car_pitch}
+---
+
+### Book your hotel here:
+
+| Platform | Action |
+|----------|--------|
+| 🏨 **Booking.com** | [Search hotels in {city_label} →]({booking_url}) |
+| 🌟 **MakeMyTrip** | [Hotels in {city_label} →]({mmt_url}) |
+| 🛎️ **OYO Rooms** | [Budget stays in {city_label} →]({oyo_url}) |
+
+> 💡 Prices subject to availability. Check the platform for final pricing.
+{car_section}
 """
+
+
+def _ct_booking_url(city: str) -> str:
+    """Generate a CarTrawler search URL for a given city."""
+    international = {
+        "Dubai": "https://www.cartrawler.com/ct/en-gb/car-rental/uae/dubai/",
+        "London": "https://www.cartrawler.com/ct/en-gb/car-rental/united-kingdom/london/",
+        "New York": "https://www.cartrawler.com/ct/en-gb/car-rental/united-states/new-york/",
+        "Los Angeles": "https://www.cartrawler.com/ct/en-gb/car-rental/united-states/los-angeles/",
+        "Singapore": "https://www.cartrawler.com/ct/en-gb/car-rental/singapore/singapore/",
+        "Paris": "https://www.cartrawler.com/ct/en-gb/car-rental/france/paris/",
+        "Sydney": "https://www.cartrawler.com/ct/en-gb/car-rental/australia/sydney/",
+        "Bangkok": "https://www.cartrawler.com/ct/en-gb/car-rental/thailand/bangkok/",
+        "Amsterdam": "https://www.cartrawler.com/ct/en-gb/car-rental/netherlands/amsterdam/",
+        "Tokyo": "https://www.cartrawler.com/ct/en-gb/car-rental/japan/tokyo/",
+    }
+    if city in international:
+        return international[city]
+    return f"https://www.cartrawler.com/ct/en-gb/car-rental/india/{city.lower().replace(' ', '-')}/"
 
 
 def _format_cars(result: dict) -> str:
-    """Format car search results as a display card."""
+    """Format car search results as individual cards with booking links."""
     cars = result.get("cars", [])
     if not cars:
         city = result.get("city", "this city")
-        return f"## 🚗 No Cars Available\n\nNo rental cars found in **{city}** matching your criteria.\n\nTry adjusting the car type, price range, or date."
+        return (
+            f"## 🚗 No Cars Available in {city}\n\n"
+            "No rental cars found matching your criteria.\n\n"
+            "**Try:** Different car type · Wider price range · Nearby city\n\n"
+            f"[🌐 Search on CarTrawler →]({_ct_booking_url(city)})"
+        )
 
-    rows = []
-    for c in cars[:10]:  # show max 10 in card
-        vendor = c.get("vendor", "—")
-        model = c.get("car_model", c.get("car_type", "—"))
-        price = f"₹{int(c.get('price_per_day', 0)):,}/day"
-        rating = f"⭐ {c.get('rating', '—')}"
-        location = c.get("pickup_location", c.get("city", "—"))
-        car_id = c.get("car_id", "—")
-        fuel = c.get("fuel_type", "—")
-        avail = "✅" if c.get("availability") else "❌"
-        rows.append(f"| {car_id} | {model} | {c.get('car_type','—')} | {fuel} | {price} | {rating} | {avail} | {vendor} | {location} |")
-
-    table = "\n".join(rows)
+    city = cars[0].get("city", "")
     total = result.get("total", len(cars))
-    city = cars[0].get("city", "") if cars else ""
+    booking_url = _ct_booking_url(city)
 
-    display = f"""## 🚗 Rental Cars in {city}
+    cards = []
+    for i, c in enumerate(cars[:6], 1):
+        model = c.get("car_model", c.get("car_type", "—"))
+        car_type = c.get("car_type", "—")
+        vendor = c.get("vendor", "—")
+        location = c.get("pickup_location", city)
+        price_day = f"₹{int(c.get('price_per_day', 0)):,}"
+        price_hr = f"₹{int(c.get('price_per_hour', 0)):,}"
+        rating = c.get("rating", "—")
+        reviews = c.get("total_reviews", 0)
+        fuel = c.get("fuel_type", "—")
+        trans = c.get("transmission", "—")
+        seats = c.get("seating_capacity", "—")
+        car_id = c.get("car_id", "—")
+        driver = "✅ With driver" if c.get("with_driver") else "🚗 Self-drive"
+        ins = "🛡️ Insurance incl." if c.get("insurance_included") else "⚠️ No insurance"
+        avail = "✅ Available" if c.get("availability") else "❌ Unavailable"
 
-> Showing {len(cars)} of {total} available cars
+        cards.append(f"""---
 
-| Car ID | Model | Type | Fuel | Price | Rating | Available | Vendor | Pickup |
-|--------|-------|------|------|-------|--------|-----------|--------|--------|
-{table}
+### {i}. {model} &nbsp;·&nbsp; {car_type}
+📍 **{vendor}** — {location} &nbsp;&nbsp; {avail}
+
+| | |
+|--|--|
+| 💰 **Price** | **{price_day}/day** &nbsp;·&nbsp; {price_hr}/hr |
+| ⭐ **Rating** | {rating} ({reviews} reviews) |
+| ⛽ **Fuel** | {fuel} &nbsp;·&nbsp; {trans} &nbsp;·&nbsp; {seats} seats |
+| 🔑 **Driver** | {driver} &nbsp;·&nbsp; {ins} |
+| 🪪 **Car ID** | `{car_id}` |
+
+[🚗 Book on CarTrawler →]({booking_url}) &nbsp;&nbsp; *or use* `book_rental_car` *with Car ID* `{car_id}`
+""")
+
+    cards_text = "\n".join(cards)
+    return f"""## 🚗 Rental Cars in {city}
+
+> Showing **{len(cars)}** of {total} available cars · Prices per day (fuel not included)
+
+{cards_text}
 
 ---
-💡 **To book:** Use the `book_rental_car` tool with the Car ID, pickup date, and number of days.
-🏷️ **Offers:** Use `list_offers` to find car rental discounts like `CAR10`, `WEEKEND15`.
+🏷️ **Have a coupon?** Use `validate_car_coupon` before booking · Try codes: `CAR10` · `WEEKEND15` · `LUXURY20`
 """
-    return display
 
 
 def _format_booking_confirmation(result: dict) -> str:
@@ -167,28 +235,33 @@ def _format_booking_confirmation(result: dict) -> str:
         return f"## ❌ Booking Failed\n\n{result.get('message', 'Unknown error')}"
 
     b = result.get("booking", {})
-    display = f"""## ✅ Booking Confirmed!
+    discount = int(b.get('discount_applied', 0) or 0)
+    discount_row = f"| 🏷️ **Discount Applied** | ₹{discount:,} saved |\n" if discount > 0 else ""
+    pts = b.get('loyalty_points_earned', 0) or 0
+
+    return f"""## ✅ Booking Confirmed!
 
 ---
 
-| Field | Details |
-|-------|---------|
+### 🚗 {b.get('car_model', 'Your Car')} · {b.get('car_type', '')}
+
+| | |
+|--|--|
 | 📋 **Booking ID** | `{b.get('booking_id', '—')}` |
-| 🚗 **Car** | {b.get('car_model', '—')} ({b.get('car_type', '—')}) |
 | 📍 **Pickup** | {b.get('pickup_location', '—')} |
-| 📅 **Pickup Date** | {b.get('pickup_date', '—')} |
+| 📅 **Pickup Date** | {b.get('travel_date', '—')} |
 | 🔄 **Return Date** | {b.get('return_date', '—')} |
 | ⏱️ **Duration** | {b.get('rental_days', '—')} day(s) |
-| 💰 **Total Paid** | ₹{int(b.get('total_price', 0)):,} |
-| 🏷️ **Discount** | ₹{int(b.get('discount_applied', 0)):,} |
-| 💳 **Payment** | {b.get('payment_method', '—')} |
-| ⭐ **Loyalty Points** | +{b.get('loyalty_points_earned', 0)} points |
+| 💳 **Payment** | {b.get('payment_method', '—')} · {b.get('payment_status', '—')} |
+{discount_row}| 💰 **Total Paid** | **₹{int(b.get('total_price', 0)):,}** |
+| ⭐ **Points Earned** | +{pts} loyalty points |
 
 ---
-> 🔑 Save your Booking ID for cancellations or enquiries.
-> ⛽ Fuel not included. Security deposit collected at pickup.
+
+> 🔑 **Save your Booking ID:** `{b.get('booking_id', '—')}`
+> ⛽ Fuel not included · Security deposit collected at pickup
+> 🆓 Free cancellation — use `cancel_booking` with your Booking ID
 """
-    return display
 
 
 def _format_profile(result: dict) -> str:
@@ -222,31 +295,38 @@ def _format_profile(result: dict) -> str:
 
 
 def _format_offers(result: dict) -> str:
-    """Format car rental offers as a display card."""
+    """Format car rental offers as individual offer cards."""
     offers = result.get("offers", [])
     if not offers:
-        return "## 🏷️ No Active Offers\n\nCheck back soon for new car rental deals!"
+        return "## 🏷️ No Active Car Rental Offers\n\nCheck back soon for new deals!"
 
-    rows = []
+    cards = []
     for o in offers:
-        code = f"`{o.get('coupon_code', '—')}`"
-        desc = o.get("description", "—")[:50]
-        disc = f"{int(o.get('discount_percentage', 0))}% off" if o.get("discount_percentage") else f"₹{int(o.get('max_discount_amount', 0))} off"
-        min_amt = f"₹{int(o.get('min_booking_amount', 0)):,}" if o.get("min_booking_amount") else "—"
-        valid = o.get("valid_till", "—")
-        rows.append(f"| {code} | {desc} | {disc} | {min_amt} | {valid} |")
+        code = o.get("coupon_code", "—")
+        desc = o.get("description", "—")
+        pct = o.get("discount_percentage", 0) or 0
+        max_disc = int(o.get("max_discount_amount", 0) or 0)
+        min_amt = int(o.get("min_booking_amount", 0) or 0)
+        valid_till = o.get("valid_till", "—")
+        disc_str = f"**{int(pct)}% off**" if pct else f"**₹{max_disc:,} flat off**"
+        min_str = f"Min. booking ₹{min_amt:,}" if min_amt else "No minimum"
+        cards.append(
+            f"### 🏷️ `{code}`\n"
+            f"{desc}\n\n"
+            f"| | |\n|--|--|\n"
+            f"| 💸 **Discount** | {disc_str} (up to ₹{max_disc:,}) |\n"
+            f"| 🛒 **Eligibility** | {min_str} |\n"
+            f"| 📅 **Valid Till** | {valid_till} |\n"
+        )
 
-    table = "\n".join(rows)
-    display = f"""## 🏷️ Car Rental Offers & Coupons
+    cards_text = "\n---\n\n".join(cards)
+    return f"""## 🏷️ Car Rental Offers & Coupons
 
-| Code | Description | Discount | Min. Booking | Valid Till |
-|------|-------------|----------|--------------|------------|
-{table}
+{cards_text}
 
 ---
-💡 Apply any coupon code when using `book_rental_car`.
+💡 Apply code when using `book_rental_car` · Use `validate_car_coupon` to check savings first.
 """
-    return display
 
 
 # ═════════════════════════════════════════════════════════════════════════════
