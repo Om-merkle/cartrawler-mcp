@@ -659,7 +659,40 @@ async def find_cars(
         insurance_included=insurance_included or None,
         limit=limit,
     )
-    return _format_cars(result)
+    # Always inject city so the no-results card shows the right name
+    if "city" not in result:
+        result["city"] = city
+
+    cars_card = _format_cars(result)
+
+    # Append active car rental discounts to every search result
+    from cartrawler.tools.offer_tools import get_all_offers
+    offers_result = await get_all_offers(applicable_on="CAR")
+    active_offers = offers_result.get("offers", [])[:4]
+    if active_offers:
+        offer_lines = []
+        for o in active_offers:
+            code = o.get("coupon_code", "—")
+            pct = o.get("discount_percentage", 0) or 0
+            max_d = int(o.get("max_discount_amount", 0) or 0)
+            desc = o.get("description", "")
+            disc = f"{int(pct)}% off" if pct else f"₹{max_d:,} off"
+            offer_lines.append(f"| 🏷️ `{code}` | {disc} | {desc} |")
+        offers_table = "\n".join(offer_lines)
+        discount_block = f"""
+---
+
+## 🏷️ Car Rental Discounts — Apply at Checkout
+
+| Code | Savings | Description |
+|------|---------|-------------|
+{offers_table}
+
+> 💡 Use code when calling `book_rental_car` · Run `validate_car_coupon` to see exact savings
+"""
+        return cars_card + discount_block
+
+    return cars_card
 
 
 @mcp.tool()

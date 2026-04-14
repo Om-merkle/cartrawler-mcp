@@ -173,6 +173,7 @@ async def search_cars(
             return {
                 "success": True,
                 "count": 0,
+                "city": city,
                 "cars": [],
                 "message": f"No cars found in {city} matching your criteria.",
                 "policy_note": (
