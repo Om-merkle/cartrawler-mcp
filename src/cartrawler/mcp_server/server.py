@@ -70,22 +70,26 @@ When a user asks about flights or hotel bookings:
 
 def _auth_card(action: str = "continue") -> str:
     """Return a formatted authentication-required card."""
-    return f"""## 🔐 Login Required
+    return f"""## 🔐 Account Required to {action.title()}
 
-To **{action}**, please authenticate first.
+To proceed, I need your CarTrawler account details. Please provide:
 
 ---
 
-### New to CarTrawler?
-Use the **`register`** tool:
-- `name`, `email`, `password` *(required)*
-- `phone`, `age`, `home_city`, `preferred_car_type` *(optional)*
+### 📋 Your Details
 
-### Already have an account?
-Use the **`login`** tool with your `email` and `password`.
+| Field | Required? | Example |
+|-------|-----------|---------|
+| **Full Name** | ✅ Yes | Rahul Sharma |
+| **Email** | ✅ Yes | rahul@gmail.com |
+| **Password** | ✅ Yes | Min 6 characters |
+| **Phone** | ✅ Yes | 9876543210 |
+| **Preferred Car Type** | Optional | Sedan / SUV / Hatchback |
 
-> Your session token is valid for **30 minutes**.
-> Use `refresh_session` to extend it without re-logging in.
+---
+
+> **Already have an account?** Just share your email and password — I'll log you in.
+> **New user?** Share the details above — I'll create your account instantly.
 """
 
 
@@ -357,34 +361,48 @@ async def register(
     )
     if result.get("success"):
         tokens = result.get("tokens", {})
-        return f"""## 🎉 Welcome to CarTrawler, {name}!
-
-Your account has been created successfully.
+        return f"""## 🎉 Account Created — Welcome, {name}!
 
 ---
 
 | | |
 |--|--|
-| **User ID** | `{result.get('user_id', '—')}` |
-| **Loyalty Tier** | 🥉 Bronze |
-| **Points** | 0 pts |
+| 👤 **Name** | {name} |
+| 📧 **Email** | {email} |
+| 🆔 **User ID** | `{result.get('user_id', '—')}` |
+| 🥉 **Loyalty Tier** | Bronze (0 pts) |
 
-### 🔑 Your Access Token
+### 🔑 Access Token *(copy this — needed for booking)*
 ```
 {tokens.get('access_token', '—')}
 ```
 
-### 🔄 Your Refresh Token
+### 🔄 Refresh Token *(use to renew session after 30 min)*
 ```
 {tokens.get('refresh_token', '—')}
 ```
 
-> ⚠️ Token expires in **30 minutes**. Use `refresh_session` to renew.
+---
+✅ **You're logged in.** Token valid for **30 minutes**.
+🚗 Say **"find cars in [your city]"** to start booking!
+"""
+
+    # Friendly error — distinguish "already registered" from real errors
+    msg = result.get("message", "Unknown error")
+    if "already registered" in msg.lower() or "already exists" in msg.lower():
+        return f"""## 📧 Email Already Registered
+
+**{email}** already has a CarTrawler account.
 
 ---
-🚗 **Ready to book your first car?** Try `find_cars` with your city!
+
+### 👉 Just log in instead:
+
+Please share your **password** for `{email}` and I'll log you in right away.
+
+> Forgot your password? Register with a different email address.
 """
-    return f"## ❌ Registration Failed\n\n{result.get('message', 'Unknown error')}"
+    return f"## ❌ Registration Failed\n\n{msg}\n\nPlease check your details and try again."
 
 
 @mcp.tool()
@@ -429,7 +447,31 @@ Welcome back, **{tokens.get('name', 'User')}**! 👋
 - `my_bookings` — View your bookings
 - `my_profile` — View your profile
 """
-    return f"## ❌ Login Failed\n\n{result.get('message', 'Incorrect email or password.')}"
+    msg = result.get("message", "")
+    if "no account" in msg.lower() or "not found" in msg.lower():
+        return f"""## ❌ Email Not Found
+
+No CarTrawler account exists for **{email}**.
+
+---
+
+Would you like to **create an account**? Please share:
+- Your **full name**
+- Your **phone number**
+- A **password** (min 6 characters)
+
+I'll register you instantly.
+"""
+    return f"""## ❌ Incorrect Password
+
+The password entered for **{email}** is incorrect.
+
+---
+
+Please share the **correct password** to log in.
+
+> Registered with a different password? Try again or create a new account with a different email.
+"""
 
 
 @mcp.tool()
