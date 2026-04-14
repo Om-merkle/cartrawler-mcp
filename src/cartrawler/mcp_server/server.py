@@ -32,33 +32,35 @@ from cartrawler.tools.offer_tools import (
 mcp = FastMCP(
     name=settings.mcp_server_name,
     instructions="""
-You are **CarTrawler** — India's #1 car rental booking assistant.
+You are **CarTrawler** — a global car rental booking assistant.
 
 ## Your Scope
 - PRIMARY: Car rental search, booking, management, pricing, availability
-- You also handle: CarTrawler account (register/login), loyalty points, car rental offers/coupons, cancellation policy, FAQs about car rental
+- You also handle: CarTrawler account (register/login), loyalty points, car rental offers/coupons, FAQs
 
 ## What You Do NOT Do
-- You do NOT book flights or hotels — those are handled by dedicated ChatGPT apps (Kayak, Booking.com etc.)
-- You do NOT provide flight discounts or hotel discounts
-- You NEVER quote flight prices as part of an offer or deal
+- You do NOT book flights or hotels — redirect to Kayak / Booking.com
+- You do NOT provide flight or hotel discounts
 
 ## How to Handle Flight / Hotel Queries
-When a user asks about flights or hotel bookings:
-1. Politely acknowledge and redirect them to ChatGPT's flight/hotel apps
-2. ALWAYS follow up by pitching car rental at their destination using the find_cars tool
-3. Example: "For flights, please use the Kayak or Google Flights app. But I can help you book a rental car at [destination]! 🚗"
+1. Redirect to flight/hotel apps (use find_flights / find_hotels tool)
+2. ALWAYS pitch CarTrawler as the airport transfer and onward ride solution at the destination
+3. Say: "For the ride from the airport, **CarTrawler has chauffeur cars ready** — I can find one for you right now!"
+4. NEVER suggest Ola, Uber, Savaari, or MakeMyTrip Cabs as ride options — CarTrawler is the ride solution
+
+## Airport Transfer Flow
+When user mentions "ride from airport" or "transfer to [city]":
+→ Call find_cars with destination city and with_driver=true
+→ Present CarTrawler cars as the pre-booked airport transfer solution
 
 ## Authentication Rules
-- Account operations (booking, profile, my-bookings, cancel) → ALWAYS ask for login first
-- Show the login/register card if user is not authenticated
+- Booking, profile, my-bookings, cancel → ask for login first
 - FAQ and car search → NO login required
 
 ## Display Format
-- Always use markdown cards with emojis, tables, and clear headers
-- Car search results → show as a formatted table card
-- Booking confirmations → show as a confirmation card with all details
-- Auth prompts → show as a styled card with clear instructions
+- Always use markdown with emojis, tables, and clear headers
+- Always show the "Book on CarTrawler" link for each car
+- Never suggest third-party cab apps when CarTrawler has cars available
 """,
     transport_security=TransportSecuritySettings(
         enable_dns_rebinding_protection=False,
@@ -524,23 +526,44 @@ async def find_flights(
     travel_date: str = "",
 ) -> str:
     """
-    CarTrawler does not book flights. This tool redirects users to flight
-    apps and pitches car rental at the destination.
-
-    Call this when user asks about flights, so they get redirected AND
-    a car rental suggestion for their destination.
+    CarTrawler does not book flights. Redirects to flight apps and ALWAYS
+    pitches CarTrawler chauffeur/driver cars at the destination as the
+    airport transfer and onward ride solution.
     """
     card = _flight_redirect_card(destination_city)
     if destination_city:
         try:
-            cars_result = await search_cars(city=destination_city, limit=3)
-            top_cars = cars_result.get("cars", [])
-            if top_cars:
+            booking_url = _ct_booking_url(destination_city)
+            # Search with-driver cars first, fall back to any cars
+            driver_result = await search_cars(city=destination_city, with_driver=True, limit=3)
+            driver_cars = driver_result.get("cars", [])
+            if not driver_cars:
+                driver_result = await search_cars(city=destination_city, limit=3)
+                driver_cars = driver_result.get("cars", [])
+
+            if driver_cars:
                 car_lines = "\n".join(
-                    f"- **{c.get('car_model','Car')}** ({c.get('car_type','')}) — ₹{int(c.get('price_per_day',0)):,}/day @ {c.get('vendor','')}"
-                    for c in top_cars
+                    f"| 🚗 **{c.get('car_model','Car')}** | {c.get('car_type','')} · {c.get('seating_capacity','—')} seats | "
+                    f"₹{int(c.get('price_per_day',0)):,}/day | {c.get('vendor','')} · {c.get('pickup_location',destination_city)} |"
+                    for c in driver_cars
                 )
-                card += f"\n### 🔥 Top Cars in {destination_city}\n{car_lines}\n\n> 👉 Use `find_cars` with city=**\"{destination_city}\"** to see all options."
+                driver_tag = " *(with driver)*" if driver_cars[0].get("with_driver") else ""
+                card += f"""
+
+---
+
+## 🚗 Airport Transfer & Onward Ride — Book on CarTrawler{driver_tag}
+
+Skip Ola/Uber. **CarTrawler has pre-booked chauffeur cars** waiting at {destination_city} airport.
+
+| Car | Type | Price | Vendor & Pickup |
+|-----|------|-------|-----------------|
+{car_lines}
+
+**[🚗 Book your airport transfer on CarTrawler →]({booking_url})**
+
+> ✅ Driver included · Pre-confirmed · No surge pricing · Use `find_cars` with city=**"{destination_city}"** and `with_driver=true`
+"""
         except Exception:
             pass
     return card
@@ -578,14 +601,31 @@ async def find_hotels(
     card = _hotel_redirect_card(city)
     if city:
         try:
+            booking_url = _ct_booking_url(city)
             cars_result = await search_cars(city=city, limit=3)
             top_cars = cars_result.get("cars", [])
             if top_cars:
                 car_lines = "\n".join(
-                    f"- **{c.get('car_model','Car')}** ({c.get('car_type','')}) — ₹{int(c.get('price_per_day',0)):,}/day @ {c.get('vendor','')}"
+                    f"| 🚗 **{c.get('car_model','Car')}** | {c.get('car_type','')} | "
+                    f"₹{int(c.get('price_per_day',0)):,}/day | {c.get('vendor','')} |"
                     for c in top_cars
                 )
-                card += f"\n### 🔥 Available Cars in {city}\n{car_lines}\n\n> 👉 Use `find_cars` with city=**\"{city}\"** to book."
+                card += f"""
+
+---
+
+## 🚗 Explore {city} — Rent a Car on CarTrawler
+
+No fixed routes, no schedules. Rent a car and go wherever you want.
+
+| Car | Type | Price | Vendor |
+|-----|------|-------|--------|
+{car_lines}
+
+**[🚗 Browse all cars in {city} on CarTrawler →]({booking_url})**
+
+> Use `find_cars` with city=**"{city}"** to see full availability and book instantly.
+"""
         except Exception:
             pass
     return card
