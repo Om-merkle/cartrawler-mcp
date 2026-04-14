@@ -1,201 +1,201 @@
 flight_id,airline,flight_number,source,destination,source_city,destination_city,departure_time,arrival_time,duration_mins,price_economy,price_business,stops,aircraft,available_seats,baggage_kg,refundable,meal_included,wifi_available
-F4001,IndiGo,6E-108,BOM,DEL,Mumbai,Delhi,07:45:00,10:00:00,135,6200,18600,0,Boeing 737,87,25,false,true,false
-F4002,Air India,AI-118,DEL,BOM,Delhi,Mumbai,09:15:00,11:25:00,130,4800,14400,0,Boeing 737-800,171,25,true,true,false
-F4003,SpiceJet,SG-115,DEL,BLR,Delhi,Bangalore,06:45:00,09:30:00,165,4800,14400,0,Airbus A320,151,20,false,false,false
-F4004,Vistara,UK-101,BLR,DEL,Bangalore,Delhi,17:30:00,20:10:00,160,6200,12400,0,Airbus A320,134,20,false,true,false
-F4005,GoAir,G8-102,BOM,BLR,Mumbai,Bangalore,07:45:00,09:40:00,115,3600,10800,0,Airbus A320neo,178,20,true,false,false
-F4006,Akasa Air,QP-113,BLR,BOM,Bangalore,Mumbai,17:00:00,18:50:00,110,5800,11600,0,Airbus A321,95,15,false,false,false
-F4007,Air Asia,I5-105,MAA,BOM,Chennai,Mumbai,12:00:00,13:55:00,115,3600,10800,0,Boeing 777,148,20,true,true,false
-F4008,IndiGo,6E-120,BOM,MAA,Mumbai,Chennai,09:30:00,11:30:00,120,6200,12400,0,Boeing 777,158,15,true,true,true
-F4009,Air India,AI-122,HYD,DEL,Hyderabad,Delhi,06:45:00,09:30:00,165,5800,11600,0,Airbus A320,131,20,true,false,true
-F4010,SpiceJet,SG-117,DEL,HYD,Delhi,Hyderabad,09:30:00,12:10:00,160,6200,18600,0,Airbus A321,110,20,true,false,false
-F4011,Vistara,UK-109,CCU,DEL,Kolkata,Delhi,18:30:00,20:50:00,140,2100,4200,0,Boeing 777,151,20,true,false,false
-F4012,GoAir,G8-115,DEL,CCU,Delhi,Kolkata,21:30:00,23:55:00,145,4200,12600,0,Boeing 777,103,25,true,true,true
-F4013,Akasa Air,QP-123,PNQ,DEL,Pune,Delhi,09:45:00,12:05:00,140,4800,14400,1,Airbus A320neo,129,15,true,true,false
-F4014,Air Asia,I5-108,DEL,PNQ,Delhi,Pune,19:30:00,21:45:00,135,4800,9600,0,Boeing 777,166,25,false,true,true
-F4015,IndiGo,6E-127,BOM,GOI,Mumbai,Goa,22:15:00,23:20:00,65,3200,9600,0,Airbus A320,107,15,false,true,false
-F4016,Air India,AI-138,GOI,BOM,Goa,Mumbai,12:15:00,13:25:00,70,3200,9600,0,Boeing 777,139,25,false,false,false
-F4017,SpiceJet,SG-126,DEL,JAI,Delhi,Jaipur,16:45:00,17:40:00,55,2500,7500,0,Airbus A321,197,15,true,false,false
-F4018,Vistara,UK-111,JAI,DEL,Jaipur,Delhi,12:15:00,13:15:00,60,3600,10800,0,Boeing 737-800,122,15,true,false,true
-F4019,GoAir,G8-131,BOM,AMD,Mumbai,Ahmedabad,22:30:00,23:35:00,65,4500,13500,0,Airbus A321,101,15,false,false,false
-F4020,Akasa Air,QP-129,AMD,BOM,Ahmedabad,Mumbai,22:00:00,23:10:00,70,2100,4200,1,Airbus A320,177,15,true,true,false
-F4021,Air Asia,I5-116,MAA,DEL,Chennai,Delhi,07:15:00,10:15:00,180,3200,9600,0,Airbus A319,164,20,true,true,false
-F4022,IndiGo,6E-145,DEL,MAA,Delhi,Chennai,18:00:00,20:55:00,175,4800,14400,0,ATR 72,82,25,false,false,false
-F4023,Air India,AI-144,MAA,BLR,Chennai,Bangalore,08:00:00,09:15:00,75,2800,5600,0,ATR 72,184,20,true,false,true
-F4024,SpiceJet,SG-138,BLR,MAA,Bangalore,Chennai,17:45:00,19:05:00,80,3200,6400,0,Boeing 737,163,15,true,false,false
-F4025,Vistara,UK-124,HYD,BOM,Hyderabad,Mumbai,22:45:00,00:35:00,110,5800,11600,0,Boeing 737,143,20,false,false,false
-F4026,GoAir,G8-135,BOM,HYD,Mumbai,Hyderabad,21:00:00,22:45:00,105,3200,9600,0,Boeing 737,167,20,false,false,false
-F4027,Akasa Air,QP-131,CCU,BLR,Kolkata,Bangalore,10:30:00,13:15:00,165,3200,6400,0,Boeing 777,198,15,true,true,false
-F4028,Air Asia,I5-124,BLR,CCU,Bangalore,Kolkata,17:30:00,20:20:00,170,6200,12400,0,Boeing 737,144,20,true,true,false
-F4029,IndiGo,6E-153,DEL,LKO,Delhi,Lucknow,07:30:00,08:40:00,70,5200,15600,1,Airbus A321,83,20,true,false,true
-F4030,Air India,AI-156,LKO,DEL,Lucknow,Delhi,22:45:00,00:00:00,75,2800,8400,0,ATR 72,182,15,false,true,true
-F4031,SpiceJet,SG-147,BOM,CCU,Mumbai,Kolkata,09:45:00,13:00:00,195,2800,8400,0,Boeing 737,91,15,true,false,false
-F4032,Vistara,UK-133,CCU,BOM,Kolkata,Mumbai,08:15:00,11:25:00,190,2800,8400,0,Boeing 777,93,15,true,false,false
-F4033,GoAir,G8-138,BLR,HYD,Bangalore,Hyderabad,15:45:00,17:00:00,75,3600,10800,0,Boeing 737,172,25,true,false,false
-F4034,Akasa Air,QP-137,HYD,BLR,Hyderabad,Bangalore,17:15:00,18:25:00,70,3600,10800,0,Airbus A320neo,88,15,true,false,false
-F4035,Air Asia,I5-134,DEL,COK,Delhi,Kochi,20:00:00,23:30:00,210,3600,7200,0,Airbus A319,156,25,true,false,true
-F4036,IndiGo,6E-158,COK,DEL,Kochi,Delhi,14:00:00,17:35:00,215,3800,11400,0,Airbus A321,136,20,true,false,false
-F4037,Air India,AI-161,BOM,JAI,Mumbai,Jaipur,14:30:00,16:00:00,90,6200,12400,0,Airbus A320neo,130,20,true,false,false
-F4038,SpiceJet,SG-163,JAI,BOM,Jaipur,Mumbai,12:30:00,13:55:00,85,3600,10800,0,Boeing 737-800,155,25,true,false,false
-F4039,Vistara,UK-134,HYD,MAA,Hyderabad,Chennai,19:15:00,20:30:00,75,3600,7200,0,Boeing 777,166,20,true,false,false
-F4040,GoAir,G8-146,MAA,HYD,Chennai,Hyderabad,13:15:00,14:25:00,70,4200,8400,0,Airbus A319,154,20,false,false,false
-F4041,Akasa Air,QP-151,BOM,DEL,Mumbai,Delhi,22:00:00,00:15:00,135,6200,12400,0,Boeing 737-800,164,20,true,false,false
-F4042,Air Asia,I5-136,DEL,BOM,Delhi,Mumbai,17:30:00,19:40:00,130,2500,5000,0,Boeing 737-800,145,25,false,false,false
-F4043,IndiGo,6E-177,DEL,BLR,Delhi,Bangalore,12:45:00,15:30:00,165,4200,12600,0,Airbus A320neo,124,15,true,true,false
-F4044,Air India,AI-175,BLR,DEL,Bangalore,Delhi,07:00:00,09:40:00,160,3800,11400,0,Boeing 737-800,146,20,true,false,true
-F4045,SpiceJet,SG-178,BOM,BLR,Mumbai,Bangalore,19:30:00,21:25:00,115,3600,7200,0,Boeing 737,82,20,false,true,false
-F4046,Vistara,UK-140,BLR,BOM,Bangalore,Mumbai,12:15:00,14:05:00,110,2800,8400,0,Airbus A319,109,20,false,true,true
-F4047,GoAir,G8-160,MAA,BOM,Chennai,Mumbai,17:00:00,18:55:00,115,3200,9600,0,Boeing 777,80,15,true,false,false
-F4048,Akasa Air,QP-154,BOM,MAA,Mumbai,Chennai,08:15:00,10:15:00,120,3800,7600,0,ATR 72,165,20,false,false,false
-F4049,Air Asia,I5-156,HYD,DEL,Hyderabad,Delhi,17:45:00,20:30:00,165,2500,7500,0,Airbus A319,159,15,false,false,false
-F4050,IndiGo,6E-197,DEL,HYD,Delhi,Hyderabad,07:15:00,09:55:00,160,2500,5000,0,Airbus A320neo,127,15,false,false,false
-F4051,Air India,AI-195,CCU,DEL,Kolkata,Delhi,09:45:00,12:05:00,140,2800,8400,0,Airbus A320neo,151,15,true,false,true
-F4052,SpiceJet,SG-184,DEL,CCU,Delhi,Kolkata,15:45:00,18:10:00,145,2100,6300,1,Airbus A319,97,15,true,false,false
-F4053,Vistara,UK-156,PNQ,DEL,Pune,Delhi,18:45:00,21:05:00,140,6200,18600,0,Boeing 737,152,15,true,false,true
-F4054,GoAir,G8-169,DEL,PNQ,Delhi,Pune,12:30:00,14:45:00,135,4500,13500,0,Boeing 737,153,15,true,false,false
-F4055,Akasa Air,QP-172,BOM,GOI,Mumbai,Goa,06:45:00,07:50:00,65,3200,9600,0,Boeing 737-800,118,15,true,false,false
-F4056,Air Asia,I5-159,GOI,BOM,Goa,Mumbai,19:00:00,20:10:00,70,3200,9600,1,Boeing 777,101,25,true,true,true
-F4057,IndiGo,6E-199,DEL,JAI,Delhi,Jaipur,16:30:00,17:25:00,55,4800,9600,0,ATR 72,117,25,true,false,false
-F4058,Air India,AI-199,JAI,DEL,Jaipur,Delhi,09:45:00,10:45:00,60,3600,7200,0,Airbus A320neo,111,15,false,false,true
-F4059,SpiceJet,SG-197,BOM,AMD,Mumbai,Ahmedabad,20:15:00,21:20:00,65,5800,17400,0,Boeing 777,137,15,false,true,false
-F4060,Vistara,UK-173,AMD,BOM,Ahmedabad,Mumbai,13:30:00,14:40:00,70,4500,13500,0,Boeing 737,173,20,false,false,false
-F4061,GoAir,G8-181,MAA,DEL,Chennai,Delhi,07:45:00,10:45:00,180,4200,8400,0,Airbus A321,186,20,true,false,false
-F4062,Akasa Air,QP-177,DEL,MAA,Delhi,Chennai,20:30:00,23:25:00,175,2100,4200,0,Airbus A319,82,15,true,false,false
-F4063,Air Asia,I5-160,MAA,BLR,Chennai,Bangalore,18:15:00,19:30:00,75,2800,8400,0,ATR 72,91,20,true,true,false
-F4064,IndiGo,6E-205,BLR,MAA,Bangalore,Chennai,06:45:00,08:05:00,80,3600,7200,0,Boeing 737,170,15,true,true,false
-F4065,Air India,AI-202,HYD,BOM,Hyderabad,Mumbai,09:15:00,11:05:00,110,5800,17400,0,Airbus A321,184,15,true,false,true
-F4066,SpiceJet,SG-213,BOM,HYD,Mumbai,Hyderabad,07:15:00,09:00:00,105,2500,5000,0,Airbus A321,192,20,true,false,true
-F4067,Vistara,UK-178,CCU,BLR,Kolkata,Bangalore,07:00:00,09:45:00,165,5800,11600,0,Boeing 737-800,160,15,true,false,false
-F4068,GoAir,G8-196,BLR,CCU,Bangalore,Kolkata,11:00:00,13:50:00,170,2800,5600,0,Boeing 777,124,20,true,true,true
-F4069,Akasa Air,QP-186,DEL,LKO,Delhi,Lucknow,07:15:00,08:25:00,70,5200,15600,0,Airbus A320,188,20,true,false,false
-F4070,Air Asia,I5-177,LKO,DEL,Lucknow,Delhi,11:45:00,13:00:00,75,5800,11600,0,Boeing 737-800,143,20,true,true,false
-F4071,IndiGo,6E-225,BOM,CCU,Mumbai,Kolkata,07:00:00,10:15:00,195,3800,7600,0,Boeing 777,126,25,false,true,false
-F4072,Air India,AI-205,CCU,BOM,Kolkata,Mumbai,05:00:00,08:10:00,190,3600,7200,0,Airbus A320,181,20,false,false,false
-F4073,SpiceJet,SG-230,BLR,HYD,Bangalore,Hyderabad,18:45:00,20:00:00,75,4200,8400,0,Airbus A320neo,115,15,true,true,false
-F4074,Vistara,UK-185,HYD,BLR,Hyderabad,Bangalore,09:30:00,10:40:00,70,5200,10400,0,Boeing 777,173,15,true,true,true
-F4075,GoAir,G8-210,DEL,COK,Delhi,Kochi,08:45:00,12:15:00,210,5200,10400,0,Airbus A320neo,95,15,false,true,false
-F4076,Akasa Air,QP-187,COK,DEL,Kochi,Delhi,10:45:00,14:20:00,215,4800,14400,0,Airbus A320neo,175,20,false,true,true
-F4077,Air Asia,I5-188,BOM,JAI,Mumbai,Jaipur,18:30:00,20:00:00,90,2500,7500,0,Boeing 737,143,20,false,false,true
-F4078,IndiGo,6E-241,JAI,BOM,Jaipur,Mumbai,10:30:00,11:55:00,85,3600,7200,1,Boeing 737,109,25,true,true,true
-F4079,Air India,AI-213,HYD,MAA,Hyderabad,Chennai,06:45:00,08:00:00,75,4200,8400,0,Airbus A320,150,20,true,false,true
-F4080,SpiceJet,SG-244,MAA,HYD,Chennai,Hyderabad,15:30:00,16:40:00,70,5200,15600,0,Airbus A320,102,15,false,true,false
-F4081,Vistara,UK-188,BOM,DEL,Mumbai,Delhi,19:30:00,21:45:00,135,3800,7600,0,Airbus A320,127,15,true,false,false
-F4082,GoAir,G8-230,DEL,BOM,Delhi,Mumbai,12:45:00,14:55:00,130,5200,15600,1,Boeing 737-800,173,25,true,true,true
-F4083,Akasa Air,QP-201,DEL,BLR,Delhi,Bangalore,05:15:00,08:00:00,165,3800,7600,1,Airbus A320,177,20,false,false,false
-F4084,Air Asia,I5-192,BLR,DEL,Bangalore,Delhi,11:15:00,13:55:00,160,4500,9000,1,Airbus A320neo,171,20,true,true,true
-F4085,IndiGo,6E-258,BOM,BLR,Mumbai,Bangalore,18:30:00,20:25:00,115,6200,12400,0,Airbus A320neo,161,20,true,false,false
-F4086,Air India,AI-215,BLR,BOM,Bangalore,Mumbai,18:15:00,20:05:00,110,3600,10800,1,Boeing 777,169,20,true,false,false
-F4087,SpiceJet,SG-252,MAA,BOM,Chennai,Mumbai,07:15:00,09:10:00,115,5200,10400,0,Airbus A320neo,137,20,true,false,true
-F4088,Vistara,UK-206,BOM,MAA,Mumbai,Chennai,16:15:00,18:15:00,120,3600,10800,0,Boeing 737,91,15,false,false,false
-F4089,GoAir,G8-250,HYD,DEL,Hyderabad,Delhi,06:15:00,09:00:00,165,2800,5600,0,Airbus A321,130,25,true,false,false
-F4090,Akasa Air,QP-210,DEL,HYD,Delhi,Hyderabad,10:00:00,12:40:00,160,4500,9000,0,Boeing 737,182,15,true,true,true
-F4091,Air Asia,I5-200,CCU,DEL,Kolkata,Delhi,09:15:00,11:35:00,140,3800,7600,0,ATR 72,197,15,true,true,true
-F4092,IndiGo,6E-273,DEL,CCU,Delhi,Kolkata,09:00:00,11:25:00,145,2500,5000,1,Airbus A320,101,25,true,false,false
-F4093,Air India,AI-231,PNQ,DEL,Pune,Delhi,05:45:00,08:05:00,140,4200,8400,0,Airbus A320neo,115,20,true,true,true
-F4094,SpiceJet,SG-272,DEL,PNQ,Delhi,Pune,12:30:00,14:45:00,135,4200,12600,0,ATR 72,129,15,true,true,false
-F4095,Vistara,UK-223,BOM,GOI,Mumbai,Goa,12:00:00,13:05:00,65,6200,18600,0,Airbus A319,124,25,false,false,false
-F4096,GoAir,G8-259,GOI,BOM,Goa,Mumbai,10:00:00,11:10:00,70,5200,10400,0,ATR 72,87,20,false,false,false
-F4097,Akasa Air,QP-218,DEL,JAI,Delhi,Jaipur,10:00:00,10:55:00,55,5800,11600,0,Airbus A320,177,15,false,false,false
-F4098,Air Asia,I5-206,JAI,DEL,Jaipur,Delhi,10:15:00,11:15:00,60,3800,11400,1,Airbus A320,170,20,false,false,true
-F4099,IndiGo,6E-292,BOM,AMD,Mumbai,Ahmedabad,11:45:00,12:50:00,65,3600,7200,0,Boeing 737,87,15,false,true,true
-F4100,Air India,AI-248,AMD,BOM,Ahmedabad,Mumbai,20:00:00,21:10:00,70,5200,10400,0,Airbus A321,171,15,true,true,true
-F4101,SpiceJet,SG-277,MAA,DEL,Chennai,Delhi,09:00:00,12:00:00,180,3800,7600,0,Boeing 777,155,15,true,false,false
-F4102,Vistara,UK-228,DEL,MAA,Delhi,Chennai,10:45:00,13:40:00,175,4500,13500,0,Airbus A321,108,25,true,false,false
-F4103,GoAir,G8-269,MAA,BLR,Chennai,Bangalore,09:15:00,10:30:00,75,6200,18600,1,Airbus A320,103,25,true,false,true
-F4104,Akasa Air,QP-237,BLR,MAA,Bangalore,Chennai,08:45:00,10:05:00,80,3800,7600,0,Airbus A321,101,15,false,false,false
-F4105,Air Asia,I5-217,HYD,BOM,Hyderabad,Mumbai,19:00:00,20:50:00,110,3200,6400,0,Airbus A321,112,15,false,true,true
-F4106,IndiGo,6E-305,BOM,HYD,Mumbai,Hyderabad,19:45:00,21:30:00,105,4200,12600,1,Airbus A321,149,20,true,false,false
-F4107,Air India,AI-256,CCU,BLR,Kolkata,Bangalore,10:45:00,13:30:00,165,2100,6300,0,ATR 72,93,15,true,true,false
-F4108,SpiceJet,SG-283,BLR,CCU,Bangalore,Kolkata,07:00:00,09:50:00,170,5200,15600,0,Boeing 777,200,15,false,false,true
-F4109,Vistara,UK-230,DEL,LKO,Delhi,Lucknow,08:30:00,09:40:00,70,3200,9600,0,ATR 72,164,20,true,true,true
-F4110,GoAir,G8-271,LKO,DEL,Lucknow,Delhi,17:45:00,19:00:00,75,2100,6300,0,Boeing 737,117,25,true,true,true
-F4111,Akasa Air,QP-238,BOM,CCU,Mumbai,Kolkata,11:15:00,14:30:00,195,3600,7200,0,Boeing 737,119,20,true,false,false
-F4112,Air Asia,I5-226,CCU,BOM,Kolkata,Mumbai,07:45:00,10:55:00,190,3800,11400,0,Airbus A319,85,20,true,false,false
-F4113,IndiGo,6E-313,BLR,HYD,Bangalore,Hyderabad,13:00:00,14:15:00,75,6200,12400,0,Airbus A321,183,25,true,false,true
-F4114,Air India,AI-274,HYD,BLR,Hyderabad,Bangalore,06:45:00,07:55:00,70,4200,12600,0,Boeing 737-800,140,20,true,false,false
-F4115,SpiceJet,SG-285,DEL,COK,Delhi,Kochi,21:15:00,00:45:00,210,4500,9000,1,Airbus A320neo,107,15,true,true,false
-F4116,Vistara,UK-233,COK,DEL,Kochi,Delhi,18:15:00,21:50:00,215,2800,8400,0,Boeing 737,91,20,false,false,false
-F4117,GoAir,G8-282,BOM,JAI,Mumbai,Jaipur,13:45:00,15:15:00,90,6200,18600,0,Airbus A320neo,98,25,false,false,true
-F4118,Akasa Air,QP-242,JAI,BOM,Jaipur,Mumbai,08:30:00,09:55:00,85,3800,11400,0,Airbus A319,153,25,true,true,true
-F4119,Air Asia,I5-235,HYD,MAA,Hyderabad,Chennai,17:15:00,18:30:00,75,5200,15600,0,Airbus A321,168,15,true,false,false
-F4120,IndiGo,6E-322,MAA,HYD,Chennai,Hyderabad,16:00:00,17:10:00,70,3600,10800,0,Airbus A319,189,15,true,true,false
-F4121,Air India,AI-289,BOM,DEL,Mumbai,Delhi,15:30:00,17:45:00,135,5200,10400,0,Boeing 737-800,196,20,false,false,false
-F4122,SpiceJet,SG-297,DEL,BOM,Delhi,Mumbai,06:15:00,08:25:00,130,3600,10800,0,Airbus A320,102,15,true,true,true
-F4123,Vistara,UK-235,DEL,BLR,Delhi,Bangalore,19:00:00,21:45:00,165,6200,12400,0,Airbus A319,144,20,false,true,false
-F4124,GoAir,G8-283,BLR,DEL,Bangalore,Delhi,12:30:00,15:10:00,160,5200,15600,0,Airbus A319,155,25,true,false,true
-F4125,Akasa Air,QP-251,BOM,BLR,Mumbai,Bangalore,07:30:00,09:25:00,115,4200,8400,0,Boeing 737-800,189,15,false,true,false
-F4126,Air Asia,I5-242,BLR,BOM,Bangalore,Mumbai,13:45:00,15:35:00,110,2100,4200,0,Airbus A320neo,162,15,false,true,true
-F4127,IndiGo,6E-331,MAA,BOM,Chennai,Mumbai,14:30:00,16:25:00,115,4200,12600,0,Boeing 737-800,139,20,false,false,false
-F4128,Air India,AI-302,BOM,MAA,Mumbai,Chennai,08:00:00,10:00:00,120,5800,17400,0,ATR 72,118,15,true,true,false
-F4129,SpiceJet,SG-306,HYD,DEL,Hyderabad,Delhi,15:30:00,18:15:00,165,5800,17400,0,Boeing 737-800,195,15,false,false,false
-F4130,Vistara,UK-246,DEL,HYD,Delhi,Hyderabad,09:00:00,11:40:00,160,4500,13500,0,Boeing 777,131,20,false,true,false
-F4131,GoAir,G8-302,CCU,DEL,Kolkata,Delhi,11:30:00,13:50:00,140,5800,17400,1,Airbus A321,144,20,true,false,false
-F4132,Akasa Air,QP-257,DEL,CCU,Delhi,Kolkata,14:00:00,16:25:00,145,2800,8400,0,Airbus A320neo,167,20,false,true,true
-F4133,Air Asia,I5-254,PNQ,DEL,Pune,Delhi,12:30:00,14:50:00,140,3800,11400,0,ATR 72,139,15,true,true,false
-F4134,IndiGo,6E-350,DEL,PNQ,Delhi,Pune,07:45:00,10:00:00,135,4800,9600,1,Boeing 777,147,20,true,true,true
-F4135,Air India,AI-307,BOM,GOI,Mumbai,Goa,11:30:00,12:35:00,65,5200,15600,0,Airbus A320neo,179,15,true,false,false
-F4136,SpiceJet,SG-312,GOI,BOM,Goa,Mumbai,15:00:00,16:10:00,70,4500,13500,0,Airbus A320neo,153,15,true,true,true
-F4137,Vistara,UK-266,DEL,JAI,Delhi,Jaipur,18:45:00,19:40:00,55,4200,12600,0,Airbus A320,148,15,false,false,true
-F4138,GoAir,G8-313,JAI,DEL,Jaipur,Delhi,21:15:00,22:15:00,60,5800,11600,0,Boeing 737-800,108,20,true,true,true
-F4139,Akasa Air,QP-270,BOM,AMD,Mumbai,Ahmedabad,21:30:00,22:35:00,65,2500,5000,0,ATR 72,138,25,false,false,false
-F4140,Air Asia,I5-268,AMD,BOM,Ahmedabad,Mumbai,09:30:00,10:40:00,70,3800,7600,0,Boeing 777,82,15,true,false,true
-F4141,IndiGo,6E-357,MAA,DEL,Chennai,Delhi,05:15:00,08:15:00,180,3800,7600,0,ATR 72,178,25,false,true,false
-F4142,Air India,AI-309,DEL,MAA,Delhi,Chennai,08:00:00,10:55:00,175,6200,12400,0,Boeing 777,95,25,true,false,false
-F4143,SpiceJet,SG-317,MAA,BLR,Chennai,Bangalore,11:00:00,12:15:00,75,4200,8400,0,ATR 72,159,25,false,true,false
-F4144,Vistara,UK-270,BLR,MAA,Bangalore,Chennai,21:00:00,22:20:00,80,2500,5000,0,Boeing 737-800,179,20,false,true,false
-F4145,GoAir,G8-327,HYD,BOM,Hyderabad,Mumbai,14:15:00,16:05:00,110,4800,14400,1,Airbus A319,122,15,true,true,false
-F4146,Akasa Air,QP-273,BOM,HYD,Mumbai,Hyderabad,08:45:00,10:30:00,105,2500,5000,0,Boeing 737,195,20,false,true,false
-F4147,Air Asia,I5-278,CCU,BLR,Kolkata,Bangalore,13:45:00,16:30:00,165,2500,5000,1,ATR 72,126,20,true,false,true
-F4148,IndiGo,6E-361,BLR,CCU,Bangalore,Kolkata,06:00:00,08:50:00,170,5800,11600,0,Airbus A319,159,20,false,true,false
-F4149,Air India,AI-320,DEL,LKO,Delhi,Lucknow,10:00:00,11:10:00,70,4200,12600,0,Boeing 777,168,20,true,false,true
-F4150,SpiceJet,SG-321,LKO,DEL,Lucknow,Delhi,09:00:00,10:15:00,75,2500,7500,1,Airbus A319,182,25,false,false,true
-F4151,Vistara,UK-290,BOM,CCU,Mumbai,Kolkata,17:30:00,20:45:00,195,2100,4200,0,Airbus A319,94,20,true,true,true
-F4152,GoAir,G8-336,CCU,BOM,Kolkata,Mumbai,15:00:00,18:10:00,190,5800,11600,1,Airbus A321,146,25,false,false,false
-F4153,Akasa Air,QP-277,BLR,HYD,Bangalore,Hyderabad,18:15:00,19:30:00,75,3800,11400,0,Airbus A320,81,15,false,false,false
-F4154,Air Asia,I5-284,HYD,BLR,Hyderabad,Bangalore,07:45:00,08:55:00,70,3200,9600,1,Airbus A320,144,15,false,false,false
-F4155,IndiGo,6E-374,DEL,COK,Delhi,Kochi,12:00:00,15:30:00,210,4500,13500,0,Airbus A319,137,20,true,false,false
-F4156,Air India,AI-321,COK,DEL,Kochi,Delhi,08:45:00,12:20:00,215,2100,4200,0,ATR 72,193,25,false,true,false
-F4157,SpiceJet,SG-336,BOM,JAI,Mumbai,Jaipur,15:30:00,17:00:00,90,3200,9600,0,Airbus A319,171,20,false,false,true
-F4158,Vistara,UK-294,JAI,BOM,Jaipur,Mumbai,12:00:00,13:25:00,85,3800,11400,0,Airbus A321,169,15,true,true,false
-F4159,GoAir,G8-341,HYD,MAA,Hyderabad,Chennai,18:00:00,19:15:00,75,5200,10400,0,Boeing 777,107,20,true,false,false
-F4160,Akasa Air,QP-281,MAA,HYD,Chennai,Hyderabad,18:00:00,19:10:00,70,5800,11600,0,Airbus A319,138,25,false,true,false
-F4161,Air Asia,I5-285,BOM,DEL,Mumbai,Delhi,21:00:00,23:15:00,135,4200,12600,1,Airbus A320neo,168,25,true,false,true
-F4162,IndiGo,6E-378,DEL,BOM,Delhi,Mumbai,17:30:00,19:40:00,130,4200,12600,1,Boeing 737-800,115,20,true,false,false
-F4163,Air India,AI-326,DEL,BLR,Delhi,Bangalore,09:45:00,12:30:00,165,6200,18600,0,Airbus A321,171,25,false,true,true
-F4164,SpiceJet,SG-343,BLR,DEL,Bangalore,Delhi,14:30:00,17:10:00,160,2800,5600,0,Airbus A321,170,15,true,false,false
-F4165,Vistara,UK-313,BOM,BLR,Mumbai,Bangalore,18:30:00,20:25:00,115,2100,4200,0,Airbus A320neo,86,15,true,false,true
-F4166,GoAir,G8-351,BLR,BOM,Bangalore,Mumbai,13:15:00,15:05:00,110,6200,18600,0,Airbus A320,125,20,true,false,false
-F4167,Akasa Air,QP-299,MAA,BOM,Chennai,Mumbai,12:45:00,14:40:00,115,4800,14400,0,Airbus A320,198,20,true,false,false
-F4168,Air Asia,I5-296,BOM,MAA,Mumbai,Chennai,22:00:00,00:00:00,120,6200,18600,0,Airbus A319,186,15,false,false,false
-F4169,IndiGo,6E-390,HYD,DEL,Hyderabad,Delhi,22:15:00,01:00:00,165,3600,10800,0,Boeing 737,103,15,false,false,true
-F4170,Air India,AI-339,DEL,HYD,Delhi,Hyderabad,06:45:00,09:25:00,160,4800,14400,0,ATR 72,80,20,true,false,true
-F4171,SpiceJet,SG-345,CCU,DEL,Kolkata,Delhi,09:30:00,11:50:00,140,2100,6300,0,Airbus A321,89,20,false,true,true
-F4172,Vistara,UK-330,DEL,CCU,Delhi,Kolkata,07:15:00,09:40:00,145,4800,14400,0,Boeing 737-800,193,15,false,false,false
-F4173,GoAir,G8-363,PNQ,DEL,Pune,Delhi,14:15:00,16:35:00,140,4800,14400,1,Airbus A320,94,20,true,true,false
-F4174,Akasa Air,QP-319,DEL,PNQ,Delhi,Pune,12:00:00,14:15:00,135,3800,11400,1,Boeing 737,129,20,false,false,false
-F4175,Air Asia,I5-297,BOM,GOI,Mumbai,Goa,21:30:00,22:35:00,65,4800,14400,0,ATR 72,194,15,true,false,true
-F4176,IndiGo,6E-394,GOI,BOM,Goa,Mumbai,10:00:00,11:10:00,70,2500,5000,0,Boeing 737-800,190,20,true,true,false
-F4177,Air India,AI-353,DEL,JAI,Delhi,Jaipur,07:15:00,08:10:00,55,4500,13500,0,Boeing 737,86,15,true,false,true
-F4178,SpiceJet,SG-364,JAI,DEL,Jaipur,Delhi,12:30:00,13:30:00,60,4200,12600,0,Boeing 777,120,15,true,false,true
-F4179,Vistara,UK-348,BOM,AMD,Mumbai,Ahmedabad,05:00:00,06:05:00,65,2100,4200,0,Boeing 737,117,20,false,true,false
-F4180,GoAir,G8-378,AMD,BOM,Ahmedabad,Mumbai,17:45:00,18:55:00,70,2100,6300,0,Boeing 737-800,97,20,false,false,false
-F4181,Akasa Air,QP-324,MAA,DEL,Chennai,Delhi,14:30:00,17:30:00,180,4800,9600,0,Airbus A320,153,25,true,false,false
-F4182,Air Asia,I5-300,DEL,MAA,Delhi,Chennai,14:15:00,17:10:00,175,3200,9600,1,Airbus A320neo,100,15,true,false,false
-F4183,IndiGo,6E-401,MAA,BLR,Chennai,Bangalore,08:15:00,09:30:00,75,5200,10400,1,Airbus A319,162,25,true,false,false
-F4184,Air India,AI-356,BLR,MAA,Bangalore,Chennai,13:00:00,14:20:00,80,6200,18600,1,Airbus A321,96,15,true,false,false
-F4185,SpiceJet,SG-367,HYD,BOM,Hyderabad,Mumbai,11:30:00,13:20:00,110,4500,13500,0,ATR 72,168,25,true,false,false
-F4186,Vistara,UK-360,BOM,HYD,Mumbai,Hyderabad,15:45:00,17:30:00,105,2100,6300,0,Boeing 737-800,171,20,true,false,true
-F4187,GoAir,G8-389,CCU,BLR,Kolkata,Bangalore,20:45:00,23:30:00,165,3800,11400,0,Boeing 737,102,25,true,false,true
-F4188,Akasa Air,QP-342,BLR,CCU,Bangalore,Kolkata,11:30:00,14:20:00,170,2500,5000,1,Airbus A320,184,25,false,false,false
-F4189,Air Asia,I5-307,DEL,LKO,Delhi,Lucknow,06:30:00,07:40:00,70,4800,14400,0,Airbus A320neo,126,20,true,false,false
-F4190,IndiGo,6E-411,LKO,DEL,Lucknow,Delhi,09:45:00,11:00:00,75,4800,9600,0,Airbus A320,164,15,false,false,true
-F4191,Air India,AI-373,BOM,CCU,Mumbai,Kolkata,09:45:00,13:00:00,195,2800,5600,0,Airbus A319,200,20,true,true,false
-F4192,SpiceJet,SG-375,CCU,BOM,Kolkata,Mumbai,07:30:00,10:40:00,190,3200,6400,0,Airbus A321,129,20,true,true,true
-F4193,Vistara,UK-371,BLR,HYD,Bangalore,Hyderabad,08:30:00,09:45:00,75,5200,10400,0,Boeing 777,126,25,false,true,false
-F4194,GoAir,G8-398,HYD,BLR,Hyderabad,Bangalore,17:15:00,18:25:00,70,4200,12600,0,Airbus A321,142,20,false,true,false
-F4195,Akasa Air,QP-347,DEL,COK,Delhi,Kochi,19:15:00,22:45:00,210,2500,7500,0,Airbus A320neo,100,20,false,false,true
-F4196,Air Asia,I5-315,COK,DEL,Kochi,Delhi,18:30:00,22:05:00,215,4500,13500,0,Airbus A320neo,162,20,true,true,true
-F4197,IndiGo,6E-416,BOM,JAI,Mumbai,Jaipur,10:15:00,11:45:00,90,4800,9600,1,Airbus A320neo,87,15,true,true,false
-F4198,Air India,AI-386,JAI,BOM,Jaipur,Mumbai,05:30:00,06:55:00,85,3200,9600,0,Airbus A319,191,20,true,true,false
-F4199,SpiceJet,SG-395,HYD,MAA,Hyderabad,Chennai,09:15:00,10:30:00,75,5800,17400,0,Airbus A321,198,20,false,false,true
-F4200,Vistara,UK-379,MAA,HYD,Chennai,Hyderabad,17:45:00,18:55:00,70,2500,5000,0,Boeing 777,185,15,false,true,true
+F4001,IndiGo,6E-116,BOM,DEL,Mumbai,Delhi,15:15:00,17:30:00,135,3600,10800,0,ATR 72,122,20,false,false,false
+F4002,Air India,AI-101,DEL,BOM,Delhi,Mumbai,13:30:00,15:40:00,130,3200,6400,0,Airbus A319,119,15,true,false,false
+F4003,SpiceJet,SG-110,DEL,BLR,Delhi,Bangalore,08:30:00,11:15:00,165,5200,10400,0,Airbus A320neo,141,15,true,false,false
+F4004,Vistara,UK-112,BLR,DEL,Bangalore,Delhi,18:45:00,21:25:00,160,5800,11600,0,Boeing 737,147,20,false,false,false
+F4005,GoAir,G8-103,BOM,BLR,Mumbai,Bangalore,08:00:00,09:55:00,115,4800,9600,0,Airbus A320neo,101,20,false,false,true
+F4006,Akasa Air,QP-107,BLR,BOM,Bangalore,Mumbai,20:00:00,21:50:00,110,4500,9000,0,Boeing 777,138,25,true,false,false
+F4007,Air Asia,I5-110,MAA,BOM,Chennai,Mumbai,05:45:00,07:40:00,115,2100,4200,0,Airbus A320,134,20,false,true,false
+F4008,IndiGo,6E-118,BOM,MAA,Mumbai,Chennai,07:45:00,09:45:00,120,3600,10800,0,Airbus A320neo,178,20,true,false,false
+F4009,Air India,AI-114,HYD,DEL,Hyderabad,Delhi,17:00:00,19:45:00,165,5800,11600,0,Airbus A321,95,15,false,false,false
+F4010,SpiceJet,SG-115,DEL,HYD,Delhi,Hyderabad,12:00:00,14:40:00,160,3600,10800,0,Boeing 777,148,20,true,true,false
+F4011,Vistara,UK-124,CCU,DEL,Kolkata,Delhi,09:30:00,11:50:00,140,6200,12400,0,Boeing 777,158,15,true,true,true
+F4012,GoAir,G8-107,DEL,CCU,Delhi,Kolkata,06:45:00,09:10:00,145,5800,11600,0,Airbus A320,131,20,true,false,true
+F4013,Akasa Air,QP-109,PNQ,DEL,Pune,Delhi,09:30:00,11:50:00,140,6200,18600,0,Airbus A321,110,20,true,false,false
+F4014,Air Asia,I5-118,DEL,PNQ,Delhi,Pune,18:30:00,20:45:00,135,2100,4200,0,Boeing 777,151,20,true,false,false
+F4015,IndiGo,6E-131,BOM,GOI,Mumbai,Goa,21:30:00,22:35:00,65,4200,12600,0,Boeing 777,103,25,true,true,true
+F4016,Air India,AI-124,GOI,BOM,Goa,Mumbai,09:45:00,10:55:00,70,4800,14400,1,Airbus A320neo,129,15,true,true,false
+F4017,SpiceJet,SG-118,DEL,JAI,Delhi,Jaipur,19:30:00,20:25:00,55,4800,9600,0,Boeing 777,166,25,false,true,true
+F4018,Vistara,UK-131,JAI,DEL,Jaipur,Delhi,22:15:00,23:15:00,60,3200,9600,0,Airbus A320,107,15,false,true,false
+F4019,GoAir,G8-123,BOM,AMD,Mumbai,Ahmedabad,12:15:00,13:20:00,65,3200,9600,0,Boeing 777,139,25,false,false,false
+F4020,Akasa Air,QP-118,AMD,BOM,Ahmedabad,Mumbai,16:45:00,17:55:00,70,2500,7500,0,Airbus A321,197,15,true,false,false
+F4021,Air Asia,I5-120,MAA,DEL,Chennai,Delhi,12:15:00,15:15:00,180,3600,10800,0,Boeing 737-800,122,15,true,false,true
+F4022,IndiGo,6E-147,DEL,MAA,Delhi,Chennai,22:30:00,01:25:00,175,4500,13500,0,Airbus A321,101,15,false,false,false
+F4023,Air India,AI-130,MAA,BLR,Chennai,Bangalore,22:00:00,23:15:00,75,2100,4200,1,Airbus A320,177,15,true,true,false
+F4024,SpiceJet,SG-126,BLR,MAA,Bangalore,Chennai,07:15:00,08:35:00,80,3200,9600,0,Airbus A319,164,20,true,true,false
+F4025,Vistara,UK-149,HYD,BOM,Hyderabad,Mumbai,18:00:00,19:50:00,110,4800,14400,0,ATR 72,82,25,false,false,false
+F4026,GoAir,G8-129,BOM,HYD,Mumbai,Hyderabad,08:00:00,09:45:00,105,2800,5600,0,ATR 72,184,20,true,false,true
+F4027,Akasa Air,QP-130,CCU,BLR,Kolkata,Bangalore,17:45:00,20:30:00,165,3200,6400,0,Boeing 737,163,15,true,false,false
+F4028,Air Asia,I5-133,BLR,CCU,Bangalore,Kolkata,22:45:00,01:35:00,170,5800,11600,0,Boeing 737,143,20,false,false,false
+F4029,IndiGo,6E-151,DEL,LKO,Delhi,Lucknow,21:00:00,22:10:00,70,3200,9600,0,Boeing 737,167,20,false,false,false
+F4030,Air India,AI-132,LKO,DEL,Lucknow,Delhi,10:30:00,11:45:00,75,3200,6400,0,Boeing 777,198,15,true,true,false
+F4031,SpiceJet,SG-134,BOM,CCU,Mumbai,Kolkata,17:30:00,20:45:00,195,6200,12400,0,Boeing 737,144,20,true,true,false
+F4032,Vistara,UK-157,CCU,BOM,Kolkata,Mumbai,07:30:00,10:40:00,190,5200,15600,1,Airbus A321,83,20,true,false,true
+F4033,GoAir,G8-141,BLR,HYD,Bangalore,Hyderabad,22:45:00,00:00:00,75,2800,8400,0,ATR 72,182,15,false,true,true
+F4034,Akasa Air,QP-139,HYD,BLR,Hyderabad,Bangalore,09:45:00,10:55:00,70,2800,8400,0,Boeing 737,91,15,true,false,false
+F4035,Air Asia,I5-142,DEL,COK,Delhi,Kochi,08:15:00,11:45:00,210,2800,8400,0,Boeing 777,93,15,true,false,false
+F4036,IndiGo,6E-154,COK,DEL,Kochi,Delhi,15:45:00,19:20:00,215,3600,10800,0,Boeing 737,172,25,true,false,false
+F4037,Air India,AI-138,BOM,JAI,Mumbai,Jaipur,17:15:00,18:45:00,90,3600,10800,0,Airbus A320neo,88,15,true,false,false
+F4038,SpiceJet,SG-144,JAI,BOM,Jaipur,Mumbai,20:00:00,21:25:00,85,3600,7200,0,Airbus A319,156,25,true,false,true
+F4039,Vistara,UK-162,HYD,MAA,Hyderabad,Chennai,14:00:00,15:15:00,75,3800,11400,0,Airbus A321,136,20,true,false,false
+F4040,GoAir,G8-146,MAA,HYD,Chennai,Hyderabad,14:30:00,15:40:00,70,6200,12400,0,Airbus A320neo,130,20,true,false,false
+F4041,Akasa Air,QP-155,BOM,DEL,Mumbai,Delhi,12:30:00,14:45:00,135,3600,10800,0,Boeing 737-800,155,25,true,false,false
+F4042,Air Asia,I5-143,DEL,BOM,Delhi,Mumbai,19:15:00,21:25:00,130,3600,7200,0,Boeing 777,166,20,true,false,false
+F4043,IndiGo,6E-162,DEL,BLR,Delhi,Bangalore,13:15:00,16:00:00,165,4200,8400,0,Airbus A319,154,20,false,false,false
+F4044,Air India,AI-152,BLR,DEL,Bangalore,Delhi,22:00:00,00:40:00,160,6200,12400,0,Boeing 737-800,164,20,true,false,false
+F4045,SpiceJet,SG-146,BOM,BLR,Mumbai,Bangalore,17:30:00,19:25:00,115,2500,5000,0,Boeing 737-800,145,25,false,false,false
+F4046,Vistara,UK-181,BLR,BOM,Bangalore,Mumbai,12:45:00,14:35:00,110,4200,12600,0,Airbus A320neo,124,15,true,true,false
+F4047,GoAir,G8-160,MAA,BOM,Chennai,Mumbai,07:00:00,08:55:00,115,3800,11400,0,Boeing 737-800,146,20,true,false,true
+F4048,Akasa Air,QP-170,BOM,MAA,Mumbai,Chennai,19:30:00,21:30:00,120,3600,7200,0,Boeing 737,82,20,false,true,false
+F4049,Air Asia,I5-149,HYD,DEL,Hyderabad,Delhi,12:15:00,15:00:00,165,2800,8400,0,Airbus A319,109,20,false,true,true
+F4050,IndiGo,6E-176,DEL,HYD,Delhi,Hyderabad,17:00:00,19:40:00,160,3200,9600,0,Boeing 777,80,15,true,false,false
+F4051,Air India,AI-155,CCU,DEL,Kolkata,Delhi,08:15:00,10:35:00,140,3800,7600,0,ATR 72,165,20,false,false,false
+F4052,SpiceJet,SG-166,DEL,CCU,Delhi,Kolkata,17:45:00,20:10:00,145,2500,7500,0,Airbus A319,159,15,false,false,false
+F4053,Vistara,UK-201,PNQ,DEL,Pune,Delhi,07:15:00,09:35:00,140,2500,5000,0,Airbus A320neo,127,15,false,false,false
+F4054,GoAir,G8-180,DEL,PNQ,Delhi,Pune,09:45:00,12:00:00,135,2800,8400,0,Airbus A320neo,151,15,true,false,true
+F4055,Akasa Air,QP-176,BOM,GOI,Mumbai,Goa,15:45:00,16:50:00,65,2100,6300,1,Airbus A319,97,15,true,false,false
+F4056,Air Asia,I5-165,GOI,BOM,Goa,Mumbai,18:45:00,19:55:00,70,6200,18600,0,Boeing 737,152,15,true,false,true
+F4057,IndiGo,6E-185,DEL,JAI,Delhi,Jaipur,12:30:00,13:25:00,55,4500,13500,0,Boeing 737,153,15,true,false,false
+F4058,Air India,AI-173,JAI,DEL,Jaipur,Delhi,06:45:00,07:45:00,60,3200,9600,0,Boeing 737-800,118,15,true,false,false
+F4059,SpiceJet,SG-169,BOM,AMD,Mumbai,Ahmedabad,19:00:00,20:05:00,65,3200,9600,1,Boeing 777,101,25,true,true,true
+F4060,Vistara,UK-203,AMD,BOM,Ahmedabad,Mumbai,16:30:00,17:40:00,70,4800,9600,0,ATR 72,117,25,true,false,false
+F4061,GoAir,G8-184,MAA,DEL,Chennai,Delhi,09:45:00,12:45:00,180,3600,7200,0,Airbus A320neo,111,15,false,false,true
+F4062,Akasa Air,QP-189,DEL,MAA,Delhi,Chennai,20:15:00,23:10:00,175,5800,17400,0,Boeing 777,137,15,false,true,false
+F4063,Air Asia,I5-182,MAA,BLR,Chennai,Bangalore,13:30:00,14:45:00,75,4500,13500,0,Boeing 737,173,20,false,false,false
+F4064,IndiGo,6E-197,BLR,MAA,Bangalore,Chennai,07:45:00,09:05:00,80,4200,8400,0,Airbus A321,186,20,true,false,false
+F4065,Air India,AI-178,HYD,BOM,Hyderabad,Mumbai,20:30:00,22:20:00,110,2100,4200,0,Airbus A319,82,15,true,false,false
+F4066,SpiceJet,SG-170,BOM,HYD,Mumbai,Hyderabad,18:15:00,20:00:00,105,2800,8400,0,ATR 72,91,20,true,true,false
+F4067,Vistara,UK-209,CCU,BLR,Kolkata,Bangalore,06:45:00,09:30:00,165,3600,7200,0,Boeing 737,170,15,true,true,false
+F4068,GoAir,G8-187,BLR,CCU,Bangalore,Kolkata,09:15:00,12:05:00,170,5800,17400,0,Airbus A321,184,15,true,false,true
+F4069,Akasa Air,QP-205,DEL,LKO,Delhi,Lucknow,07:15:00,08:25:00,70,2500,5000,0,Airbus A321,192,20,true,false,true
+F4070,Air Asia,I5-187,LKO,DEL,Lucknow,Delhi,07:00:00,08:15:00,75,5800,11600,0,Boeing 737-800,160,15,true,false,false
+F4071,IndiGo,6E-212,BOM,CCU,Mumbai,Kolkata,11:00:00,14:15:00,195,2800,5600,0,Boeing 777,124,20,true,true,true
+F4072,Air India,AI-187,CCU,BOM,Kolkata,Mumbai,07:15:00,10:25:00,190,5200,15600,0,Airbus A320,188,20,true,false,false
+F4073,SpiceJet,SG-187,BLR,HYD,Bangalore,Hyderabad,11:45:00,13:00:00,75,5800,11600,0,Boeing 737-800,143,20,true,true,false
+F4074,Vistara,UK-229,HYD,BLR,Hyderabad,Bangalore,07:00:00,08:10:00,70,3800,7600,0,Boeing 777,126,25,false,true,false
+F4075,GoAir,G8-190,DEL,COK,Delhi,Kochi,05:00:00,08:30:00,210,3600,7200,0,Airbus A320,181,20,false,false,false
+F4076,Akasa Air,QP-222,COK,DEL,Kochi,Delhi,18:45:00,22:20:00,215,4200,8400,0,Airbus A320neo,115,15,true,true,false
+F4077,Air Asia,I5-194,BOM,JAI,Mumbai,Jaipur,09:30:00,11:00:00,90,5200,10400,0,Boeing 777,173,15,true,true,true
+F4078,IndiGo,6E-226,JAI,BOM,Jaipur,Mumbai,08:45:00,10:10:00,85,5200,10400,0,Airbus A320neo,95,15,false,true,false
+F4079,Air India,AI-188,HYD,MAA,Hyderabad,Chennai,10:45:00,12:00:00,75,4800,14400,0,Airbus A320neo,175,20,false,true,true
+F4080,SpiceJet,SG-198,MAA,HYD,Chennai,Hyderabad,18:30:00,19:40:00,70,2500,7500,0,Boeing 737,143,20,false,false,true
+F4081,Vistara,UK-245,BOM,DEL,Mumbai,Delhi,10:30:00,12:45:00,135,3600,7200,1,Boeing 737,109,25,true,true,true
+F4082,GoAir,G8-198,DEL,BOM,Delhi,Mumbai,06:45:00,08:55:00,130,4200,8400,0,Airbus A320,150,20,true,false,true
+F4083,Akasa Air,QP-236,DEL,BLR,Delhi,Bangalore,15:30:00,18:15:00,165,5200,15600,0,Airbus A320,102,15,false,true,false
+F4084,Air Asia,I5-197,BLR,DEL,Bangalore,Delhi,19:30:00,22:10:00,160,3800,7600,0,Airbus A320,127,15,true,false,false
+F4085,IndiGo,6E-246,BOM,BLR,Mumbai,Bangalore,12:45:00,14:40:00,115,5200,15600,1,Boeing 737-800,173,25,true,true,true
+F4086,Air India,AI-202,BLR,BOM,Bangalore,Mumbai,05:15:00,07:05:00,110,3800,7600,1,Airbus A320,177,20,false,false,false
+F4087,SpiceJet,SG-202,MAA,BOM,Chennai,Mumbai,11:15:00,13:10:00,115,4500,9000,1,Airbus A320neo,171,20,true,true,true
+F4088,Vistara,UK-262,BOM,MAA,Mumbai,Chennai,18:30:00,20:30:00,120,6200,12400,0,Airbus A320neo,161,20,true,false,false
+F4089,GoAir,G8-200,HYD,DEL,Hyderabad,Delhi,18:15:00,21:00:00,165,3600,10800,1,Boeing 777,169,20,true,false,false
+F4090,Akasa Air,QP-244,DEL,HYD,Delhi,Hyderabad,07:15:00,09:55:00,160,5200,10400,0,Airbus A320neo,137,20,true,false,true
+F4091,Air Asia,I5-215,CCU,DEL,Kolkata,Delhi,16:15:00,18:35:00,140,3600,10800,0,Boeing 737,91,15,false,false,false
+F4092,IndiGo,6E-266,DEL,CCU,Delhi,Kolkata,06:15:00,08:40:00,145,2800,5600,0,Airbus A321,130,25,true,false,false
+F4093,Air India,AI-211,PNQ,DEL,Pune,Delhi,10:00:00,12:20:00,140,4500,9000,0,Boeing 737,182,15,true,true,true
+F4094,SpiceJet,SG-210,DEL,PNQ,Delhi,Pune,09:15:00,11:30:00,135,3800,7600,0,ATR 72,197,15,true,true,true
+F4095,Vistara,UK-277,BOM,GOI,Mumbai,Goa,09:00:00,10:05:00,65,2500,5000,1,Airbus A320,101,25,true,false,false
+F4096,GoAir,G8-216,GOI,BOM,Goa,Mumbai,05:45:00,06:55:00,70,4200,8400,0,Airbus A320neo,115,20,true,true,true
+F4097,Akasa Air,QP-264,DEL,JAI,Delhi,Jaipur,12:30:00,13:25:00,55,4200,12600,0,ATR 72,129,15,true,true,false
+F4098,Air Asia,I5-232,JAI,DEL,Jaipur,Delhi,12:00:00,13:00:00,60,6200,18600,0,Airbus A319,124,25,false,false,false
+F4099,IndiGo,6E-275,BOM,AMD,Mumbai,Ahmedabad,10:00:00,11:05:00,65,5200,10400,0,ATR 72,87,20,false,false,false
+F4100,Air India,AI-219,AMD,BOM,Ahmedabad,Mumbai,10:00:00,11:10:00,70,5800,11600,0,Airbus A320,177,15,false,false,false
+F4101,SpiceJet,SG-216,MAA,DEL,Chennai,Delhi,10:15:00,13:15:00,180,3800,11400,1,Airbus A320,170,20,false,false,true
+F4102,Vistara,UK-296,DEL,MAA,Delhi,Chennai,11:45:00,14:40:00,175,3600,7200,0,Boeing 737,87,15,false,true,true
+F4103,GoAir,G8-233,MAA,BLR,Chennai,Bangalore,20:00:00,21:15:00,75,5200,10400,0,Airbus A321,171,15,true,true,true
+F4104,Akasa Air,QP-269,BLR,MAA,Bangalore,Chennai,09:00:00,10:20:00,80,3800,7600,0,Boeing 777,155,15,true,false,false
+F4105,Air Asia,I5-237,HYD,BOM,Hyderabad,Mumbai,10:45:00,12:35:00,110,4500,13500,0,Airbus A321,108,25,true,false,false
+F4106,IndiGo,6E-285,BOM,HYD,Mumbai,Hyderabad,09:15:00,11:00:00,105,6200,18600,1,Airbus A320,103,25,true,false,true
+F4107,Air India,AI-238,CCU,BLR,Kolkata,Bangalore,08:45:00,11:30:00,165,3800,7600,0,Airbus A321,101,15,false,false,false
+F4108,SpiceJet,SG-227,BLR,CCU,Bangalore,Kolkata,19:00:00,21:50:00,170,3200,6400,0,Airbus A321,112,15,false,true,true
+F4109,Vistara,UK-309,DEL,LKO,Delhi,Lucknow,19:45:00,20:55:00,70,4200,12600,1,Airbus A321,149,20,true,false,false
+F4110,GoAir,G8-241,LKO,DEL,Lucknow,Delhi,10:45:00,12:00:00,75,2100,6300,0,ATR 72,93,15,true,true,false
+F4111,Akasa Air,QP-275,BOM,CCU,Mumbai,Kolkata,07:00:00,10:15:00,195,5200,15600,0,Boeing 777,200,15,false,false,true
+F4112,Air Asia,I5-239,CCU,BOM,Kolkata,Mumbai,08:30:00,11:40:00,190,3200,9600,0,ATR 72,164,20,true,true,true
+F4113,IndiGo,6E-287,BLR,HYD,Bangalore,Hyderabad,17:45:00,19:00:00,75,2100,6300,0,Boeing 737,117,25,true,true,true
+F4114,Air India,AI-239,HYD,BLR,Hyderabad,Bangalore,11:15:00,12:25:00,70,3600,7200,0,Boeing 737,119,20,true,false,false
+F4115,SpiceJet,SG-236,DEL,COK,Delhi,Kochi,07:45:00,11:15:00,210,3800,11400,0,Airbus A319,85,20,true,false,false
+F4116,Vistara,UK-317,COK,DEL,Kochi,Delhi,13:00:00,16:35:00,215,6200,12400,0,Airbus A321,183,25,true,false,true
+F4117,GoAir,G8-259,BOM,JAI,Mumbai,Jaipur,06:45:00,08:15:00,90,4200,12600,0,Boeing 737-800,140,20,true,false,false
+F4118,Akasa Air,QP-277,JAI,BOM,Jaipur,Mumbai,21:15:00,22:40:00,85,4500,9000,1,Airbus A320neo,107,15,true,true,false
+F4119,Air Asia,I5-242,HYD,MAA,Hyderabad,Chennai,18:15:00,19:30:00,75,2800,8400,0,Boeing 737,91,20,false,false,false
+F4120,IndiGo,6E-298,MAA,HYD,Chennai,Hyderabad,13:45:00,14:55:00,70,6200,18600,0,Airbus A320neo,98,25,false,false,true
+F4121,Air India,AI-243,BOM,DEL,Mumbai,Delhi,08:30:00,10:45:00,135,3800,11400,0,Airbus A319,153,25,true,true,true
+F4122,SpiceJet,SG-245,DEL,BOM,Delhi,Mumbai,17:15:00,19:25:00,130,5200,15600,0,Airbus A321,168,15,true,false,false
+F4123,Vistara,UK-326,DEL,BLR,Delhi,Bangalore,16:00:00,18:45:00,165,3600,10800,0,Airbus A319,189,15,true,true,false
+F4124,GoAir,G8-274,BLR,DEL,Bangalore,Delhi,15:30:00,18:10:00,160,5200,10400,0,Boeing 737-800,196,20,false,false,false
+F4125,Akasa Air,QP-289,BOM,BLR,Mumbai,Bangalore,06:15:00,08:10:00,115,3600,10800,0,Airbus A320,102,15,true,true,true
+F4126,Air Asia,I5-244,BLR,BOM,Bangalore,Mumbai,19:00:00,20:50:00,110,6200,12400,0,Airbus A319,144,20,false,true,false
+F4127,IndiGo,6E-299,MAA,BOM,Chennai,Mumbai,12:30:00,14:25:00,115,5200,15600,0,Airbus A319,155,25,true,false,true
+F4128,Air India,AI-252,BOM,MAA,Mumbai,Chennai,07:30:00,09:30:00,120,4200,8400,0,Boeing 737-800,189,15,false,true,false
+F4129,SpiceJet,SG-252,HYD,DEL,Hyderabad,Delhi,13:45:00,16:30:00,165,2100,4200,0,Airbus A320neo,162,15,false,true,true
+F4130,Vistara,UK-335,DEL,HYD,Delhi,Hyderabad,14:30:00,17:10:00,160,4200,12600,0,Boeing 737-800,139,20,false,false,false
+F4131,GoAir,G8-287,CCU,DEL,Kolkata,Delhi,08:00:00,10:20:00,140,5800,17400,0,ATR 72,118,15,true,true,false
+F4132,Akasa Air,QP-298,DEL,CCU,Delhi,Kolkata,15:30:00,17:55:00,145,5800,17400,0,Boeing 737-800,195,15,false,false,false
+F4133,Air Asia,I5-255,PNQ,DEL,Pune,Delhi,09:00:00,11:20:00,140,4500,13500,0,Boeing 777,131,20,false,true,false
+F4134,IndiGo,6E-318,DEL,PNQ,Delhi,Pune,11:30:00,13:45:00,135,5800,17400,1,Airbus A321,144,20,true,false,false
+F4135,Air India,AI-258,BOM,GOI,Mumbai,Goa,14:00:00,15:05:00,65,2800,8400,0,Airbus A320neo,167,20,false,true,true
+F4136,SpiceJet,SG-264,GOI,BOM,Goa,Mumbai,12:30:00,13:40:00,70,3800,11400,0,ATR 72,139,15,true,true,false
+F4137,Vistara,UK-354,DEL,JAI,Delhi,Jaipur,07:45:00,08:40:00,55,4800,9600,1,Boeing 777,147,20,true,true,true
+F4138,GoAir,G8-292,JAI,DEL,Jaipur,Delhi,11:30:00,12:30:00,60,5200,15600,0,Airbus A320neo,179,15,true,false,false
+F4139,Akasa Air,QP-304,BOM,AMD,Mumbai,Ahmedabad,15:00:00,16:05:00,65,4500,13500,0,Airbus A320neo,153,15,true,true,true
+F4140,Air Asia,I5-275,AMD,BOM,Ahmedabad,Mumbai,18:45:00,19:55:00,70,4200,12600,0,Airbus A320,148,15,false,false,true
+F4141,IndiGo,6E-329,MAA,DEL,Chennai,Delhi,21:15:00,00:15:00,180,5800,11600,0,Boeing 737-800,108,20,true,true,true
+F4142,Air India,AI-271,DEL,MAA,Delhi,Chennai,21:30:00,00:25:00,175,2500,5000,0,ATR 72,138,25,false,false,false
+F4143,SpiceJet,SG-278,MAA,BLR,Chennai,Bangalore,09:30:00,10:45:00,75,3800,7600,0,Boeing 777,82,15,true,false,true
+F4144,Vistara,UK-361,BLR,MAA,Bangalore,Chennai,05:15:00,06:35:00,80,3800,7600,0,ATR 72,178,25,false,true,false
+F4145,GoAir,G8-294,HYD,BOM,Hyderabad,Mumbai,08:00:00,09:50:00,110,6200,12400,0,Boeing 777,95,25,true,false,false
+F4146,Akasa Air,QP-309,BOM,HYD,Mumbai,Hyderabad,11:00:00,12:45:00,105,4200,8400,0,ATR 72,159,25,false,true,false
+F4147,Air Asia,I5-279,CCU,BLR,Kolkata,Bangalore,21:00:00,23:45:00,165,2500,5000,0,Boeing 737-800,179,20,false,true,false
+F4148,IndiGo,6E-343,BLR,CCU,Bangalore,Kolkata,14:15:00,17:05:00,170,4800,14400,1,Airbus A319,122,15,true,true,false
+F4149,Air India,AI-274,DEL,LKO,Delhi,Lucknow,08:45:00,09:55:00,70,2500,5000,0,Boeing 737,195,20,false,true,false
+F4150,SpiceJet,SG-288,LKO,DEL,Lucknow,Delhi,13:45:00,15:00:00,75,2500,5000,1,ATR 72,126,20,true,false,true
+F4151,Vistara,UK-365,BOM,CCU,Mumbai,Kolkata,06:00:00,09:15:00,195,5800,11600,0,Airbus A319,159,20,false,true,false
+F4152,GoAir,G8-305,CCU,BOM,Kolkata,Mumbai,10:00:00,13:10:00,190,4200,12600,0,Boeing 777,168,20,true,false,true
+F4153,Akasa Air,QP-313,BLR,HYD,Bangalore,Hyderabad,09:00:00,10:15:00,75,2500,7500,1,Airbus A319,182,25,false,false,true
+F4154,Air Asia,I5-299,HYD,BLR,Hyderabad,Bangalore,17:30:00,18:40:00,70,2100,4200,0,Airbus A319,94,20,true,true,true
+F4155,IndiGo,6E-352,DEL,COK,Delhi,Kochi,15:00:00,18:30:00,210,5800,11600,1,Airbus A321,146,25,false,false,false
+F4156,Air India,AI-278,COK,DEL,Kochi,Delhi,18:15:00,21:50:00,215,3800,11400,0,Airbus A320,81,15,false,false,false
+F4157,SpiceJet,SG-294,BOM,JAI,Mumbai,Jaipur,07:45:00,09:15:00,90,3200,9600,1,Airbus A320,144,15,false,false,false
+F4158,Vistara,UK-378,JAI,BOM,Jaipur,Mumbai,12:00:00,13:25:00,85,4500,13500,0,Airbus A319,137,20,true,false,false
+F4159,GoAir,G8-306,HYD,MAA,Hyderabad,Chennai,08:45:00,10:00:00,75,2100,4200,0,ATR 72,193,25,false,true,false
+F4160,Akasa Air,QP-328,MAA,HYD,Chennai,Hyderabad,15:30:00,16:40:00,70,3200,9600,0,Airbus A319,171,20,false,false,true
+F4161,Air Asia,I5-303,BOM,DEL,Mumbai,Delhi,12:00:00,14:15:00,135,3800,11400,0,Airbus A321,169,15,true,true,false
+F4162,IndiGo,6E-357,DEL,BOM,Delhi,Mumbai,18:00:00,20:10:00,130,5200,10400,0,Boeing 777,107,20,true,false,false
+F4163,Air India,AI-282,DEL,BLR,Delhi,Bangalore,18:00:00,20:45:00,165,5800,11600,0,Airbus A319,138,25,false,true,false
+F4164,SpiceJet,SG-295,BLR,DEL,Bangalore,Delhi,21:00:00,23:40:00,160,4200,12600,1,Airbus A320neo,168,25,true,false,true
+F4165,Vistara,UK-382,BOM,BLR,Mumbai,Bangalore,17:30:00,19:25:00,115,4200,12600,1,Boeing 737-800,115,20,true,false,false
+F4166,GoAir,G8-311,BLR,BOM,Bangalore,Mumbai,09:45:00,11:35:00,110,6200,18600,0,Airbus A321,171,25,false,true,true
+F4167,Akasa Air,QP-335,MAA,BOM,Chennai,Mumbai,14:30:00,16:25:00,115,2800,5600,0,Airbus A321,170,15,true,false,false
+F4168,Air Asia,I5-322,BOM,MAA,Mumbai,Chennai,18:30:00,20:30:00,120,2100,4200,0,Airbus A320neo,86,15,true,false,true
+F4169,IndiGo,6E-367,HYD,DEL,Hyderabad,Delhi,13:15:00,16:00:00,165,6200,18600,0,Airbus A320,125,20,true,false,false
+F4170,Air India,AI-300,DEL,HYD,Delhi,Hyderabad,12:45:00,15:25:00,160,4800,14400,0,Airbus A320,198,20,true,false,false
+F4171,SpiceJet,SG-306,CCU,DEL,Kolkata,Delhi,22:00:00,00:20:00,140,6200,18600,0,Airbus A319,186,15,false,false,false
+F4172,Vistara,UK-394,DEL,CCU,Delhi,Kolkata,22:15:00,00:40:00,145,3600,10800,0,Boeing 737,103,15,false,false,true
+F4173,GoAir,G8-324,PNQ,DEL,Pune,Delhi,06:45:00,09:05:00,140,4800,14400,0,ATR 72,80,20,true,false,true
+F4174,Akasa Air,QP-337,DEL,PNQ,Delhi,Pune,09:30:00,11:45:00,135,2100,6300,0,Airbus A321,89,20,false,true,true
+F4175,Air Asia,I5-339,BOM,GOI,Mumbai,Goa,07:15:00,08:20:00,65,4800,14400,0,Boeing 737-800,193,15,false,false,false
+F4176,IndiGo,6E-379,GOI,BOM,Goa,Mumbai,14:15:00,15:25:00,70,4800,14400,1,Airbus A320,94,20,true,true,false
+F4177,Air India,AI-320,DEL,JAI,Delhi,Jaipur,12:00:00,12:55:00,55,3800,11400,1,Boeing 737,129,20,false,false,false
+F4178,SpiceJet,SG-307,JAI,DEL,Jaipur,Delhi,21:30:00,22:30:00,60,4800,14400,0,ATR 72,194,15,true,false,true
+F4179,Vistara,UK-398,BOM,AMD,Mumbai,Ahmedabad,10:00:00,11:05:00,65,2500,5000,0,Boeing 737-800,190,20,true,true,false
+F4180,GoAir,G8-338,AMD,BOM,Ahmedabad,Mumbai,07:15:00,08:25:00,70,4500,13500,0,Boeing 737,86,15,true,false,true
+F4181,Akasa Air,QP-356,MAA,DEL,Chennai,Delhi,12:30:00,15:30:00,180,4200,12600,0,Boeing 777,120,15,true,false,true
+F4182,Air Asia,I5-357,DEL,MAA,Delhi,Chennai,05:00:00,07:55:00,175,2100,4200,0,Boeing 737,117,20,false,true,false
+F4183,IndiGo,6E-394,MAA,BLR,Chennai,Bangalore,17:45:00,19:00:00,75,2100,6300,0,Boeing 737-800,97,20,false,false,false
+F4184,Air India,AI-325,BLR,MAA,Bangalore,Chennai,14:30:00,15:50:00,80,4800,9600,0,Airbus A320,153,25,true,false,false
+F4185,SpiceJet,SG-310,HYD,BOM,Hyderabad,Mumbai,14:15:00,16:05:00,110,3200,9600,1,Airbus A320neo,100,15,true,false,false
+F4186,Vistara,UK-405,BOM,HYD,Mumbai,Hyderabad,08:15:00,10:00:00,105,5200,10400,1,Airbus A319,162,25,true,false,false
+F4187,GoAir,G8-341,CCU,BLR,Kolkata,Bangalore,13:00:00,15:45:00,165,6200,18600,1,Airbus A321,96,15,true,false,false
+F4188,Akasa Air,QP-359,BLR,CCU,Bangalore,Kolkata,11:30:00,14:20:00,170,4500,13500,0,ATR 72,168,25,true,false,false
+F4189,Air Asia,I5-369,DEL,LKO,Delhi,Lucknow,15:45:00,16:55:00,70,2100,6300,0,Boeing 737-800,171,20,true,false,true
+F4190,IndiGo,6E-405,LKO,DEL,Lucknow,Delhi,20:45:00,22:00:00,75,3800,11400,0,Boeing 737,102,25,true,false,true
+F4191,Air India,AI-343,BOM,CCU,Mumbai,Kolkata,11:30:00,14:45:00,195,2500,5000,1,Airbus A320,184,25,false,false,false
+F4192,SpiceJet,SG-317,CCU,BOM,Kolkata,Mumbai,06:30:00,09:40:00,190,4800,14400,0,Airbus A320neo,126,20,true,false,false
+F4193,Vistara,UK-415,BLR,HYD,Bangalore,Hyderabad,09:45:00,11:00:00,75,4800,9600,0,Airbus A320,164,15,false,false,true
+F4194,GoAir,G8-358,HYD,BLR,Hyderabad,Bangalore,09:45:00,10:55:00,70,2800,5600,0,Airbus A319,200,20,true,true,false
+F4195,Akasa Air,QP-367,DEL,COK,Delhi,Kochi,07:30:00,11:00:00,210,3200,6400,0,Airbus A321,129,20,true,true,true
+F4196,Air Asia,I5-380,COK,DEL,Kochi,Delhi,08:30:00,12:05:00,215,5200,10400,0,Boeing 777,126,25,false,true,false
+F4197,IndiGo,6E-414,BOM,JAI,Mumbai,Jaipur,17:15:00,18:45:00,90,4200,12600,0,Airbus A321,142,20,false,true,false
+F4198,Air India,AI-348,JAI,BOM,Jaipur,Mumbai,19:15:00,20:40:00,85,2500,7500,0,Airbus A320neo,100,20,false,false,true
+F4199,SpiceJet,SG-325,HYD,MAA,Hyderabad,Chennai,18:30:00,19:45:00,75,4500,13500,0,Airbus A320neo,162,20,true,true,true
+F4200,Vistara,UK-420,MAA,HYD,Chennai,Hyderabad,10:15:00,11:25:00,70,4800,9600,1,Airbus A320neo,87,15,true,true,false

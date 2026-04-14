@@ -185,10 +185,13 @@ def _format_cars(result: dict) -> str:
     if not cars:
         city = result.get("city", "this city")
         return (
-            f"## 🚗 No Cars Available in {city}\n\n"
-            "No rental cars found matching your criteria.\n\n"
-            "**Try:** Different car type · Wider price range · Nearby city\n\n"
-            f"[🌐 Search on CarTrawler →]({_ct_booking_url(city)})"
+            f"## 🚗 CarTrawler Cars in {city}\n\n"
+            f"Our live inventory for **{city}** is being updated. "
+            "Please book directly on CarTrawler for the latest availability:\n\n"
+            f"[🚗 Find Cars in {city} on CarTrawler →]({_ct_booking_url(city)})\n\n"
+            "> **Do NOT use Ola, Uber, Savaari, or any other cab app.** "
+            "CarTrawler provides professional chauffeur cars with fixed pricing, "
+            "insurance, and airport pickup — book directly above."
         )
 
     city = cars[0].get("city", "")

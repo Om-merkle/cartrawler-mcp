@@ -1,201 +1,201 @@
 hotel_id,name,city,area,address,star_rating,price_per_night,amenities,total_rooms,available_rooms,check_in_time,check_out_time,image_url,is_active
-H9001,FabExpress Mumbai,Mumbai,Colaba,"155 Colaba, Mumbai",2,2000,"[""wifi"", ""lockers"", ""lounge""]",500,106,14:00,12:00,,TRUE
-H9002,FabHotel Mumbai,Mumbai,Andheri,"33 Andheri, Mumbai",3,3000,"[""restaurant"", ""gym"", ""parking""]",80,5,14:00,12:00,,TRUE
-H9003,Holiday Inn Mumbai,Mumbai,Juhu,"167 Juhu, Mumbai",4,7500,"[""gym"", ""airport_shuttle"", ""wifi"", ""pool"", ""bar"", ""parking""]",60,20,14:00,12:00,,TRUE
-H9004,Radisson Blu Mumbai,Mumbai,Bandra,"43 Bandra, Mumbai",4,7000,"[""gym"", ""wifi"", ""pool"", ""bar"", ""restaurant"", ""airport_shuttle""]",400,67,14:00,12:00,,TRUE
-H9005,Aloft Mumbai,Mumbai,Powai,"14 Powai, Mumbai",4,8500,"[""parking"", ""gym"", ""pool""]",250,56,14:00,12:00,,TRUE
-H9006,Citrus Mumbai,Mumbai,Goregaon,"60 Goregaon, Mumbai",3,5000,"[""restaurant"", ""parking"", ""gym"", ""wifi""]",400,85,14:00,12:00,,TRUE
-H9007,Fortune Mumbai,Mumbai,Lower Parel,"166 Lower Parel, Mumbai",3,4000,"[""gym"", ""restaurant"", ""wifi"", ""parking""]",250,60,14:00,12:00,,TRUE
-H9008,Hyatt Mumbai,Mumbai,Worli,"186 Worli, Mumbai",5,15000,"[""wifi"", ""airport_shuttle"", ""spa"", ""gym"", ""concierge""]",100,28,14:00,12:00,,TRUE
-H9009,Park Inn Mumbai,Mumbai,Colaba,"173 Colaba, Mumbai",3,5000,"[""parking"", ""wifi"", ""restaurant""]",100,27,14:00,12:00,,TRUE
-H9010,Citrus Mumbai,Mumbai,Andheri,"34 Andheri, Mumbai",3,3000,"[""gym"", ""parking"", ""wifi""]",200,65,14:00,12:00,,TRUE
-H9011,Zostel Mumbai,Mumbai,Juhu,"61 Juhu, Mumbai",2,1000,"[""lounge"", ""wifi"", ""lockers""]",150,21,14:00,12:00,,TRUE
-H9012,Holiday Inn Mumbai,Mumbai,Bandra,"45 Bandra, Mumbai",4,10000,"[""pool"", ""bar"", ""parking""]",300,33,14:00,12:00,,TRUE
-H9013,WelcomHotel Mumbai,Mumbai,Powai,"91 Powai, Mumbai",3,5500,"[""parking"", ""restaurant"", ""gym""]",300,82,14:00,12:00,,TRUE
-H9014,Ibis Mumbai,Mumbai,Goregaon,"113 Goregaon, Mumbai",3,5500,"[""restaurant"", ""gym"", ""wifi""]",300,10,14:00,12:00,,TRUE
-H9015,Ginger Mumbai,Mumbai,Lower Parel,"162 Lower Parel, Mumbai",3,2500,"[""gym"", ""wifi"", ""parking"", ""restaurant""]",250,69,14:00,12:00,,TRUE
-H9016,FabHotel Mumbai,Mumbai,Worli,"40 Worli, Mumbai",3,5000,"[""parking"", ""wifi"", ""restaurant""]",80,19,14:00,12:00,,TRUE
-H9017,OYO Mumbai,Mumbai,Colaba,"63 Colaba, Mumbai",2,2000,"[""wifi"", ""lockers"", ""lounge""]",300,26,14:00,12:00,,TRUE
-H9018,Leela Mumbai,Mumbai,Andheri,"184 Andheri, Mumbai",5,24000,"[""gym"", ""airport_shuttle"", ""wifi"", ""butler"", ""parking"", ""restaurant"", ""pool"", ""spa"", ""bar""]",200,62,14:00,12:00,,TRUE
-H9019,WelcomHotel Mumbai,Mumbai,Juhu,"8 Juhu, Mumbai",3,4000,"[""parking"", ""gym"", ""wifi""]",150,25,14:00,12:00,,TRUE
-H9020,Holiday Inn Mumbai,Mumbai,Bandra,"112 Bandra, Mumbai",4,6500,"[""airport_shuttle"", ""bar"", ""gym"", ""parking"", ""pool"", ""wifi""]",200,61,14:00,12:00,,TRUE
-H9021,Fortune Mumbai,Mumbai,Powai,"185 Powai, Mumbai",3,5500,"[""parking"", ""wifi"", ""restaurant"", ""gym""]",300,83,14:00,12:00,,TRUE
-H9022,FabExpress Mumbai,Mumbai,Goregaon,"104 Goregaon, Mumbai",2,1500,"[""lounge"", ""wifi"", ""lockers""]",150,46,14:00,12:00,,TRUE
-H9023,Sheraton Delhi,Delhi,Janpath,"78 Janpath, Delhi",4,6500,"[""pool"", ""airport_shuttle"", ""parking"", ""restaurant"", ""gym"", ""bar"", ""wifi""]",300,41,14:00,12:00,,TRUE
-H9024,DoubleTree Delhi,Delhi,Aerocity,"134 Aerocity, Delhi",4,8500,"[""gym"", ""bar"", ""restaurant"", ""wifi""]",100,28,14:00,12:00,,TRUE
-H9025,Radisson Blu Delhi,Delhi,Connaught Place,"188 Connaught Place, Delhi",4,6000,"[""pool"", ""restaurant"", ""wifi""]",250,43,14:00,12:00,,TRUE
-H9026,Ibis Delhi,Delhi,Karol Bagh,"117 Karol Bagh, Delhi",3,3500,"[""parking"", ""wifi"", ""gym"", ""restaurant""]",100,14,14:00,12:00,,TRUE
-H9027,Ginger Delhi,Delhi,Dwarka,"183 Dwarka, Delhi",3,4000,"[""gym"", ""parking"", ""wifi""]",150,34,14:00,12:00,,TRUE
-H9028,JW Marriott Delhi,Delhi,Saket,"106 Saket, Delhi",5,13000,"[""gym"", ""restaurant"", ""airport_shuttle"", ""bar"", ""parking"", ""spa"", ""butler"", ""concierge"", ""wifi""]",400,106,14:00,12:00,,TRUE
-H9029,The Hosteller Delhi,Delhi,Vasant Kunj,"128 Vasant Kunj, Delhi",2,2000,"[""wifi"", ""lockers"", ""lounge""]",200,57,14:00,12:00,,TRUE
-H9030,Holiday Inn Delhi,Delhi,Paharganj,"125 Paharganj, Delhi",4,11500,"[""parking"", ""airport_shuttle"", ""gym"", ""wifi"", ""bar"", ""pool""]",250,9,14:00,12:00,,TRUE
-H9031,WelcomHotel Delhi,Delhi,Janpath,"31 Janpath, Delhi",3,4500,"[""restaurant"", ""gym"", ""wifi"", ""parking""]",400,79,14:00,12:00,,TRUE
-H9032,Oberoi Delhi,Delhi,Aerocity,"31 Aerocity, Delhi",5,18000,"[""concierge"", ""airport_shuttle"", ""parking""]",100,33,14:00,12:00,,TRUE
-H9033,Holiday Inn Delhi,Delhi,Connaught Place,"190 Connaught Place, Delhi",4,10000,"[""pool"", ""restaurant"", ""parking"", ""gym"", ""bar"", ""airport_shuttle""]",250,78,14:00,12:00,,TRUE
-H9034,Courtyard Delhi,Delhi,Karol Bagh,"87 Karol Bagh, Delhi",4,9000,"[""gym"", ""airport_shuttle"", ""wifi"", ""pool"", ""bar"", ""parking""]",500,119,14:00,12:00,,TRUE
-H9035,Leela Delhi,Delhi,Dwarka,"23 Dwarka, Delhi",5,22000,"[""bar"", ""parking"", ""restaurant"", ""wifi"", ""gym"", ""spa"", ""pool""]",500,27,14:00,12:00,,TRUE
-H9036,FabExpress Delhi,Delhi,Saket,"7 Saket, Delhi",2,1500,"[""wifi"", ""lounge"", ""lockers""]",500,148,14:00,12:00,,TRUE
-H9037,St Regis Delhi,Delhi,Vasant Kunj,"148 Vasant Kunj, Delhi",5,24000,"[""pool"", ""gym"", ""bar""]",100,30,14:00,12:00,,TRUE
-H9038,Courtyard Delhi,Delhi,Paharganj,"22 Paharganj, Delhi",4,10000,"[""parking"", ""airport_shuttle"", ""pool"", ""wifi"", ""restaurant""]",200,16,14:00,12:00,,TRUE
-H9039,Lemon Tree Premier Delhi,Delhi,Janpath,"98 Janpath, Delhi",4,8000,"[""gym"", ""bar"", ""restaurant"", ""pool""]",100,29,14:00,12:00,,TRUE
-H9040,Hyatt Delhi,Delhi,Aerocity,"105 Aerocity, Delhi",5,23000,"[""spa"", ""restaurant"", ""concierge"", ""butler"", ""parking"", ""airport_shuttle"", ""pool"", ""bar""]",60,18,14:00,12:00,,TRUE
-H9041,Zostel Delhi,Delhi,Connaught Place,"97 Connaught Place, Delhi",2,2000,"[""lounge"", ""lockers"", ""wifi""]",80,24,14:00,12:00,,TRUE
-H9042,Citrus Delhi,Delhi,Karol Bagh,"131 Karol Bagh, Delhi",3,5500,"[""gym"", ""restaurant"", ""wifi""]",150,34,14:00,12:00,,TRUE
-H9043,FabHotel Delhi,Delhi,Dwarka,"124 Dwarka, Delhi",3,2500,"[""restaurant"", ""wifi"", ""gym""]",100,22,14:00,12:00,,TRUE
-H9044,FabExpress Delhi,Delhi,Saket,"26 Saket, Delhi",2,1000,"[""lounge"", ""wifi"", ""lockers""]",400,109,14:00,12:00,,TRUE
-H9045,Sheraton Bangalore,Bangalore,Airport Road,"37 Airport Road, Bangalore",4,9000,"[""wifi"", ""airport_shuttle"", ""gym""]",30,8,14:00,12:00,,TRUE
-H9046,The Hosteller Bangalore,Bangalore,Whitefield,"75 Whitefield, Bangalore",2,2000,"[""lounge"", ""lockers"", ""wifi""]",250,39,14:00,12:00,,TRUE
-H9047,Park Inn Bangalore,Bangalore,Koramangala,"90 Koramangala, Bangalore",3,5500,"[""wifi"", ""parking"", ""gym""]",60,7,14:00,12:00,,TRUE
-H9048,Aloft Bangalore,Bangalore,MG Road,"179 MG Road, Bangalore",4,7000,"[""restaurant"", ""wifi"", ""parking"", ""gym"", ""bar"", ""pool"", ""airport_shuttle""]",300,45,14:00,12:00,,TRUE
-H9049,Zostel Bangalore,Bangalore,Indiranagar,"163 Indiranagar, Bangalore",2,1000,"[""wifi"", ""lounge"", ""lockers""]",80,26,14:00,12:00,,TRUE
-H9050,Zostel Bangalore,Bangalore,Electronic City,"54 Electronic City, Bangalore",2,1500,"[""wifi"", ""lounge"", ""lockers""]",60,5,14:00,12:00,,TRUE
-H9051,Ibis Bangalore,Bangalore,Hebbal,"3 Hebbal, Bangalore",3,5000,"[""wifi"", ""gym"", ""parking"", ""restaurant""]",300,15,14:00,12:00,,TRUE
-H9052,FabHotel Bangalore,Bangalore,Marathahalli,"138 Marathahalli, Bangalore",3,2500,"[""restaurant"", ""wifi"", ""gym"", ""parking""]",200,57,14:00,12:00,,TRUE
-H9053,Park Inn Bangalore,Bangalore,Airport Road,"46 Airport Road, Bangalore",3,5500,"[""gym"", ""restaurant"", ""parking"", ""wifi""]",80,19,14:00,12:00,,TRUE
-H9054,Taj Bangalore,Bangalore,Whitefield,"195 Whitefield, Bangalore",5,16500,"[""butler"", ""airport_shuttle"", ""wifi"", ""parking"", ""gym"", ""restaurant"", ""concierge"", ""pool""]",30,7,14:00,12:00,,TRUE
-H9055,Keys Hotels Bangalore,Bangalore,Koramangala,"2 Koramangala, Bangalore",3,3000,"[""gym"", ""restaurant"", ""wifi"", ""parking""]",60,11,14:00,12:00,,TRUE
-H9056,Ginger Bangalore,Bangalore,MG Road,"17 MG Road, Bangalore",3,4500,"[""parking"", ""wifi"", ""gym""]",100,23,14:00,12:00,,TRUE
-H9057,The Hosteller Bangalore,Bangalore,Indiranagar,"187 Indiranagar, Bangalore",2,2000,"[""lockers"", ""wifi"", ""lounge""]",500,141,14:00,12:00,,TRUE
-H9058,Citrus Bangalore,Bangalore,Electronic City,"1 Electronic City, Bangalore",3,4000,"[""parking"", ""gym"", ""restaurant"", ""wifi""]",100,8,14:00,12:00,,TRUE
-H9059,Citrus Bangalore,Bangalore,Hebbal,"127 Hebbal, Bangalore",3,3500,"[""restaurant"", ""parking"", ""gym""]",100,18,14:00,12:00,,TRUE
-H9060,WelcomHotel Bangalore,Bangalore,Marathahalli,"2 Marathahalli, Bangalore",3,4000,"[""gym"", ""wifi"", ""parking""]",80,18,14:00,12:00,,TRUE
-H9061,Treebo Bangalore,Bangalore,Airport Road,"51 Airport Road, Bangalore",2,1000,"[""wifi"", ""lockers"", ""lounge""]",500,165,14:00,12:00,,TRUE
-H9062,Four Seasons Bangalore,Bangalore,Whitefield,"111 Whitefield, Bangalore",5,12000,"[""gym"", ""airport_shuttle"", ""parking"", ""concierge"", ""spa"", ""wifi"", ""pool"", ""restaurant""]",300,35,14:00,12:00,,TRUE
-H9063,The Hosteller Bangalore,Bangalore,Koramangala,"159 Koramangala, Bangalore",2,1500,"[""lockers"", ""lounge"", ""wifi""]",45,5,14:00,12:00,,TRUE
-H9064,Backpacker Panda Bangalore,Bangalore,MG Road,"81 MG Road, Bangalore",2,2000,"[""lounge"", ""lockers"", ""wifi""]",250,12,14:00,12:00,,TRUE
-H9065,Aloft Chennai,Chennai,Mount Road,"17 Mount Road, Chennai",4,6500,"[""restaurant"", ""gym"", ""pool"", ""airport_shuttle"", ""bar"", ""wifi""]",45,14,14:00,12:00,,TRUE
-H9066,Keys Hotels Chennai,Chennai,Nungambakkam,"154 Nungambakkam, Chennai",3,5500,"[""parking"", ""gym"", ""restaurant"", ""wifi""]",200,61,14:00,12:00,,TRUE
-H9067,FabHotel Chennai,Chennai,T Nagar,"87 T Nagar, Chennai",3,5000,"[""parking"", ""gym"", ""restaurant""]",45,6,14:00,12:00,,TRUE
-H9068,ITC Chennai,Chennai,Adyar,"152 Adyar, Chennai",5,24500,"[""pool"", ""concierge"", ""wifi"", ""parking"", ""bar""]",30,5,14:00,12:00,,TRUE
-H9069,JW Marriott Chennai,Chennai,Anna Nagar,"132 Anna Nagar, Chennai",5,22500,"[""wifi"", ""butler"", ""concierge""]",300,80,14:00,12:00,,TRUE
-H9070,Ginger Chennai,Chennai,Airport,"15 Airport, Chennai",3,3000,"[""parking"", ""gym"", ""restaurant""]",80,25,14:00,12:00,,TRUE
-H9071,OYO Chennai,Chennai,Besant Nagar,"88 Besant Nagar, Chennai",2,1000,"[""wifi"", ""lounge"", ""lockers""]",400,89,14:00,12:00,,TRUE
-H9072,The Hosteller Chennai,Chennai,Velachery,"86 Velachery, Chennai",2,2000,"[""wifi"", ""lockers"", ""lounge""]",60,8,14:00,12:00,,TRUE
-H9073,Ibis Chennai,Chennai,Mount Road,"127 Mount Road, Chennai",3,3000,"[""restaurant"", ""parking"", ""gym""]",250,32,14:00,12:00,,TRUE
-H9074,Lemon Tree Premier Chennai,Chennai,Nungambakkam,"190 Nungambakkam, Chennai",4,9000,"[""gym"", ""parking"", ""bar""]",150,6,14:00,12:00,,TRUE
-H9075,Ginger Chennai,Chennai,T Nagar,"75 T Nagar, Chennai",3,4000,"[""wifi"", ""parking"", ""gym""]",30,6,14:00,12:00,,TRUE
-H9076,Holiday Inn Chennai,Chennai,Adyar,"57 Adyar, Chennai",4,8000,"[""restaurant"", ""bar"", ""wifi""]",60,13,14:00,12:00,,TRUE
-H9077,OYO Chennai,Chennai,Anna Nagar,"174 Anna Nagar, Chennai",2,1000,"[""lockers"", ""wifi"", ""lounge""]",80,14,14:00,12:00,,TRUE
-H9078,WelcomHotel Chennai,Chennai,Airport,"96 Airport, Chennai",3,5000,"[""wifi"", ""parking"", ""gym""]",45,7,14:00,12:00,,TRUE
-H9079,Treebo Chennai,Chennai,Besant Nagar,"49 Besant Nagar, Chennai",2,1000,"[""wifi"", ""lounge"", ""lockers""]",150,43,14:00,12:00,,TRUE
-H9080,Sheraton Chennai,Chennai,Velachery,"12 Velachery, Chennai",4,11000,"[""restaurant"", ""parking"", ""wifi"", ""gym""]",30,10,14:00,12:00,,TRUE
-H9081,Ginger Chennai,Chennai,Mount Road,"131 Mount Road, Chennai",3,4500,"[""restaurant"", ""gym"", ""wifi"", ""parking""]",500,162,14:00,12:00,,TRUE
-H9082,St Regis Chennai,Chennai,Nungambakkam,"100 Nungambakkam, Chennai",5,24000,"[""wifi"", ""concierge"", ""butler"", ""gym"", ""pool"", ""spa"", ""restaurant"", ""parking"", ""bar"", ""airport_shuttle""]",250,65,14:00,12:00,,TRUE
-H9083,Aloft Hyderabad,Hyderabad,Hitec City,"164 Hitec City, Hyderabad",4,10500,"[""gym"", ""restaurant"", ""airport_shuttle"", ""bar""]",200,18,14:00,12:00,,TRUE
-H9084,Aloft Hyderabad,Hyderabad,Banjara Hills,"147 Banjara Hills, Hyderabad",4,7000,"[""pool"", ""bar"", ""restaurant"", ""wifi"", ""parking""]",250,71,14:00,12:00,,TRUE
-H9085,Novotel Hyderabad,Hyderabad,Jubilee Hills,"120 Jubilee Hills, Hyderabad",4,10000,"[""wifi"", ""parking"", ""pool"", ""airport_shuttle"", ""restaurant"", ""gym""]",150,36,14:00,12:00,,TRUE
-H9086,Aloft Hyderabad,Hyderabad,Secunderabad,"7 Secunderabad, Hyderabad",4,7000,"[""bar"", ""airport_shuttle"", ""parking"", ""wifi"", ""gym""]",300,70,14:00,12:00,,TRUE
-H9087,FabHotel Hyderabad,Hyderabad,Begumpet,"71 Begumpet, Hyderabad",3,3000,"[""restaurant"", ""gym"", ""parking"", ""wifi""]",30,9,14:00,12:00,,TRUE
-H9088,Sheraton Hyderabad,Hyderabad,Gachibowli,"173 Gachibowli, Hyderabad",4,8500,"[""restaurant"", ""wifi"", ""bar"", ""pool"", ""parking"", ""airport_shuttle"", ""gym""]",100,5,14:00,12:00,,TRUE
-H9089,Fortune Hyderabad,Hyderabad,Ameerpet,"89 Ameerpet, Hyderabad",3,5500,"[""gym"", ""wifi"", ""restaurant"", ""parking""]",500,136,14:00,12:00,,TRUE
-H9090,Treebo Hyderabad,Hyderabad,Kukatpally,"102 Kukatpally, Hyderabad",2,1000,"[""lounge"", ""lockers"", ""wifi""]",80,21,14:00,12:00,,TRUE
-H9091,Citrus Hyderabad,Hyderabad,Hitec City,"185 Hitec City, Hyderabad",3,5500,"[""gym"", ""wifi"", ""restaurant"", ""parking""]",80,18,14:00,12:00,,TRUE
-H9092,Park Inn Hyderabad,Hyderabad,Banjara Hills,"54 Banjara Hills, Hyderabad",3,4000,"[""restaurant"", ""wifi"", ""gym"", ""parking""]",60,9,14:00,12:00,,TRUE
-H9093,Novotel Hyderabad,Hyderabad,Jubilee Hills,"128 Jubilee Hills, Hyderabad",4,11000,"[""wifi"", ""bar"", ""restaurant"", ""pool"", ""parking"", ""gym""]",300,43,14:00,12:00,,TRUE
-H9094,Novotel Hyderabad,Hyderabad,Secunderabad,"146 Secunderabad, Hyderabad",4,6000,"[""bar"", ""wifi"", ""parking"", ""restaurant"", ""gym"", ""airport_shuttle""]",45,13,14:00,12:00,,TRUE
-H9095,Courtyard Hyderabad,Hyderabad,Begumpet,"28 Begumpet, Hyderabad",4,8500,"[""pool"", ""airport_shuttle"", ""parking"", ""wifi"", ""gym"", ""restaurant"", ""bar""]",60,6,14:00,12:00,,TRUE
-H9096,Citrus Hyderabad,Hyderabad,Gachibowli,"7 Gachibowli, Hyderabad",3,3000,"[""gym"", ""parking"", ""wifi"", ""restaurant""]",80,12,14:00,12:00,,TRUE
-H9097,Radisson Blu Hyderabad,Hyderabad,Ameerpet,"117 Ameerpet, Hyderabad",4,6000,"[""parking"", ""airport_shuttle"", ""restaurant"", ""pool"", ""wifi"", ""bar""]",60,8,14:00,12:00,,TRUE
-H9098,JW Marriott Hyderabad,Hyderabad,Kukatpally,"123 Kukatpally, Hyderabad",5,24000,"[""wifi"", ""bar"", ""restaurant"", ""parking"", ""gym""]",400,84,14:00,12:00,,TRUE
-H9099,Citrus Hyderabad,Hyderabad,Hitec City,"71 Hitec City, Hyderabad",3,3000,"[""gym"", ""restaurant"", ""parking""]",200,43,14:00,12:00,,TRUE
-H9100,WelcomHotel Hyderabad,Hyderabad,Banjara Hills,"146 Banjara Hills, Hyderabad",3,4500,"[""gym"", ""wifi"", ""restaurant""]",100,25,14:00,12:00,,TRUE
-H9101,Backpacker Panda Kolkata,Kolkata,Park Street,"89 Park Street, Kolkata",2,2000,"[""wifi"", ""lounge"", ""lockers""]",400,49,14:00,12:00,,TRUE
-H9102,Holiday Inn Kolkata,Kolkata,Salt Lake,"159 Salt Lake, Kolkata",4,9500,"[""gym"", ""parking"", ""bar"", ""wifi""]",60,13,14:00,12:00,,TRUE
-H9103,The Hosteller Kolkata,Kolkata,New Town,"75 New Town, Kolkata",2,2000,"[""lounge"", ""lockers"", ""wifi""]",200,53,14:00,12:00,,TRUE
-H9104,WelcomHotel Kolkata,Kolkata,Howrah,"20 Howrah, Kolkata",3,5500,"[""parking"", ""restaurant"", ""gym"", ""wifi""]",250,26,14:00,12:00,,TRUE
-H9105,Novotel Kolkata,Kolkata,Esplanade,"119 Esplanade, Kolkata",4,6000,"[""airport_shuttle"", ""gym"", ""pool"", ""bar""]",200,7,14:00,12:00,,TRUE
-H9106,ITC Kolkata,Kolkata,Alipore,"182 Alipore, Kolkata",5,14000,"[""restaurant"", ""concierge"", ""gym"", ""pool"", ""butler""]",250,40,14:00,12:00,,TRUE
-H9107,Ginger Kolkata,Kolkata,Rajarhat,"5 Rajarhat, Kolkata",3,4500,"[""gym"", ""restaurant"", ""parking""]",300,99,14:00,12:00,,TRUE
-H9108,Radisson Blu Kolkata,Kolkata,Bhowanipore,"172 Bhowanipore, Kolkata",4,6000,"[""airport_shuttle"", ""wifi"", ""bar"", ""restaurant""]",30,10,14:00,12:00,,TRUE
-H9109,Citrus Kolkata,Kolkata,Park Street,"179 Park Street, Kolkata",3,2500,"[""parking"", ""gym"", ""restaurant"", ""wifi""]",30,9,14:00,12:00,,TRUE
-H9110,JW Marriott Kolkata,Kolkata,Salt Lake,"197 Salt Lake, Kolkata",5,15000,"[""concierge"", ""gym"", ""restaurant"", ""parking"", ""airport_shuttle"", ""wifi"", ""pool"", ""butler""]",80,26,14:00,12:00,,TRUE
-H9111,Keys Hotels Kolkata,Kolkata,New Town,"25 New Town, Kolkata",3,5500,"[""parking"", ""wifi"", ""gym""]",200,37,14:00,12:00,,TRUE
-H9112,Leela Kolkata,Kolkata,Howrah,"83 Howrah, Kolkata",5,21000,"[""gym"", ""parking"", ""bar"", ""restaurant"", ""pool"", ""wifi"", ""airport_shuttle"", ""concierge""]",60,5,14:00,12:00,,TRUE
-H9113,Lemon Tree Premier Kolkata,Kolkata,Esplanade,"4 Esplanade, Kolkata",4,9000,"[""parking"", ""bar"", ""gym"", ""wifi"", ""airport_shuttle"", ""restaurant"", ""pool""]",150,7,14:00,12:00,,TRUE
-H9114,Marriott Kolkata,Kolkata,Alipore,"106 Alipore, Kolkata",5,16500,"[""gym"", ""wifi"", ""spa"", ""airport_shuttle"", ""concierge"", ""restaurant"", ""bar"", ""pool""]",500,104,14:00,12:00,,TRUE
-H9115,Ginger Kolkata,Kolkata,Rajarhat,"86 Rajarhat, Kolkata",3,3000,"[""wifi"", ""restaurant"", ""parking""]",150,6,14:00,12:00,,TRUE
-H9116,Citrus Pune,Pune,Kharadi,"98 Kharadi, Pune",3,4500,"[""parking"", ""wifi"", ""gym""]",30,9,14:00,12:00,,TRUE
-H9117,FabHotel Pune,Pune,Koregaon Park,"80 Koregaon Park, Pune",3,3000,"[""restaurant"", ""gym"", ""wifi""]",60,16,14:00,12:00,,TRUE
-H9118,Keys Hotels Pune,Pune,Hinjewadi,"39 Hinjewadi, Pune",3,4000,"[""parking"", ""wifi"", ""gym""]",400,118,14:00,12:00,,TRUE
-H9119,WelcomHotel Pune,Pune,Kalyani Nagar,"35 Kalyani Nagar, Pune",3,3500,"[""restaurant"", ""wifi"", ""parking"", ""gym""]",500,78,14:00,12:00,,TRUE
-H9120,Keys Hotels Pune,Pune,Shivajinagar,"188 Shivajinagar, Pune",3,3500,"[""restaurant"", ""parking"", ""wifi""]",500,68,14:00,12:00,,TRUE
-H9121,Keys Hotels Pune,Pune,Viman Nagar,"156 Viman Nagar, Pune",3,4000,"[""parking"", ""restaurant"", ""wifi""]",45,12,14:00,12:00,,TRUE
-H9122,Marriott Pune,Pune,Baner,"14 Baner, Pune",5,22000,"[""airport_shuttle"", ""parking"", ""concierge"", ""bar"", ""restaurant"", ""pool"", ""wifi"", ""butler"", ""spa""]",250,44,14:00,12:00,,TRUE
-H9123,Sheraton Pune,Pune,Camp,"63 Camp, Pune",4,9000,"[""wifi"", ""restaurant"", ""parking"", ""gym""]",100,32,14:00,12:00,,TRUE
-H9124,FabHotel Pune,Pune,Kharadi,"93 Kharadi, Pune",3,4000,"[""gym"", ""restaurant"", ""wifi"", ""parking""]",200,37,14:00,12:00,,TRUE
-H9125,Park Inn Pune,Pune,Koregaon Park,"195 Koregaon Park, Pune",3,3000,"[""gym"", ""restaurant"", ""wifi"", ""parking""]",45,9,14:00,12:00,,TRUE
-H9126,Ginger Pune,Pune,Hinjewadi,"142 Hinjewadi, Pune",3,5000,"[""wifi"", ""gym"", ""parking"", ""restaurant""]",100,19,14:00,12:00,,TRUE
-H9127,Courtyard Pune,Pune,Kalyani Nagar,"19 Kalyani Nagar, Pune",4,8500,"[""bar"", ""gym"", ""wifi""]",30,9,14:00,12:00,,TRUE
-H9128,WelcomHotel Pune,Pune,Shivajinagar,"126 Shivajinagar, Pune",3,4000,"[""wifi"", ""gym"", ""restaurant"", ""parking""]",250,44,14:00,12:00,,TRUE
-H9129,FabHotel Pune,Pune,Viman Nagar,"105 Viman Nagar, Pune",3,2500,"[""gym"", ""parking"", ""restaurant""]",200,66,14:00,12:00,,TRUE
-H9130,Lemon Tree Premier Pune,Pune,Baner,"131 Baner, Pune",4,11500,"[""airport_shuttle"", ""pool"", ""bar"", ""wifi"", ""gym"", ""parking""]",80,12,14:00,12:00,,TRUE
-H9131,WelcomHotel Pune,Pune,Camp,"162 Camp, Pune",3,5000,"[""restaurant"", ""parking"", ""gym"", ""wifi""]",400,121,14:00,12:00,,TRUE
-H9132,Treebo Pune,Pune,Kharadi,"66 Kharadi, Pune",2,1000,"[""lounge"", ""wifi"", ""lockers""]",45,6,14:00,12:00,,TRUE
-H9133,Park Inn Pune,Pune,Koregaon Park,"102 Koregaon Park, Pune",3,5000,"[""restaurant"", ""parking"", ""gym"", ""wifi""]",60,18,14:00,12:00,,TRUE
-H9134,DoubleTree Goa,Goa,Calangute,"129 Calangute, Goa",4,10000,"[""wifi"", ""pool"", ""airport_shuttle""]",45,15,14:00,12:00,,TRUE
-H9135,WelcomHotel Goa,Goa,Baga,"37 Baga, Goa",3,3500,"[""wifi"", ""parking"", ""gym"", ""restaurant""]",30,6,14:00,12:00,,TRUE
-H9136,Ibis Goa,Goa,Anjuna,"25 Anjuna, Goa",3,2500,"[""wifi"", ""restaurant"", ""gym"", ""parking""]",200,15,14:00,12:00,,TRUE
-H9137,Holiday Inn Goa,Goa,Vagator,"181 Vagator, Goa",4,7000,"[""gym"", ""parking"", ""bar"", ""wifi""]",80,6,14:00,12:00,,TRUE
-H9138,Keys Hotels Goa,Goa,Candolim,"67 Candolim, Goa",3,4000,"[""restaurant"", ""wifi"", ""gym""]",45,9,14:00,12:00,,TRUE
-H9139,ITC Goa,Goa,Panjim,"71 Panjim, Goa",5,13000,"[""gym"", ""pool"", ""butler""]",500,154,14:00,12:00,,TRUE
-H9140,Ibis Goa,Goa,Colva,"25 Colva, Goa",3,3000,"[""parking"", ""gym"", ""restaurant"", ""wifi""]",250,48,14:00,12:00,,TRUE
-H9141,WelcomHotel Goa,Goa,Margao,"95 Margao, Goa",3,5000,"[""parking"", ""wifi"", ""restaurant"", ""gym""]",500,107,14:00,12:00,,TRUE
-H9142,Novotel Goa,Goa,Sinquerim,"92 Sinquerim, Goa",4,8500,"[""bar"", ""pool"", ""gym"", ""restaurant""]",30,9,14:00,12:00,,TRUE
-H9143,St Regis Goa,Goa,Dona Paula,"72 Dona Paula, Goa",5,23000,"[""pool"", ""wifi"", ""gym""]",500,87,14:00,12:00,,TRUE
-H9144,Leela Goa,Goa,Calangute,"12 Calangute, Goa",5,24000,"[""concierge"", ""gym"", ""pool"", ""wifi"", ""butler"", ""airport_shuttle"", ""restaurant"", ""spa"", ""parking"", ""bar""]",500,30,14:00,12:00,,TRUE
-H9145,Fortune Goa,Goa,Baga,"156 Baga, Goa",3,3000,"[""parking"", ""wifi"", ""gym""]",250,16,14:00,12:00,,TRUE
-H9146,Courtyard Goa,Goa,Anjuna,"44 Anjuna, Goa",4,9500,"[""parking"", ""gym"", ""airport_shuttle"", ""pool""]",500,27,14:00,12:00,,TRUE
-H9147,Taj Goa,Goa,Vagator,"42 Vagator, Goa",5,17000,"[""pool"", ""airport_shuttle"", ""butler"", ""wifi"", ""parking"", ""gym"", ""bar"", ""spa"", ""restaurant"", ""concierge""]",45,10,14:00,12:00,,TRUE
-H9148,The Hosteller Goa,Goa,Candolim,"197 Candolim, Goa",2,2000,"[""lockers"", ""lounge"", ""wifi""]",200,46,14:00,12:00,,TRUE
-H9149,Park Inn Goa,Goa,Panjim,"60 Panjim, Goa",3,3000,"[""parking"", ""restaurant"", ""wifi""]",45,6,14:00,12:00,,TRUE
-H9150,Sheraton Goa,Goa,Colva,"191 Colva, Goa",4,6500,"[""restaurant"", ""wifi"", ""airport_shuttle"", ""parking"", ""pool""]",30,9,14:00,12:00,,TRUE
-H9151,Park Inn Goa,Goa,Margao,"109 Margao, Goa",3,3500,"[""restaurant"", ""wifi"", ""parking""]",45,11,14:00,12:00,,TRUE
-H9152,Four Seasons Goa,Goa,Sinquerim,"81 Sinquerim, Goa",5,14000,"[""butler"", ""concierge"", ""wifi"", ""gym"", ""pool"", ""airport_shuttle"", ""bar"", ""parking""]",100,21,14:00,12:00,,TRUE
-H9153,OYO Goa,Goa,Dona Paula,"71 Dona Paula, Goa",2,2000,"[""wifi"", ""lounge"", ""lockers""]",250,42,14:00,12:00,,TRUE
-H9154,Park Inn Goa,Goa,Calangute,"16 Calangute, Goa",3,5500,"[""restaurant"", ""parking"", ""wifi""]",30,6,14:00,12:00,,TRUE
-H9155,FabExpress Goa,Goa,Baga,"101 Baga, Goa",2,1000,"[""lounge"", ""wifi"", ""lockers""]",300,55,14:00,12:00,,TRUE
-H9156,Courtyard Goa,Goa,Anjuna,"90 Anjuna, Goa",4,9000,"[""airport_shuttle"", ""parking"", ""pool"", ""gym"", ""bar"", ""wifi"", ""restaurant""]",200,11,14:00,12:00,,TRUE
-H9157,Taj Goa,Goa,Vagator,"182 Vagator, Goa",5,16500,"[""pool"", ""restaurant"", ""wifi"", ""butler"", ""concierge"", ""bar""]",80,25,14:00,12:00,,TRUE
-H9158,ITC Goa,Goa,Candolim,"174 Candolim, Goa",5,24500,"[""spa"", ""butler"", ""parking"", ""restaurant"", ""wifi""]",30,5,14:00,12:00,,TRUE
-H9159,FabExpress Jaipur,Jaipur,Civil Lines,"87 Civil Lines, Jaipur",2,2000,"[""lockers"", ""wifi"", ""lounge""]",80,6,14:00,12:00,,TRUE
-H9160,JW Marriott Jaipur,Jaipur,Pink City,"126 Pink City, Jaipur",5,16500,"[""restaurant"", ""pool"", ""airport_shuttle"", ""spa"", ""wifi"", ""bar"", ""parking""]",500,118,14:00,12:00,,TRUE
-H9161,Radisson Blu Jaipur,Jaipur,Vaishali Nagar,"30 Vaishali Nagar, Jaipur",4,6500,"[""gym"", ""parking"", ""airport_shuttle"", ""pool"", ""bar""]",45,14,14:00,12:00,,TRUE
-H9162,Courtyard Jaipur,Jaipur,Malviya Nagar,"166 Malviya Nagar, Jaipur",4,11500,"[""parking"", ""airport_shuttle"", ""wifi""]",300,28,14:00,12:00,,TRUE
-H9163,Novotel Jaipur,Jaipur,Sindhi Camp,"101 Sindhi Camp, Jaipur",4,10500,"[""pool"", ""gym"", ""wifi"", ""restaurant""]",500,35,14:00,12:00,,TRUE
-H9164,Holiday Inn Jaipur,Jaipur,Tonk Road,"2 Tonk Road, Jaipur",4,10500,"[""pool"", ""parking"", ""airport_shuttle"", ""bar""]",45,13,14:00,12:00,,TRUE
-H9165,Novotel Jaipur,Jaipur,Mansarovar,"22 Mansarovar, Jaipur",4,7000,"[""airport_shuttle"", ""wifi"", ""restaurant"", ""pool""]",100,6,14:00,12:00,,TRUE
-H9166,The Hosteller Jaipur,Jaipur,Civil Lines,"76 Civil Lines, Jaipur",2,2000,"[""wifi"", ""lounge"", ""lockers""]",400,130,14:00,12:00,,TRUE
-H9167,WelcomHotel Jaipur,Jaipur,Pink City,"156 Pink City, Jaipur",3,4500,"[""parking"", ""wifi"", ""gym""]",80,6,14:00,12:00,,TRUE
-H9168,DoubleTree Jaipur,Jaipur,Vaishali Nagar,"56 Vaishali Nagar, Jaipur",4,7000,"[""restaurant"", ""wifi"", ""parking"", ""gym"", ""pool"", ""airport_shuttle"", ""bar""]",200,9,14:00,12:00,,TRUE
-H9169,Fortune Jaipur,Jaipur,Malviya Nagar,"98 Malviya Nagar, Jaipur",3,5000,"[""wifi"", ""gym"", ""parking""]",100,26,14:00,12:00,,TRUE
-H9170,Holiday Inn Jaipur,Jaipur,Sindhi Camp,"138 Sindhi Camp, Jaipur",4,7500,"[""airport_shuttle"", ""restaurant"", ""bar"", ""pool"", ""gym"", ""parking"", ""wifi""]",500,135,14:00,12:00,,TRUE
-H9171,Park Inn Jaipur,Jaipur,Tonk Road,"40 Tonk Road, Jaipur",3,3500,"[""gym"", ""wifi"", ""restaurant""]",45,9,14:00,12:00,,TRUE
-H9172,ITC Jaipur,Jaipur,Mansarovar,"176 Mansarovar, Jaipur",5,20500,"[""spa"", ""butler"", ""airport_shuttle"", ""restaurant"", ""gym"", ""wifi""]",100,5,14:00,12:00,,TRUE
-H9173,Marriott Jaipur,Jaipur,Civil Lines,"97 Civil Lines, Jaipur",5,13500,"[""concierge"", ""butler"", ""bar"", ""airport_shuttle"", ""wifi"", ""spa"", ""parking""]",400,30,14:00,12:00,,TRUE
-H9174,Treebo Ahmedabad,Ahmedabad,CG Road,"82 CG Road, Ahmedabad",2,2000,"[""lockers"", ""wifi"", ""lounge""]",500,141,14:00,12:00,,TRUE
-H9175,Park Inn Ahmedabad,Ahmedabad,SG Highway,"123 SG Highway, Ahmedabad",3,4500,"[""gym"", ""wifi"", ""parking""]",500,37,14:00,12:00,,TRUE
-H9176,Hyatt Ahmedabad,Ahmedabad,Vastrapur,"14 Vastrapur, Ahmedabad",5,23500,"[""wifi"", ""gym"", ""restaurant"", ""parking"", ""pool"", ""airport_shuttle"", ""butler""]",100,18,14:00,12:00,,TRUE
-H9177,Keys Hotels Ahmedabad,Ahmedabad,Navrangpura,"79 Navrangpura, Ahmedabad",3,5000,"[""parking"", ""gym"", ""restaurant"", ""wifi""]",45,15,14:00,12:00,,TRUE
-H9178,Marriott Ahmedabad,Ahmedabad,Satellite,"24 Satellite, Ahmedabad",5,14500,"[""concierge"", ""parking"", ""airport_shuttle"", ""spa"", ""restaurant""]",250,68,14:00,12:00,,TRUE
-H9179,FabHotel Ahmedabad,Ahmedabad,Bodakdev,"104 Bodakdev, Ahmedabad",3,2500,"[""parking"", ""wifi"", ""gym"", ""restaurant""]",300,100,14:00,12:00,,TRUE
-H9180,Novotel Ahmedabad,Ahmedabad,Maninagar,"156 Maninagar, Ahmedabad",4,9500,"[""restaurant"", ""gym"", ""wifi"", ""airport_shuttle"", ""bar""]",60,16,14:00,12:00,,TRUE
-H9181,Backpacker Panda Ahmedabad,Ahmedabad,CG Road,"127 CG Road, Ahmedabad",2,1500,"[""lockers"", ""lounge"", ""wifi""]",150,48,14:00,12:00,,TRUE
-H9182,Radisson Blu Ahmedabad,Ahmedabad,SG Highway,"75 SG Highway, Ahmedabad",4,8000,"[""bar"", ""airport_shuttle"", ""wifi"", ""pool""]",100,25,14:00,12:00,,TRUE
-H9183,Ibis Ahmedabad,Ahmedabad,Vastrapur,"119 Vastrapur, Ahmedabad",3,5000,"[""gym"", ""restaurant"", ""wifi""]",400,122,14:00,12:00,,TRUE
-H9184,Lemon Tree Premier Ahmedabad,Ahmedabad,Navrangpura,"28 Navrangpura, Ahmedabad",4,6000,"[""airport_shuttle"", ""wifi"", ""bar""]",200,36,14:00,12:00,,TRUE
-H9185,Holiday Inn Ahmedabad,Ahmedabad,Satellite,"106 Satellite, Ahmedabad",4,7000,"[""airport_shuttle"", ""bar"", ""parking"", ""gym"", ""pool"", ""wifi""]",150,24,14:00,12:00,,TRUE
-H9186,Holiday Inn Ahmedabad,Ahmedabad,Bodakdev,"138 Bodakdev, Ahmedabad",4,8000,"[""gym"", ""bar"", ""airport_shuttle"", ""pool"", ""parking"", ""restaurant""]",30,7,14:00,12:00,,TRUE
-H9187,FabExpress Ahmedabad,Ahmedabad,Maninagar,"51 Maninagar, Ahmedabad",2,1000,"[""lockers"", ""lounge"", ""wifi""]",60,17,14:00,12:00,,TRUE
-H9188,Lemon Tree Premier Ahmedabad,Ahmedabad,CG Road,"9 CG Road, Ahmedabad",4,7000,"[""bar"", ""airport_shuttle"", ""wifi"", ""gym"", ""restaurant"", ""pool""]",300,68,14:00,12:00,,TRUE
-H9189,Ginger Kochi,Kochi,MG Road,"84 MG Road, Kochi",3,5500,"[""wifi"", ""restaurant"", ""gym""]",45,6,14:00,12:00,,TRUE
-H9190,Ginger Kochi,Kochi,Kakkanad,"40 Kakkanad, Kochi",3,3500,"[""restaurant"", ""parking"", ""gym""]",500,92,14:00,12:00,,TRUE
-H9191,Novotel Kochi,Kochi,Ernakulam,"112 Ernakulam, Kochi",4,9500,"[""parking"", ""bar"", ""pool"", ""wifi"", ""restaurant"", ""airport_shuttle"", ""gym""]",60,10,14:00,12:00,,TRUE
-H9192,Radisson Blu Kochi,Kochi,Edapally,"68 Edapally, Kochi",4,11500,"[""gym"", ""wifi"", ""bar"", ""airport_shuttle"", ""restaurant"", ""parking"", ""pool""]",400,51,14:00,12:00,,TRUE
-H9193,Holiday Inn Kochi,Kochi,Marine Drive,"59 Marine Drive, Kochi",4,6500,"[""airport_shuttle"", ""parking"", ""bar"", ""gym"", ""wifi"", ""restaurant""]",30,9,14:00,12:00,,TRUE
-H9194,Novotel Kochi,Kochi,Vyttila,"98 Vyttila, Kochi",4,9000,"[""wifi"", ""parking"", ""restaurant"", ""airport_shuttle"", ""pool"", ""gym""]",30,9,14:00,12:00,,TRUE
-H9195,Novotel Kochi,Kochi,MG Road,"78 MG Road, Kochi",4,6500,"[""wifi"", ""pool"", ""restaurant"", ""bar""]",150,8,14:00,12:00,,TRUE
-H9196,Novotel Kochi,Kochi,Kakkanad,"14 Kakkanad, Kochi",4,11000,"[""wifi"", ""restaurant"", ""bar"", ""airport_shuttle"", ""pool"", ""gym"", ""parking""]",45,11,14:00,12:00,,TRUE
-H9197,Courtyard Kochi,Kochi,Ernakulam,"94 Ernakulam, Kochi",4,8500,"[""pool"", ""restaurant"", ""airport_shuttle"", ""bar"", ""parking""]",150,28,14:00,12:00,,TRUE
-H9198,WelcomHotel Kochi,Kochi,Edapally,"61 Edapally, Kochi",3,5000,"[""parking"", ""restaurant"", ""wifi""]",45,7,14:00,12:00,,TRUE
-H9199,FabHotel Kochi,Kochi,Marine Drive,"11 Marine Drive, Kochi",3,4500,"[""gym"", ""parking"", ""wifi""]",45,13,14:00,12:00,,TRUE
-H9200,Fortune Kochi,Kochi,Vyttila,"186 Vyttila, Kochi",3,4000,"[""parking"", ""wifi"", ""gym""]",60,11,14:00,12:00,,TRUE
+H9001,DoubleTree Mumbai,Mumbai,Colaba,"176 Colaba, Mumbai",4,10500,"[""airport_shuttle"", ""bar"", ""restaurant"", ""parking"", ""wifi"", ""gym""]",250,54,14:00,12:00,,true
+H9002,Park Inn Mumbai,Mumbai,Andheri,"24 Andheri, Mumbai",3,5500,"[""gym"", ""wifi"", ""restaurant"", ""parking""]",500,114,14:00,12:00,,true
+H9003,St Regis Mumbai,Mumbai,Juhu,"88 Juhu, Mumbai",5,19500,"[""butler"", ""airport_shuttle"", ""pool"", ""wifi"", ""concierge"", ""bar"", ""restaurant"", ""parking"", ""gym""]",45,12,14:00,12:00,,true
+H9004,Holiday Inn Mumbai,Mumbai,Bandra,"176 Bandra, Mumbai",4,8000,"[""gym"", ""wifi"", ""parking"", ""restaurant"", ""bar"", ""pool"", ""airport_shuttle""]",45,5,14:00,12:00,,true
+H9005,Park Inn Mumbai,Mumbai,Powai,"106 Powai, Mumbai",3,2500,"[""wifi"", ""restaurant"", ""gym"", ""parking""]",100,23,14:00,12:00,,true
+H9006,St Regis Mumbai,Mumbai,Goregaon,"5 Goregaon, Mumbai",5,13500,"[""bar"", ""butler"", ""pool"", ""restaurant"", ""wifi"", ""spa"", ""concierge"", ""airport_shuttle""]",400,121,14:00,12:00,,true
+H9007,Citrus Mumbai,Mumbai,Lower Parel,"160 Lower Parel, Mumbai",3,5500,"[""parking"", ""wifi"", ""restaurant""]",60,7,14:00,12:00,,true
+H9008,Fortune Mumbai,Mumbai,Worli,"173 Worli, Mumbai",3,2500,"[""restaurant"", ""wifi"", ""gym""]",200,12,14:00,12:00,,true
+H9009,Four Seasons Mumbai,Mumbai,Colaba,"118 Colaba, Mumbai",5,23000,"[""bar"", ""wifi"", ""pool"", ""spa"", ""gym""]",60,5,14:00,12:00,,true
+H9010,Novotel Mumbai,Mumbai,Andheri,"179 Andheri, Mumbai",4,7500,"[""bar"", ""parking"", ""gym"", ""restaurant""]",200,58,14:00,12:00,,true
+H9011,Keys Hotels Mumbai,Mumbai,Juhu,"23 Juhu, Mumbai",3,3500,"[""gym"", ""restaurant"", ""wifi"", ""parking""]",30,5,14:00,12:00,,true
+H9012,Holiday Inn Mumbai,Mumbai,Bandra,"190 Bandra, Mumbai",4,11500,"[""gym"", ""bar"", ""pool"", ""wifi""]",100,23,14:00,12:00,,true
+H9013,Park Inn Mumbai,Mumbai,Powai,"14 Powai, Mumbai",3,3500,"[""gym"", ""restaurant"", ""parking"", ""wifi""]",250,79,14:00,12:00,,true
+H9014,Fortune Mumbai,Mumbai,Goregaon,"10 Goregaon, Mumbai",3,4000,"[""wifi"", ""gym"", ""restaurant""]",30,9,14:00,12:00,,true
+H9015,Leela Mumbai,Mumbai,Lower Parel,"142 Lower Parel, Mumbai",5,13000,"[""airport_shuttle"", ""bar"", ""pool""]",60,14,14:00,12:00,,true
+H9016,Citrus Mumbai,Mumbai,Worli,"89 Worli, Mumbai",3,4000,"[""parking"", ""wifi"", ""gym"", ""restaurant""]",400,124,14:00,12:00,,true
+H9017,Hyatt Mumbai,Mumbai,Colaba,"186 Colaba, Mumbai",5,23500,"[""gym"", ""wifi"", ""parking"", ""restaurant"", ""pool"", ""spa"", ""airport_shuttle"", ""bar"", ""butler"", ""concierge""]",60,10,14:00,12:00,,true
+H9018,Courtyard Mumbai,Mumbai,Andheri,"26 Andheri, Mumbai",4,9000,"[""airport_shuttle"", ""wifi"", ""parking""]",150,21,14:00,12:00,,true
+H9019,Holiday Inn Mumbai,Mumbai,Juhu,"45 Juhu, Mumbai",4,10000,"[""pool"", ""bar"", ""parking""]",300,33,14:00,12:00,,true
+H9020,WelcomHotel Mumbai,Mumbai,Bandra,"91 Bandra, Mumbai",3,5500,"[""parking"", ""restaurant"", ""gym""]",300,82,14:00,12:00,,true
+H9021,Ibis Mumbai,Mumbai,Powai,"113 Powai, Mumbai",3,5500,"[""restaurant"", ""gym"", ""wifi""]",300,10,14:00,12:00,,true
+H9022,Ginger Mumbai,Mumbai,Goregaon,"162 Goregaon, Mumbai",3,2500,"[""gym"", ""wifi"", ""parking"", ""restaurant""]",250,69,14:00,12:00,,true
+H9023,FabHotel Delhi,Delhi,Janpath,"40 Janpath, Delhi",3,5000,"[""parking"", ""wifi"", ""restaurant""]",80,19,14:00,12:00,,true
+H9024,OYO Delhi,Delhi,Aerocity,"63 Aerocity, Delhi",2,2000,"[""wifi"", ""lockers"", ""lounge""]",300,26,14:00,12:00,,true
+H9025,Leela Delhi,Delhi,Connaught Place,"184 Connaught Place, Delhi",5,24000,"[""gym"", ""airport_shuttle"", ""wifi"", ""butler"", ""parking"", ""restaurant"", ""pool"", ""spa"", ""bar""]",200,62,14:00,12:00,,true
+H9026,WelcomHotel Delhi,Delhi,Karol Bagh,"8 Karol Bagh, Delhi",3,4000,"[""parking"", ""gym"", ""wifi""]",150,25,14:00,12:00,,true
+H9027,Holiday Inn Delhi,Delhi,Dwarka,"112 Dwarka, Delhi",4,6500,"[""airport_shuttle"", ""bar"", ""gym"", ""parking"", ""pool"", ""wifi""]",200,61,14:00,12:00,,true
+H9028,Fortune Delhi,Delhi,Saket,"185 Saket, Delhi",3,5500,"[""parking"", ""wifi"", ""restaurant"", ""gym""]",300,83,14:00,12:00,,true
+H9029,FabExpress Delhi,Delhi,Vasant Kunj,"104 Vasant Kunj, Delhi",2,1500,"[""lounge"", ""wifi"", ""lockers""]",150,46,14:00,12:00,,true
+H9030,Sheraton Delhi,Delhi,Paharganj,"78 Paharganj, Delhi",4,6500,"[""pool"", ""airport_shuttle"", ""parking"", ""restaurant"", ""gym"", ""bar"", ""wifi""]",300,41,14:00,12:00,,true
+H9031,DoubleTree Delhi,Delhi,Janpath,"134 Janpath, Delhi",4,8500,"[""gym"", ""bar"", ""restaurant"", ""wifi""]",100,28,14:00,12:00,,true
+H9032,Radisson Blu Delhi,Delhi,Aerocity,"188 Aerocity, Delhi",4,6000,"[""pool"", ""restaurant"", ""wifi""]",250,43,14:00,12:00,,true
+H9033,Ibis Delhi,Delhi,Connaught Place,"117 Connaught Place, Delhi",3,3500,"[""parking"", ""wifi"", ""gym"", ""restaurant""]",100,14,14:00,12:00,,true
+H9034,Ginger Delhi,Delhi,Karol Bagh,"183 Karol Bagh, Delhi",3,4000,"[""gym"", ""parking"", ""wifi""]",150,34,14:00,12:00,,true
+H9035,JW Marriott Delhi,Delhi,Dwarka,"106 Dwarka, Delhi",5,13000,"[""gym"", ""restaurant"", ""airport_shuttle"", ""bar"", ""parking"", ""spa"", ""butler"", ""concierge"", ""wifi""]",400,106,14:00,12:00,,true
+H9036,The Hosteller Delhi,Delhi,Saket,"128 Saket, Delhi",2,2000,"[""wifi"", ""lockers"", ""lounge""]",200,57,14:00,12:00,,true
+H9037,Holiday Inn Delhi,Delhi,Vasant Kunj,"125 Vasant Kunj, Delhi",4,11500,"[""parking"", ""airport_shuttle"", ""gym"", ""wifi"", ""bar"", ""pool""]",250,9,14:00,12:00,,true
+H9038,WelcomHotel Delhi,Delhi,Paharganj,"31 Paharganj, Delhi",3,4500,"[""restaurant"", ""gym"", ""wifi"", ""parking""]",400,79,14:00,12:00,,true
+H9039,Oberoi Delhi,Delhi,Janpath,"31 Janpath, Delhi",5,18000,"[""concierge"", ""airport_shuttle"", ""parking""]",100,33,14:00,12:00,,true
+H9040,Holiday Inn Delhi,Delhi,Aerocity,"190 Aerocity, Delhi",4,10000,"[""pool"", ""restaurant"", ""parking"", ""gym"", ""bar"", ""airport_shuttle""]",250,78,14:00,12:00,,true
+H9041,Courtyard Delhi,Delhi,Connaught Place,"87 Connaught Place, Delhi",4,9000,"[""gym"", ""airport_shuttle"", ""wifi"", ""pool"", ""bar"", ""parking""]",500,119,14:00,12:00,,true
+H9042,Leela Delhi,Delhi,Karol Bagh,"23 Karol Bagh, Delhi",5,22000,"[""bar"", ""parking"", ""restaurant"", ""wifi"", ""gym"", ""spa"", ""pool""]",500,27,14:00,12:00,,true
+H9043,FabExpress Delhi,Delhi,Dwarka,"7 Dwarka, Delhi",2,1500,"[""wifi"", ""lounge"", ""lockers""]",500,148,14:00,12:00,,true
+H9044,St Regis Delhi,Delhi,Saket,"148 Saket, Delhi",5,24000,"[""pool"", ""gym"", ""bar""]",100,30,14:00,12:00,,true
+H9045,Courtyard Bangalore,Bangalore,Airport Road,"22 Airport Road, Bangalore",4,10000,"[""parking"", ""airport_shuttle"", ""pool"", ""wifi"", ""restaurant""]",200,16,14:00,12:00,,true
+H9046,Lemon Tree Premier Bangalore,Bangalore,Whitefield,"98 Whitefield, Bangalore",4,8000,"[""gym"", ""bar"", ""restaurant"", ""pool""]",100,29,14:00,12:00,,true
+H9047,Hyatt Bangalore,Bangalore,Koramangala,"105 Koramangala, Bangalore",5,23000,"[""spa"", ""restaurant"", ""concierge"", ""butler"", ""parking"", ""airport_shuttle"", ""pool"", ""bar""]",60,18,14:00,12:00,,true
+H9048,Zostel Bangalore,Bangalore,MG Road,"97 MG Road, Bangalore",2,2000,"[""lounge"", ""lockers"", ""wifi""]",80,24,14:00,12:00,,true
+H9049,Citrus Bangalore,Bangalore,Indiranagar,"131 Indiranagar, Bangalore",3,5500,"[""gym"", ""restaurant"", ""wifi""]",150,34,14:00,12:00,,true
+H9050,FabHotel Bangalore,Bangalore,Electronic City,"124 Electronic City, Bangalore",3,2500,"[""restaurant"", ""wifi"", ""gym""]",100,22,14:00,12:00,,true
+H9051,FabExpress Bangalore,Bangalore,Hebbal,"26 Hebbal, Bangalore",2,1000,"[""lounge"", ""wifi"", ""lockers""]",400,109,14:00,12:00,,true
+H9052,Sheraton Bangalore,Bangalore,Marathahalli,"37 Marathahalli, Bangalore",4,9000,"[""wifi"", ""airport_shuttle"", ""gym""]",30,8,14:00,12:00,,true
+H9053,The Hosteller Bangalore,Bangalore,Airport Road,"75 Airport Road, Bangalore",2,2000,"[""lounge"", ""lockers"", ""wifi""]",250,39,14:00,12:00,,true
+H9054,Park Inn Bangalore,Bangalore,Whitefield,"90 Whitefield, Bangalore",3,5500,"[""wifi"", ""parking"", ""gym""]",60,7,14:00,12:00,,true
+H9055,Aloft Bangalore,Bangalore,Koramangala,"179 Koramangala, Bangalore",4,7000,"[""restaurant"", ""wifi"", ""parking"", ""gym"", ""bar"", ""pool"", ""airport_shuttle""]",300,45,14:00,12:00,,true
+H9056,Zostel Bangalore,Bangalore,MG Road,"163 MG Road, Bangalore",2,1000,"[""wifi"", ""lounge"", ""lockers""]",80,26,14:00,12:00,,true
+H9057,Zostel Bangalore,Bangalore,Indiranagar,"54 Indiranagar, Bangalore",2,1500,"[""wifi"", ""lounge"", ""lockers""]",60,5,14:00,12:00,,true
+H9058,Ibis Bangalore,Bangalore,Electronic City,"3 Electronic City, Bangalore",3,5000,"[""wifi"", ""gym"", ""parking"", ""restaurant""]",300,15,14:00,12:00,,true
+H9059,FabHotel Bangalore,Bangalore,Hebbal,"138 Hebbal, Bangalore",3,2500,"[""restaurant"", ""wifi"", ""gym"", ""parking""]",200,57,14:00,12:00,,true
+H9060,Park Inn Bangalore,Bangalore,Marathahalli,"46 Marathahalli, Bangalore",3,5500,"[""gym"", ""restaurant"", ""parking"", ""wifi""]",80,19,14:00,12:00,,true
+H9061,Taj Bangalore,Bangalore,Airport Road,"195 Airport Road, Bangalore",5,16500,"[""butler"", ""airport_shuttle"", ""wifi"", ""parking"", ""gym"", ""restaurant"", ""concierge"", ""pool""]",30,7,14:00,12:00,,true
+H9062,Keys Hotels Bangalore,Bangalore,Whitefield,"2 Whitefield, Bangalore",3,3000,"[""gym"", ""restaurant"", ""wifi"", ""parking""]",60,11,14:00,12:00,,true
+H9063,Ginger Bangalore,Bangalore,Koramangala,"17 Koramangala, Bangalore",3,4500,"[""parking"", ""wifi"", ""gym""]",100,23,14:00,12:00,,true
+H9064,The Hosteller Bangalore,Bangalore,MG Road,"187 MG Road, Bangalore",2,2000,"[""lockers"", ""wifi"", ""lounge""]",500,141,14:00,12:00,,true
+H9065,Citrus Chennai,Chennai,Mount Road,"1 Mount Road, Chennai",3,4000,"[""parking"", ""gym"", ""restaurant"", ""wifi""]",100,8,14:00,12:00,,true
+H9066,Citrus Chennai,Chennai,Nungambakkam,"127 Nungambakkam, Chennai",3,3500,"[""restaurant"", ""parking"", ""gym""]",100,18,14:00,12:00,,true
+H9067,WelcomHotel Chennai,Chennai,T Nagar,"2 T Nagar, Chennai",3,4000,"[""gym"", ""wifi"", ""parking""]",80,18,14:00,12:00,,true
+H9068,Treebo Chennai,Chennai,Adyar,"51 Adyar, Chennai",2,1000,"[""wifi"", ""lockers"", ""lounge""]",500,165,14:00,12:00,,true
+H9069,Four Seasons Chennai,Chennai,Anna Nagar,"111 Anna Nagar, Chennai",5,12000,"[""gym"", ""airport_shuttle"", ""parking"", ""concierge"", ""spa"", ""wifi"", ""pool"", ""restaurant""]",300,35,14:00,12:00,,true
+H9070,The Hosteller Chennai,Chennai,Airport,"159 Airport, Chennai",2,1500,"[""lockers"", ""lounge"", ""wifi""]",45,5,14:00,12:00,,true
+H9071,Backpacker Panda Chennai,Chennai,Besant Nagar,"81 Besant Nagar, Chennai",2,2000,"[""lounge"", ""lockers"", ""wifi""]",250,12,14:00,12:00,,true
+H9072,Aloft Chennai,Chennai,Velachery,"17 Velachery, Chennai",4,6500,"[""restaurant"", ""gym"", ""pool"", ""airport_shuttle"", ""bar"", ""wifi""]",45,14,14:00,12:00,,true
+H9073,Keys Hotels Chennai,Chennai,Mount Road,"154 Mount Road, Chennai",3,5500,"[""parking"", ""gym"", ""restaurant"", ""wifi""]",200,61,14:00,12:00,,true
+H9074,FabHotel Chennai,Chennai,Nungambakkam,"87 Nungambakkam, Chennai",3,5000,"[""parking"", ""gym"", ""restaurant""]",45,6,14:00,12:00,,true
+H9075,ITC Chennai,Chennai,T Nagar,"152 T Nagar, Chennai",5,24500,"[""pool"", ""concierge"", ""wifi"", ""parking"", ""bar""]",30,5,14:00,12:00,,true
+H9076,JW Marriott Chennai,Chennai,Adyar,"132 Adyar, Chennai",5,22500,"[""wifi"", ""butler"", ""concierge""]",300,80,14:00,12:00,,true
+H9077,Ginger Chennai,Chennai,Anna Nagar,"15 Anna Nagar, Chennai",3,3000,"[""parking"", ""gym"", ""restaurant""]",80,25,14:00,12:00,,true
+H9078,OYO Chennai,Chennai,Airport,"88 Airport, Chennai",2,1000,"[""wifi"", ""lounge"", ""lockers""]",400,89,14:00,12:00,,true
+H9079,The Hosteller Chennai,Chennai,Besant Nagar,"86 Besant Nagar, Chennai",2,2000,"[""wifi"", ""lockers"", ""lounge""]",60,8,14:00,12:00,,true
+H9080,Ibis Chennai,Chennai,Velachery,"127 Velachery, Chennai",3,3000,"[""restaurant"", ""parking"", ""gym""]",250,32,14:00,12:00,,true
+H9081,Lemon Tree Premier Chennai,Chennai,Mount Road,"190 Mount Road, Chennai",4,9000,"[""gym"", ""parking"", ""bar""]",150,6,14:00,12:00,,true
+H9082,Ginger Chennai,Chennai,Nungambakkam,"75 Nungambakkam, Chennai",3,4000,"[""wifi"", ""parking"", ""gym""]",30,6,14:00,12:00,,true
+H9083,Holiday Inn Hyderabad,Hyderabad,Hitec City,"57 Hitec City, Hyderabad",4,8000,"[""restaurant"", ""bar"", ""wifi""]",60,13,14:00,12:00,,true
+H9084,OYO Hyderabad,Hyderabad,Banjara Hills,"174 Banjara Hills, Hyderabad",2,1000,"[""lockers"", ""wifi"", ""lounge""]",80,14,14:00,12:00,,true
+H9085,WelcomHotel Hyderabad,Hyderabad,Jubilee Hills,"96 Jubilee Hills, Hyderabad",3,5000,"[""wifi"", ""parking"", ""gym""]",45,7,14:00,12:00,,true
+H9086,Treebo Hyderabad,Hyderabad,Secunderabad,"49 Secunderabad, Hyderabad",2,1000,"[""wifi"", ""lounge"", ""lockers""]",150,43,14:00,12:00,,true
+H9087,Sheraton Hyderabad,Hyderabad,Begumpet,"12 Begumpet, Hyderabad",4,11000,"[""restaurant"", ""parking"", ""wifi"", ""gym""]",30,10,14:00,12:00,,true
+H9088,Ginger Hyderabad,Hyderabad,Gachibowli,"131 Gachibowli, Hyderabad",3,4500,"[""restaurant"", ""gym"", ""wifi"", ""parking""]",500,162,14:00,12:00,,true
+H9089,St Regis Hyderabad,Hyderabad,Ameerpet,"100 Ameerpet, Hyderabad",5,24000,"[""wifi"", ""concierge"", ""butler"", ""gym"", ""pool"", ""spa"", ""restaurant"", ""parking"", ""bar"", ""airport_shuttle""]",250,65,14:00,12:00,,true
+H9090,Aloft Hyderabad,Hyderabad,Kukatpally,"164 Kukatpally, Hyderabad",4,10500,"[""gym"", ""restaurant"", ""airport_shuttle"", ""bar""]",200,18,14:00,12:00,,true
+H9091,Aloft Hyderabad,Hyderabad,Hitec City,"147 Hitec City, Hyderabad",4,7000,"[""pool"", ""bar"", ""restaurant"", ""wifi"", ""parking""]",250,71,14:00,12:00,,true
+H9092,Novotel Hyderabad,Hyderabad,Banjara Hills,"120 Banjara Hills, Hyderabad",4,10000,"[""wifi"", ""parking"", ""pool"", ""airport_shuttle"", ""restaurant"", ""gym""]",150,36,14:00,12:00,,true
+H9093,Aloft Hyderabad,Hyderabad,Jubilee Hills,"7 Jubilee Hills, Hyderabad",4,7000,"[""bar"", ""airport_shuttle"", ""parking"", ""wifi"", ""gym""]",300,70,14:00,12:00,,true
+H9094,FabHotel Hyderabad,Hyderabad,Secunderabad,"71 Secunderabad, Hyderabad",3,3000,"[""restaurant"", ""gym"", ""parking"", ""wifi""]",30,9,14:00,12:00,,true
+H9095,Sheraton Hyderabad,Hyderabad,Begumpet,"173 Begumpet, Hyderabad",4,8500,"[""restaurant"", ""wifi"", ""bar"", ""pool"", ""parking"", ""airport_shuttle"", ""gym""]",100,5,14:00,12:00,,true
+H9096,Fortune Hyderabad,Hyderabad,Gachibowli,"89 Gachibowli, Hyderabad",3,5500,"[""gym"", ""wifi"", ""restaurant"", ""parking""]",500,136,14:00,12:00,,true
+H9097,Treebo Hyderabad,Hyderabad,Ameerpet,"102 Ameerpet, Hyderabad",2,1000,"[""lounge"", ""lockers"", ""wifi""]",80,21,14:00,12:00,,true
+H9098,Citrus Hyderabad,Hyderabad,Kukatpally,"185 Kukatpally, Hyderabad",3,5500,"[""gym"", ""wifi"", ""restaurant"", ""parking""]",80,18,14:00,12:00,,true
+H9099,Park Inn Hyderabad,Hyderabad,Hitec City,"54 Hitec City, Hyderabad",3,4000,"[""restaurant"", ""wifi"", ""gym"", ""parking""]",60,9,14:00,12:00,,true
+H9100,Novotel Hyderabad,Hyderabad,Banjara Hills,"128 Banjara Hills, Hyderabad",4,11000,"[""wifi"", ""bar"", ""restaurant"", ""pool"", ""parking"", ""gym""]",300,43,14:00,12:00,,true
+H9101,Novotel Kolkata,Kolkata,Park Street,"146 Park Street, Kolkata",4,6000,"[""bar"", ""wifi"", ""parking"", ""restaurant"", ""gym"", ""airport_shuttle""]",45,13,14:00,12:00,,true
+H9102,Courtyard Kolkata,Kolkata,Salt Lake,"28 Salt Lake, Kolkata",4,8500,"[""pool"", ""airport_shuttle"", ""parking"", ""wifi"", ""gym"", ""restaurant"", ""bar""]",60,6,14:00,12:00,,true
+H9103,Citrus Kolkata,Kolkata,New Town,"7 New Town, Kolkata",3,3000,"[""gym"", ""parking"", ""wifi"", ""restaurant""]",80,12,14:00,12:00,,true
+H9104,Radisson Blu Kolkata,Kolkata,Howrah,"117 Howrah, Kolkata",4,6000,"[""parking"", ""airport_shuttle"", ""restaurant"", ""pool"", ""wifi"", ""bar""]",60,8,14:00,12:00,,true
+H9105,JW Marriott Kolkata,Kolkata,Esplanade,"123 Esplanade, Kolkata",5,24000,"[""wifi"", ""bar"", ""restaurant"", ""parking"", ""gym""]",400,84,14:00,12:00,,true
+H9106,Citrus Kolkata,Kolkata,Alipore,"71 Alipore, Kolkata",3,3000,"[""gym"", ""restaurant"", ""parking""]",200,43,14:00,12:00,,true
+H9107,WelcomHotel Kolkata,Kolkata,Rajarhat,"146 Rajarhat, Kolkata",3,4500,"[""gym"", ""wifi"", ""restaurant""]",100,25,14:00,12:00,,true
+H9108,Backpacker Panda Kolkata,Kolkata,Bhowanipore,"89 Bhowanipore, Kolkata",2,2000,"[""wifi"", ""lounge"", ""lockers""]",400,49,14:00,12:00,,true
+H9109,Holiday Inn Kolkata,Kolkata,Park Street,"159 Park Street, Kolkata",4,9500,"[""gym"", ""parking"", ""bar"", ""wifi""]",60,13,14:00,12:00,,true
+H9110,The Hosteller Kolkata,Kolkata,Salt Lake,"75 Salt Lake, Kolkata",2,2000,"[""lounge"", ""lockers"", ""wifi""]",200,53,14:00,12:00,,true
+H9111,WelcomHotel Kolkata,Kolkata,New Town,"20 New Town, Kolkata",3,5500,"[""parking"", ""restaurant"", ""gym"", ""wifi""]",250,26,14:00,12:00,,true
+H9112,Novotel Kolkata,Kolkata,Howrah,"119 Howrah, Kolkata",4,6000,"[""airport_shuttle"", ""gym"", ""pool"", ""bar""]",200,7,14:00,12:00,,true
+H9113,ITC Kolkata,Kolkata,Esplanade,"182 Esplanade, Kolkata",5,14000,"[""restaurant"", ""concierge"", ""gym"", ""pool"", ""butler""]",250,40,14:00,12:00,,true
+H9114,Ginger Kolkata,Kolkata,Alipore,"5 Alipore, Kolkata",3,4500,"[""gym"", ""restaurant"", ""parking""]",300,99,14:00,12:00,,true
+H9115,Radisson Blu Kolkata,Kolkata,Rajarhat,"172 Rajarhat, Kolkata",4,6000,"[""airport_shuttle"", ""wifi"", ""bar"", ""restaurant""]",30,10,14:00,12:00,,true
+H9116,Citrus Pune,Pune,Kharadi,"179 Kharadi, Pune",3,2500,"[""parking"", ""gym"", ""restaurant"", ""wifi""]",30,9,14:00,12:00,,true
+H9117,JW Marriott Pune,Pune,Koregaon Park,"197 Koregaon Park, Pune",5,15000,"[""concierge"", ""gym"", ""restaurant"", ""parking"", ""airport_shuttle"", ""wifi"", ""pool"", ""butler""]",80,26,14:00,12:00,,true
+H9118,Keys Hotels Pune,Pune,Hinjewadi,"25 Hinjewadi, Pune",3,5500,"[""parking"", ""wifi"", ""gym""]",200,37,14:00,12:00,,true
+H9119,Leela Pune,Pune,Kalyani Nagar,"83 Kalyani Nagar, Pune",5,21000,"[""gym"", ""parking"", ""bar"", ""restaurant"", ""pool"", ""wifi"", ""airport_shuttle"", ""concierge""]",60,5,14:00,12:00,,true
+H9120,Lemon Tree Premier Pune,Pune,Shivajinagar,"4 Shivajinagar, Pune",4,9000,"[""parking"", ""bar"", ""gym"", ""wifi"", ""airport_shuttle"", ""restaurant"", ""pool""]",150,7,14:00,12:00,,true
+H9121,Marriott Pune,Pune,Viman Nagar,"106 Viman Nagar, Pune",5,16500,"[""gym"", ""wifi"", ""spa"", ""airport_shuttle"", ""concierge"", ""restaurant"", ""bar"", ""pool""]",500,104,14:00,12:00,,true
+H9122,Ginger Pune,Pune,Baner,"86 Baner, Pune",3,3000,"[""wifi"", ""restaurant"", ""parking""]",150,6,14:00,12:00,,true
+H9123,Citrus Pune,Pune,Camp,"98 Camp, Pune",3,4500,"[""parking"", ""wifi"", ""gym""]",30,9,14:00,12:00,,true
+H9124,FabHotel Pune,Pune,Kharadi,"80 Kharadi, Pune",3,3000,"[""restaurant"", ""gym"", ""wifi""]",60,16,14:00,12:00,,true
+H9125,Keys Hotels Pune,Pune,Koregaon Park,"39 Koregaon Park, Pune",3,4000,"[""parking"", ""wifi"", ""gym""]",400,118,14:00,12:00,,true
+H9126,WelcomHotel Pune,Pune,Hinjewadi,"35 Hinjewadi, Pune",3,3500,"[""restaurant"", ""wifi"", ""parking"", ""gym""]",500,78,14:00,12:00,,true
+H9127,Keys Hotels Pune,Pune,Kalyani Nagar,"188 Kalyani Nagar, Pune",3,3500,"[""restaurant"", ""parking"", ""wifi""]",500,68,14:00,12:00,,true
+H9128,Keys Hotels Pune,Pune,Shivajinagar,"156 Shivajinagar, Pune",3,4000,"[""parking"", ""restaurant"", ""wifi""]",45,12,14:00,12:00,,true
+H9129,Marriott Pune,Pune,Viman Nagar,"14 Viman Nagar, Pune",5,22000,"[""airport_shuttle"", ""parking"", ""concierge"", ""bar"", ""restaurant"", ""pool"", ""wifi"", ""butler"", ""spa""]",250,44,14:00,12:00,,true
+H9130,Sheraton Pune,Pune,Baner,"63 Baner, Pune",4,9000,"[""wifi"", ""restaurant"", ""parking"", ""gym""]",100,32,14:00,12:00,,true
+H9131,FabHotel Pune,Pune,Camp,"93 Camp, Pune",3,4000,"[""gym"", ""restaurant"", ""wifi"", ""parking""]",200,37,14:00,12:00,,true
+H9132,Park Inn Pune,Pune,Kharadi,"195 Kharadi, Pune",3,3000,"[""gym"", ""restaurant"", ""wifi"", ""parking""]",45,9,14:00,12:00,,true
+H9133,Ginger Pune,Pune,Koregaon Park,"142 Koregaon Park, Pune",3,5000,"[""wifi"", ""gym"", ""parking"", ""restaurant""]",100,19,14:00,12:00,,true
+H9134,Courtyard Goa,Goa,Calangute,"19 Calangute, Goa",4,8500,"[""bar"", ""gym"", ""wifi""]",30,9,14:00,12:00,,true
+H9135,WelcomHotel Goa,Goa,Baga,"126 Baga, Goa",3,4000,"[""wifi"", ""gym"", ""restaurant"", ""parking""]",250,44,14:00,12:00,,true
+H9136,FabHotel Goa,Goa,Anjuna,"105 Anjuna, Goa",3,2500,"[""gym"", ""parking"", ""restaurant""]",200,66,14:00,12:00,,true
+H9137,Lemon Tree Premier Goa,Goa,Vagator,"131 Vagator, Goa",4,11500,"[""airport_shuttle"", ""pool"", ""bar"", ""wifi"", ""gym"", ""parking""]",80,12,14:00,12:00,,true
+H9138,WelcomHotel Goa,Goa,Candolim,"162 Candolim, Goa",3,5000,"[""restaurant"", ""parking"", ""gym"", ""wifi""]",400,121,14:00,12:00,,true
+H9139,Treebo Goa,Goa,Panjim,"66 Panjim, Goa",2,1000,"[""lounge"", ""wifi"", ""lockers""]",45,6,14:00,12:00,,true
+H9140,Park Inn Goa,Goa,Colva,"102 Colva, Goa",3,5000,"[""restaurant"", ""parking"", ""gym"", ""wifi""]",60,18,14:00,12:00,,true
+H9141,DoubleTree Goa,Goa,Margao,"129 Margao, Goa",4,10000,"[""wifi"", ""pool"", ""airport_shuttle""]",45,15,14:00,12:00,,true
+H9142,WelcomHotel Goa,Goa,Sinquerim,"37 Sinquerim, Goa",3,3500,"[""wifi"", ""parking"", ""gym"", ""restaurant""]",30,6,14:00,12:00,,true
+H9143,Ibis Goa,Goa,Dona Paula,"25 Dona Paula, Goa",3,2500,"[""wifi"", ""restaurant"", ""gym"", ""parking""]",200,15,14:00,12:00,,true
+H9144,Holiday Inn Goa,Goa,Calangute,"181 Calangute, Goa",4,7000,"[""gym"", ""parking"", ""bar"", ""wifi""]",80,6,14:00,12:00,,true
+H9145,Keys Hotels Goa,Goa,Baga,"67 Baga, Goa",3,4000,"[""restaurant"", ""wifi"", ""gym""]",45,9,14:00,12:00,,true
+H9146,ITC Goa,Goa,Anjuna,"71 Anjuna, Goa",5,13000,"[""gym"", ""pool"", ""butler""]",500,154,14:00,12:00,,true
+H9147,Ibis Goa,Goa,Vagator,"25 Vagator, Goa",3,3000,"[""parking"", ""gym"", ""restaurant"", ""wifi""]",250,48,14:00,12:00,,true
+H9148,WelcomHotel Goa,Goa,Candolim,"95 Candolim, Goa",3,5000,"[""parking"", ""wifi"", ""restaurant"", ""gym""]",500,107,14:00,12:00,,true
+H9149,Novotel Goa,Goa,Panjim,"92 Panjim, Goa",4,8500,"[""bar"", ""pool"", ""gym"", ""restaurant""]",30,9,14:00,12:00,,true
+H9150,St Regis Goa,Goa,Colva,"72 Colva, Goa",5,23000,"[""pool"", ""wifi"", ""gym""]",500,87,14:00,12:00,,true
+H9151,Leela Goa,Goa,Margao,"12 Margao, Goa",5,24000,"[""concierge"", ""gym"", ""pool"", ""wifi"", ""butler"", ""airport_shuttle"", ""restaurant"", ""spa"", ""parking"", ""bar""]",500,30,14:00,12:00,,true
+H9152,Fortune Goa,Goa,Sinquerim,"156 Sinquerim, Goa",3,3000,"[""parking"", ""wifi"", ""gym""]",250,16,14:00,12:00,,true
+H9153,Courtyard Goa,Goa,Dona Paula,"44 Dona Paula, Goa",4,9500,"[""parking"", ""gym"", ""airport_shuttle"", ""pool""]",500,27,14:00,12:00,,true
+H9154,Taj Goa,Goa,Calangute,"42 Calangute, Goa",5,17000,"[""pool"", ""airport_shuttle"", ""butler"", ""wifi"", ""parking"", ""gym"", ""bar"", ""spa"", ""restaurant"", ""concierge""]",45,10,14:00,12:00,,true
+H9155,The Hosteller Goa,Goa,Baga,"197 Baga, Goa",2,2000,"[""lockers"", ""lounge"", ""wifi""]",200,46,14:00,12:00,,true
+H9156,Park Inn Goa,Goa,Anjuna,"60 Anjuna, Goa",3,3000,"[""parking"", ""restaurant"", ""wifi""]",45,6,14:00,12:00,,true
+H9157,Sheraton Goa,Goa,Vagator,"191 Vagator, Goa",4,6500,"[""restaurant"", ""wifi"", ""airport_shuttle"", ""parking"", ""pool""]",30,9,14:00,12:00,,true
+H9158,Park Inn Goa,Goa,Candolim,"109 Candolim, Goa",3,3500,"[""restaurant"", ""wifi"", ""parking""]",45,11,14:00,12:00,,true
+H9159,Four Seasons Jaipur,Jaipur,Civil Lines,"81 Civil Lines, Jaipur",5,14000,"[""butler"", ""concierge"", ""wifi"", ""gym"", ""pool"", ""airport_shuttle"", ""bar"", ""parking""]",100,21,14:00,12:00,,true
+H9160,OYO Jaipur,Jaipur,Pink City,"71 Pink City, Jaipur",2,2000,"[""wifi"", ""lounge"", ""lockers""]",250,42,14:00,12:00,,true
+H9161,Park Inn Jaipur,Jaipur,Vaishali Nagar,"16 Vaishali Nagar, Jaipur",3,5500,"[""restaurant"", ""parking"", ""wifi""]",30,6,14:00,12:00,,true
+H9162,FabExpress Jaipur,Jaipur,Malviya Nagar,"101 Malviya Nagar, Jaipur",2,1000,"[""lounge"", ""wifi"", ""lockers""]",300,55,14:00,12:00,,true
+H9163,Courtyard Jaipur,Jaipur,Sindhi Camp,"90 Sindhi Camp, Jaipur",4,9000,"[""airport_shuttle"", ""parking"", ""pool"", ""gym"", ""bar"", ""wifi"", ""restaurant""]",200,11,14:00,12:00,,true
+H9164,Taj Jaipur,Jaipur,Tonk Road,"182 Tonk Road, Jaipur",5,16500,"[""pool"", ""restaurant"", ""wifi"", ""butler"", ""concierge"", ""bar""]",80,25,14:00,12:00,,true
+H9165,ITC Jaipur,Jaipur,Mansarovar,"174 Mansarovar, Jaipur",5,24500,"[""spa"", ""butler"", ""parking"", ""restaurant"", ""wifi""]",30,5,14:00,12:00,,true
+H9166,FabExpress Jaipur,Jaipur,Civil Lines,"87 Civil Lines, Jaipur",2,2000,"[""lockers"", ""wifi"", ""lounge""]",80,6,14:00,12:00,,true
+H9167,JW Marriott Jaipur,Jaipur,Pink City,"126 Pink City, Jaipur",5,16500,"[""restaurant"", ""pool"", ""airport_shuttle"", ""spa"", ""wifi"", ""bar"", ""parking""]",500,118,14:00,12:00,,true
+H9168,Radisson Blu Jaipur,Jaipur,Vaishali Nagar,"30 Vaishali Nagar, Jaipur",4,6500,"[""gym"", ""parking"", ""airport_shuttle"", ""pool"", ""bar""]",45,14,14:00,12:00,,true
+H9169,Courtyard Jaipur,Jaipur,Malviya Nagar,"166 Malviya Nagar, Jaipur",4,11500,"[""parking"", ""airport_shuttle"", ""wifi""]",300,28,14:00,12:00,,true
+H9170,Novotel Jaipur,Jaipur,Sindhi Camp,"101 Sindhi Camp, Jaipur",4,10500,"[""pool"", ""gym"", ""wifi"", ""restaurant""]",500,35,14:00,12:00,,true
+H9171,Holiday Inn Jaipur,Jaipur,Tonk Road,"2 Tonk Road, Jaipur",4,10500,"[""pool"", ""parking"", ""airport_shuttle"", ""bar""]",45,13,14:00,12:00,,true
+H9172,Novotel Jaipur,Jaipur,Mansarovar,"22 Mansarovar, Jaipur",4,7000,"[""airport_shuttle"", ""wifi"", ""restaurant"", ""pool""]",100,6,14:00,12:00,,true
+H9173,The Hosteller Jaipur,Jaipur,Civil Lines,"76 Civil Lines, Jaipur",2,2000,"[""wifi"", ""lounge"", ""lockers""]",400,130,14:00,12:00,,true
+H9174,WelcomHotel Ahmedabad,Ahmedabad,CG Road,"156 CG Road, Ahmedabad",3,4500,"[""parking"", ""wifi"", ""gym""]",80,6,14:00,12:00,,true
+H9175,DoubleTree Ahmedabad,Ahmedabad,SG Highway,"56 SG Highway, Ahmedabad",4,7000,"[""restaurant"", ""wifi"", ""parking"", ""gym"", ""pool"", ""airport_shuttle"", ""bar""]",200,9,14:00,12:00,,true
+H9176,Fortune Ahmedabad,Ahmedabad,Vastrapur,"98 Vastrapur, Ahmedabad",3,5000,"[""wifi"", ""gym"", ""parking""]",100,26,14:00,12:00,,true
+H9177,Holiday Inn Ahmedabad,Ahmedabad,Navrangpura,"138 Navrangpura, Ahmedabad",4,7500,"[""airport_shuttle"", ""restaurant"", ""bar"", ""pool"", ""gym"", ""parking"", ""wifi""]",500,135,14:00,12:00,,true
+H9178,Park Inn Ahmedabad,Ahmedabad,Satellite,"40 Satellite, Ahmedabad",3,3500,"[""gym"", ""wifi"", ""restaurant""]",45,9,14:00,12:00,,true
+H9179,ITC Ahmedabad,Ahmedabad,Bodakdev,"176 Bodakdev, Ahmedabad",5,20500,"[""spa"", ""butler"", ""airport_shuttle"", ""restaurant"", ""gym"", ""wifi""]",100,5,14:00,12:00,,true
+H9180,Marriott Ahmedabad,Ahmedabad,Maninagar,"97 Maninagar, Ahmedabad",5,13500,"[""concierge"", ""butler"", ""bar"", ""airport_shuttle"", ""wifi"", ""spa"", ""parking""]",400,30,14:00,12:00,,true
+H9181,Treebo Ahmedabad,Ahmedabad,CG Road,"82 CG Road, Ahmedabad",2,2000,"[""lockers"", ""wifi"", ""lounge""]",500,141,14:00,12:00,,true
+H9182,Park Inn Ahmedabad,Ahmedabad,SG Highway,"123 SG Highway, Ahmedabad",3,4500,"[""gym"", ""wifi"", ""parking""]",500,37,14:00,12:00,,true
+H9183,Hyatt Ahmedabad,Ahmedabad,Vastrapur,"14 Vastrapur, Ahmedabad",5,23500,"[""wifi"", ""gym"", ""restaurant"", ""parking"", ""pool"", ""airport_shuttle"", ""butler""]",100,18,14:00,12:00,,true
+H9184,Keys Hotels Ahmedabad,Ahmedabad,Navrangpura,"79 Navrangpura, Ahmedabad",3,5000,"[""parking"", ""gym"", ""restaurant"", ""wifi""]",45,15,14:00,12:00,,true
+H9185,Marriott Ahmedabad,Ahmedabad,Satellite,"24 Satellite, Ahmedabad",5,14500,"[""concierge"", ""parking"", ""airport_shuttle"", ""spa"", ""restaurant""]",250,68,14:00,12:00,,true
+H9186,FabHotel Ahmedabad,Ahmedabad,Bodakdev,"104 Bodakdev, Ahmedabad",3,2500,"[""parking"", ""wifi"", ""gym"", ""restaurant""]",300,100,14:00,12:00,,true
+H9187,Novotel Ahmedabad,Ahmedabad,Maninagar,"156 Maninagar, Ahmedabad",4,9500,"[""restaurant"", ""gym"", ""wifi"", ""airport_shuttle"", ""bar""]",60,16,14:00,12:00,,true
+H9188,Backpacker Panda Ahmedabad,Ahmedabad,CG Road,"127 CG Road, Ahmedabad",2,1500,"[""lockers"", ""lounge"", ""wifi""]",150,48,14:00,12:00,,true
+H9189,Radisson Blu Kochi,Kochi,MG Road,"75 MG Road, Kochi",4,8000,"[""bar"", ""airport_shuttle"", ""wifi"", ""pool""]",100,25,14:00,12:00,,true
+H9190,Ibis Kochi,Kochi,Kakkanad,"119 Kakkanad, Kochi",3,5000,"[""gym"", ""restaurant"", ""wifi""]",400,122,14:00,12:00,,true
+H9191,Lemon Tree Premier Kochi,Kochi,Ernakulam,"28 Ernakulam, Kochi",4,6000,"[""airport_shuttle"", ""wifi"", ""bar""]",200,36,14:00,12:00,,true
+H9192,Holiday Inn Kochi,Kochi,Edapally,"106 Edapally, Kochi",4,7000,"[""airport_shuttle"", ""bar"", ""parking"", ""gym"", ""pool"", ""wifi""]",150,24,14:00,12:00,,true
+H9193,Holiday Inn Kochi,Kochi,Marine Drive,"138 Marine Drive, Kochi",4,8000,"[""gym"", ""bar"", ""airport_shuttle"", ""pool"", ""parking"", ""restaurant""]",30,7,14:00,12:00,,true
+H9194,FabExpress Kochi,Kochi,Vyttila,"51 Vyttila, Kochi",2,1000,"[""lockers"", ""lounge"", ""wifi""]",60,17,14:00,12:00,,true
+H9195,Lemon Tree Premier Kochi,Kochi,MG Road,"9 MG Road, Kochi",4,7000,"[""bar"", ""airport_shuttle"", ""wifi"", ""gym"", ""restaurant"", ""pool""]",300,68,14:00,12:00,,true
+H9196,Ginger Kochi,Kochi,Kakkanad,"84 Kakkanad, Kochi",3,5500,"[""wifi"", ""restaurant"", ""gym""]",45,6,14:00,12:00,,true
+H9197,Ginger Kochi,Kochi,Ernakulam,"40 Ernakulam, Kochi",3,3500,"[""restaurant"", ""parking"", ""gym""]",500,92,14:00,12:00,,true
+H9198,Novotel Kochi,Kochi,Edapally,"112 Edapally, Kochi",4,9500,"[""parking"", ""bar"", ""pool"", ""wifi"", ""restaurant"", ""airport_shuttle"", ""gym""]",60,10,14:00,12:00,,true
+H9199,Radisson Blu Kochi,Kochi,Marine Drive,"68 Marine Drive, Kochi",4,11500,"[""gym"", ""wifi"", ""bar"", ""airport_shuttle"", ""restaurant"", ""parking"", ""pool""]",400,51,14:00,12:00,,true
+H9200,Holiday Inn Kochi,Kochi,Vyttila,"59 Vyttila, Kochi",4,6500,"[""airport_shuttle"", ""parking"", ""bar"", ""gym"", ""wifi"", ""restaurant""]",30,9,14:00,12:00,,true

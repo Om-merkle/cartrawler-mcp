@@ -263,7 +263,12 @@ def gen_cars():
     random.shuffle(cities_list)
     cities_list = cities_list[:200]
 
+    # Track how many with_driver cars each city already has
+    city_driver_count: dict[str, int] = {}
+    city_total_count: dict[str, int] = {}
+
     for city in cities_list:
+        city_total_count[city] = city_total_count.get(city, 0) + 1
         car_type = random.choice(CAR_TYPES)
         model = random.choice(CAR_MODELS[car_type])
         vendor = random.choice(CAR_VENDORS)
@@ -280,7 +285,25 @@ def gen_cars():
                    "MUV":random.randint(2500,3800),"Luxury":random.randint(7000,12000)}
         ppd = ppd_map[car_type]
         pph = round(ppd/7)
-        with_driver = "true" if (car_type in ["MUV","Sedan","SUV"] and random.random()>0.55) else "false"
+
+        # Guarantee at least 4 driver cars per city:
+        # - Force with_driver=true if city has <4 driver cars AND car type supports it
+        # - Otherwise use 45% probability for eligible types
+        driver_count = city_driver_count.get(city, 0)
+        remaining = city_total_count[city]  # cars left for this city (approximate)
+        force_driver = (
+            car_type in ["MUV", "Sedan", "SUV"]
+            and driver_count < 4
+            and (city_total_count[city] - driver_count) <= 5  # running low on chances
+        )
+        with_driver = "true" if (
+            car_type in ["MUV", "Sedan", "SUV"]
+            and (force_driver or random.random() > 0.45)
+        ) else "false"
+
+        if with_driver == "true":
+            city_driver_count[city] = driver_count + 1
+
         avail = random.choices(["true","false"],[0.85,0.15])[0]
         rating = round(random.uniform(3.5,5.0),1)
         reviews = random.randint(50,500)
@@ -289,6 +312,23 @@ def gen_cars():
         rows.append([f"C{cid}",vendor,city,location,car_type,model,fuel,trans,seats,
                      ppd,pph,with_driver,avail,rating,reviews,"true",insurance,min_age])
         cid += 1
+
+    # Post-pass: ensure every city has at least 3 with_driver cars
+    # by flipping the first eligible self-drive car to with_driver if needed
+    from collections import defaultdict
+    city_rows: dict[str, list] = defaultdict(list)
+    for row in rows:
+        city_rows[row[2]].append(row)
+    for city, city_car_rows in city_rows.items():
+        driver_count = sum(1 for r in city_car_rows if r[11] == "true")
+        if driver_count < 3:
+            for row in city_car_rows:
+                if row[11] == "false" and row[4] in ["MUV", "Sedan", "SUV"]:
+                    row[11] = "true"
+                    driver_count += 1
+                    if driver_count >= 3:
+                        break
+
     return rows
 
 # ── 4. OFFERS ─────────────────────────────────────────────────────────────────
