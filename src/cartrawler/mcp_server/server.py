@@ -10,10 +10,12 @@ Hosted on : Render.com
 """
 from __future__ import annotations
 
+from pathlib import Path
 from typing import Any
 
 from mcp.server.fastmcp import FastMCP
 from mcp.server.transport_security import TransportSecuritySettings
+from mcp.types import CallToolResult, TextContent
 
 from cartrawler.config import settings
 from cartrawler.tools.auth_tools import (
@@ -27,7 +29,12 @@ from cartrawler.tools.offer_tools import (
     get_all_offers, get_applicable_offers, validate_coupon,
 )
 
-# ── MCP instance ──────────────────────────────────────────────────────────────
+# ── Widget paths ──────────────────────────────────────────────────────────────
+_WIDGETS = Path(__file__).parent / "widgets"
+_UI_MIME = "application/vnd.mcp-ui+html"
+_UI_CSP  = {"fetch": ["https://esm.sh"]}
+
+# ── MCP instance ─────────────────────────────────────────────────────────────
 
 mcp = FastMCP(
     name=settings.mcp_server_name,
@@ -74,7 +81,27 @@ When user mentions "ride from airport" or "transfer to [city]":
 )
 
 
-# ── Display card helpers ───────────────────────────────────────────────────────
+# ── UI Widget resources (MCP Apps — visual cards in ChatGPT) ─────────────────
+
+@mcp.resource("ui://cartrawler/cars", mime_type=_UI_MIME)
+def _widget_cars() -> str:
+    """Car search carousel widget."""
+    return (_WIDGETS / "cars.html").read_text(encoding="utf-8")
+
+
+@mcp.resource("ui://cartrawler/offers", mime_type=_UI_MIME)
+def _widget_offers() -> str:
+    """Offers & coupon cards widget."""
+    return (_WIDGETS / "offers.html").read_text(encoding="utf-8")
+
+
+@mcp.resource("ui://cartrawler/booking", mime_type=_UI_MIME)
+def _widget_booking() -> str:
+    """Booking confirmation card widget."""
+    return (_WIDGETS / "booking.html").read_text(encoding="utf-8")
+
+
+# ── Display card helpers ──────────────────────────────────────────────────────
 
 def _auth_card(action: str = "continue") -> str:
     """Return a formatted authentication-required card."""
@@ -632,7 +659,7 @@ async def find_cars(
     min_rating: float = 0,
     insurance_included: bool = False,
     limit: int = 20,
-) -> str:
+) -> CallToolResult:
     """
     Search available rental cars in any Indian city. ← CORE SERVICE
 
@@ -659,40 +686,43 @@ async def find_cars(
         insurance_included=insurance_included or None,
         limit=limit,
     )
-    # Always inject city so the no-results card shows the right name
     if "city" not in result:
         result["city"] = city
 
-    cars_card = _format_cars(result)
-
-    # Append active car rental discounts to every search result
-    from cartrawler.tools.offer_tools import get_all_offers
+    # Fetch active offers to embed in both markdown and widget
     offers_result = await get_all_offers(applicable_on="CAR")
-    active_offers = offers_result.get("offers", [])[:4]
+    active_offers = offers_result.get("offers", [])[:5]
+
+    cars_md = _format_cars(result)
     if active_offers:
-        offer_lines = []
-        for o in active_offers:
-            code = o.get("coupon_code", "—")
-            pct = o.get("discount_percentage", 0) or 0
-            max_d = int(o.get("max_discount_amount", 0) or 0)
-            desc = o.get("description", "")
-            disc = f"{int(pct)}% off" if pct else f"₹{max_d:,} off"
-            offer_lines.append(f"| 🏷️ `{code}` | {disc} | {desc} |")
-        offers_table = "\n".join(offer_lines)
-        discount_block = f"""
----
+        offer_lines = "\n".join(
+            f"| 🏷️ `{o.get('coupon_code','—')}` | "
+            f"{'{}% off'.format(int(o['discount_percentage'])) if o.get('discount_percentage') else '₹{:,} off'.format(int(o.get('max_discount_amount',0)))} | "
+            f"{o.get('description','')} |"
+            for o in active_offers
+        )
+        cars_md += (
+            "\n\n---\n\n## 🏷️ Car Rental Discounts\n\n"
+            "| Code | Savings | Description |\n|------|---------|-------------|\n"
+            + offer_lines
+            + "\n\n> 💡 Apply code in `book_rental_car` · Check savings with `validate_car_coupon`"
+        )
 
-## 🏷️ Car Rental Discounts — Apply at Checkout
-
-| Code | Savings | Description |
-|------|---------|-------------|
-{offers_table}
-
-> 💡 Use code when calling `book_rental_car` · Run `validate_car_coupon` to see exact savings
-"""
-        return cars_card + discount_block
-
-    return cars_card
+    return CallToolResult(**{
+        "content": [TextContent(type="text", text=cars_md)],
+        "structuredContent": {
+            "city": result.get("city", city),
+            "total": result.get("count", 0),
+            "cars": result.get("cars", []),
+            "offers": active_offers,
+        },
+        "_meta": {
+            "ui": {
+                "resourceUri": "ui://cartrawler/cars",
+                "csp": _UI_CSP,
+            }
+        },
+    })
 
 
 @mcp.tool()
@@ -752,7 +782,7 @@ async def book_rental_car(
     rental_days: int,
     payment_method: str = "CARD",
     coupon_code: str = "",
-) -> str:
+) -> CallToolResult:
     """
     Book a rental car. LOGIN REQUIRED — get access_token via `login`.
 
@@ -765,7 +795,9 @@ async def book_rental_car(
     Free cancellation if cancelled ≥ 2 hours before pickup.
     """
     if not access_token:
-        return _auth_card("book a rental car")
+        return CallToolResult(
+            content=[TextContent(type="text", text=_auth_card("book a rental car"))]
+        )
 
     result = await book_car(
         access_token=access_token,
@@ -775,7 +807,11 @@ async def book_rental_car(
         payment_method=payment_method,
         coupon_code=coupon_code or None,
     )
-    return _format_booking_confirmation(result)
+    return CallToolResult(**{
+        "content": [TextContent(type="text", text=_format_booking_confirmation(result))],
+        "structuredContent": {"booking": result.get("booking", {}), "success": result.get("success", False)},
+        "_meta": {"ui": {"resourceUri": "ui://cartrawler/booking", "csp": _UI_CSP}},
+    })
 
 
 @mcp.tool()
@@ -885,7 +921,7 @@ async def my_rides(
 # ═════════════════════════════════════════════════════════════════════════════
 
 @mcp.tool()
-async def car_offers(city: str = "") -> str:
+async def car_offers(city: str = "") -> CallToolResult:
     """
     List all active car rental discounts and coupon codes.
 
@@ -895,7 +931,11 @@ async def car_offers(city: str = "") -> str:
     Returns coupon codes, discount %, and eligibility criteria.
     """
     result = await get_all_offers(applicable_on="CAR", city=city or None)
-    return _format_offers(result)
+    return CallToolResult(**{
+        "content": [TextContent(type="text", text=_format_offers(result))],
+        "structuredContent": {"offers": result.get("offers", [])},
+        "_meta": {"ui": {"resourceUri": "ui://cartrawler/offers", "csp": _UI_CSP}},
+    })
 
 
 @mcp.tool()

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CarTrawler Cars</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --card-bg: #f8f9fa;
+      --card-border: #e9ecef;
+      --text: #212529;
+      --subtext: #6c757d;
+      --accent: #0054a6;
+      --accent-light: #e8f1fb;
+      --green: #198754;
+      --green-light: #d1e7dd;
+      --yellow: #856404;
+      --yellow-light: #fff3cd;
+      --shadow: rgba(0,0,0,0.08);
+      --scrollbar: #dee2e6;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1a1a2e;
+        --card-bg: #16213e;
+        --card-border: #0f3460;
+        --text: #e2e8f0;
+        --subtext: #94a3b8;
+        --accent: #4d96ff;
+        --accent-light: #1a2a4a;
+        --green: #4caf82;
+        --green-light: #0d2d1f;
+        --yellow: #ffd60a;
+        --yellow-light: #2d2500;
+        --shadow: rgba(0,0,0,0.3);
+        --scrollbar: #2d3748;
+      }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      padding: 16px;
+      min-height: 100vh;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    .header-title { font-size: 15px; font-weight: 700; }
+    .header-count { font-size: 12px; color: var(--subtext); }
+
+    /* Carousel */
+    .carousel {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      padding-bottom: 12px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+    .carousel::-webkit-scrollbar { height: 4px; }
+    .carousel::-webkit-scrollbar-track { background: transparent; }
+    .carousel::-webkit-scrollbar-thumb { background: var(--scrollbar); border-radius: 2px; }
+
+    /* Card */
+    .card {
+      flex: 0 0 220px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 14px;
+      scroll-snap-align: start;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px var(--shadow);
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 8px;
+      gap: 8px;
+    }
+    .car-name {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.3;
+      flex: 1;
+    }
+    .price-badge {
+      background: var(--accent);
+      color: #fff;
+      padding: 4px 9px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .vendor-line {
+      font-size: 11px;
+      color: var(--subtext);
+      margin-bottom: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-bottom: 10px;
+      flex: 1;
+    }
+    .tag {
+      font-size: 10px;
+      padding: 2px 7px;
+      border-radius: 10px;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-weight: 500;
+    }
+    .tag.driver {
+      background: var(--green-light);
+      color: var(--green);
+    }
+    .tag.insurance {
+      background: var(--accent-light);
+      color: var(--accent);
+    }
+
+    .rating-row {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      color: var(--subtext);
+      margin-bottom: 12px;
+    }
+    .stars { color: #ffc107; font-size: 12px; }
+
+    .book-btn {
+      display: block;
+      width: 100%;
+      padding: 9px 0;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 9px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      transition: opacity 0.15s;
+      margin-top: auto;
+    }
+    .book-btn:hover { opacity: 0.88; }
+
+    /* Offers bar */
+    .offers-section {
+      margin-top: 16px;
+      border-top: 1px solid var(--card-border);
+      padding-top: 12px;
+    }
+    .offers-label { font-size: 12px; color: var(--subtext); margin-bottom: 8px; font-weight: 600; }
+    .offers-row { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; }
+    .offer-chip {
+      flex: 0 0 auto;
+      background: var(--yellow-light);
+      color: var(--yellow);
+      padding: 5px 12px;
+      border-radius: 16px;
+      font-size: 11px;
+      font-weight: 700;
+      white-space: nowrap;
+      cursor: pointer;
+      border: none;
+      transition: filter 0.15s;
+    }
+    .offer-chip:hover { filter: brightness(1.1); }
+    .offer-chip.copied { background: var(--green-light); color: var(--green); }
+
+    /* Empty state */
+    .empty {
+      text-align: center;
+      padding: 32px 16px;
+      color: var(--subtext);
+    }
+    .empty-icon { font-size: 36px; margin-bottom: 10px; }
+    .empty-title { font-size: 15px; font-weight: 600; margin-bottom: 6px; color: var(--text); }
+    .empty-sub { font-size: 13px; margin-bottom: 16px; }
+
+    .loading {
+      text-align: center;
+      padding: 32px;
+      color: var(--subtext);
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div class="loading">🚗 Loading CarTrawler cars…</div>
+  </div>
+
+  <script type="module">
+    const root = document.getElementById('app');
+
+    const INT_URLS = {
+      'Dubai': 'https://www.cartrawler.com/ct/en-gb/car-rental/uae/dubai/',
+      'London': 'https://www.cartrawler.com/ct/en-gb/car-rental/united-kingdom/london/',
+      'New York': 'https://www.cartrawler.com/ct/en-gb/car-rental/united-states/new-york/',
+      'Los Angeles': 'https://www.cartrawler.com/ct/en-gb/car-rental/united-states/los-angeles/',
+      'Singapore': 'https://www.cartrawler.com/ct/en-gb/car-rental/singapore/singapore/',
+      'Paris': 'https://www.cartrawler.com/ct/en-gb/car-rental/france/paris/',
+      'Sydney': 'https://www.cartrawler.com/ct/en-gb/car-rental/australia/sydney/',
+      'Bangkok': 'https://www.cartrawler.com/ct/en-gb/car-rental/thailand/bangkok/',
+      'Amsterdam': 'https://www.cartrawler.com/ct/en-gb/car-rental/netherlands/amsterdam/',
+      'Tokyo': 'https://www.cartrawler.com/ct/en-gb/car-rental/japan/tokyo/',
+    };
+    function ctUrl(city) {
+      return INT_URLS[city] || `https://www.cartrawler.com/ct/en-gb/car-rental/india/${(city||'').toLowerCase().replace(/\s+/g,'-')}/`;
+    }
+    function fmt(n) { return parseInt(n||0).toLocaleString('en-IN'); }
+    function bool(v) { return v === true || v === 'true'; }
+
+    function render(data) {
+      const cars  = data.cars  || [];
+      const city  = data.city  || '';
+      const total = data.total || cars.length;
+      const offers = data.offers || [];
+      const url   = ctUrl(city);
+
+      if (!cars.length) {
+        root.innerHTML = `
+          <div class="empty">
+            <div class="empty-icon">🚗</div>
+            <div class="empty-title">No cars found in ${city||'this city'}</div>
+            <div class="empty-sub">Try a different car type or search on CarTrawler</div>
+            <a href="${url}" target="_blank" class="book-btn" style="display:inline-block;width:auto;padding:9px 20px">
+              Browse CarTrawler →
+            </a>
+          </div>`;
+        return;
+      }
+
+      const cards = cars.slice(0, 6).map(c => {
+        const model    = c.car_model || c.car_type || 'Car';
+        const carType  = c.car_type  || '';
+        const vendor   = c.vendor    || '';
+        const loc      = c.pickup_location || city;
+        const price    = c.price_per_day ? `₹${fmt(c.price_per_day)}/day` : '—';
+        const priceHr  = c.price_per_hour ? ` · ₹${fmt(c.price_per_hour)}/hr` : '';
+        const rating   = c.rating ? parseFloat(c.rating).toFixed(1) : null;
+        const reviews  = c.total_reviews || 0;
+        const driver   = bool(c.with_driver);
+        const insured  = bool(c.insurance_included);
+        const fuel     = c.fuel_type || '';
+        const trans    = c.transmission || '';
+        const seats    = c.seating_capacity || 5;
+
+        const ratingHtml = rating
+          ? `<div class="rating-row"><span class="stars">★</span> ${rating} <span>(${reviews} reviews)</span></div>`
+          : '';
+        const priceHrHtml = priceHr
+          ? `<div style="font-size:11px;color:var(--subtext);margin-bottom:10px">${priceHr}</div>`
+          : '';
+
+        return `
+          <div class="card">
+            <div class="card-top">
+              <div class="car-name">${model}</div>
+              <div class="price-badge">${price}</div>
+            </div>
+            ${priceHrHtml}
+            <div class="vendor-line">📍 ${vendor} · ${loc}</div>
+            <div class="tags">
+              ${carType ? `<span class="tag">${carType}</span>` : ''}
+              ${fuel    ? `<span class="tag">${fuel}</span>`    : ''}
+              ${trans   ? `<span class="tag">${trans}</span>`   : ''}
+              <span class="tag">👤 ${seats} seats</span>
+              ${driver  ? '<span class="tag driver">✅ With Driver</span>' : '<span class="tag">🚗 Self-drive</span>'}
+              ${insured ? '<span class="tag insurance">🛡️ Insured</span>' : ''}
+            </div>
+            ${ratingHtml}
+            <a href="${url}" target="_blank" class="book-btn">Book on CarTrawler →</a>
+          </div>`;
+      }).join('');
+
+      const offerHtml = offers.length
+        ? `<div class="offers-section">
+            <div class="offers-label">🏷️ Apply a discount code at checkout</div>
+            <div class="offers-row">
+              ${offers.map(o => {
+                const code = o.coupon_code || '—';
+                const pct  = o.discount_percentage;
+                const maxD = parseInt(o.max_discount_amount||0);
+                const disc = pct ? `${parseInt(pct)}% off` : `₹${maxD.toLocaleString('en-IN')} off`;
+                return `<button class="offer-chip" data-code="${code}"
+                  onclick="const c=this;navigator.clipboard?.writeText('${code}').then(()=>{c.textContent='✅ Copied!';c.classList.add('copied');setTimeout(()=>{c.textContent='${code} · ${disc}';c.classList.remove('copied')},1500)})">
+                  ${code} · ${disc}
+                </button>`;
+              }).join('')}
+            </div>
+           </div>`
+        : '';
+
+      root.innerHTML = `
+        <div class="header">
+          <span class="header-title">🚗 Rental Cars · ${city}</span>
+          <span class="header-count">${cars.length} of ${total} cars</span>
+        </div>
+        <div class="carousel">${cards}</div>
+        ${offerHtml}`;
+    }
+
+    async function init() {
+      try {
+        const { App } = await import('https://esm.sh/@modelcontextprotocol/ext-apps@latest');
+        const app = new App({ name: 'CarTrawler Cars', version: '1.0.0' });
+        app.ontoolresult = (res) => render(res.structuredContent || {});
+        app.connect();
+      } catch (_) {
+        window.addEventListener('message', ({ data }) => {
+          const sc = data?.structuredContent;
+          if (sc?.cars !== undefined) render(sc);
+          else if (data?.cars !== undefined) render(data);
+        });
+        try { window.parent.postMessage({ type: 'mcp-ui-ready', widget: 'cars' }, '*'); } catch(_) {}
+      }
+    }
+    init();
+  </script>
+</body>
+</html>
