@@ -22,7 +22,7 @@ from starlette.responses import JSONResponse
 from starlette.routing import Mount, Route
 
 from cartrawler.config import settings
-from cartrawler.mcp_server import create_mcp_app
+from cartrawler.mcp_server import create_mcp_app, create_mcp_http_app
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Logging
@@ -124,15 +124,17 @@ async def admin_embed(request: Request) -> JSONResponse:
         return JSONResponse({"status": "error", "message": str(exc)}, status_code=500)
 
 
-_mcp_app = create_mcp_app()
+_mcp_sse_app  = create_mcp_app()       # SSE  — ChatGPT Custom Connector (/sse)
+_mcp_http_app = create_mcp_http_app()  # Streamable HTTP — ChatGPT Apps UI (/mcp)
 
 app = Starlette(
     routes=[
-        Route("/health", health),
+        Route("/health",       health),
         Route("/admin/dbcheck", admin_dbcheck),
-        Route("/admin/seed", admin_seed, methods=["POST"]),
-        Route("/admin/embed", admin_embed, methods=["POST"]),
-        Mount("/", app=_mcp_app),
+        Route("/admin/seed",   admin_seed,  methods=["POST"]),
+        Route("/admin/embed",  admin_embed, methods=["POST"]),
+        Mount("/mcp",  app=_mcp_http_app),   # Streamable HTTP for ChatGPT Apps UI
+        Mount("/",     app=_mcp_sse_app),    # SSE for ChatGPT Custom Connector
     ]
 )
 

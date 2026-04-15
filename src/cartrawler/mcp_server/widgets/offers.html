@@ -1,176 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CarTrawler Offers</title>
-  <style>
-    :root {
-      --bg: #ffffff;
-      --card-bg: #fffbf0;
-      --card-border: #fde68a;
-      --text: #1a1a2e;
-      --subtext: #6c757d;
-      --accent: #b45309;
-      --accent-bg: #fef3c7;
-      --btn-bg: #d97706;
-      --btn-hover: #b45309;
-      --green: #059669;
-      --green-bg: #d1fae5;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #1a1a2e;
-        --card-bg: #2a2010;
-        --card-border: #4a3800;
-        --text: #e2e8f0;
-        --subtext: #94a3b8;
-        --accent: #fbbf24;
-        --accent-bg: #2a2000;
-        --btn-bg: #d97706;
-        --btn-hover: #fbbf24;
-        --green: #34d399;
-        --green-bg: #052e16;
-      }
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      padding: 16px;
-    }
-    h2 { font-size: 15px; font-weight: 700; margin-bottom: 14px; }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 12px;
-    }
-    .offer-card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 14px;
-      padding: 16px;
-      display: flex;
-      flex-direction: column;
-    }
-    .code-badge {
-      display: inline-block;
-      background: var(--accent-bg);
-      color: var(--accent);
-      font-family: 'SF Mono', 'Fira Code', monospace;
-      font-size: 15px;
-      font-weight: 800;
-      padding: 4px 10px;
-      border-radius: 8px;
-      letter-spacing: 1px;
-      margin-bottom: 10px;
-      border: 1px dashed var(--card-border);
-    }
-    .discount-amount {
-      font-size: 22px;
-      font-weight: 800;
-      color: var(--accent);
-      margin-bottom: 6px;
-    }
-    .desc {
-      font-size: 12px;
-      color: var(--subtext);
-      margin-bottom: 10px;
-      line-height: 1.5;
-      flex: 1;
-    }
-    .meta {
-      font-size: 11px;
-      color: var(--subtext);
-      margin-bottom: 12px;
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-    .copy-btn {
-      background: var(--btn-bg);
-      color: #fff;
-      border: none;
-      padding: 9px;
-      border-radius: 9px;
-      font-size: 13px;
-      font-weight: 600;
-      cursor: pointer;
-      width: 100%;
-      transition: background 0.15s;
-      text-align: center;
-    }
-    .copy-btn:hover { background: var(--btn-hover); }
-    .copy-btn.copied { background: var(--green); }
-    .loading { text-align: center; padding: 32px; color: var(--subtext); }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CarTrawler Offers</title>
+<style>
+:root{
+  --bg:#fffbf0;--surface:#ffffff;--border:#fde68a;--text:#1a1a2e;--sub:#6c757d;
+  --accent:#b45309;--accent2:#fef3c7;--btn:#d97706;--green:#059669;--green2:#d1fae5;
+}
+@media(prefers-color-scheme:dark){
+  :root{
+    --bg:#1a1600;--surface:#2a2000;--border:#4a3800;--text:#e2d9c0;--sub:#a08050;
+    --accent:#fbbf24;--accent2:#2a1e00;--btn:#d97706;--green:#34d399;--green2:#052e16;
+  }
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;padding:14px}
+h2{font-size:14px;font-weight:700;margin-bottom:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:6px}
+.code{font-family:'SF Mono',Menlo,monospace;font-size:14px;font-weight:800;color:var(--accent);background:var(--accent2);padding:4px 9px;border-radius:8px;border:1px dashed var(--border);display:inline-block;letter-spacing:.5px}
+.disc{font-size:20px;font-weight:800;color:var(--accent)}
+.desc{font-size:11px;color:var(--sub);line-height:1.5;flex:1}
+.meta{font-size:10px;color:var(--sub);display:flex;flex-direction:column;gap:2px}
+.copy-btn{background:var(--btn);color:#fff;border:none;padding:8px;border-radius:9px;font-size:12px;font-weight:600;cursor:pointer;width:100%;transition:background .15s}
+.copy-btn.copied{background:var(--green)}
+.loading{text-align:center;padding:32px;color:var(--sub)}
+</style>
 </head>
 <body>
-  <div id="app">
-    <div class="loading">🏷️ Loading offers…</div>
-  </div>
+<div id="app"><div class="loading">🏷️ Loading offers…</div></div>
+<script>
+var _id=0,_cb={};
+function send(method,params,cb){
+  var id=++_id;if(cb)_cb[id]=cb;
+  var msg={jsonrpc:'2.0',method:method,id:id};
+  if(params!==undefined)msg.params=params;
+  try{window.parent.postMessage(JSON.stringify(msg),'*');}catch(e){}
+}
+window.addEventListener('message',function(ev){
+  var data;try{data=typeof ev.data==='string'?JSON.parse(ev.data):ev.data;}catch(e){return;}
+  if(!data)return;
+  if(data.id&&_cb[data.id]){_cb[data.id](data.result);delete _cb[data.id];}
+  if(data.method==='notifications/tools/call_result'||data.method==='tool_result'){
+    var sc=(data.params||data).structuredContent;
+    if(sc&&sc.offers)return render(sc);
+  }
+  if(data.structuredContent&&data.structuredContent.offers)return render(data.structuredContent);
+  if(data.offers)return render(data);
+});
+send('initialize',{protocolVersion:'2024-11-05',capabilities:{},clientInfo:{name:'CarTrawler Offers Widget',version:'1.0.0'}},function(){
+  send('notifications/initialized');
+});
 
-  <script type="module">
-    const root = document.getElementById('app');
+function fmt(n){return parseInt(n||0).toLocaleString('en-IN');}
+function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
 
-    function fmt(n) { return parseInt(n||0).toLocaleString('en-IN'); }
+function render(data){
+  var offers=data.offers||[];
+  var root=document.getElementById('app');
+  if(!offers.length){root.innerHTML='<div class="loading">No active offers right now.</div>';return;}
+  var cards=offers.map(function(o,i){
+    var code=o.coupon_code||'—';
+    var pct=o.discount_percentage||0;
+    var maxD=parseInt(o.max_discount_amount||0);
+    var minA=parseInt(o.min_booking_amount||0);
+    var disc=pct?parseInt(pct)+'% OFF':'₹'+fmt(maxD)+' OFF';
+    var desc=o.description||'';
+    var till=o.valid_till?'Valid till '+o.valid_till:'';
+    var minS=minA?'Min. ₹'+fmt(minA):'No minimum';
+    var bid='copybtn'+i;
+    return '<div class="card">'
+      +'<div class="code">'+esc(code)+'</div>'
+      +'<div class="disc">'+disc+'</div>'
+      +'<div class="desc">'+esc(desc)+'</div>'
+      +'<div class="meta">'+(maxD?'<span>💰 Up to ₹'+fmt(maxD)+' savings</span>':'')+'<span>🛒 '+minS+'</span>'+(till?'<span>📅 '+till+'</span>':'')+'</div>'
+      +'<button id="'+bid+'" class="copy-btn" onclick="cp(\''+esc(code)+'\',\''+bid+'\')">Copy Code</button>'
+      +'</div>';
+  }).join('');
+  root.innerHTML='<h2>🏷️ Car Rental Offers & Coupons</h2><div class="grid">'+cards+'</div>';
+}
 
-    function render(data) {
-      const offers = data.offers || [];
-      if (!offers.length) {
-        root.innerHTML = '<div class="loading">No active offers right now.</div>';
-        return;
-      }
-      const cards = offers.map((o, i) => {
-        const code  = o.coupon_code || '—';
-        const pct   = o.discount_percentage || 0;
-        const maxD  = parseInt(o.max_discount_amount || 0);
-        const minA  = parseInt(o.min_booking_amount  || 0);
-        const disc  = pct ? `${parseInt(pct)}% OFF` : `₹${fmt(maxD)} OFF`;
-        const desc  = o.description || '';
-        const till  = o.valid_till ? `Valid till ${o.valid_till}` : '';
-        const minS  = minA ? `Min. booking ₹${fmt(minA)}` : 'No minimum spend';
-        const id    = `btn-${i}`;
-        return `
-          <div class="offer-card">
-            <div class="code-badge">${code}</div>
-            <div class="discount-amount">${disc}</div>
-            <div class="desc">${desc}</div>
-            <div class="meta">
-              <span>💰 Up to ₹${fmt(maxD)} savings</span>
-              <span>🛒 ${minS}</span>
-              ${till ? `<span>📅 ${till}</span>` : ''}
-            </div>
-            <button id="${id}" class="copy-btn"
-              onclick="
-                navigator.clipboard?.writeText('${code}');
-                const b=document.getElementById('${id}');
-                b.textContent='✅ Copied!';
-                b.classList.add('copied');
-                setTimeout(()=>{b.textContent='Copy Code';b.classList.remove('copied')},2000)
-              ">Copy Code</button>
-          </div>`;
-      }).join('');
-      root.innerHTML = `<h2>🏷️ Car Rental Offers & Coupons</h2><div class="grid">${cards}</div>`;
-    }
-
-    async function init() {
-      try {
-        const { App } = await import('https://esm.sh/@modelcontextprotocol/ext-apps@latest');
-        const app = new App({ name: 'CarTrawler Offers', version: '1.0.0' });
-        app.ontoolresult = (res) => render(res.structuredContent || {});
-        app.connect();
-      } catch (_) {
-        window.addEventListener('message', ({ data }) => {
-          const sc = data?.structuredContent;
-          if (sc?.offers !== undefined) render(sc);
-          else if (data?.offers !== undefined) render(data);
-        });
-        try { window.parent.postMessage({ type: 'mcp-ui-ready', widget: 'offers' }, '*'); } catch(_) {}
-      }
-    }
-    init();
-  </script>
+function cp(code,bid){
+  try{navigator.clipboard.writeText(code);}catch(e){}
+  var b=document.getElementById(bid);
+  if(b){b.textContent='✅ Copied!';b.classList.add('copied');setTimeout(function(){b.textContent='Copy Code';b.classList.remove('copied');},2000);}
+}
+</script>
 </body>
 </html>

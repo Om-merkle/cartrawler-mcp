@@ -1,205 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Booking Confirmed</title>
-  <style>
-    :root {
-      --bg: #f0fdf4;
-      --card-bg: #ffffff;
-      --card-border: #bbf7d0;
-      --text: #14532d;
-      --subtext: #6c757d;
-      --accent: #16a34a;
-      --row-bg: #f8fffe;
-      --row-border: #d1fae5;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #052e16;
-        --card-bg: #0a3622;
-        --card-border: #14532d;
-        --text: #dcfce7;
-        --subtext: #86efac;
-        --accent: #4ade80;
-        --row-bg: #0d3d20;
-        --row-border: #14532d;
-      }
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      padding: 16px;
-    }
-    .check-banner {
-      text-align: center;
-      padding: 20px 0 14px;
-    }
-    .check-icon { font-size: 44px; margin-bottom: 8px; }
-    .check-title { font-size: 20px; font-weight: 800; color: var(--accent); }
-    .check-sub { font-size: 13px; color: var(--subtext); margin-top: 4px; }
-    .card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 14px;
-      overflow: hidden;
-      margin-top: 14px;
-    }
-    .card-header {
-      background: var(--accent);
-      color: #fff;
-      padding: 12px 16px;
-      font-size: 15px;
-      font-weight: 700;
-    }
-    .detail-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 16px;
-      border-bottom: 1px solid var(--row-border);
-      background: var(--row-bg);
-      font-size: 13px;
-    }
-    .detail-row:last-child { border-bottom: none; }
-    .detail-label { color: var(--subtext); }
-    .detail-value { font-weight: 600; color: var(--text); text-align: right; max-width: 60%; word-break: break-all; }
-    .booking-id {
-      font-family: 'SF Mono', 'Fira Code', monospace;
-      font-size: 12px;
-      background: var(--row-border);
-      padding: 2px 8px;
-      border-radius: 6px;
-      color: var(--accent);
-      cursor: pointer;
-    }
-    .total-row {
-      background: var(--accent);
-      color: #fff;
-      padding: 14px 16px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 16px;
-      font-weight: 800;
-    }
-    .points-badge {
-      background: #fef3c7;
-      color: #92400e;
-      padding: 8px 16px;
-      text-align: center;
-      font-size: 13px;
-      font-weight: 600;
-    }
-    .action-row {
-      padding: 14px 16px;
-      display: flex;
-      gap: 10px;
-    }
-    .btn-outline {
-      flex: 1;
-      padding: 10px;
-      border: 1px solid var(--card-border);
-      border-radius: 9px;
-      background: transparent;
-      color: var(--text);
-      font-size: 13px;
-      font-weight: 600;
-      cursor: pointer;
-      text-align: center;
-    }
-    .loading { text-align: center; padding: 32px; color: var(--subtext); }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Booking Confirmed</title>
+<style>
+:root{
+  --bg:#f0fdf4;--surface:#fff;--border:#bbf7d0;--text:#14532d;--sub:#6c757d;
+  --green:#16a34a;--green2:#dcfce7;--row:#f8fffe;--total-bg:#16a34a;
+}
+@media(prefers-color-scheme:dark){
+  :root{
+    --bg:#051e0f;--surface:#0a3622;--border:#14532d;--text:#dcfce7;--sub:#86efac;
+    --green:#4ade80;--green2:#052e16;--row:#0d3d20;--total-bg:#15803d;
+  }
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;padding:14px}
+.banner{text-align:center;padding:20px 0 14px}
+.icon{font-size:44px;margin-bottom:8px}
+.title{font-size:20px;font-weight:800;color:var(--green)}
+.sub{font-size:13px;color:var(--sub);margin-top:4px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-top:14px}
+.card-hdr{background:var(--green);color:#fff;padding:12px 16px;font-size:14px;font-weight:700}
+.row{display:flex;justify-content:space-between;align-items:center;padding:10px 16px;border-bottom:1px solid var(--border);background:var(--row);font-size:13px}
+.row:last-child{border-bottom:none}
+.lbl{color:var(--sub)}
+.val{font-weight:600;text-align:right;max-width:60%;word-break:break-all}
+.bid{font-family:monospace;font-size:12px;background:var(--green2);padding:2px 8px;border-radius:6px;color:var(--green);cursor:pointer}
+.total-row{background:var(--total-bg);color:#fff;padding:14px 16px;display:flex;justify-content:space-between;font-size:16px;font-weight:800}
+.pts{background:#fef3c7;color:#92400e;padding:8px 16px;text-align:center;font-size:13px;font-weight:600}
+.actions{padding:12px 16px;display:flex;gap:10px}
+.btn{flex:1;padding:10px;border:1px solid var(--border);border-radius:9px;background:transparent;color:var(--text);font-size:13px;font-weight:600;cursor:pointer;text-align:center;transition:background .15s}
+.btn:hover{background:var(--green2)}
+.loading{text-align:center;padding:32px;color:var(--sub)}
+</style>
 </head>
 <body>
-  <div id="app">
-    <div class="loading">Loading booking details…</div>
-  </div>
+<div id="app"><div class="loading">Loading booking details…</div></div>
+<script>
+var _id=0,_cb={};
+function send(method,params,cb){
+  var id=++_id;if(cb)_cb[id]=cb;
+  var msg={jsonrpc:'2.0',method:method,id:id};
+  if(params!==undefined)msg.params=params;
+  try{window.parent.postMessage(JSON.stringify(msg),'*');}catch(e){}
+}
+window.addEventListener('message',function(ev){
+  var data;try{data=typeof ev.data==='string'?JSON.parse(ev.data):ev.data;}catch(e){return;}
+  if(!data)return;
+  if(data.id&&_cb[data.id]){_cb[data.id](data.result);delete _cb[data.id];}
+  if(data.method==='notifications/tools/call_result'||data.method==='tool_result'){
+    var sc=(data.params||data).structuredContent;
+    if(sc&&(sc.booking||sc.booking_id))return render(sc);
+  }
+  if(data.structuredContent&&(data.structuredContent.booking||data.structuredContent.booking_id))return render(data.structuredContent);
+  if(data.booking||data.booking_id)return render(data);
+});
+send('initialize',{protocolVersion:'2024-11-05',capabilities:{},clientInfo:{name:'CarTrawler Booking Widget',version:'1.0.0'}},function(){
+  send('notifications/initialized');
+});
 
-  <script type="module">
-    const root = document.getElementById('app');
+function fmt(n){return parseFloat(n||0).toLocaleString('en-IN',{maximumFractionDigits:2});}
+function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
 
-    function fmt(n) { return parseFloat(n||0).toLocaleString('en-IN', {maximumFractionDigits:2}); }
+function render(data){
+  var b=data.booking||data;
+  var root=document.getElementById('app');
+  if(!b||!b.booking_id){root.innerHTML='<div class="loading">'+(data.message||'Booking details unavailable.')+'</div>';return;}
+  var pts=b.loyalty_points_earned||0;
+  var disc=parseFloat(b.discount_applied||0);
+  var bid=esc(b.booking_id);
+  var discRow=disc>0?'<div class="row"><span class="lbl">🏷️ Discount</span><span class="val" style="color:var(--green)">−₹'+fmt(disc)+'</span></div>':'';
+  var ptsRow=pts>0?'<div class="pts">⭐ You earned +'+pts+' CarTrawler loyalty points!</div>':'';
+  root.innerHTML=
+    '<div class="banner"><div class="icon">✅</div><div class="title">Booking Confirmed!</div><div class="sub">Your car is reserved.</div></div>'
+    +'<div class="card">'
+    +'<div class="card-hdr">🚗 '+(esc(b.car_model)||'Your Car')+' · '+(esc(b.car_type)||'')+'</div>'
+    +'<div class="row"><span class="lbl">📋 Booking ID</span><span class="bid" onclick="cp(\''+bid+'\')" title="Tap to copy">'+bid+'</span></div>'
+    +'<div class="row"><span class="lbl">📍 Pickup</span><span class="val">'+esc(b.pickup_location||'—')+'</span></div>'
+    +'<div class="row"><span class="lbl">📅 Pickup Date</span><span class="val">'+esc(b.travel_date||'—')+'</span></div>'
+    +'<div class="row"><span class="lbl">🔄 Return Date</span><span class="val">'+esc(b.return_date||'—')+'</span></div>'
+    +'<div class="row"><span class="lbl">⏱️ Duration</span><span class="val">'+(b.rental_days||'—')+' day(s)</span></div>'
+    +'<div class="row"><span class="lbl">💳 Payment</span><span class="val">'+(esc(b.payment_method||'—'))+' · '+(esc(b.payment_status||'—'))+'</span></div>'
+    +discRow
+    +'<div class="total-row"><span>💰 Total Paid</span><span>₹'+fmt(b.total_price)+'</span></div>'
+    +ptsRow
+    +'<div class="actions"><button class="btn" id="cpbid" onclick="cpBid(\''+bid+'\')">📋 Copy Booking ID</button></div>'
+    +'</div>';
+}
 
-    function render(data) {
-      const b = data.booking || data;
-      if (!b || !b.booking_id) {
-        root.innerHTML = `<div class="loading">${data.message || 'Booking details unavailable.'}</div>`;
-        return;
-      }
-      const pts = b.loyalty_points_earned || 0;
-      const disc = parseFloat(b.discount_applied || 0);
-      const discRow = disc > 0
-        ? `<div class="detail-row"><span class="detail-label">🏷️ Discount Applied</span><span class="detail-value" style="color:var(--accent)">−₹${fmt(disc)}</span></div>`
-        : '';
-      const ptsRow = pts > 0
-        ? `<div class="points-badge">⭐ You earned +${pts} CarTrawler loyalty points!</div>`
-        : '';
-
-      root.innerHTML = `
-        <div class="check-banner">
-          <div class="check-icon">✅</div>
-          <div class="check-title">Booking Confirmed!</div>
-          <div class="check-sub">Your car is reserved. Details below.</div>
-        </div>
-        <div class="card">
-          <div class="card-header">🚗 ${b.car_model || 'Your Car'} · ${b.car_type || ''}</div>
-          <div class="detail-row">
-            <span class="detail-label">📋 Booking ID</span>
-            <span class="booking-id" onclick="navigator.clipboard?.writeText('${b.booking_id}')" title="Click to copy">${b.booking_id}</span>
-          </div>
-          <div class="detail-row">
-            <span class="detail-label">📍 Pickup</span>
-            <span class="detail-value">${b.pickup_location || '—'}</span>
-          </div>
-          <div class="detail-row">
-            <span class="detail-label">📅 Pickup Date</span>
-            <span class="detail-value">${b.travel_date || '—'}</span>
-          </div>
-          <div class="detail-row">
-            <span class="detail-label">🔄 Return Date</span>
-            <span class="detail-value">${b.return_date || '—'}</span>
-          </div>
-          <div class="detail-row">
-            <span class="detail-label">⏱️ Duration</span>
-            <span class="detail-value">${b.rental_days || '—'} day(s)</span>
-          </div>
-          <div class="detail-row">
-            <span class="detail-label">💳 Payment</span>
-            <span class="detail-value">${b.payment_method || '—'} · ${b.payment_status || '—'}</span>
-          </div>
-          ${discRow}
-          <div class="total-row">
-            <span>💰 Total Paid</span>
-            <span>₹${fmt(b.total_price)}</span>
-          </div>
-          ${ptsRow}
-          <div class="action-row">
-            <button class="btn-outline" onclick="navigator.clipboard?.writeText('${b.booking_id}');this.textContent='✅ Copied!'">
-              📋 Copy Booking ID
-            </button>
-          </div>
-        </div>`;
-    }
-
-    async function init() {
-      try {
-        const { App } = await import('https://esm.sh/@modelcontextprotocol/ext-apps@latest');
-        const app = new App({ name: 'CarTrawler Booking', version: '1.0.0' });
-        app.ontoolresult = (res) => render(res.structuredContent || {});
-        app.connect();
-      } catch (_) {
-        window.addEventListener('message', ({ data }) => {
-          const sc = data?.structuredContent;
-          if (sc?.booking || sc?.booking_id) render(sc);
-          else if (data?.booking || data?.booking_id) render(data);
-        });
-        try { window.parent.postMessage({ type: 'mcp-ui-ready', widget: 'booking' }, '*'); } catch(_) {}
-      }
-    }
-    init();
-  </script>
+function cp(code){try{navigator.clipboard.writeText(code);}catch(e){}}
+function cpBid(bid){
+  cp(bid);
+  var b=document.getElementById('cpbid');
+  if(b){b.textContent='✅ Copied!';setTimeout(function(){b.textContent='📋 Copy Booking ID';},2000);}
+}
+</script>
 </body>
 </html>

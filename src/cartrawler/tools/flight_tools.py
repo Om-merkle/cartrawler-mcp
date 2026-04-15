@@ -13,9 +13,9 @@ from datetime import date
 from sqlalchemy import and_, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from cartrawler.auth.jwt_handler import verify_token
 from cartrawler.db.database import AsyncSessionLocal
 from cartrawler.db.models import Booking, Flight, User
+from cartrawler.tools.common import resolve_user, update_loyalty_tier
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -46,24 +46,11 @@ def _booking_to_dict(b: Booking) -> dict:
 
 
 async def _resolve_user(db: AsyncSession, access_token: str) -> User | None:
-    try:
-        payload = verify_token(access_token, expected_type="access")
-    except ValueError:
-        return None
-    result = await db.execute(select(User).where(User.user_id == payload["sub"]))
-    return result.scalar_one_or_none()
+    return await resolve_user(db, access_token)
 
 
 def _update_loyalty_tier(user: User) -> None:
-    pts = user.loyalty_points or 0
-    if pts >= 10000:
-        user.loyalty_tier = "PLATINUM"
-    elif pts >= 5000:
-        user.loyalty_tier = "GOLD"
-    elif pts >= 1000:
-        user.loyalty_tier = "SILVER"
-    else:
-        user.loyalty_tier = "BRONZE"
+    update_loyalty_tier(user)
 
 
 # ─────────────────────────────────────────────────────────────────────────────

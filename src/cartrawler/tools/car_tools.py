@@ -23,9 +23,9 @@ from datetime import date
 
 from sqlalchemy import and_, or_, select
 
-from cartrawler.auth.jwt_handler import verify_token
 from cartrawler.db.database import AsyncSessionLocal
 from cartrawler.db.models import Booking, Car, Offer, User
+from cartrawler.tools.common import resolve_user, update_loyalty_tier
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -80,13 +80,7 @@ def _next_booking_id(existing: list[str]) -> str:
 
 
 async def _resolve_user(db, access_token: str):
-    try:
-        payload = verify_token(access_token, expected_type="access")
-    except ValueError:
-        return None
-    from sqlalchemy import select as sel
-    result = await db.execute(sel(User).where(User.user_id == payload["sub"]))
-    return result.scalar_one_or_none()
+    return await resolve_user(db, access_token)
 
 
 def _update_loyalty_tier(user: User) -> None:
