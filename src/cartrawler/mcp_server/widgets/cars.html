@@ -23,7 +23,7 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 .hdr-title{font-size:14px;font-weight:700}
 .hdr-count{font-size:12px;color:var(--sub)}
 /* Carousel */
-.rail{display:flex;gap:10px;overflow-x:auto;padding-bottom:10px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.rail{display:flex;gap:10px;overflow-x:auto;padding-bottom:10px;scroll-snap-type:x mandatory}
 .rail::-webkit-scrollbar{height:3px}
 .rail::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px}
 /* Card */
@@ -80,13 +80,17 @@ window.addEventListener('message',function(ev){
   // JSON-RPC response to our initialize
   if(data.id&&_cb[data.id]){_cb[data.id](data.result||data.error);delete _cb[data.id];}
 
-  // Server pushes tool-result notification (MCP Apps protocol)
-  if(data.method==='notifications/tools/call_result'||data.method==='tool_result'){
-    var sc=(data.params||data).structuredContent||(data.params||data).structured_content;
+  // ChatGPT MCP Apps bridge notification (correct method name)
+  if(data.method==='ui/notifications/tool-result'){
+    var sc=(data.params||{}).structuredContent;
     if(sc&&sc.cars!==undefined)return render(sc);
   }
 
-  // Simpler host: direct structuredContent push
+  // Fallback: direct structuredContent push or legacy method names
+  if(data.method==='notifications/tools/call_result'||data.method==='tool_result'){
+    var sc2=(data.params||data).structuredContent;
+    if(sc2&&sc2.cars!==undefined)return render(sc2);
+  }
   if(data.structuredContent&&data.structuredContent.cars!==undefined)return render(data.structuredContent);
   if(data.cars!==undefined)return render(data);
 });

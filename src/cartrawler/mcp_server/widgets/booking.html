@@ -50,9 +50,15 @@ window.addEventListener('message',function(ev){
   var data;try{data=typeof ev.data==='string'?JSON.parse(ev.data):ev.data;}catch(e){return;}
   if(!data)return;
   if(data.id&&_cb[data.id]){_cb[data.id](data.result);delete _cb[data.id];}
-  if(data.method==='notifications/tools/call_result'||data.method==='tool_result'){
-    var sc=(data.params||data).structuredContent;
+  // ChatGPT MCP Apps bridge notification (correct method name)
+  if(data.method==='ui/notifications/tool-result'){
+    var sc=(data.params||{}).structuredContent;
     if(sc&&(sc.booking||sc.booking_id))return render(sc);
+  }
+  // Fallback: legacy method names and direct pushes
+  if(data.method==='notifications/tools/call_result'||data.method==='tool_result'){
+    var sc2=(data.params||data).structuredContent;
+    if(sc2&&(sc2.booking||sc2.booking_id))return render(sc2);
   }
   if(data.structuredContent&&(data.structuredContent.booking||data.structuredContent.booking_id))return render(data.structuredContent);
   if(data.booking||data.booking_id)return render(data);

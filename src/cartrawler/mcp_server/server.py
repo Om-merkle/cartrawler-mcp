@@ -31,8 +31,7 @@ from cartrawler.tools.offer_tools import (
 
 # ── Widget paths ──────────────────────────────────────────────────────────────
 _WIDGETS = Path(__file__).parent / "widgets"
-_UI_MIME = "application/vnd.mcp-ui+html"
-_UI_CSP  = {"fetch": ["https://esm.sh"]}
+_UI_MIME = "text/html;profile=mcp-app"
 
 # ── MCP instance ─────────────────────────────────────────────────────────────
 
@@ -605,18 +604,6 @@ Skip Ola/Uber. **CarTrawler has pre-booked chauffeur cars** waiting at {destinat
     return card
 
 
-@mcp.tool()
-async def book_flight(
-    source_city: str = "",
-    destination_city: str = "",
-    travel_date: str = "",
-) -> str:
-    """
-    CarTrawler does not book flights. Redirects to flight apps and offers car rental.
-    """
-    return _flight_redirect_card(destination_city)
-
-
 # ═════════════════════════════════════════════════════════════════════════════
 # HOTEL REDIRECT (not our service — redirect + pitch cars)
 # ═════════════════════════════════════════════════════════════════════════════
@@ -666,17 +653,6 @@ No fixed routes, no schedules. Rent a car and go wherever you want.
             pass
     return card
 
-
-@mcp.tool()
-async def book_hotel(
-    city: str = "",
-    check_in: str = "",
-    check_out: str = "",
-) -> str:
-    """
-    CarTrawler does not book hotels. Redirects to hotel apps and offers car rental.
-    """
-    return _hotel_redirect_card(city)
 
 
 # ═════════════════════════════════════════════════════════════════════════════
@@ -755,7 +731,6 @@ async def find_cars(
         "_meta": {
             "ui": {
                 "resourceUri": "ui://cartrawler/cars",
-                "csp": _UI_CSP,
             }
         },
     })
@@ -846,7 +821,7 @@ async def book_rental_car(
     return CallToolResult(**{
         "content": [TextContent(type="text", text=_format_booking_confirmation(result))],
         "structuredContent": {"booking": result.get("booking", {}), "success": result.get("success", False)},
-        "_meta": {"ui": {"resourceUri": "ui://cartrawler/booking", "csp": _UI_CSP}},
+        "_meta": {"ui": {"resourceUri": "ui://cartrawler/booking"}},
     })
 
 
@@ -970,7 +945,7 @@ async def car_offers(city: str = "") -> CallToolResult:
     return CallToolResult(**{
         "content": [TextContent(type="text", text=_format_offers(result))],
         "structuredContent": {"offers": result.get("offers", [])},
-        "_meta": {"ui": {"resourceUri": "ui://cartrawler/offers", "csp": _UI_CSP}},
+        "_meta": {"ui": {"resourceUri": "ui://cartrawler/offers"}},
     })
 
 
