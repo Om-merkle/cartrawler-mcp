@@ -155,6 +155,10 @@ app = Starlette(
         *_mcp_sse_app.routes,                # /sse (GET) + /messages (POST) — direct, no stripping
     ]
 )
+# Starlette 1.x removed redirect_slashes from __init__; set it on the router
+# directly. Without this, POST /mcp → 307 /mcp/ → 404, breaking ChatGPT's
+# MCP handshake entirely (tools are never discovered).
+app.router.redirect_slashes = False
 
 # ─────────────────────────────────────────────────────────────────────────────
 # CLI entry point
