@@ -1,25 +1,30 @@
-"""Password hashing helpers using bcrypt via passlib."""
-from passlib.context import CryptContext
+"""Password hashing helpers using bcrypt directly.
 
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+passlib 1.7.4 is incompatible with bcrypt >= 4.x (bcrypt removed __about__
+and now raises ValueError for passwords > 72 bytes before passlib can
+intercept it). We use bcrypt directly so we control truncation explicitly.
+"""
+import bcrypt
 
-# bcrypt silently truncates (or errors) at 72 bytes — truncate explicitly so
-# hash and verify are always consistent regardless of passlib/bcrypt version.
+# bcrypt hard limit is 72 bytes of UTF-8. Truncate before hashing so
+# hash() and verify() are always consistent.
 _BCRYPT_MAX = 72
 
 
-def _truncate(plain: str) -> str:
-    encoded = plain.encode("utf-8")
-    if len(encoded) > _BCRYPT_MAX:
-        encoded = encoded[:_BCRYPT_MAX]
-    return encoded.decode("utf-8", errors="ignore")
+def _encode(plain: str) -> bytes:
+    """Return UTF-8 bytes of *plain* capped at 72 bytes."""
+    raw = plain.encode("utf-8")
+    return raw[:_BCRYPT_MAX]
 
 
 def hash_password(plain: str) -> str:
     """Return the bcrypt hash of *plain*."""
-    return pwd_context.hash(_truncate(plain))
+    return bcrypt.hashpw(_encode(plain), bcrypt.gensalt()).decode("utf-8")
 
 
 def verify_password(plain: str, hashed: str) -> bool:
     """Return True if *plain* matches the stored *hashed* password."""
-    return pwd_context.verify(_truncate(plain), hashed)
+    try:
+        return bcrypt.checkpw(_encode(plain), hashed.encode("utf-8"))
+    except Exception:
+        return False
