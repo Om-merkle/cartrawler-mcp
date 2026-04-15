@@ -19,6 +19,7 @@ from sqlalchemy import text
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from cartrawler.db.database import engine
+from cartrawler.auth.password import hash_password
 from cartrawler.db.models import (
     Base,
     Booking,
@@ -31,6 +32,10 @@ from cartrawler.db.models import (
     User,
     UserSession,
 )
+
+# Default password for all CSV-seeded users (change after first login)
+_SEED_PASSWORD = "cartrawler123"
+_SEED_PASSWORD_HASH = hash_password(_SEED_PASSWORD)
 
 logger = logging.getLogger("cartrawler.admin.seeder")
 
@@ -107,7 +112,7 @@ async def _seed_users(session: AsyncSession) -> int:
         home_city=r.get("home_city") or None,
         loyalty_tier=r.get("loyalty_tier", "BRONZE"),
         loyalty_points=_int_or_none(r.get("loyalty_points", "0")) or 0,
-        hashed_password=None, is_active=True, is_verified=True,
+        hashed_password=_SEED_PASSWORD_HASH, is_active=True, is_verified=True,
     ) for r in rows])
     return len(rows)
 

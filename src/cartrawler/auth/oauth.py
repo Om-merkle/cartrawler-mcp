@@ -334,7 +334,7 @@ async def oauth_authorize(request: Request) -> HTMLResponse | RedirectResponse:
         except Exception as exc:
             return _render("login", login_msg=_msg(f"Database error: {exc}. Please try again."), **h)
 
-        if not user or not verify_password(password, str(user.hashed_password)):
+        if not user or not user.hashed_password or not verify_password(password, str(user.hashed_password)):
             return _render("login", login_msg=_msg("Invalid email or password."), **h)
 
         if not bool(user.is_active):
