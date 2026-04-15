@@ -327,9 +327,12 @@ async def oauth_authorize(request: Request) -> HTMLResponse | RedirectResponse:
         if not email or not password:
             return _render("login", login_msg=_msg("Email and password are required."), **h)
 
-        async with AsyncSessionLocal() as db:
-            r = await db.execute(select(User).where(User.email == email))
-            user: User | None = r.scalar_one_or_none()
+        try:
+            async with AsyncSessionLocal() as db:
+                r = await db.execute(select(User).where(User.email == email))
+                user: User | None = r.scalar_one_or_none()
+        except Exception as exc:
+            return _render("login", login_msg=_msg(f"Database error: {exc}. Please try again."), **h)
 
         if not user or not verify_password(password, str(user.hashed_password)):
             return _render("login", login_msg=_msg("Invalid email or password."), **h)
@@ -354,33 +357,37 @@ async def oauth_authorize(request: Request) -> HTMLResponse | RedirectResponse:
             return _render("register",
                            register_msg=_msg("Password must be at least 6 characters."), **h)
 
-        async with AsyncSessionLocal() as db:
-            # Check duplicate email
-            r = await db.execute(select(User).where(User.email == email))
-            if r.scalar_one_or_none():
-                return _render("register",
-                               register_msg=_msg("An account with this email already exists. Please sign in."), **h)
+        try:
+            async with AsyncSessionLocal() as db:
+                # Check duplicate email
+                r = await db.execute(select(User).where(User.email == email))
+                if r.scalar_one_or_none():
+                    return _render("register",
+                                   register_msg=_msg("An account with this email already exists. Please sign in."), **h)
 
-            # Generate user ID
-            all_ids_r = await db.execute(select(User.user_id))
-            all_ids = [row[0] for row in all_ids_r.fetchall()]
-            user_id = _next_user_id(all_ids)
+                # Generate user ID
+                all_ids_r = await db.execute(select(User.user_id))
+                all_ids = [row[0] for row in all_ids_r.fetchall()]
+                user_id = _next_user_id(all_ids)
 
-            new_user = User(
-                user_id=user_id,
-                name=name,
-                email=email,
-                hashed_password=hash_password(password),
-                phone=phone,
-                home_city=home_city,
-                loyalty_tier="Bronze",
-                loyalty_points=0,
-                is_active=True,
-                is_verified=False,
-            )
-            db.add(new_user)
-            await db.commit()
-            await db.refresh(new_user)
+                new_user = User(
+                    user_id=user_id,
+                    name=name,
+                    email=email,
+                    hashed_password=hash_password(password),
+                    phone=phone,
+                    home_city=home_city,
+                    loyalty_tier="Bronze",
+                    loyalty_points=0,
+                    is_active=True,
+                    is_verified=False,
+                )
+                db.add(new_user)
+                await db.commit()
+                await db.refresh(new_user)
+        except Exception as exc:
+            return _render("register",
+                           register_msg=_msg(f"Database error: {exc}. Run /admin/seed first to initialise the database."), **h)
 
         return _redirect(new_user)
 
