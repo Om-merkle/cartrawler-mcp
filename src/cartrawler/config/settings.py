@@ -50,6 +50,7 @@ class Settings(BaseSettings):
     mcp_server_name: str = "cartrawler-mcp"
     mcp_server_host: str = "0.0.0.0"
     mcp_server_port: int = 8000
+    mcp_server_base_url: str = "https://cartrawler-mcp-y81f.onrender.com"
 
     # ── External APIs ──────────────────────────────────────────────────────────
     cartrawler_api_key: str = ""
