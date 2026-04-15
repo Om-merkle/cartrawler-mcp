@@ -32,23 +32,21 @@ h2{font-size:14px;font-weight:700;margin-bottom:12px}
 <body>
 <div id="app"><div class="loading">🏷️ Loading offers…</div></div>
 <script>
-var _id=0,_cb={};
-function send(method,params,cb){
-  var id=++_id;if(cb)_cb[id]=cb;
-  var msg={jsonrpc:'2.0',method:method,id:id};
-  if(params!==undefined)msg.params=params;
-  try{window.parent.postMessage(JSON.stringify(msg),'*');}catch(e){}
+function tryOpenAIBridge(){
+  try{
+    var meta=window.openai&&window.openai.toolResponseMetadata;
+    if(meta&&meta.offers){render(meta);return true;}
+  }catch(e){}
+  return false;
 }
 window.addEventListener('message',function(ev){
   var data;try{data=typeof ev.data==='string'?JSON.parse(ev.data):ev.data;}catch(e){return;}
   if(!data)return;
-  if(data.id&&_cb[data.id]){_cb[data.id](data.result);delete _cb[data.id];}
-  // ChatGPT MCP Apps bridge notification (correct method name)
   if(data.method==='ui/notifications/tool-result'){
     var sc=(data.params||{}).structuredContent;
     if(sc&&sc.offers)return render(sc);
+    setTimeout(tryOpenAIBridge,50);
   }
-  // Fallback: legacy method names and direct pushes
   if(data.method==='notifications/tools/call_result'||data.method==='tool_result'){
     var sc2=(data.params||data).structuredContent;
     if(sc2&&sc2.offers)return render(sc2);
@@ -56,9 +54,7 @@ window.addEventListener('message',function(ev){
   if(data.structuredContent&&data.structuredContent.offers)return render(data.structuredContent);
   if(data.offers)return render(data);
 });
-send('initialize',{protocolVersion:'2024-11-05',capabilities:{},clientInfo:{name:'CarTrawler Offers Widget',version:'1.0.0'}},function(){
-  send('notifications/initialized');
-});
+if(!tryOpenAIBridge()){setTimeout(tryOpenAIBridge,200);}
 
 function fmt(n){return parseInt(n||0).toLocaleString('en-IN');}
 function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}

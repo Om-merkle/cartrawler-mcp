@@ -720,18 +720,20 @@ async def find_cars(
             + "\n\n> 💡 Apply code in `book_rental_car` · Check savings with `validate_car_coupon`"
         )
 
+    sc = {
+        "city": result.get("city", city),
+        "total": result.get("count", 0),
+        "cars": result.get("cars", []),
+        "offers": active_offers,
+    }
     return CallToolResult(**{
         "content": [TextContent(type="text", text=cars_md)],
-        "structuredContent": {
-            "city": result.get("city", city),
-            "total": result.get("count", 0),
-            "cars": result.get("cars", []),
-            "offers": active_offers,
-        },
+        "structuredContent": sc,
+        # _meta is exposed to the widget via window.openai.toolResponseMetadata
+        # Include full data here as well as the UI resource reference
         "_meta": {
-            "ui": {
-                "resourceUri": "ui://cartrawler/cars",
-            }
+            "ui": {"resourceUri": "ui://cartrawler/cars"},
+            **sc,
         },
     })
 
@@ -818,10 +820,11 @@ async def book_rental_car(
         payment_method=payment_method,
         coupon_code=coupon_code or None,
     )
+    booking_data = {"booking": result.get("booking", {}), "success": result.get("success", False)}
     return CallToolResult(**{
         "content": [TextContent(type="text", text=_format_booking_confirmation(result))],
-        "structuredContent": {"booking": result.get("booking", {}), "success": result.get("success", False)},
-        "_meta": {"ui": {"resourceUri": "ui://cartrawler/booking"}},
+        "structuredContent": booking_data,
+        "_meta": {"ui": {"resourceUri": "ui://cartrawler/booking"}, **booking_data},
     })
 
 
@@ -942,10 +945,11 @@ async def car_offers(city: str = "") -> CallToolResult:
     Returns coupon codes, discount %, and eligibility criteria.
     """
     result = await get_all_offers(applicable_on="CAR", city=city or None)
+    offers_data = {"offers": result.get("offers", [])}
     return CallToolResult(**{
         "content": [TextContent(type="text", text=_format_offers(result))],
-        "structuredContent": {"offers": result.get("offers", [])},
-        "_meta": {"ui": {"resourceUri": "ui://cartrawler/offers"}},
+        "structuredContent": offers_data,
+        "_meta": {"ui": {"resourceUri": "ui://cartrawler/offers"}, **offers_data},
     })
 
 

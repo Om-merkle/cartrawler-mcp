@@ -58,35 +58,38 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 <div id="app"><div class="loading">🚗 Loading CarTrawler cars…</div></div>
 <script>
 /* ── CarTrawler Cars Widget
-   Protocol: MCP JSON-RPC 2.0 over postMessage (no external deps)
-   Fallback : raw structuredContent push or demo mode
+   Data sources (in priority order):
+   1. window.openai.toolResponseMetadata  — ChatGPT MCP Apps bridge (_meta)
+   2. ui/notifications/tool-result        — postMessage from ChatGPT bridge (structuredContent)
+   3. Legacy postMessage method names     — fallback
 ──────────────────────────────────────────────────────────────── */
-var _id=0,_cb={};
 
-function send(method,params,cb){
-  var id=++_id;
-  if(cb)_cb[id]=cb;
-  var msg={jsonrpc:'2.0',method:method,id:id};
-  if(params!==undefined)msg.params=params;
-  try{window.parent.postMessage(JSON.stringify(msg),'*');}catch(e){}
+// 1. ChatGPT Apps bridge: data is in window.openai.toolResponseMetadata
+//    This maps to the _meta field returned by the tool.
+function tryOpenAIBridge(){
+  try{
+    var meta=window.openai&&window.openai.toolResponseMetadata;
+    if(meta&&meta.cars!==undefined){render(meta);return true;}
+  }catch(e){}
+  return false;
 }
 
+// 2. postMessage listener (ui/notifications/tool-result from ChatGPT bridge)
 window.addEventListener('message',function(ev){
   var data;
   try{data=typeof ev.data==='string'?JSON.parse(ev.data):ev.data;}
   catch(e){return;}
   if(!data)return;
 
-  // JSON-RPC response to our initialize
-  if(data.id&&_cb[data.id]){_cb[data.id](data.result||data.error);delete _cb[data.id];}
-
   // ChatGPT MCP Apps bridge notification (correct method name)
   if(data.method==='ui/notifications/tool-result'){
     var sc=(data.params||{}).structuredContent;
     if(sc&&sc.cars!==undefined)return render(sc);
+    // _meta may also come via toolResponseMetadata after this notification
+    setTimeout(tryOpenAIBridge,50);
   }
 
-  // Fallback: direct structuredContent push or legacy method names
+  // Fallback: legacy method names and direct pushes
   if(data.method==='notifications/tools/call_result'||data.method==='tool_result'){
     var sc2=(data.params||data).structuredContent;
     if(sc2&&sc2.cars!==undefined)return render(sc2);
@@ -95,15 +98,11 @@ window.addEventListener('message',function(ev){
   if(data.cars!==undefined)return render(data);
 });
 
-// Step 1: initialize the MCP bridge
-send('initialize',{
-  protocolVersion:'2024-11-05',
-  capabilities:{roots:{listChanged:false}},
-  clientInfo:{name:'CarTrawler Cars Widget',version:'1.0.0'}
-},function(){
-  // Step 2: signal we're ready for data
-  send('notifications/initialized');
-});
+// Try immediately on load (data may already be set by ChatGPT before DOMContentLoaded)
+if(!tryOpenAIBridge()){
+  // Also try after a short delay in case ChatGPT injects window.openai asynchronously
+  setTimeout(tryOpenAIBridge,200);
+}
 
 /* ── URL helpers ──────────────────────────────────────────────── */
 var INT_URLS={
