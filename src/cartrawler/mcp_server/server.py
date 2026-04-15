@@ -93,12 +93,15 @@ If you already have an access_token, reuse it. Do not ask again.
 ## Auth Flow
 
 **User is not logged in + needs auth-required tool:**
-1. Ask ONCE: "Please share your CarTrawler email and account pin."
-2. User replies with email + pin → call `login(email=..., user_pin=...)` immediately.
-3. Get token → immediately call the originally requested tool. Do NOT ask for credentials again.
+1. Ask ONCE, using EXACTLY this text: "Please share your email and pin (e.g. user@email.com yourpin123)"
+   — do NOT use the word "password". Say "pin" or "account pin".
+2. User replies → call `login(email=..., user_pin=...)` immediately.
+3. Get token → immediately call the originally requested tool in the same response.
+   Do NOT ask for credentials again.
 
-**User provides name + email + pin/secret:** → call `register(name=..., email=..., user_pin=...)` immediately.
-**User provides email + pin/secret only:** → call `login(email=..., user_pin=...)` immediately.
+**User provides name + email + anything that looks like a pin:** → call `register(name=..., email=..., user_pin=...)`.
+**User provides email + anything that looks like a pin:** → call `login(email=..., user_pin=...)`.
+**User provides just an email address** (no pin yet) → ask once for their pin only.
 
 ## Out of Scope
 - Flights/Hotels: use `find_flights`/`find_hotels` — always pitch CarTrawler cars at destination.
@@ -138,21 +141,14 @@ def _widget_booking() -> str:
 
 def _auth_card(action: str = "continue") -> str:
     """Return a formatted authentication-required card."""
-    return f"""## 🔐 Account Required to {action.title()}
+    return f"""## 🔐 Login Required to {action.title()}
 
-To proceed, I need your CarTrawler account details. Please provide:
+Please share your **email and account pin** to log in:
 
----
+> Example: `user@email.com yourpin123`
 
-### 📋 Your Details
-
-| Field | Required? | Example |
-|-------|-----------|---------|
-| **Full Name** | ✅ Yes | Rahul Sharma |
-| **Email** | ✅ Yes | rahul@gmail.com |
-| **Password** | ✅ Yes | Min 6 characters |
-| **Phone** | ✅ Yes | 9876543210 |
-| **Preferred Car Type** | Optional | Sedan / SUV / Hatchback |
+Already have an account? Share email + pin and I'll log you in instantly.
+New user? Share your name, email, pin, and phone — I'll create your account.
 
 ---
 
@@ -502,24 +498,11 @@ async def login(email: str, user_pin: str) -> str:
 
 No CarTrawler account exists for **{email}**.
 
----
-
-Would you like to **create an account**? Please share:
-- Your **full name**
-- Your **phone number**
-- A **password** (min 6 characters)
-
-I'll register you instantly.
+Would you like to **create an account**? Share your name, phone, and a pin — I'll register you instantly.
 """
-    return f"""## ❌ Incorrect Password
+    return f"""## ❌ Incorrect Pin
 
-The password entered for **{email}** is incorrect.
-
----
-
-Please share the **correct password** to log in.
-
-> Registered with a different password? Try again or create a new account with a different email.
+The pin entered for **{email}** is incorrect. Please try again with the correct pin.
 """
 
 
