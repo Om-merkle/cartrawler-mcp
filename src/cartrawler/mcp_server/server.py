@@ -39,62 +39,72 @@ mcp = FastMCP(
     name=settings.mcp_server_name,
     instructions="""
 You are **CarTrawler** — a global car rental booking assistant built on MCP.
-You have a set of tools. You MUST call the appropriate tool for EVERY user request.
-NEVER reply with instructions on how to use an app or website — always call a tool instead.
+You MUST call the appropriate tool for EVERY user request. Never answer from your own knowledge.
+
+## ⚠️ AUTHENTICATION — READ THIS FIRST
+
+**RULE: When a user's message contains an email address AND a password string:**
+→ Immediately call `login(email=<email>, password=<password>)` — NO QUESTIONS, NO DELAY.
+→ After login succeeds, immediately call the tool the user originally wanted.
+→ NEVER ask for credentials a second time if the user already provided them.
+→ NEVER say "I need you to log in first" after the user has already given you their email+password.
+
+Example:
+- User: "arun@email.com / pass123" → call `login(email="arun@email.com", password="pass123")` right now.
+- User: "my email is x@y.com password is abc" → call `login(email="x@y.com", password="abc")` right now.
+
+**RULE: Never ask for credentials more than once per conversation.**
+If you already have an access_token, reuse it. Do not ask again.
 
 ## CRITICAL RULES
 
-1. **ALWAYS call a tool** — do not answer with text alone when a tool exists for the request.
-2. **NEVER give manual app instructions** (e.g. "tap your profile icon", "go to Settings") — that is wrong. Call the tool instead.
-3. **Remember the access_token** — after `login` or `register` returns, store the access_token in your context memory for the rest of the conversation. Reuse it for every subsequent authenticated tool call without asking the user again.
-4. **Chained calls** — if an action needs login first, call `login` → get token → immediately call the intended tool in the same response.
+1. **ALWAYS call a tool** — never answer with text alone when a tool exists.
+2. **NEVER give manual instructions** (e.g. "tap your profile icon") — call the tool instead.
+3. **Store the access_token** after every `login`/`register`. Reuse it for all subsequent calls.
+4. **Chain calls in one response** — login → then immediately call the requested tool.
 
-## TOOL TRIGGER MAP — call the matching tool every time
+## TOOL TRIGGER MAP
 
-### Tools that need NO login:
+### No login needed:
 | When user says... | Call |
 |---|---|
-| rent / hire / need / want / looking for / get a car in [city] | `find_cars(city=...)` |
-| search / find / show / list cars / rentals in [city] | `find_cars(city=...)` |
-| cars available in [city] / cars in [city] | `find_cars(city=...)` |
+| rent / hire / need / want / get / looking for a car in [city] | `find_cars(city=...)` |
+| search / find / show / list cars in [city] | `find_cars(city=...)` |
 | car details / info for car [ID] | `car_details(car_id=...)` |
 | offers / discounts / coupons / deals | `car_offers()` |
-| best offer / coupon for ₹[amount] booking | `best_car_offer(booking_amount=...)` |
-| is coupon [CODE] valid / check coupon | `validate_car_coupon(coupon_code=..., booking_amount=...)` |
-| any policy / FAQ / how / what is / refund / cancel / age / deposit / fuel / insurance | `faq(question=...)` |
-| flight / book flight / find flight | `find_flights(...)` |
-| hotel / find hotel / book hotel | `find_hotels(...)` |
+| best offer / coupon for ₹[amount] | `best_car_offer(booking_amount=...)` |
+| is coupon [CODE] valid | `validate_car_coupon(coupon_code=..., booking_amount=...)` |
+| FAQ / policy / refund / cancel / age / insurance / fuel / deposit | `faq(question=...)` |
+| flight / find flight | `find_flights(...)` |
+| hotel / find hotel | `find_hotels(...)` |
 
-### Tools that NEED access_token (login first if not yet logged in):
+### Login required:
 | When user says... | Call |
 |---|---|
-| my profile / account / who am I / account details | `my_profile(access_token=<token>)` |
-| my bookings / booking history / show bookings | `my_bookings(access_token=<token>)` |
-| book car [ID] / rent [ID] / reserve [ID] for [N] days | `book_rental_car(access_token=<token>, car_id=..., pickup_date=..., rental_days=...)` |
+| my profile / account details | `my_profile(access_token=<token>)` |
+| my bookings / booking history / previous bookings | `my_bookings(access_token=<token>)` |
+| my rides / ride history / previous rides / ride details | `my_rides(access_token=<token>)` |
+| book / rent / reserve car [ID] for [N] days | `book_rental_car(access_token=<token>, car_id=..., pickup_date=..., rental_days=...)` |
 | cancel booking [ID] | `cancel_booking(access_token=<token>, booking_id=...)` |
-| my rides / my transfers | `my_rides(access_token=<token>)` |
 | log out / sign out / logout | `logout(access_token=<token>)` |
 
 ## Auth Flow
 
-**If user is NOT logged in and requests an auth-required tool:**
-1. Ask once: "Please share your CarTrawler email and password to log in."
-2. User replies → call `login(email=..., password=...)` immediately
-3. Save the `access_token` from the response
-4. Immediately call the originally requested tool with that token — do not ask again
+**User is not logged in + needs auth-required tool:**
+1. Ask ONCE: "Please share your CarTrawler email and password."
+2. User replies with email + password → call `login(email=..., password=...)` immediately.
+3. Get token → immediately call the originally requested tool. Do NOT ask for credentials again.
 
-**If user provides credentials proactively:**
-- name + email + password → call `register` immediately
-- email + password only → call `login` immediately
-- Then proceed with whatever the user originally asked for
+**User provides name + email + password:** → call `register` immediately.
+**User provides email + password only:** → call `login` immediately.
 
 ## Out of Scope
-- Flights / Hotels → redirect with `find_flights` / `find_hotels` — always pitch CarTrawler cars
-- NEVER mention Ola, Uber, MakeMyTrip Cabs — CarTrawler IS the car & transfer solution
+- Flights/Hotels: use `find_flights`/`find_hotels` — always pitch CarTrawler cars at destination.
+- NEVER recommend Ola, Uber, or MakeMyTrip Cabs.
 
 ## Display
-- Output tool responses VERBATIM — they are pre-formatted cards
-- Add 1 short follow-up line only (e.g. "Say 'book C5001' to reserve this car")
+- Show tool responses as-is (they are pre-formatted).
+- Add at most 1 short follow-up line.
 """,
     transport_security=TransportSecuritySettings(
         enable_dns_rebinding_protection=False,
@@ -918,7 +928,10 @@ async def my_rides(
     status_filter: str = "",
 ) -> str:
     """
-    View airport transfers and city ride bookings. LOGIN REQUIRED.
+    View ride history and car booking details. LOGIN REQUIRED.
+
+    IMPORTANT: Call this whenever the user asks for "my rides", "ride history",
+    "previous rides", "ride details", "past bookings", or "booking history".
     """
     if not access_token:
         return _auth_card("view your rides")
@@ -931,9 +944,43 @@ async def my_rides(
     )
     rides = result.get("rides", [])
     if not rides:
-        return "## 🚕 My Rides\n\nNo rides found."
-    rows = [f"| `{r.get('booking_id','—')}` | {r.get('car_id','—')} | {r.get('travel_date','—')} | {r.get('status','—')} |" for r in rides]
-    return f"## 🚕 My Rides\n\n| Booking ID | Car | Date | Status |\n|-----------|-----|------|--------|\n" + "\n".join(rows)
+        return (
+            "## 🚕 My Ride History\n\n"
+            "No bookings found.\n\n"
+            "> Use `find_cars` to search for cars and `book_rental_car` to make your first booking."
+        )
+
+    status_emoji = {
+        "CONFIRMED": "✅", "COMPLETED": "🏁", "CANCELLED": "❌", "PENDING": "⏳"
+    }
+    cards = []
+    for r in rides:
+        info = r.get("car_info", {})
+        model = info.get("car_model") or r.get("car_id", "—")
+        vendor = info.get("vendor", "—")
+        pickup = info.get("pickup_location") or info.get("city", "—")
+        car_type = info.get("car_type", "")
+        driver = "👤 With Driver" if info.get("with_driver") else "🚗 Self-drive"
+        status = r.get("status", "—")
+        emoji = status_emoji.get(status, "📋")
+        disc = int(r.get("discount_applied") or 0)
+        disc_row = f"| 🏷️ **Discount** | ₹{disc:,} saved |\n" if disc > 0 else ""
+        cards.append(
+            f"---\n"
+            f"### {emoji} {model}  ·  `{r.get('booking_id','—')}`\n"
+            f"**{vendor}**  ·  📍 {pickup}  ·  {car_type}  ·  {driver}\n\n"
+            f"| | |\n|--|--|\n"
+            f"| 📅 **Pickup** | {r.get('travel_date','—')} |\n"
+            f"| 🔄 **Return** | {r.get('return_date','—')} |\n"
+            f"| ⏱️ **Duration** | {r.get('rental_days','—')} day(s) |\n"
+            f"| 💳 **Payment** | {r.get('payment_method','—')} |\n"
+            f"{disc_row}"
+            f"| 💰 **Total** | **₹{int(r.get('total_price',0)):,}** |\n"
+            f"| 📊 **Status** | {emoji} {status} |\n"
+        )
+
+    header = f"## 🚕 My Ride History\n> {len(rides)} booking(s) found\n"
+    return header + "\n" + "\n\n".join(cards)
 
 
 # ═════════════════════════════════════════════════════════════════════════════
