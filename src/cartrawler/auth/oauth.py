@@ -68,6 +68,16 @@ async def oauth_metadata(_request: Request) -> JSONResponse:
     })
 
 
+async def oauth_protected_resource(_request: Request) -> JSONResponse:
+    """RFC 9728 OAuth Protected Resource Metadata — tells ChatGPT where our AS is."""
+    base = _base_url()
+    return JSONResponse({
+        "resource": f"{base}/mcp",
+        "authorization_servers": [base],
+        "bearer_methods_supported": ["header"],
+    })
+
+
 # ─────────────────────────────────────────────────────────────────────────────
 # POST /oauth/register  (dynamic client registration — RFC 7591)
 # ─────────────────────────────────────────────────────────────────────────────

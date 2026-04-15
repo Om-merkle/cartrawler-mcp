@@ -22,7 +22,7 @@ from starlette.responses import JSONResponse
 from starlette.routing import Mount, Route
 
 from cartrawler.auth.oauth import (
-    oauth_authorize, oauth_metadata, oauth_register, oauth_token,
+    oauth_authorize, oauth_metadata, oauth_protected_resource, oauth_register, oauth_token,
 )
 from cartrawler.config import settings
 from cartrawler.mcp_server import create_mcp_app, create_mcp_http_app
@@ -139,10 +139,18 @@ app = Starlette(
         Route("/admin/seed",    admin_seed,  methods=["POST"]),
         Route("/admin/embed",   admin_embed, methods=["POST"]),
         # OAuth 2.0 + PKCE — required by ChatGPT Apps UI
+        # Discovery at root (RFC 8414 AS metadata)
         Route("/.well-known/oauth-authorization-server", oauth_metadata),
-        Route("/oauth/register",  oauth_register,  methods=["POST"]),
-        Route("/oauth/authorize", oauth_authorize, methods=["GET", "POST"]),
-        Route("/oauth/token",     oauth_token,     methods=["POST"]),
+        # Discovery under /mcp (ChatGPT probes relative to the MCP server URL)
+        Route("/mcp/.well-known/oauth-authorization-server", oauth_metadata),
+        Route("/mcp/.well-known/oauth-protected-resource",   oauth_protected_resource),
+        # Auth endpoints (also duplicated under /mcp/ so relative redirects work)
+        Route("/oauth/register",      oauth_register,  methods=["POST"]),
+        Route("/oauth/authorize",     oauth_authorize, methods=["GET", "POST"]),
+        Route("/oauth/token",         oauth_token,     methods=["POST"]),
+        Route("/mcp/oauth/register",  oauth_register,  methods=["POST"]),
+        Route("/mcp/oauth/authorize", oauth_authorize, methods=["GET", "POST"]),
+        Route("/mcp/oauth/token",     oauth_token,     methods=["POST"]),
         Mount("/mcp",  app=_mcp_http_app),   # Streamable HTTP for ChatGPT Apps UI
         *_mcp_sse_app.routes,                # /sse (GET) + /messages (POST) — direct, no stripping
     ]
