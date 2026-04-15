@@ -54,7 +54,9 @@ NEVER reply with instructions on how to use an app or website — always call a 
 ### Tools that need NO login:
 | When user says... | Call |
 |---|---|
-| search / find / show cars / rentals in [city] | `find_cars(city=...)` |
+| rent / hire / need / want / looking for / get a car in [city] | `find_cars(city=...)` |
+| search / find / show / list cars / rentals in [city] | `find_cars(city=...)` |
+| cars available in [city] / cars in [city] | `find_cars(city=...)` |
 | car details / info for car [ID] | `car_details(car_id=...)` |
 | offers / discounts / coupons / deals | `car_offers()` |
 | best offer / coupon for ₹[amount] booking | `best_car_offer(booking_amount=...)` |
@@ -68,7 +70,7 @@ NEVER reply with instructions on how to use an app or website — always call a 
 |---|---|
 | my profile / account / who am I / account details | `my_profile(access_token=<token>)` |
 | my bookings / booking history / show bookings | `my_bookings(access_token=<token>)` |
-| book car [ID] / rent [ID] / reserve [ID] | `book_rental_car(access_token=<token>, car_id=..., pickup_date=..., rental_days=...)` |
+| book car [ID] / rent [ID] / reserve [ID] for [N] days | `book_rental_car(access_token=<token>, car_id=..., pickup_date=..., rental_days=...)` |
 | cancel booking [ID] | `cancel_booking(access_token=<token>, booking_id=...)` |
 | my rides / my transfers | `my_rides(access_token=<token>)` |
 | log out / sign out / logout | `logout(access_token=<token>)` |
@@ -673,7 +675,11 @@ async def find_cars(
     limit: int = 20,
 ) -> CallToolResult:
     """
-    Search available rental cars in any Indian city. ← CORE SERVICE
+    Search / find / rent / hire available rental cars in any Indian city. ← CORE SERVICE
+
+    IMPORTANT: Call this tool whenever user says "rent a car", "need a car",
+    "looking for a car", "want to hire", "get a car", "car rental in [city]",
+    "cars available in [city]", or any variation of wanting a car in a city.
 
     car_type: Sedan | SUV | Hatchback | Luxury | MUV | Compact
     fuel_type: Petrol | Diesel | CNG
