@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import logging
 import os
+from contextlib import asynccontextmanager
 
 import uvicorn
 
@@ -130,33 +131,43 @@ async def admin_embed(request: Request) -> JSONResponse:
 _mcp_sse_app  = create_mcp_app()       # SSE  — ChatGPT Custom Connector (/sse)
 _mcp_http_app = create_mcp_http_app()  # Streamable HTTP — ChatGPT Apps UI (/mcp)
 
-# Inject SSE routes directly — avoids Starlette path-stripping bug with Mount("/")
-# _mcp_sse_app.routes = [Route('/sse', ...), Mount('/messages', ...)]
+
+@asynccontextmanager
+async def lifespan(app: Starlette):
+    """
+    Compose the MCP HTTP app's lifespan into the main app.
+
+    FastMCP's StreamableHTTPSessionManager must be started via its own
+    lifespan before it can handle any requests. Injecting routes directly
+    (to avoid Starlette's path-stripping Mount bug) skips that startup, so
+    we run it explicitly here.
+    """
+    async with _mcp_http_app.router.lifespan_context(_mcp_http_app):
+        yield
+
+
+# Inject all routes directly — avoids Starlette's Mount path-stripping bug.
+# Mount("/mcp", app) strips the /mcp prefix before passing to FastMCP, so
+# FastMCP's internal /mcp route receives "/" and returns 404.
 app = Starlette(
+    lifespan=lifespan,
     routes=[
         Route("/health",        health),
         Route("/admin/dbcheck", admin_dbcheck),
         Route("/admin/seed",    admin_seed,  methods=["POST"]),
         Route("/admin/embed",   admin_embed, methods=["POST"]),
         # OAuth 2.0 + PKCE — required by ChatGPT Apps UI
-        # Discovery at root (RFC 8414 AS metadata)
         Route("/.well-known/oauth-authorization-server", oauth_metadata),
-        # Discovery under /mcp (ChatGPT probes relative to the MCP server URL)
         Route("/mcp/.well-known/oauth-authorization-server", oauth_metadata),
         Route("/mcp/.well-known/oauth-protected-resource",   oauth_protected_resource),
-        # Auth endpoints (also duplicated under /mcp/ so relative redirects work)
         Route("/oauth/register",      oauth_register,  methods=["POST"]),
         Route("/oauth/authorize",     oauth_authorize, methods=["GET", "POST"]),
         Route("/oauth/token",         oauth_token,     methods=["POST"]),
         Route("/mcp/oauth/register",  oauth_register,  methods=["POST"]),
         Route("/mcp/oauth/authorize", oauth_authorize, methods=["GET", "POST"]),
         Route("/mcp/oauth/token",     oauth_token,     methods=["POST"]),
-        # Streamable HTTP for ChatGPT Apps UI.
-        # Inject routes directly (same pattern as SSE) — the FastMCP HTTP app
-        # registers its handler at /mcp internally. Mount("/mcp", ...) would
-        # strip the prefix and the app would receive "/" → 404.
-        *_mcp_http_app.routes,
-        *_mcp_sse_app.routes,                # /sse (GET) + /messages (POST) — direct, no stripping
+        *_mcp_http_app.routes,   # /mcp  — Streamable HTTP (ChatGPT Apps UI)
+        *_mcp_sse_app.routes,    # /sse + /messages — SSE (ChatGPT Custom Connector)
     ]
 )
 
