@@ -127,14 +127,16 @@ async def admin_embed(request: Request) -> JSONResponse:
 _mcp_sse_app  = create_mcp_app()       # SSE  — ChatGPT Custom Connector (/sse)
 _mcp_http_app = create_mcp_http_app()  # Streamable HTTP — ChatGPT Apps UI (/mcp)
 
+# Inject SSE routes directly — avoids Starlette path-stripping bug with Mount("/")
+# _mcp_sse_app.routes = [Route('/sse', ...), Mount('/messages', ...)]
 app = Starlette(
     routes=[
-        Route("/health",       health),
+        Route("/health",        health),
         Route("/admin/dbcheck", admin_dbcheck),
-        Route("/admin/seed",   admin_seed,  methods=["POST"]),
-        Route("/admin/embed",  admin_embed, methods=["POST"]),
+        Route("/admin/seed",    admin_seed,  methods=["POST"]),
+        Route("/admin/embed",   admin_embed, methods=["POST"]),
         Mount("/mcp",  app=_mcp_http_app),   # Streamable HTTP for ChatGPT Apps UI
-        Mount("/",     app=_mcp_sse_app),    # SSE for ChatGPT Custom Connector
+        *_mcp_sse_app.routes,                # /sse (GET) + /messages (POST) — direct, no stripping
     ]
 )
 
