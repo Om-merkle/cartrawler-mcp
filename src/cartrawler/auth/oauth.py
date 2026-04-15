@@ -387,7 +387,7 @@ async def oauth_authorize(request: Request) -> HTMLResponse | RedirectResponse:
                 await db.refresh(new_user)
         except Exception as exc:
             return _render("register",
-                           register_msg=_msg(f"Database error: {exc}. Run /admin/seed first to initialise the database."), **h)
+                           register_msg=_msg(f"Registration failed: {exc}"), **h)
 
         return _redirect(new_user)
 
