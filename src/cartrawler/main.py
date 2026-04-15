@@ -19,7 +19,7 @@ import uvicorn
 from starlette.applications import Starlette
 from starlette.requests import Request
 from starlette.responses import JSONResponse
-from starlette.routing import Mount, Route
+from starlette.routing import Route
 
 from cartrawler.auth.oauth import (
     oauth_authorize, oauth_metadata, oauth_protected_resource, oauth_register, oauth_token,
@@ -151,14 +151,14 @@ app = Starlette(
         Route("/mcp/oauth/register",  oauth_register,  methods=["POST"]),
         Route("/mcp/oauth/authorize", oauth_authorize, methods=["GET", "POST"]),
         Route("/mcp/oauth/token",     oauth_token,     methods=["POST"]),
-        Mount("/mcp",  app=_mcp_http_app),   # Streamable HTTP for ChatGPT Apps UI
+        # Streamable HTTP for ChatGPT Apps UI.
+        # Inject routes directly (same pattern as SSE) — the FastMCP HTTP app
+        # registers its handler at /mcp internally. Mount("/mcp", ...) would
+        # strip the prefix and the app would receive "/" → 404.
+        *_mcp_http_app.routes,
         *_mcp_sse_app.routes,                # /sse (GET) + /messages (POST) — direct, no stripping
     ]
 )
-# Starlette 1.x removed redirect_slashes from __init__; set it on the router
-# directly. Without this, POST /mcp → 307 /mcp/ → 404, breaking ChatGPT's
-# MCP handshake entirely (tools are never discovered).
-app.router.redirect_slashes = False
 
 # ─────────────────────────────────────────────────────────────────────────────
 # CLI entry point
