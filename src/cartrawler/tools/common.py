@@ -44,6 +44,12 @@ async def resolve_user(db: AsyncSession, access_token: str) -> User | None:
     return result.scalar_one_or_none()
 
 
+async def resolve_user_by_email(db: AsyncSession, email: str) -> User | None:
+    """Look up a user by email address — no token required."""
+    result = await db.execute(select(User).where(User.email == email.lower().strip()))
+    return result.scalar_one_or_none()
+
+
 def update_loyalty_tier(user: User) -> None:
     pts = user.loyalty_points or 0
     if pts >= 10000:

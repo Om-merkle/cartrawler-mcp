@@ -15,7 +15,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from cartrawler.db.database import AsyncSessionLocal
 from cartrawler.db.models import Booking, Flight, User
-from cartrawler.tools.common import resolve_user, update_loyalty_tier
+from cartrawler.tools.common import resolve_user, resolve_user_by_email, update_loyalty_tier
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -47,6 +47,10 @@ def _booking_to_dict(b: Booking) -> dict:
 
 async def _resolve_user(db: AsyncSession, access_token: str) -> User | None:
     return await resolve_user(db, access_token)
+
+
+async def _resolve_user_by_email(db: AsyncSession, email: str) -> User | None:
+    return await resolve_user_by_email(db, email)
 
 
 def _update_loyalty_tier(user: User) -> None:
@@ -85,16 +89,16 @@ async def get_booking_details(access_token: str, booking_id: str) -> dict:
 # ─────────────────────────────────────────────────────────────────────────────
 
 async def list_my_bookings(
-    access_token: str,
+    email: str,
     status_filter: str | None = None,
     booking_type: str | None = None,
     limit: int = 20,
 ) -> dict:
-    """List all bookings for the authenticated user with optional filters."""
+    """List all bookings for the user identified by email."""
     async with AsyncSessionLocal() as db:
-        user = await _resolve_user(db, access_token)
+        user = await _resolve_user_by_email(db, email)
         if not user:
-            return {"success": False, "message": "Authentication required.", "bookings": []}
+            return {"success": False, "message": f"No account found for {email}.", "bookings": []}
 
         conditions = [Booking.user_id == user.user_id]
         if status_filter:
@@ -122,12 +126,12 @@ async def list_my_bookings(
 # Tool: cancel_booking
 # ─────────────────────────────────────────────────────────────────────────────
 
-async def cancel_booking(access_token: str, booking_id: str) -> dict:
+async def cancel_booking(email: str, booking_id: str) -> dict:
     """Cancel a booking and process refund if eligible."""
     async with AsyncSessionLocal() as db:
-        user = await _resolve_user(db, access_token)
+        user = await _resolve_user_by_email(db, email)
         if not user:
-            return {"success": False, "message": "Authentication required."}
+            return {"success": False, "message": f"No account found for {email}."}
 
         r = await db.execute(
             select(Booking).where(

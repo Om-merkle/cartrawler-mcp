@@ -25,7 +25,7 @@ from sqlalchemy import and_, or_, select
 
 from cartrawler.db.database import AsyncSessionLocal
 from cartrawler.db.models import Booking, Car, Offer, User
-from cartrawler.tools.common import resolve_user, update_loyalty_tier
+from cartrawler.tools.common import resolve_user, resolve_user_by_email, update_loyalty_tier
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -81,6 +81,10 @@ def _next_booking_id(existing: list[str]) -> str:
 
 async def _resolve_user(db, access_token: str):
     return await resolve_user(db, access_token)
+
+
+async def _resolve_user_by_email(db, email: str):
+    return await resolve_user_by_email(db, email)
 
 
 def _update_loyalty_tier(user: User) -> None:
@@ -208,7 +212,7 @@ async def get_car_details(car_id: str) -> dict:
 # ─────────────────────────────────────────────────────────────────────────────
 
 async def book_car(
-    access_token: str,
+    email: str,
     car_id: str,
     pickup_date: str,         # YYYY-MM-DD
     rental_days: int,          # number of days
@@ -216,7 +220,7 @@ async def book_car(
     coupon_code: str | None = None,
 ) -> dict:
     """
-    Book a rental car for the authenticated user.
+    Book a rental car for the user identified by email.
 
     CarTrawler policy: Minimum rental age 21. Fuel not included.
     Security deposit collected at pickup (not charged here).
@@ -225,11 +229,11 @@ async def book_car(
         return {"success": False, "message": "Rental days must be at least 1.", "booking": None}
 
     async with AsyncSessionLocal() as db:
-        user = await _resolve_user(db, access_token)
+        user = await _resolve_user_by_email(db, email)
         if not user:
             return {
                 "success": False,
-                "message": "Authentication required. Please log in first.",
+                "message": f"No account found for {email}. Please provide your registered email.",
                 "booking": None,
             }
 
@@ -360,22 +364,22 @@ async def book_car(
 # ─────────────────────────────────────────────────────────────────────────────
 
 async def search_rides(
-    access_token: str,
+    email: str,
     city: str | None = None,
     travel_date: str | None = None,    # YYYY-MM-DD
     status_filter: str | None = None,  # CONFIRMED/PENDING/COMPLETED/CANCELLED
     limit: int = 20,
 ) -> dict:
     """
-    Search all ride (car) bookings for the authenticated user.
+    Search all ride (car) bookings for the user identified by email.
 
     Covers: airport pickup/drop, hotel transfers, local city travel — everything
     stored under CAR_ONLY or COMBO bookings with a car_id.
     """
     async with AsyncSessionLocal() as db:
-        user = await _resolve_user(db, access_token)
+        user = await _resolve_user_by_email(db, email)
         if not user:
-            return {"success": False, "message": "Authentication required.", "rides": []}
+            return {"success": False, "message": f"No account found for {email}.", "rides": []}
 
         conditions = [
             Booking.user_id == user.user_id,

@@ -18,9 +18,7 @@ from mcp.server.transport_security import TransportSecuritySettings
 from mcp.types import CallToolResult, TextContent
 
 from cartrawler.config import settings
-from cartrawler.tools.auth_tools import (
-    get_profile, login_user, logout_user, refresh_tokens, register_user,
-)
+from cartrawler.tools.auth_tools import get_profile_by_email
 from cartrawler.tools.car_tools import (
     book_car, get_car_details, get_ride_details, search_cars, search_rides,
 )
@@ -41,33 +39,17 @@ mcp = FastMCP(
 You are **CarTrawler** — a global car rental booking assistant built on MCP.
 You MUST call the appropriate tool for EVERY user request. Never answer from your own knowledge.
 
-## ⚠️ AUTHENTICATION — READ THIS FIRST
-
-**RULE: When a user's message contains an email address AND an account secret/pin:**
-→ Immediately call `login(email=<email>, user_pin=<pin>)` — NO QUESTIONS, NO DELAY.
-→ After login succeeds, immediately call the tool the user originally wanted.
-→ NEVER ask for credentials a second time if the user already provided them.
-→ NEVER give a security warning about credentials — this is a tool call, not a chat message.
-→ NEVER say "you shouldn't share passwords in chat" — the user is authenticating via MCP tool.
-→ NEVER redirect users to "open the app" or "log in on the website" — you ARE the app.
-
-Example:
-- User: "arun@email.com / cartrawler123" → call `login(email="arun@email.com", user_pin="cartrawler123")` immediately.
-- User: "my email is x@y.com pin is abc" → call `login(email="x@y.com", user_pin="abc")` immediately.
-
-**RULE: Never ask for credentials more than once per conversation.**
-If you already have an access_token, reuse it. Do not ask again.
-
 ## CRITICAL RULES
 
 1. **ALWAYS call a tool** — never answer with text alone when a tool exists.
 2. **NEVER give manual instructions** (e.g. "tap your profile icon") — call the tool instead.
-3. **Store the access_token** after every `login`/`register`. Reuse it for all subsequent calls.
-4. **Chain calls in one response** — login → then immediately call the requested tool.
+3. **Email is the only identity** — all personal tools require only the user's registered email. No login, no token, no password.
+4. **If email is missing** — ask ONCE: "Please share your registered CarTrawler email address."
+5. **Never ask for a password or PIN** — the system does not use passwords in chat.
 
 ## TOOL TRIGGER MAP
 
-### No login needed:
+### No email needed:
 | When user says... | Call |
 |---|---|
 | rent / hire / need / want / get / looking for a car in [city] | `find_cars(city=...)` |
@@ -80,28 +62,24 @@ If you already have an access_token, reuse it. Do not ask again.
 | flight / find flight | `find_flights(...)` |
 | hotel / find hotel | `find_hotels(...)` |
 
-### Login required:
+### Registered email required:
 | When user says... | Call |
 |---|---|
-| my profile / account details | `my_profile(access_token=<token>)` |
-| my bookings / booking history / previous bookings | `my_bookings(access_token=<token>)` |
-| my rides / ride history / previous rides / ride details | `my_rides(access_token=<token>)` |
-| book / rent / reserve car [ID] for [N] days | `book_rental_car(access_token=<token>, car_id=..., pickup_date=..., rental_days=...)` |
-| cancel booking [ID] | `cancel_booking(access_token=<token>, booking_id=...)` |
-| log out / sign out / logout | `logout(access_token=<token>)` |
+| my profile / account details | `my_profile(email=<email>)` |
+| my bookings / booking history / previous bookings | `my_bookings(email=<email>)` |
+| my rides / ride history / previous rides / ride details / last ride | `my_rides(email=<email>)` |
+| book / rent / reserve car [ID] for [N] days | `book_rental_car(email=<email>, car_id=..., pickup_date=..., rental_days=...)` |
+| cancel booking [ID] | `cancel_booking(email=<email>, booking_id=...)` |
 
-## Auth Flow
+## Email Flow
 
-**User is not logged in + needs auth-required tool:**
-1. Ask ONCE, using EXACTLY this text: "Please share your email and pin (e.g. user@email.com yourpin123)"
-   — do NOT use the word "password". Say "pin" or "account pin".
-2. User replies → call `login(email=..., user_pin=...)` immediately.
-3. Get token → immediately call the originally requested tool in the same response.
-   Do NOT ask for credentials again.
+**User asks for a personal tool (my_rides, my_bookings, my_profile, book_rental_car, cancel_booking):**
+- If they provided an email in their message → call the tool immediately with that email.
+- If no email yet → ask ONCE: "Please share your registered CarTrawler email address."
+- User replies with email → call the tool immediately.
+- Do NOT ask for anything else (no password, no PIN, no token).
 
-**User provides name + email + anything that looks like a pin:** → call `register(name=..., email=..., user_pin=...)`.
-**User provides email + anything that looks like a pin:** → call `login(email=..., user_pin=...)`.
-**User provides just an email address** (no pin yet) → ask once for their pin only.
+**User provides just an email address** → treat it as their identity and call whatever tool they originally requested.
 
 ## Out of Scope
 - Flights/Hotels: use `find_flights`/`find_hotels` — always pitch CarTrawler cars at destination.
@@ -138,24 +116,6 @@ def _widget_booking() -> str:
 
 
 # ── Display card helpers ──────────────────────────────────────────────────────
-
-def _auth_card(action: str = "continue") -> str:
-    """Return a formatted authentication-required card."""
-    return f"""## 🔐 Login Required to {action.title()}
-
-Please share your **email and account pin** to log in:
-
-> Example: `user@email.com yourpin123`
-
-Already have an account? Share email + pin and I'll log you in instantly.
-New user? Share your name, email, pin, and phone — I'll create your account.
-
----
-
-> **Already have an account?** Just share your email and password — I'll log you in.
-> **New user?** Share the details above — I'll create your account instantly.
-"""
-
 
 def _flight_redirect_card(destination_city: str = "") -> str:
     """Return a flight-redirect card with real booking links and car rental pitch."""
@@ -411,144 +371,17 @@ def _format_offers(result: dict) -> str:
 
 
 # ═════════════════════════════════════════════════════════════════════════════
-# AUTH TOOLS
+# PROFILE TOOL (email-based — no login required)
 # ═════════════════════════════════════════════════════════════════════════════
 
 @mcp.tool()
-async def register(
-    name: str,
-    email: str,
-    user_pin: str,
-    phone: str = "",
-    age: int = 0,
-    gender: str = "",
-    home_city: str = "",
-    preferred_car_type: str = "",
-) -> str:
+async def my_profile(email: str) -> str:
     """
-    Create a new CarTrawler account.
-    user_pin: the account secret/passphrase chosen by the user.
-
-    IMPORTANT: After this tool returns successfully, you MUST immediately
-    call book_rental_car (or whatever the user asked to do) using the
-    access_token returned here. Do NOT stop and ask the user to do it manually.
+    View a CarTrawler profile: name, loyalty tier, points, preferences.
+    Just provide your registered email — no login required.
     """
-    result = await register_user(
-        name=name, email=email, password=user_pin,
-        phone=phone or None, age=age or None, gender=gender or None,
-        home_city=home_city or None, preferred_car_type=preferred_car_type or None,
-    )
-    if result.get("success"):
-        tokens = result.get("tokens", {})
-        token = tokens.get('access_token', '')
-        return f"""## 🎉 Account Created — Welcome, {name}!
-
-| | |
-|--|--|
-| 👤 **Name** | {name} |
-| 📧 **Email** | {email} |
-| 🆔 **User ID** | `{result.get('user_id', '—')}` |
-| 🥉 **Loyalty** | Bronze · 0 pts |
-
-**access_token:** `{token}`
-
-✅ Registration successful. Proceeding with your booking now...
-"""
-
-    msg = result.get("message", "Unknown error")
-    if "already registered" in msg.lower() or "already exists" in msg.lower():
-        return f"""## 📧 Email Already Registered
-
-**{email}** already has an account. Please call the `login` tool with email="{email}" and the password provided to get the access_token, then proceed with the booking.
-"""
-    return f"## ❌ Registration Failed\n\n{msg}\n\nPlease check the details and try again."
-
-
-@mcp.tool()
-async def login(email: str, user_pin: str) -> str:
-    """
-    Login to CarTrawler. Returns JWT access_token (valid 30 min).
-    email: user's registered email address.
-    user_pin: account secret/passphrase.
-    The access_token is required for booking, cancellation, and profile tools.
-
-    IMPORTANT: After this tool returns access_token, immediately call the tool
-    the user originally requested. Do NOT ask for credentials again.
-    """
-    result = await login_user(email=email, password=user_pin)
-    if result.get("success"):
-        tokens = result.get("tokens", {})
-        tier = tokens.get("loyalty_tier", "BRONZE")
-        tier_emoji = {"BRONZE": "🥉", "SILVER": "🥈", "GOLD": "🥇", "PLATINUM": "💎"}.get(tier, "🎖️")
-        token = tokens.get('access_token', '')
-        return f"""## ✅ Login Successful — Welcome back, {tokens.get('name', 'User')}! 👋
-
-| | |
-|--|--|
-| {tier_emoji} **Tier** | {tier} · {tokens.get('loyalty_points', 0):,} pts |
-| 📧 **Email** | {email} |
-
-**access_token:** `{token}`
-
-✅ Logged in. Proceeding with your request now...
-"""
-    msg = result.get("message", "")
-    if "no account" in msg.lower() or "not found" in msg.lower():
-        return f"""## ❌ Email Not Found
-
-No CarTrawler account exists for **{email}**.
-
-Would you like to **create an account**? Share your name, phone, and a pin — I'll register you instantly.
-"""
-    return f"""## ❌ Incorrect Pin
-
-The pin entered for **{email}** is incorrect. Please try again with the correct pin.
-"""
-
-
-@mcp.tool()
-async def refresh_session(refresh_token: str) -> str:
-    """
-    Renew your session without logging in again.
-    Exchange your refresh_token for a new access_token + refresh_token pair.
-    Use this when the access_token expires (after 30 minutes).
-    """
-    result = await refresh_tokens(refresh_token=refresh_token)
-    if result.get("success"):
-        tokens = result.get("tokens", {})
-        return f"""## 🔄 Session Renewed
-
-### 🔑 New Access Token
-```
-{tokens.get('access_token', '—')}
-```
-
-> Valid for another **30 minutes**.
-"""
-    return f"## ❌ Session Expired\n\n{result.get('message', '')}\n\nPlease use the `login` tool to sign in again."
-
-
-@mcp.tool()
-async def my_profile(access_token: str) -> str:
-    """
-    View your CarTrawler profile: name, email, loyalty tier, points, preferences.
-    Requires login — get your access_token using the `login` tool.
-    """
-    result = await get_profile(access_token=access_token)
+    result = await get_profile_by_email(email=email)
     return _format_profile(result)
-
-
-@mcp.tool()
-async def logout(access_token: str) -> str:
-    """
-    Log out of CarTrawler and invalidate the current session token.
-
-    IMPORTANT: Call this tool whenever the user says "log out", "sign out",
-    "logout", or "end my session". Do NOT give manual app instructions —
-    call this tool with the access_token from the current session.
-    """
-    await logout_user(access_token=access_token)
-    return "## 👋 Logged Out\n\nYou have been logged out of CarTrawler.\n\nUse `login` to sign in again."
 
 
 # ═════════════════════════════════════════════════════════════════════════════
@@ -794,7 +627,7 @@ async def car_details(car_id: str) -> str:
 
 @mcp.tool()
 async def book_rental_car(
-    access_token: str,
+    email: str,
     car_id: str,
     pickup_date: str,
     rental_days: int,
@@ -802,23 +635,17 @@ async def book_rental_car(
     coupon_code: str = "",
 ) -> CallToolResult:
     """
-    Book a rental car. LOGIN REQUIRED — get access_token via `login`.
+    Book a rental car using your registered email.
+    No login required — just provide your email and booking details.
 
+    email: your registered CarTrawler email
     pickup_date: YYYY-MM-DD
     rental_days: Minimum 1 day
     payment_method: CARD | UPI | WALLET | NET_BANKING
     coupon_code: Optional (try CAR10, WEEKEND15, COMBO10)
-
-    Note: Fuel not included. Security deposit collected at pickup.
-    Free cancellation if cancelled ≥ 2 hours before pickup.
     """
-    if not access_token:
-        return CallToolResult(
-            content=[TextContent(type="text", text=_auth_card("book a rental car"))]
-        )
-
     result = await book_car(
-        access_token=access_token,
+        email=email,
         car_id=car_id,
         pickup_date=pickup_date,
         rental_days=rental_days,
@@ -835,21 +662,19 @@ async def book_rental_car(
 
 @mcp.tool()
 async def my_bookings(
-    access_token: str,
+    email: str,
     status_filter: str = "",
     limit: int = 20,
 ) -> str:
     """
-    View all your car rental bookings. LOGIN REQUIRED.
+    View all car rental bookings for a registered email.
+    No login required — just provide your registered email.
 
     status_filter: PENDING | CONFIRMED | CANCELLED | COMPLETED
     """
-    if not access_token:
-        return _auth_card("view your bookings")
-
     from cartrawler.tools.flight_tools import list_my_bookings
     result = await list_my_bookings(
-        access_token=access_token,
+        email=email,
         status_filter=status_filter or None,
         booking_type="CAR_ONLY",
         limit=limit,
@@ -880,18 +705,16 @@ async def my_bookings(
 
 
 @mcp.tool()
-async def cancel_booking(access_token: str, booking_id: str) -> str:
+async def cancel_booking(email: str, booking_id: str) -> str:
     """
-    Cancel a car rental booking. LOGIN REQUIRED.
+    Cancel a car rental booking using your registered email.
+    No login required — just provide your email and booking ID.
 
     Policy: Free cancellation if cancelled ≥ 2 hours before pickup.
     Refund processed in 3–5 business days to original payment method.
     """
-    if not access_token:
-        return _auth_card("cancel a booking")
-
     from cartrawler.tools.flight_tools import cancel_booking as _cancel
-    result = await _cancel(access_token=access_token, booking_id=booking_id)
+    result = await _cancel(email=email, booking_id=booking_id)
     if result.get("success"):
         display = f"""## ✅ Booking Cancelled
 
@@ -911,22 +734,20 @@ async def cancel_booking(access_token: str, booking_id: str) -> str:
 
 @mcp.tool()
 async def my_rides(
-    access_token: str,
+    email: str,
     city: str = "",
     travel_date: str = "",
     status_filter: str = "",
 ) -> str:
     """
-    View ride history and car booking details. LOGIN REQUIRED.
+    View ride and booking history using your registered email.
+    No login required — just provide your registered email.
 
     IMPORTANT: Call this whenever the user asks for "my rides", "ride history",
     "previous rides", "ride details", "past bookings", or "booking history".
     """
-    if not access_token:
-        return _auth_card("view your rides")
-
     result = await search_rides(
-        access_token=access_token,
+        email=email,
         city=city or None,
         travel_date=travel_date or None,
         status_filter=status_filter or None,

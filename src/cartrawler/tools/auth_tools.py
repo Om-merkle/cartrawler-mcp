@@ -290,6 +290,16 @@ async def get_profile(access_token: str) -> dict:
         }
 
 
+async def get_profile_by_email(email: str) -> dict:
+    """Fetch a user's profile by email — no token required."""
+    async with AsyncSessionLocal() as db:
+        result = await db.execute(select(User).where(User.email == email.lower().strip()))
+        user: User | None = result.scalar_one_or_none()
+        if not user:
+            return {"success": False, "message": f"No account found for {email}.", "profile": None}
+        return {"success": True, "profile": _user_to_dict(user)}
+
+
 # ─────────────────────────────────────────────────────────────────────────────
 # Tool: logout_user
 # ─────────────────────────────────────────────────────────────────────────────
