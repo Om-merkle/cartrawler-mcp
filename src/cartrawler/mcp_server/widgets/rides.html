@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>My Rides</title>
+<style>
+:root{
+  --bg:#f5f5f7;--surface:#fff;--border:#e0e0e0;--text:#1d1d1f;--sub:#6e6e73;
+  --accent:#0066cc;--accent2:#e8f1fb;
+  --green:#1a7f37;--green2:#dafbe1;
+  --red:#d1242f;--red2:#ffeef0;
+  --yellow:#7d5a00;--yellow2:#fff3c4;
+  --grey2:#f0f0f0;
+  --shadow:0 2px 12px rgba(0,0,0,.08);
+}
+@media(prefers-color-scheme:dark){
+  :root{
+    --bg:#1c1c1e;--surface:#2c2c2e;--border:#3a3a3c;--text:#f5f5f7;--sub:#aeaeb2;
+    --accent:#4da3ff;--accent2:#1a2d4a;
+    --green:#3fb950;--green2:#0d2d1a;
+    --red:#f85149;--red2:#2d0b0e;
+    --yellow:#f0c060;--yellow2:#2d2200;
+    --grey2:#3a3a3c;
+    --shadow:0 2px 12px rgba(0,0,0,.4);
+  }
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;padding:12px;min-height:100vh}
+
+/* Header */
+.hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.hdr-title{font-size:14px;font-weight:700}
+.hdr-count{font-size:12px;color:var(--sub);background:var(--grey2);padding:3px 10px;border-radius:20px}
+
+/* Rail (horizontal scroll) */
+.rail{display:flex;gap:12px;overflow-x:auto;padding-bottom:10px;scroll-snap-type:x mandatory}
+.rail::-webkit-scrollbar{height:3px}
+.rail::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px}
+
+/* Card */
+.card{
+  flex:0 0 220px;background:var(--surface);border:1px solid var(--border);
+  border-radius:16px;padding:14px;scroll-snap-align:start;
+  display:flex;flex-direction:column;gap:10px;
+  box-shadow:var(--shadow);transition:transform .15s,box-shadow .15s;
+  position:relative;overflow:hidden;
+}
+.card:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.12)}
+
+/* Status stripe */
+.stripe{position:absolute;top:0;left:0;right:0;height:3px}
+.stripe.confirmed{background:var(--green)}
+.stripe.completed{background:var(--accent)}
+.stripe.cancelled{background:var(--red)}
+.stripe.pending{background:var(--yellow)}
+
+/* Car name + status badge */
+.card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-top:4px}
+.car-name{font-size:13px;font-weight:700;line-height:1.3;flex:1}
+.status-badge{font-size:10px;font-weight:700;padding:3px 8px;border-radius:10px;white-space:nowrap;flex-shrink:0}
+.status-badge.confirmed{background:var(--green2);color:var(--green)}
+.status-badge.completed{background:var(--accent2);color:var(--accent)}
+.status-badge.cancelled{background:var(--red2);color:var(--red)}
+.status-badge.pending{background:var(--yellow2);color:var(--yellow)}
+
+/* Vendor + location */
+.vendor{font-size:11px;color:var(--sub);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* Tags */
+.tags{display:flex;flex-wrap:wrap;gap:4px}
+.tag{font-size:10px;padding:2px 7px;border-radius:10px;background:var(--accent2);color:var(--accent);font-weight:500}
+.tag.driver{background:var(--green2);color:var(--green)}
+
+/* Divider */
+.divider{border:none;border-top:1px solid var(--border);margin:2px 0}
+
+/* Trip rows */
+.rows{display:flex;flex-direction:column;gap:5px}
+.row{display:flex;justify-content:space-between;align-items:center;font-size:11px}
+.row-lbl{color:var(--sub)}
+.row-val{font-weight:600;text-align:right}
+.row-val.price{font-size:13px;color:var(--accent);font-weight:700}
+.row-val.discount{color:var(--green);font-size:11px}
+
+/* Booking ID pill */
+.bid{font-size:10px;background:var(--grey2);color:var(--sub);padding:3px 9px;border-radius:8px;font-family:monospace;align-self:flex-start;margin-top:auto}
+
+/* Empty / loading */
+.empty,.loading{text-align:center;padding:32px 16px;color:var(--sub)}
+.empty-icon{font-size:36px;margin-bottom:10px}
+.empty-title{font-size:15px;font-weight:600;color:var(--text);margin-bottom:6px}
+</style>
+</head>
+<body>
+<div id="app"><div class="loading">🚕 Loading ride history…</div></div>
+<script>
+/* ── CarTrawler My Rides Widget
+   Data sources (priority order):
+   1. window.openai.toolResponseMetadata  — ChatGPT MCP Apps _meta
+   2. ui/notifications/tool-result        — postMessage structuredContent
+   3. Legacy postMessage fallbacks
+──────────────────────────────────────────────────────────────── */
+
+function tryOpenAIBridge(){
+  try{
+    var meta=window.openai&&window.openai.toolResponseMetadata;
+    if(meta&&meta.rides!==undefined){render(meta);return true;}
+  }catch(e){}
+  return false;
+}
+
+window.addEventListener('message',function(ev){
+  var data;
+  try{data=typeof ev.data==='string'?JSON.parse(ev.data):ev.data;}
+  catch(e){return;}
+  if(!data)return;
+
+  if(data.method==='ui/notifications/tool-result'){
+    var sc=(data.params||{}).structuredContent;
+    if(sc&&sc.rides!==undefined)return render(sc);
+    setTimeout(tryOpenAIBridge,50);
+  }
+  if(data.method==='notifications/tools/call_result'||data.method==='tool_result'){
+    var sc2=(data.params||data).structuredContent;
+    if(sc2&&sc2.rides!==undefined)return render(sc2);
+  }
+  if(data.structuredContent&&data.structuredContent.rides!==undefined)return render(data.structuredContent);
+  if(data.rides!==undefined)return render(data);
+});
+
+if(!tryOpenAIBridge()){
+  setTimeout(tryOpenAIBridge,200);
+}
+
+/* ── Helpers ──────────────────────────────────────────────────── */
+function fmt(n){return parseInt(n||0).toLocaleString('en-IN');}
+function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function bool(v){return v===true||v==='true'||v==='TRUE';}
+
+var STATUS_EMOJI={CONFIRMED:'✅',COMPLETED:'🏁',CANCELLED:'❌',PENDING:'⏳'};
+var STATUS_CLASS={CONFIRMED:'confirmed',COMPLETED:'completed',CANCELLED:'cancelled',PENDING:'pending'};
+
+function fmtDate(d){
+  if(!d)return '—';
+  try{
+    var parts=d.split('-');
+    var months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    return parts[2]+' '+months[parseInt(parts[1])-1]+' '+parts[0];
+  }catch(e){return d;}
+}
+
+/* ── Render ───────────────────────────────────────────────────── */
+function render(data){
+  var rides=data.rides||[];
+  var root=document.getElementById('app');
+
+  if(!rides.length){
+    root.innerHTML='<div class="empty"><div class="empty-icon">🚕</div>'
+      +'<div class="empty-title">No rides found</div>'
+      +'<div style="font-size:12px">Book your first car rental with CarTrawler!</div></div>';
+    return;
+  }
+
+  var cards=rides.map(function(r){
+    var info=r.car_info||{};
+    var model=info.car_model||r.car_id||'Car';
+    var vendor=info.vendor||'—';
+    var pickup=info.pickup_location||info.city||'—';
+    var carType=info.car_type||'';
+    var driver=bool(info.with_driver);
+    var status=(r.status||'').toUpperCase();
+    var cls=STATUS_CLASS[status]||'confirmed';
+    var emoji=STATUS_EMOJI[status]||'📋';
+    var discount=parseInt(r.discount_applied||0);
+    var total=parseInt(r.total_price||0);
+    var bid=r.booking_id||'—';
+
+    var discRow=discount>0
+      ?'<div class="row"><span class="row-lbl">🏷️ Discount</span><span class="row-val discount">−₹'+fmt(discount)+'</span></div>'
+      :'';
+
+    return '<div class="card">'
+      +'<div class="stripe '+cls+'"></div>'
+      +'<div class="card-top"><div class="car-name">'+esc(model)+'</div>'
+      +'<div class="status-badge '+cls+'">'+emoji+' '+esc(status)+'</div></div>'
+      +'<div class="vendor">'+esc(vendor)+' · 📍 '+esc(pickup)+'</div>'
+      +'<div class="tags">'
+      +(carType?'<span class="tag">'+esc(carType)+'</span>':'')
+      +(driver?'<span class="tag driver">👤 With Driver</span>':'<span class="tag">🚗 Self-drive</span>')
+      +'</div>'
+      +'<hr class="divider">'
+      +'<div class="rows">'
+      +'<div class="row"><span class="row-lbl">📅 Pickup</span><span class="row-val">'+esc(fmtDate(r.travel_date))+'</span></div>'
+      +'<div class="row"><span class="row-lbl">🔄 Return</span><span class="row-val">'+esc(fmtDate(r.return_date))+'</span></div>'
+      +'<div class="row"><span class="row-lbl">⏱️ Duration</span><span class="row-val">'+(r.rental_days||'—')+' day(s)</span></div>'
+      +'<div class="row"><span class="row-lbl">💳 Payment</span><span class="row-val">'+esc(r.payment_method||'—')+'</span></div>'
+      +discRow
+      +'<div class="row"><span class="row-lbl">💰 Total</span><span class="row-val price">₹'+fmt(total)+'</span></div>'
+      +'</div>'
+      +'<div class="bid">'+esc(bid)+'</div>'
+      +'</div>';
+  }).join('');
+
+  root.innerHTML='<div class="hdr">'
+    +'<span class="hdr-title">🚕 My Ride History</span>'
+    +'<span class="hdr-count">'+rides.length+' booking'+(rides.length===1?'':'s')+'</span>'
+    +'</div>'
+    +'<div class="rail">'+cards+'</div>';
+}
+</script>
+</body>
+</html>

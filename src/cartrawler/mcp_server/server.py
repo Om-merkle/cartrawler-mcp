@@ -115,6 +115,12 @@ def _widget_booking() -> str:
     return (_WIDGETS / "booking.html").read_text(encoding="utf-8")
 
 
+@mcp.resource("ui://cartrawler/rides", mime_type=_UI_MIME)
+def _widget_rides() -> str:
+    """Ride history cards widget."""
+    return (_WIDGETS / "rides.html").read_text(encoding="utf-8")
+
+
 # ── Display card helpers ──────────────────────────────────────────────────────
 
 def _flight_redirect_card(destination_city: str = "") -> str:
@@ -738,7 +744,7 @@ async def my_rides(
     city: str = "",
     travel_date: str = "",
     status_filter: str = "",
-) -> str:
+) -> CallToolResult:
     """
     View ride and booking history using your registered email.
     No login required — just provide your registered email.
@@ -753,12 +759,19 @@ async def my_rides(
         status_filter=status_filter or None,
     )
     rides = result.get("rides", [])
+
     if not rides:
-        return (
+        md = (
             "## 🚕 My Ride History\n\n"
             "No bookings found.\n\n"
             "> Use `find_cars` to search for cars and `book_rental_car` to make your first booking."
         )
+        sc = {"rides": []}
+        return CallToolResult(**{
+            "content": [TextContent(type="text", text=md)],
+            "structuredContent": sc,
+            "_meta": {"ui": {"resourceUri": "ui://cartrawler/rides"}, **sc},
+        })
 
     status_emoji = {
         "CONFIRMED": "✅", "COMPLETED": "🏁", "CANCELLED": "❌", "PENDING": "⏳"
@@ -790,7 +803,14 @@ async def my_rides(
         )
 
     header = f"## 🚕 My Ride History\n> {len(rides)} booking(s) found\n"
-    return header + "\n" + "\n\n".join(cards)
+    md = header + "\n" + "\n\n".join(cards)
+
+    sc = {"rides": rides}
+    return CallToolResult(**{
+        "content": [TextContent(type="text", text=md)],
+        "structuredContent": sc,
+        "_meta": {"ui": {"resourceUri": "ui://cartrawler/rides"}, **sc},
+    })
 
 
 # ═════════════════════════════════════════════════════════════════════════════
